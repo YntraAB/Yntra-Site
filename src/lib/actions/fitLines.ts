@@ -8,10 +8,17 @@ type Options = {
 export function fitLines(node: HTMLElement, options: Options = {}) {
   let { lines = 2, min, max } = options;
 
+  // Capture the original computed font size once, so we can grow back to it.
+  // Using the live computed size here would cap future runs at the previously-shrunk size.
+  const originalComputedSize = (() => {
+    const size = parseFloat(getComputedStyle(node).fontSize);
+    return Number.isFinite(size) && size > 0 ? size : 32;
+  })();
+
   const measureAndFit = () => {
     const computed = getComputedStyle(node);
-    const currentComputedSize = parseFloat(computed.fontSize) || 32;
-    const maxPx = max ?? currentComputedSize;
+    // Use the original computed size as our default ceiling so we can grow after shrinking.
+    const maxPx = max ?? originalComputedSize;
     const minPx = Math.max(10, min ?? Math.round(maxPx * 0.6));
 
     // Start from the largest size to allow growth when text gets shorter
@@ -68,4 +75,3 @@ export function fitLines(node: HTMLElement, options: Options = {}) {
     }
   };
 }
-

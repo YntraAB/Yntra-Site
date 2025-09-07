@@ -33,6 +33,13 @@
     return () => unsub();
   });
 
+  // Keep <html lang="..."> in sync for better hyphenation/accessibility
+  $effect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('lang', currentLocale || 'sv');
+    }
+  });
+
   function changeLang(e: Event) {
     const value = (e.target as HTMLSelectElement).value;
     i18nLocale.set(value);
