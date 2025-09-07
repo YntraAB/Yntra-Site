@@ -1,0 +1,110 @@
+{
+  "brand": { "name": "Yntra", "logo_alt": "Yntra logo" },
+  "meta": {
+    "title": "Yntra – Design & Development Studio",
+    "description": "We design and build high-performing websites, apps, and digital systems that help businesses scale faster, look better, and work smarter.",
+    "keywords": "hire developers, top designers, web development, app development, digital agency, custom software"
+  },
+  "nav": {
+    "services": "Services",
+    "why": "Why Us",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "lang": {
+    "label": "Language",
+    "aria": "Change language",
+    "options": { "sv": "Svenska", "en": "English", "es": "Español", "de": "Deutsch", "fr": "Français" }
+  },
+  "hero": {
+    "looking_for": "I'm looking for",
+    "btn": { "website": "Website", "system": "System App" },
+    "title_prefix": "Hire the Top 3% of the World's",
+    "title_highlight": "Talent",
+    "subtitle": "We design and build high-performing websites, apps, and digital systems that help businesses scale faster, look better, and work smarter.",
+    "cta_hire": "Hire Us"
+  },
+  "slides": {
+    "website": [
+      { "title": "Modern E-commerce Platform", "subtitle": "High-converting online store", "alt": "Modern E-commerce Platform" },
+      { "title": "Corporate Website", "subtitle": "Professional business presence", "alt": "Corporate Website" }
+    ],
+    "system": [
+      { "title": "Analytics Dashboard", "subtitle": "Data-driven business insights", "alt": "Analytics Dashboard" },
+      { "title": "Project Management System", "subtitle": "Streamlined team collaboration", "alt": "Project Management System" }
+    ]
+  },
+  "trusted": {
+    "title": "Trusted by companies worldwide",
+    "subtitle": "Leading businesses choose us to build their digital future"
+  },
+  "services": {
+    "title": "What We Do",
+    "subtitle": "Comprehensive digital solutions tailored to your business needs, delivered by world-class talent.",
+    "cards": {
+      "websites": {
+        "title": "Websites",
+        "desc": "Beautiful, responsive, conversion-focused websites that drive results and engage your audience.",
+        "features": ["Responsive Design", "SEO Optimized", "Fast Performance", "CMS Integration"]
+      },
+      "systems": {
+        "title": "System Apps",
+        "desc": "Custom-built tools and applications to streamline business operations and boost productivity.",
+        "features": ["Custom Development", "API Integration", "Cloud Deployment", "Scalable Architecture"]
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "desc": "User-first interfaces that engage and delight, created with deep understanding of user behavior.",
+        "features": ["User Research", "Prototyping", "Design Systems", "Usability Testing"]
+      },
+      "support": {
+        "title": "Ongoing Support",
+        "desc": "Comprehensive maintenance, scaling, and optimization to keep your digital assets performing at their best.",
+        "features": ["24/7 Monitoring", "Regular Updates", "Performance Optimization", "Technical Support"]
+      }
+    }
+  },
+  "why": {
+    "title": "Why work with us?",
+    "subtitle": "We deliver exceptional results through a combination of world-class talent, proven processes, and cutting-edge technology.",
+    "items": [
+      { "title": "Only the Top 3% of designers & developers", "text": "Rigorous vetting ensures you work with exceptional talent who deliver outstanding results." },
+      { "title": "Proven track record with global businesses", "text": "Successfully delivered 500+ projects from startups to Fortune 500 enterprises." },
+      { "title": "Tailored solutions, no cookie-cutter templates", "text": "Every project is custom-built to match your unique requirements and brand." },
+      { "title": "Scalable technology that grows with you", "text": "Future-proof architecture and clean code that adapts as you expand." },
+      { "title": "Quality guarantee and ongoing support", "text": "Comprehensive testing, optimization, and continuous support for long-term success." }
+    ]
+  },
+  "showcase": {
+    "title": "See our work in action",
+    "subtitle": "Real projects, real results. Discover how we've helped businesses transform their digital presence and achieve exceptional outcomes.",
+    "cards": [
+      { "title": "Enterprise Analytics Dashboard", "tag": "System App", "desc": "Real-time business intelligence platform processing 10M+ data points daily for strategic decisions." },
+      { "title": "Corporate Website Transformation", "tag": "Website", "desc": "Modern corporate presence that elevated brand perception and generated 500% more qualified leads." },
+      { "title": "Project Management Suite", "tag": "System App", "desc": "Comprehensive project management system that streamlined workflows for teams across 15 countries." }
+    ]
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "subtitle": "Don't just take our word for it. Here's what industry leaders say about working with our team."
+  },
+  "cta": {
+    "title_prefix": "Ready to hire",
+    "title_highlight": "world-class",
+    "title_suffix": "designers & developers?",
+    "subtitle": "Join hundreds of successful companies who've transformed their digital presence with our top-tier talent. Let's discuss your project and create something extraordinary together.",
+    "hire_us": "Hire Us",
+    "schedule_call": "Schedule a Call",
+    "stats": { "projects": "Projects Delivered", "satisfaction": "Client Satisfaction", "support": "Support Available" }
+  },
+  "footer": {
+    "sections": { "services": "Services", "company": "Company", "contact": "Get in Touch", "resources": "Resources" },
+    "service_links": ["Website Design", "System Applications", "UI/UX Design", "Mobile Apps", "E-commerce", "Brand Identity"],
+    "company_links": ["About Us", "Our Process", "Case Studies", "Careers", "Blog"],
+    "resource_links": ["Documentation", "Help Center", "Privacy Policy"],
+    "address": { "line1": "123 Innovation Street", "line2": "Tech City, TC 12345" },
+    "built_with": "Built with SvelteKit",
+    "copyright": "© 2024 Yntra Development Agency. All rights reserved."
+  },
+  "aria": { "toggle_menu": "Toggle menu", "go_to_slide": "Go to slide {num}" }
+}

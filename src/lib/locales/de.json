@@ -1,0 +1,110 @@
+{
+  "brand": { "name": "Yntra", "logo_alt": "Yntra-Logo" },
+  "meta": {
+    "title": "Yntra – Design- & Entwicklungsstudio",
+    "description": "Wir entwerfen und entwickeln leistungsstarke Websites, Apps und digitale Systeme, die Unternehmen helfen, schneller zu skalieren, besser auszusehen und smarter zu arbeiten.",
+    "keywords": "entwickler einstellen, top designer, webentwicklung, app entwicklung, digitale agentur, maßgeschneiderte software"
+  },
+  "nav": {
+    "services": "Leistungen",
+    "why": "Warum wir",
+    "testimonials": "Kundenstimmen",
+    "contact": "Kontakt"
+  },
+  "lang": {
+    "label": "Sprache",
+    "aria": "Sprache ändern",
+    "options": { "sv": "Schwedisch", "en": "Englisch", "es": "Spanisch", "de": "Deutsch", "fr": "Französisch" }
+  },
+  "hero": {
+    "looking_for": "Ich suche",
+    "btn": { "website": "Website", "system": "System‑App" },
+    "title_prefix": "Stellen Sie die Top 3% der Welt ein",
+    "title_highlight": "Talente",
+    "subtitle": "Wir entwerfen und entwickeln leistungsstarke Websites, Apps und digitale Systeme, die Unternehmen helfen, schneller zu skalieren, besser auszusehen und smarter zu arbeiten.",
+    "cta_hire": "Beauftragen Sie uns"
+  },
+  "slides": {
+    "website": [
+      { "title": "Moderne E‑Commerce‑Plattform", "subtitle": "Hoch konvertierender Onlineshop", "alt": "Moderne E‑Commerce‑Plattform" },
+      { "title": "Unternehmenswebsite", "subtitle": "Professionelle Unternehmenspräsenz", "alt": "Unternehmenswebsite" }
+    ],
+    "system": [
+      { "title": "Analyse‑Dashboard", "subtitle": "Datenbasierte Geschäftseinblicke", "alt": "Analyse‑Dashboard" },
+      { "title": "Projektmanagement‑System", "subtitle": "Optimierte Team‑Zusammenarbeit", "alt": "Projektmanagement‑System" }
+    ]
+  },
+  "trusted": {
+    "title": "Vertraut von Unternehmen weltweit",
+    "subtitle": "Führende Unternehmen wählen uns, um ihre digitale Zukunft zu gestalten"
+  },
+  "services": {
+    "title": "Was wir tun",
+    "subtitle": "Umfassende digitale Lösungen, maßgeschneidert für Ihr Unternehmen – geliefert von Weltklasse‑Talenten.",
+    "cards": {
+      "websites": {
+        "title": "Websites",
+        "desc": "Schöne, responsive, konversionsstarke Websites, die Ergebnisse liefern und Ihr Publikum begeistern.",
+        "features": ["Responsives Design", "SEO‑optimiert", "Hohe Performance", "CMS‑Integration"]
+      },
+      "systems": {
+        "title": "System‑Apps",
+        "desc": "Individuelle Tools und Anwendungen, die Geschäftsprozesse optimieren und die Produktivität steigern.",
+        "features": ["Individuelle Entwicklung", "API‑Integration", "Cloud‑Deployment", "Skalierbare Architektur"]
+      },
+      "uiux": {
+        "title": "UI/UX‑Design",
+        "desc": "Benutzerzentrierte Interfaces, die begeistern – entwickelt mit tiefem Verständnis für Nutzerverhalten.",
+        "features": ["Nutzerforschung", "Prototyping", "Designsysteme", "Usability‑Tests"]
+      },
+      "support": {
+        "title": "Laufender Support",
+        "desc": "Umfassende Wartung, Skalierung und Optimierung für dauerhaft höchste Leistung Ihrer digitalen Produkte.",
+        "features": ["24/7‑Monitoring", "Regelmäßige Updates", "Performance‑Optimierung", "Technischer Support"]
+      }
+    }
+  },
+  "why": {
+    "title": "Warum mit uns arbeiten?",
+    "subtitle": "Wir liefern außergewöhnliche Ergebnisse durch eine Kombination aus Weltklasse‑Talent, bewährten Prozessen und modernster Technologie.",
+    "items": [
+      { "title": "Nur die Top 3% der Designer & Entwickler", "text": "Strenges Auswahlverfahren – Sie arbeiten mit herausragenden Talenten, die exzellente Ergebnisse liefern." },
+      { "title": "Erfolgsbilanz mit globalen Unternehmen", "text": "Über 500 Projekte erfolgreich umgesetzt – von Startups bis Fortune‑500‑Unternehmen." },
+      { "title": "Maßgeschneiderte Lösungen, keine Schablonen", "text": "Jedes Projekt wird individuell für Ihre Anforderungen und Marke entwickelt." },
+      { "title": "Skalierbare Technologie, die mitwächst", "text": "Zukunftssichere Architektur und sauberer Code, der sich Ihrer Expansion anpasst." },
+      { "title": "Qualitätsgarantie und laufender Support", "text": "Umfassende Tests, Optimierung und kontinuierliche Unterstützung für langfristigen Erfolg." }
+    ]
+  },
+  "showcase": {
+    "title": "Sehen Sie unsere Arbeit in Aktion",
+    "subtitle": "Echte Projekte, echte Ergebnisse. Entdecken Sie, wie wir die digitale Präsenz von Unternehmen transformiert haben.",
+    "cards": [
+      { "title": "Enterprise‑Analyse‑Dashboard", "tag": "System‑App", "desc": "Echtzeit‑Business‑Intelligence‑Plattform, die täglich 10M+ Datenpunkte für strategische Entscheidungen verarbeitet." },
+      { "title": "Transformation der Unternehmenswebsite", "tag": "Website", "desc": "Moderne Unternehmenspräsenz, die die Markenwahrnehmung steigerte und 500% mehr qualifizierte Leads generierte." },
+      { "title": "Projektmanagement‑Suite", "tag": "System‑App", "desc": "Umfassendes Projektmanagement‑System, das Arbeitsabläufe in Teams aus 15 Ländern optimierte." }
+    ]
+  },
+  "testimonials": {
+    "title": "Was unsere Kunden sagen",
+    "subtitle": "Verlassen Sie sich nicht nur auf unser Wort. So bewerten Branchenführer die Zusammenarbeit mit unserem Team."
+  },
+  "cta": {
+    "title_prefix": "Bereit,",
+    "title_highlight": "Weltklasse",
+    "title_suffix": "Designer & Entwickler einzustellen?",
+    "subtitle": "Schließen Sie sich Hunderten erfolgreicher Unternehmen an, die ihre digitale Präsenz mit unserem Top‑Talent transformiert haben. Sprechen wir über Ihr Projekt und schaffen gemeinsam Außergewöhnliches.",
+    "hire_us": "Beauftragen Sie uns",
+    "schedule_call": "Termin vereinbaren",
+    "stats": { "projects": "Gelieferte Projekte", "satisfaction": "Kundenzufriedenheit", "support": "Support verfügbar" }
+  },
+  "footer": {
+    "sections": { "services": "Leistungen", "company": "Unternehmen", "contact": "Kontakt aufnehmen", "resources": "Ressourcen" },
+    "service_links": ["Webdesign", "Systemanwendungen", "UI/UX‑Design", "Mobile Apps", "E‑Commerce", "Markenidentität"],
+    "company_links": ["Über uns", "Unser Prozess", "Fallstudien", "Karriere", "Blog"],
+    "resource_links": ["Dokumentation", "Hilfe‑Center", "Datenschutzrichtlinie"],
+    "address": { "line1": "Innovationsstraße 123", "line2": "Tech City, TC 12345" },
+    "built_with": "Erstellt mit SvelteKit",
+    "copyright": "© 2024 Yntra Development Agency. Alle Rechte vorbehalten."
+  },
+  "aria": { "toggle_menu": "Menü umschalten", "go_to_slide": "Zur Folie {num} wechseln" }
+}

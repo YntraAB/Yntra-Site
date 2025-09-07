@@ -1,0 +1,110 @@
+{
+  "brand": { "name": "Yntra", "logo_alt": "Logotipo de Yntra" },
+  "meta": {
+    "title": "Yntra – Estudio de Diseño y Desarrollo",
+    "description": "Diseñamos y construimos sitios web, apps y sistemas digitales de alto rendimiento que ayudan a las empresas a escalar más rápido, verse mejor y trabajar de forma más inteligente.",
+    "keywords": "contratar desarrolladores, mejores diseñadores, desarrollo web, desarrollo de apps, agencia digital, software a medida"
+  },
+  "nav": {
+    "services": "Servicios",
+    "why": "Por qué nosotros",
+    "testimonials": "Testimonios",
+    "contact": "Contacto"
+  },
+  "lang": {
+    "label": "Idioma",
+    "aria": "Cambiar idioma",
+    "options": { "sv": "Sueco", "en": "Inglés", "es": "Español", "de": "Alemán", "fr": "Francés" }
+  },
+  "hero": {
+    "looking_for": "Estoy buscando",
+    "btn": { "website": "Sitio web", "system": "Aplicación de sistema" },
+    "title_prefix": "Contrata al 3% superior del mundo",
+    "title_highlight": "Talento",
+    "subtitle": "Diseñamos y construimos sitios web, apps y sistemas digitales de alto rendimiento que ayudan a las empresas a escalar más rápido, verse mejor y trabajar de forma más inteligente.",
+    "cta_hire": "Contrátanos"
+  },
+  "slides": {
+    "website": [
+      { "title": "Plataforma de e‑commerce moderna", "subtitle": "Tienda online de alta conversión", "alt": "Plataforma de e‑commerce moderna" },
+      { "title": "Web corporativa", "subtitle": "Presencia empresarial profesional", "alt": "Web corporativa" }
+    ],
+    "system": [
+      { "title": "Panel de analítica", "subtitle": "Información empresarial basada en datos", "alt": "Panel de analítica" },
+      { "title": "Sistema de gestión de proyectos", "subtitle": "Colaboración de equipos optimizada", "alt": "Sistema de gestión de proyectos" }
+    ]
+  },
+  "trusted": {
+    "title": "De confianza por empresas de todo el mundo",
+    "subtitle": "Las empresas líderes nos eligen para construir su futuro digital"
+  },
+  "services": {
+    "title": "Qué hacemos",
+    "subtitle": "Soluciones digitales integrales, adaptadas a las necesidades de tu negocio, entregadas por talento de clase mundial.",
+    "cards": {
+      "websites": {
+        "title": "Sitios web",
+        "desc": "Sitios web atractivos, responsivos y enfocados en la conversión que generan resultados y atraen a tu audiencia.",
+        "features": ["Diseño responsivo", "SEO optimizado", "Alto rendimiento", "Integración con CMS"]
+      },
+      "systems": {
+        "title": "Aplicaciones de sistema",
+        "desc": "Herramientas y aplicaciones a medida para optimizar las operaciones y aumentar la productividad.",
+        "features": ["Desarrollo a medida", "Integración de APIs", "Despliegue en la nube", "Arquitectura escalable"]
+      },
+      "uiux": {
+        "title": "Diseño UI/UX",
+        "desc": "Interfaces centradas en el usuario que inspiran y deleitan, creadas con una profunda comprensión del comportamiento del usuario.",
+        "features": ["Investigación de usuarios", "Prototipado", "Sistemas de diseño", "Pruebas de usabilidad"]
+      },
+      "support": {
+        "title": "Soporte continuo",
+        "desc": "Mantenimiento, escalado y optimización integrales para mantener tus activos digitales en su mejor rendimiento.",
+        "features": ["Monitoreo 24/7", "Actualizaciones periódicas", "Optimización de rendimiento", "Soporte técnico"]
+      }
+    }
+  },
+  "why": {
+    "title": "¿Por qué trabajar con nosotros?",
+    "subtitle": "Ofrecemos resultados excepcionales gracias a una combinación de talento de primer nivel, procesos probados y tecnología de vanguardia.",
+    "items": [
+      { "title": "Solo el 3% superior de diseñadores y desarrolladores", "text": "Una rigurosa selección garantiza trabajar con talento excepcional que entrega resultados sobresalientes." },
+      { "title": "Historial comprobado con empresas globales", "text": "Hemos entregado con éxito más de 500 proyectos, desde startups hasta empresas Fortune 500." },
+      { "title": "Soluciones a medida, sin plantillas", "text": "Cada proyecto se construye a medida para tus necesidades y tu marca." },
+      { "title": "Tecnología escalable que crece contigo", "text": "Arquitectura preparada para el futuro y código limpio que se adapta a tu expansión." },
+      { "title": "Garantía de calidad y soporte continuo", "text": "Pruebas exhaustivas, optimización y soporte continuo para el éxito a largo plazo." }
+    ]
+  },
+  "showcase": {
+    "title": "Mira nuestro trabajo en acción",
+    "subtitle": "Proyectos reales, resultados reales. Descubre cómo hemos ayudado a transformar la presencia digital de empresas y lograr resultados extraordinarios.",
+    "cards": [
+      { "title": "Panel de analítica empresarial", "tag": "Aplicación de sistema", "desc": "Plataforma de inteligencia empresarial en tiempo real que procesa más de 10M de puntos de datos al día para decisiones estratégicas." },
+      { "title": "Transformación de web corporativa", "tag": "Sitio web", "desc": "Presencia corporativa moderna que elevó la percepción de marca y generó un 500% más de leads calificados." },
+      { "title": "Suite de gestión de proyectos", "tag": "Aplicación de sistema", "desc": "Sistema integral de gestión de proyectos que optimizó flujos de trabajo en equipos de 15 países." }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "subtitle": "No te fíes solo de nuestra palabra. Aquí tienes lo que dicen los líderes del sector sobre trabajar con nuestro equipo."
+  },
+  "cta": {
+    "title_prefix": "¿Listo para contratar",
+    "title_highlight": "de clase mundial",
+    "title_suffix": "diseñadores y desarrolladores?",
+    "subtitle": "Únete a cientos de empresas que han transformado su presencia digital con nuestro talento de primer nivel. Hablemos de tu proyecto y creemos algo extraordinario juntos.",
+    "hire_us": "Contrátanos",
+    "schedule_call": "Agendar una llamada",
+    "stats": { "projects": "Proyectos entregados", "satisfaction": "Satisfacción del cliente", "support": "Soporte disponible" }
+  },
+  "footer": {
+    "sections": { "services": "Servicios", "company": "Empresa", "contact": "Ponte en contacto", "resources": "Recursos" },
+    "service_links": ["Diseño web", "Aplicaciones de sistema", "Diseño UI/UX", "Apps móviles", "E‑commerce", "Identidad de marca"],
+    "company_links": ["Sobre nosotros", "Nuestro proceso", "Casos de estudio", "Carreras", "Blog"],
+    "resource_links": ["Documentación", "Centro de ayuda", "Política de privacidad"],
+    "address": { "line1": "Calle Innovación 123", "line2": "Tech City, TC 12345" },
+    "built_with": "Construido con SvelteKit",
+    "copyright": "© 2024 Yntra Development Agency. Todos los derechos reservados."
+  },
+  "aria": { "toggle_menu": "Alternar menú", "go_to_slide": "Ir a la diapositiva {num}" }
+}

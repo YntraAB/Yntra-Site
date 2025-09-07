@@ -1,0 +1,110 @@
+{
+  "brand": { "name": "Yntra", "logo_alt": "Yntra logotyp" },
+  "meta": {
+    "title": "Yntra – Design- och utvecklingsbyrå",
+    "description": "Vi designar och bygger högpresterande webbplatser, appar och digitala system som hjälper företag att skala snabbare, se bättre ut och arbeta smartare.",
+    "keywords": "anställ utvecklare, bästa designers, webbutveckling, apputveckling, digital byrå, skräddarsydd mjukvara"
+  },
+  "nav": {
+    "services": "Tjänster",
+    "why": "Varför vi",
+    "testimonials": "Omdömen",
+    "contact": "Kontakt"
+  },
+  "lang": {
+    "label": "Språk",
+    "aria": "Byt språk",
+    "options": { "sv": "Svenska", "en": "English", "es": "Español", "de": "Deutsch", "fr": "Français" }
+  },
+  "hero": {
+    "looking_for": "Jag letar efter",
+    "btn": { "website": "Webbplats", "system": "Systemapp" },
+    "title_prefix": "Anlita de främsta 3 % av världens",
+    "title_highlight": "talanger",
+    "subtitle": "Vi designar och bygger högpresterande webbplatser, appar och digitala system som hjälper företag att skala snabbare, se bättre ut och arbeta smartare.",
+    "cta_hire": "Anlita oss"
+  },
+  "slides": {
+    "website": [
+      { "title": "Modern e‑handelsplattform", "subtitle": "Högkonverterande webbutik", "alt": "Modern e‑handelsplattform" },
+      { "title": "Företagswebbplats", "subtitle": "Professionell affärsnärvaro", "alt": "Företagswebbplats" }
+    ],
+    "system": [
+      { "title": "Analysdashboard", "subtitle": "Datadrivna affärsinsikter", "alt": "Analysdashboard" },
+      { "title": "Projektledningssystem", "subtitle": "Effektiviserat teamsamarbete", "alt": "Projektledningssystem" }
+    ]
+  },
+  "trusted": {
+    "title": "Betrodd av företag världen över",
+    "subtitle": "Ledande företag väljer oss för att bygga sin digitala framtid"
+  },
+  "services": {
+    "title": "Vad vi gör",
+    "subtitle": "Omfattande digitala lösningar anpassade efter dina affärsbehov – levererade av världsledande talanger.",
+    "cards": {
+      "websites": {
+        "title": "Webbplatser",
+        "desc": "Vackra, responsiva och konverteringsfokuserade webbplatser som skapar resultat och engagerar din målgrupp.",
+        "features": ["Responsiv design", "SEO‑optimerad", "Snabb prestanda", "CMS‑integration"]
+      },
+      "systems": {
+        "title": "Systemappar",
+        "desc": "Skräddarsydda verktyg och applikationer som effektiviserar verksamheten och ökar produktiviteten.",
+        "features": ["Anpassad utveckling", "API‑integration", "Moln‑distribution", "Skalbar arkitektur"]
+      },
+      "uiux": {
+        "title": "UI/UX‑design",
+        "desc": "Användarförst‑gränssnitt som engagerar och gläder, baserade på djup förståelse för användarbeteenden.",
+        "features": ["Användarundersökning", "Prototypning", "Designsystem", "Användbarhetstester"]
+      },
+      "support": {
+        "title": "Löpande support",
+        "desc": "Omfattande underhåll, skalning och optimering som håller dina digitala tillgångar på toppnivå.",
+        "features": ["24/7‑övervakning", "Regelbundna uppdateringar", "Prestandaoptimering", "Teknisk support"]
+      }
+    }
+  },
+  "why": {
+    "title": "Varför arbeta med oss?",
+    "subtitle": "Vi levererar exceptionella resultat genom en kombination av världsledande talang, beprövade processer och spetsteknik.",
+    "items": [
+      { "title": "Endast de främsta 3% av designers och utvecklare", "text": "Strikt urval säkerställer att du arbetar med toppkompetens som levererar enastående resultat." },
+      { "title": "Bevisad erfarenhet med globala företag", "text": "Framgångsrikt levererat 500+ projekt – från startups till Fortune 500‑företag." },
+      { "title": "Skräddarsydda lösningar – inga mallar", "text": "Varje projekt byggs från grunden för att passa dina unika behov och ditt varumärke." },
+      { "title": "Skalbar teknik som växer med dig", "text": "Framtidssäker arkitektur och ren kod som anpassas när du expanderar." },
+      { "title": "Kvalitetsgaranti och löpande support", "text": "Omfattande testning, optimering och kontinuerligt stöd för långsiktig framgång." }
+    ]
+  },
+  "showcase": {
+    "title": "Se vårt arbete i praktiken",
+    "subtitle": "Riktiga projekt, verkliga resultat. Upptäck hur vi hjälpt företag att transformera sin digitala närvaro och nå exceptionella resultat.",
+    "cards": [
+      { "title": "Enterprise‑analysdashboard", "tag": "Systemapp", "desc": "Realtidsplattform för affärsintelligens som bearbetar 10M+ datapunkter dagligen för strategiska beslut." },
+      { "title": "Förvandling av företagswebbplats", "tag": "Webbplats", "desc": "Modern företagsnärvaro som stärkte varumärket och genererade 500 % fler kvalificerade leads." },
+      { "title": "Projektledningssvit", "tag": "Systemapp", "desc": "Omfattande projektledningssystem som effektiviserade arbetsflöden för team i 15 länder." }
+    ]
+  },
+  "testimonials": {
+    "title": "Vad våra kunder säger",
+    "subtitle": "Ta inte bara oss på orden. Här är vad branschledare säger om att samarbeta med vårt team."
+  },
+  "cta": {
+    "title_prefix": "Redo att anlita",
+    "title_highlight": "världsklass",
+    "title_suffix": "designers och utvecklare?",
+    "subtitle": "Gå med i hundratals framgångsrika företag som har transformerat sin digitala närvaro med vår toppkompetens. Låt oss diskutera ditt projekt och skapa något extraordinärt tillsammans.",
+    "hire_us": "Anlita oss",
+    "schedule_call": "Boka ett samtal",
+    "stats": { "projects": "Genomförda projekt", "satisfaction": "Kundnöjdhet", "support": "Support tillgänglig" }
+  },
+  "footer": {
+    "sections": { "services": "Tjänster", "company": "Företag", "contact": "Kontakta oss", "resources": "Resurser" },
+    "service_links": ["Webbdesign", "Systemapplikationer", "UI/UX‑design", "Mobilappar", "E‑handel", "Varumärkesidentitet"],
+    "company_links": ["Om oss", "Vår process", "Case studies", "Karriär", "Blogg"],
+    "resource_links": ["Dokumentation", "Hjälpcenter", "Integritetspolicy"],
+    "address": { "line1": "Innovationgatan 123", "line2": "Tech City, TC 12345" },
+    "built_with": "Byggt med SvelteKit",
+    "copyright": "© 2024 Yntra Development Agency. Alla rättigheter förbehållna."
+  },
+  "aria": { "toggle_menu": "Växla meny", "go_to_slide": "Gå till bild {num}" }
+}
