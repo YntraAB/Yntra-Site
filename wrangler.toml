@@ -1,6 +1,5 @@
 name = "yntra-site"
-pages_build_output_dir = "./dist"
+pages_build_output_dir = "./build"
 
 [vars]
 API_KEY = "1234567asdf"
-YARN_VERSION = "1"
