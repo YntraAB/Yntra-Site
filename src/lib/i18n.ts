@@ -1,5 +1,5 @@
 import { browser } from '$app/environment';
-import { init, register, locale as localeStore, t as tStore } from 'svelte-i18n';
+import { init, register, locale as localeStore, t as tStore, waitLocale as waitLocaleFn } from 'svelte-i18n';
 
 // Register locales (dynamic imports)
 register('sv', () => import('./locales/sv.json'));
@@ -15,18 +15,20 @@ export function setupI18n() {
   initialized = true;
 
   const saved = browser ? localStorage.getItem('lang') : null;
-  const initial = saved || 'sv';
+  const supported = new Set(['sv','en','es','de','fr']);
+  const normalized = saved && supported.has(saved) ? saved : 'sv';
 
-  init({ fallbackLocale: 'en', initialLocale: initial });
+  init({ fallbackLocale: 'en', initialLocale: normalized });
 
   // ensure client picks saved locale after hydration
-  if (browser && saved) {
+  if (browser && saved && supported.has(saved)) {
     localeStore.set(saved);
   }
 }
 
 export const locale = localeStore;
 export const t = tStore;
+export const waitLocale = waitLocaleFn;
 
 // Initialize immediately on module load so SSR has a locale before any $t usage
 setupI18n();
