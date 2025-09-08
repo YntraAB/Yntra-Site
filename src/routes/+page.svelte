@@ -247,7 +247,7 @@
 <section class="py-24 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
   <div class="max-w-[1400px] mx-auto px-6 md:px-8">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('trusted.title')}</h2>
-    <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">{$t('trusted.subtitle')}</p>
+    <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12 text-[20px]">{$t('trusted.subtitle')}</p>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
       {#each companies as c, i}
@@ -465,7 +465,7 @@
   
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">{$t('testimonials.title')}</h2>
-    <p class="text-center text-white/80 max-w-3xl mx-auto mb-16">{$t('testimonials.subtitle')}</p>
+    <p class="text-center text-white/80 max-w-3xl mx-auto mb-16 text-[20px]">{$t('testimonials.subtitle')}</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
       {#each testimonials as t, i}
@@ -522,11 +522,11 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mt-12 pt-6 border-t border-white/10">
           <div class="text-center">
-            <div class="text-2xl font-bold text-[var(--accent)] mb-1">500+</div>
+            <div class="text-2xl font-bold text-[var(--accent)] mb-1">100+</div>
             <div class="text-white/80">{$t('cta.stats.projects')}</div>
           </div>
           <div class="text-center">
-            <div class="text-2xl font-bold text-[var(--accent)] mb-1">98%</div>
+            <div class="text-2xl font-bold text-[var(--accent)] mb-1">100%</div>
             <div class="text-white/80">{$t('cta.stats.satisfaction')}</div>
           </div>
           <div class="text-center">

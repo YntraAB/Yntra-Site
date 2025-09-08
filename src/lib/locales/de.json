@@ -1,9 +1,9 @@
 {
   "brand": { "name": "Yntra", "logo_alt": "Yntra-Logo" },
   "meta": {
-    "title": "Yntra – Design- & Entwicklungsstudio",
-    "description": "Wir entwerfen und entwickeln leistungsstarke Websites, Apps und digitale Systeme, die Unternehmen helfen, schneller zu skalieren, besser auszusehen und smarter zu arbeiten.",
-    "keywords": "entwickler einstellen, top designer, webentwicklung, app entwicklung, digitale agentur, maßgeschneiderte software"
+    "title": "Yntra — Design- & Entwicklungsstudio",
+    "description": "Wir entwerfen und entwickeln leistungsstarke Websites, Apps und digitale Systeme, die Unternehmen helfen, schneller zu skalieren, professioneller aufzutreten und smarter zu arbeiten.",
+    "keywords": "Entwickler einstellen, Top-Designer, Webentwicklung, App-Entwicklung, Digitalagentur, maßgeschneiderte Software"
   },
   "nav": {
     "services": "Leistungen",
@@ -19,42 +19,42 @@
   "hero": {
     "looking_for": "Ich suche",
     "btn": { "website": "Website", "system": "System‑App" },
-    "title_prefix": "Stellen Sie die Top 3% der Welt ein",
+    "title_prefix": "Stellen Sie die Top 3 % der Welt ein",
     "title_highlight": "Talente",
-    "subtitle": "Wir entwerfen und entwickeln leistungsstarke Websites, Apps und digitale Systeme, die Unternehmen helfen, schneller zu skalieren, besser auszusehen und smarter zu arbeiten.",
+    "subtitle": "Wir entwerfen und entwickeln leistungsstarke Websites, Apps und digitale Systeme, die Unternehmen helfen, schneller zu skalieren, professioneller aufzutreten und smarter zu arbeiten.",
     "cta_hire": "Beauftragen Sie uns"
   },
   "slides": {
     "website": [
-      { "title": "Moderne E‑Commerce‑Plattform", "subtitle": "Hoch konvertierender Onlineshop", "alt": "Moderne E‑Commerce‑Plattform" },
+      { "title": "Moderne E‑Commerce‑Plattform", "subtitle": "Hochkonvertierender Onlineshop", "alt": "Moderne E‑Commerce‑Plattform" },
       { "title": "Unternehmenswebsite", "subtitle": "Professionelle Unternehmenspräsenz", "alt": "Unternehmenswebsite" }
     ],
     "system": [
-      { "title": "Analyse‑Dashboard", "subtitle": "Datenbasierte Geschäftseinblicke", "alt": "Analyse‑Dashboard" },
-      { "title": "Projektmanagement‑System", "subtitle": "Optimierte Team‑Zusammenarbeit", "alt": "Projektmanagement‑System" }
+      { "title": "Analytics‑Dashboard", "subtitle": "Datengetriebene Geschäftseinblicke", "alt": "Analytics‑Dashboard" },
+      { "title": "Projektmanagementsystem", "subtitle": "Optimierte Teamzusammenarbeit", "alt": "Projektmanagementsystem" }
     ]
   },
   "trusted": {
-    "title": "Vertraut von Unternehmen weltweit",
-    "subtitle": "Führende Unternehmen wählen uns, um ihre digitale Zukunft zu gestalten"
+    "title": "Digitale Lösungen der Zukunft",
+    "subtitle": "Unternehmen aus verschiedenen Branchen wählen uns, um ihre digitale Entwicklung voranzutreiben"
   },
   "services": {
     "title": "Was wir tun",
-    "subtitle": "Umfassende digitale Lösungen, maßgeschneidert für Ihr Unternehmen – geliefert von Weltklasse‑Talenten.",
+    "subtitle": "Umfassende digitale Lösungen, maßgeschneidert für Ihre Geschäftsanforderungen — geliefert von Weltklasse‑Talenten.",
     "cards": {
       "websites": {
         "title": "Websites",
-        "desc": "Schöne, responsive, konversionsstarke Websites, die Ergebnisse liefern und Ihr Publikum begeistern.",
+        "desc": "Schöne, responsive, conversionstarke Websites, die Ergebnisse liefern und Ihr Publikum begeistern.",
         "features": ["Responsives Design", "SEO‑optimiert", "Hohe Performance", "CMS‑Integration"]
       },
       "systems": {
         "title": "System‑Apps",
-        "desc": "Individuelle Tools und Anwendungen, die Geschäftsprozesse optimieren und die Produktivität steigern.",
+        "desc": "Individuelle Tools und Anwendungen, die Geschäftsabläufe optimieren und die Produktivität steigern.",
         "features": ["Individuelle Entwicklung", "API‑Integration", "Cloud‑Deployment", "Skalierbare Architektur"]
       },
       "uiux": {
         "title": "UI/UX‑Design",
-        "desc": "Benutzerzentrierte Interfaces, die begeistern – entwickelt mit tiefem Verständnis für Nutzerverhalten.",
+        "desc": "Benutzerzentrierte Interfaces, die begeistern — mit tiefem Verständnis für Nutzerverhalten entwickelt.",
         "features": ["Nutzerforschung", "Prototyping", "Designsysteme", "Usability‑Tests"]
       },
       "support": {
@@ -68,8 +68,8 @@
     "title": "Warum mit uns arbeiten?",
     "subtitle": "Wir liefern außergewöhnliche Ergebnisse durch eine Kombination aus Weltklasse‑Talent, bewährten Prozessen und modernster Technologie.",
     "items": [
-      { "title": "Nur die Top 3% der Designer & Entwickler", "text": "Strenges Auswahlverfahren – Sie arbeiten mit herausragenden Talenten, die exzellente Ergebnisse liefern." },
-      { "title": "Erfolgsbilanz mit globalen Unternehmen", "text": "Über 500 Projekte erfolgreich umgesetzt – von Startups bis Fortune‑500‑Unternehmen." },
+      { "title": "Nur die Top 3 % der Designer & Entwickler", "text": "Strenges Auswahlverfahren — Sie arbeiten mit herausragenden Talenten, die exzellente Ergebnisse liefern." },
+      { "title": "Erfolgsbilanz mit globalen Unternehmen", "text": "Über 500 Projekte erfolgreich umgesetzt — von Startups bis Fortune‑500‑Unternehmen." },
       { "title": "Maßgeschneiderte Lösungen, keine Schablonen", "text": "Jedes Projekt wird individuell für Ihre Anforderungen und Marke entwickelt." },
       { "title": "Skalierbare Technologie, die mitwächst", "text": "Zukunftssichere Architektur und sauberer Code, der sich Ihrer Expansion anpasst." },
       { "title": "Qualitätsgarantie und laufender Support", "text": "Umfassende Tests, Optimierung und kontinuierliche Unterstützung für langfristigen Erfolg." }
@@ -77,11 +77,11 @@
   },
   "showcase": {
     "title": "Sehen Sie unsere Arbeit in Aktion",
-    "subtitle": "Echte Projekte, echte Ergebnisse. Entdecken Sie, wie wir die digitale Präsenz von Unternehmen transformiert haben.",
+    "subtitle": "Echte Projekte, echte Ergebnisse. Entdecken Sie, wie wir Unternehmen geholfen haben, ihre digitale Präsenz zu transformieren und außergewöhnliche Resultate zu erzielen.",
     "cards": [
-      { "title": "Enterprise‑Analyse‑Dashboard", "tag": "System‑App", "desc": "Echtzeit‑Business‑Intelligence‑Plattform, die täglich 10M+ Datenpunkte für strategische Entscheidungen verarbeitet." },
-      { "title": "Transformation der Unternehmenswebsite", "tag": "Website", "desc": "Moderne Unternehmenspräsenz, die die Markenwahrnehmung steigerte und 500% mehr qualifizierte Leads generierte." },
-      { "title": "Projektmanagement‑Suite", "tag": "System‑App", "desc": "Umfassendes Projektmanagement‑System, das Arbeitsabläufe in Teams aus 15 Ländern optimierte." }
+      { "title": "Enterprise‑Analytics‑Dashboard", "tag": "System‑App", "desc": "Echtzeit‑Business‑Intelligence‑Plattform, die täglich über 10 Mio. Datenpunkte für strategische Entscheidungen verarbeitet." },
+      { "title": "Transformation einer Corporate‑Website", "tag": "Website", "desc": "Moderne Unternehmenspräsenz, die die Markenwahrnehmung steigerte und 500 % mehr qualifizierte Leads generierte." },
+      { "title": "Projektmanagement‑Suite", "tag": "System‑App", "desc": "Umfassendes Projektmanagementsystem, das Workflows für Teams in 15 Ländern rationalisierte." }
     ]
   },
   "testimonials": {
@@ -101,7 +101,7 @@
     "sections": { "services": "Leistungen", "company": "Unternehmen", "contact": "Kontakt aufnehmen", "resources": "Ressourcen" },
     "service_links": ["Webdesign", "Systemanwendungen", "UI/UX‑Design", "Mobile Apps", "E‑Commerce", "Markenidentität"],
     "company_links": ["Über uns", "Unser Prozess", "Fallstudien", "Karriere", "Blog"],
-    "resource_links": ["Dokumentation", "Hilfe‑Center", "Datenschutzrichtlinie"],
+    "resource_links": ["Dokumentation", "Help‑Center", "Datenschutzrichtlinie"],
     "address": { "line1": "Innovationsstraße 123", "line2": "Tech City, TC 12345" },
     "built_with": "Erstellt mit SvelteKit",
     "copyright": "© 2024 Yntra Development Agency. Alle Rechte vorbehalten."

@@ -2,7 +2,7 @@ import { browser } from '$app/environment';
 import { init, register, locale as localeStore, t as tStore, waitLocale as waitLocaleFn } from 'svelte-i18n';
 
 // Register locales (dynamic imports)
-register('sv', () => import('./locales/sv.json'));
+register('sv', () => import('./locales/sv'));
 register('en', () => import('./locales/en.json'));
 register('es', () => import('./locales/es.json'));
 register('de', () => import('./locales/de.json'));

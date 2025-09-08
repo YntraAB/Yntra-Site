@@ -1,1 +1,110 @@
-{}
+{
+  "brand": { "name": "Yntra", "logo_alt": "Logo Yntra" },
+  "meta": {
+    "title": "Yntra — Studio de design et de développement",
+    "description": "Nous concevons et développons des sites web, des applications et des systèmes numériques haute performance qui aident les entreprises à évoluer plus vite, à paraître plus professionnelles et à travailler plus intelligemment.",
+    "keywords": "recruter développeurs, meilleurs designers, développement web, développement d'applications, agence digitale, logiciel sur mesure"
+  },
+  "nav": {
+    "services": "Services",
+    "why": "Pourquoi nous",
+    "testimonials": "Témoignages",
+    "contact": "Contact"
+  },
+  "lang": {
+    "label": "Langue",
+    "aria": "Changer de langue",
+    "options": { "sv": "Suédois", "en": "Anglais", "es": "Espagnol", "de": "Allemand", "fr": "Français" }
+  },
+  "hero": {
+    "looking_for": "Je cherche",
+    "btn": { "website": "Site web", "system": "Application système" },
+    "title_prefix": "Recrutez le top 3% mondial de",
+    "title_highlight": "talents",
+    "subtitle": "Nous concevons et développons des sites web, des applications et des systèmes numériques haute performance qui aident les entreprises à évoluer plus vite, à paraître plus professionnelles et à travailler plus intelligemment.",
+    "cta_hire": "Engagez‑nous"
+  },
+  "slides": {
+    "website": [
+      { "title": "Plateforme e‑commerce moderne", "subtitle": "Boutique en ligne à forte conversion", "alt": "Plateforme e‑commerce moderne" },
+      { "title": "Site vitrine d'entreprise", "subtitle": "Présence professionnelle", "alt": "Site vitrine d'entreprise" }
+    ],
+    "system": [
+      { "title": "Tableau de bord analytique", "subtitle": "Insights business pilotés par les données", "alt": "Tableau de bord analytique" },
+      { "title": "Système de gestion de projets", "subtitle": "Collaboration d'équipe rationalisée", "alt": "Système de gestion de projets" }
+    ]
+  },
+  "trusted": {
+    "title": "Solutions numériques d'avenir",
+    "subtitle": "Des entreprises de divers secteurs nous choisissent pour accélérer leur développement numérique"
+  },
+  "services": {
+    "title": "Ce que nous faisons",
+    "subtitle": "Des solutions numériques complètes, adaptées aux besoins de votre entreprise et délivrées par des talents de classe mondiale.",
+    "cards": {
+      "websites": {
+        "title": "Sites web",
+        "desc": "Des sites beaux, responsives et orientés conversion qui génèrent des résultats et engagent votre audience.",
+        "features": ["Design responsive", "SEO optimisé", "Haute performance", "Intégration CMS"]
+      },
+      "systems": {
+        "title": "Applications système",
+        "desc": "Des outils et applications sur mesure pour optimiser les opérations et accroître la productivité.",
+        "features": ["Développement sur mesure", "Intégration API", "Déploiement cloud", "Architecture scalable"]
+      },
+      "uiux": {
+        "title": "Design UI/UX",
+        "desc": "Des interfaces centrées utilisateur qui engagent et ravissent, conçues avec une compréhension approfondie des comportements.",
+        "features": ["Recherche utilisateur", "Prototypage", "Design systems", "Tests d'utilisabilité"]
+      },
+      "support": {
+        "title": "Support continu",
+        "desc": "Maintenance, montée en charge et optimisation complètes pour maintenir vos actifs numériques au meilleur niveau.",
+        "features": ["Supervision 24/7", "Mises à jour régulières", "Optimisation des performances", "Support technique"]
+      }
+    }
+  },
+  "why": {
+    "title": "Pourquoi travailler avec nous ?",
+    "subtitle": "Nous délivrons des résultats exceptionnels grâce à l'alliance de talents de classe mondiale, de processus éprouvés et de technologies de pointe.",
+    "items": [
+      { "title": "Seulement le top 3% des designers et développeurs", "text": "Une sélection rigoureuse pour travailler avec des talents d'exception qui livrent des résultats remarquables." },
+      { "title": "Historique probant avec des entreprises mondiales", "text": "Plus de 500 projets livrés avec succès, des startups aux entreprises du Fortune 500." },
+      { "title": "Des solutions sur mesure, sans modèles tout faits", "text": "Chaque projet est conçu sur mesure pour vos besoins uniques et votre marque." },
+      { "title": "Une technologie scalable qui grandit avec vous", "text": "Une architecture pérenne et un code propre qui s'adaptent à votre croissance." },
+      { "title": "Garantie qualité et support continu", "text": "Tests complets, optimisation et accompagnement continu pour une réussite durable." }
+    ]
+  },
+  "showcase": {
+    "title": "Découvrez notre travail en action",
+    "subtitle": "Des projets réels, des résultats concrets. Découvrez comment nous aidons les entreprises à transformer leur présence digitale et à atteindre des performances exceptionnelles.",
+    "cards": [
+      { "title": "Tableau de bord analytique d'entreprise", "tag": "Application système", "desc": "Plateforme de business intelligence en temps réel traitant plus de 10M de points de données par jour pour des décisions stratégiques." },
+      { "title": "Transformation de site corporate", "tag": "Site web", "desc": "Présence corporate moderne qui a renforcé l'image de marque et généré 500% de leads qualifiés en plus." },
+      { "title": "Suite de gestion de projets", "tag": "Application système", "desc": "Système complet de gestion de projets ayant rationalisé les workflows d'équipes dans 15 pays." }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Ne vous fiez pas qu'à notre parole. Voici ce que disent les leaders du secteur sur leur collaboration avec notre équipe."
+  },
+  "cta": {
+    "title_prefix": "Prêt à engager",
+    "title_highlight": "de classe mondiale",
+    "title_suffix": "des designers et développeurs ?",
+    "subtitle": "Rejoignez des centaines d'entreprises qui ont transformé leur présence digitale grâce à nos talents d'élite. Discutons de votre projet et créons ensemble quelque chose d'extraordinaire.",
+    "hire_us": "Engagez‑nous",
+    "schedule_call": "Planifier un appel",
+    "stats": { "projects": "Projets", "satisfaction": "Satisfaction client", "support": "Support disponible" }
+  },
+  "footer": {
+    "sections": { "services": "Services", "company": "Entreprise", "contact": "Nous contacter", "resources": "Ressources" },
+    "service_links": ["Conception de sites", "Applications système", "Design UI/UX", "Applications mobiles", "E‑commerce", "Identité de marque"],
+    "company_links": ["À propos", "Notre méthode", "Études de cas", "Carrières", "Blog"],
+    "resource_links": ["Documentation", "Centre d'aide", "Politique de confidentialité"],
+    "address": { "line1": "123 rue de l'Innovation", "line2": "Tech City, TC 12345" },
+    "built_with": "Propulsé par SvelteKit",
+    "copyright": "© 2024 Yntra Development Agency. Tous droits réservés."
+  },
+  "aria": { "toggle_menu": "Basculer le menu", "go_to_slide": "Aller à la diapositive {num}" }
+}
