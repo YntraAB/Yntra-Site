@@ -2,7 +2,7 @@
   import Globe from 'lucide-svelte/icons/globe';
   import ChevronDown from 'lucide-svelte/icons/chevron-down';
   import Check from 'lucide-svelte/icons/check';
-  import { t, locale as i18nLocale } from 'svelte-i18n';
+  import { t, locale as i18nLocale } from '$lib/i18n';
 
   let { variant = 'desktop' } = $props<{ variant?: 'desktop' | 'mobile' }>();
 

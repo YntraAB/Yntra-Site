@@ -16,11 +16,10 @@
   import Star from 'lucide-svelte/icons/star';
   import Quote from 'lucide-svelte/icons/quote';
   import { reveal } from '$lib/actions/reveal';
-  import '$lib/i18n';
-  import { t } from 'svelte-i18n';
+  import { t, locale as i18nLocale } from '$lib/i18n';
   const serviceKeys = ['websites','systems','uiux','support'] as const;
   import { fitLines } from '$lib/actions/fitLines';
-  import { locale as i18nLocale } from 'svelte-i18n';
+  
 
   type ShowcaseType = 'website' | 'system';
 

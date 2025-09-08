@@ -1,5 +1,5 @@
 import { browser } from '$app/environment';
-import { init, register, locale as localeStore } from 'svelte-i18n';
+import { init, register, locale as localeStore, t as tStore } from 'svelte-i18n';
 
 // Register locales (dynamic imports)
 register('sv', () => import('./locales/sv.json'));
@@ -26,6 +26,7 @@ export function setupI18n() {
 }
 
 export const locale = localeStore;
+export const t = tStore;
 
 // Initialize immediately on module load so SSR has a locale before any $t usage
 setupI18n();
