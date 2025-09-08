@@ -95,7 +95,7 @@
     "subtitle": "Join hundreds of successful companies who've transformed their digital presence with our top-tier talent. Let's discuss your project and create something extraordinary together.",
     "hire_us": "Hire Us",
     "schedule_call": "Schedule a Call",
-    "stats": { "projects": "Projects Delivered", "satisfaction": "Client Satisfaction", "support": "Support Available" }
+    "stats": { "projects": "Projects", "satisfaction": "Client Satisfaction", "support": "Support Available" }
   },
   "footer": {
     "sections": { "services": "Services", "company": "Company", "contact": "Get in Touch", "resources": "Resources" },

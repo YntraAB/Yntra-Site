@@ -84,6 +84,7 @@
 
     <div class="md:hidden justify-self-end flex items-center gap-2">
       <button
+        type="button"
         class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-slate-200 text-slate-700 hover:bg-slate-50"
         aria-label={$t('aria.toggle_menu')}
         aria-expanded={mobileOpen}
@@ -130,13 +131,13 @@
         </div>
         <p class="text-slate-600 max-w-md">{$t('meta.description')}</p>
         <div class="mt-6 flex items-center gap-3">
-          <a href="https://x.com/yntra" target="_blank" rel="noreferrer" aria-label="X (Twitter)" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+          <a href="https://x.com/yntra" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
             <Twitter class="h-5 w-5" aria-hidden="true" />
           </a>
-          <a href="https://github.com/yntra" target="_blank" rel="noreferrer" aria-label="GitHub" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+          <a href="https://github.com/yntra" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
             <Github class="h-5 w-5" aria-hidden="true" />
           </a>
-          <a href="https://linkedin.com/company/yntra" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+          <a href="https://linkedin.com/company/yntra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
             <Linkedin class="h-5 w-5" aria-hidden="true" />
           </a>
         </div>
