@@ -174,6 +174,7 @@
         <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur rounded-xl px-2 py-1 mb-8 shadow-sm">
           <span class="text-black/60 text-sm px-2">{$t('hero.looking_for')}</span>
           <button
+            type="button"
             class={`inline-flex items-center px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-300 ease-out ${
               currentShowcaseType === 'website' ? 'bg-[var(--accent)] text-white' : 'text-black hover:bg-white'
             }`}
@@ -183,6 +184,7 @@
             <Monitor class="w-[18px] h-[18px] mr-1" aria-hidden="true" /> {$t('hero.btn.website')}
           </button>
           <button
+            type="button"
             class={`inline-flex items-center px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-300 ease-out ${
               currentShowcaseType === 'system' ? 'bg-[var(--accent)] text-white' : 'text-black hover:bg-white'
             }`}
@@ -195,17 +197,17 @@
 
         <h1 use:fitLines={{ lines: 2, min: 18, trigger: $i18nLocale }} class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
           {$t('hero.title_prefix')}
-          <span class="bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent"> {$t('hero.title_highlight')}</span>
+          <span class="bg-gradient-to-r from-[hsl(215,24%,70%)] to-[hsl(215,36%,58%)] bg-clip-text text-transparent"> {$t('hero.title_highlight')}</span>
         </h1>
         <p class="text-lg text-white/80 max-w-xl mb-8">{$t('hero.subtitle')}</p>
 
-        <a
-          href="#contact"
-          class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl bg-[var(--accent)] text-white px-10 py-2.5 text-lg shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+        <a 
+          href="#contact" 
+          class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl bg-[var(--accent)] text-white px-10 py-2.5 text-lg shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50" 
           onclick={(e) => smoothScroll(e as MouseEvent, '#contact')}
-        >
-          {$t('hero.cta_hire')} <ArrowRight class="w-4 h-4" aria-hidden="true" />
-        </a>
+        > 
+          {$t('hero.cta_hire')} <ArrowRight class="w-4 h-4" aria-hidden="true" /> 
+        </a> 
       </div>
 
       <!-- Right: Carousel -->
@@ -228,11 +230,12 @@
         <div class="absolute left-1/2 -translate-x-1/2 bottom-4 flex gap-2">
           {#each slides[currentShowcaseType] as _, i}
             <button
-            class={`h-2 rounded-full bg-white/50 transition-all ${
+              type="button"
+              class={`h-2 rounded-full bg-white/50 transition-all ${
                 i === currentSlideIndex ? 'w-6 bg-[var(--accent)]' : 'w-2'
               }`}
-              onclick={() => setSlide(i)}
-              aria-label={$t('aria.go_to_slide', { num: i + 1 })}
+            onclick={() => setSlide(i)}
+            aria-label={$t('aria.go_to_slide') + ' ' + (i + 1)}
             ></button>
           {/each}
         </div>
@@ -267,10 +270,11 @@
     <p class="text-slate-600 text-center max-w-3xl mx-auto mb-16 text-[20px]">{$t('services.subtitle')}</p>
 
     <div class="flex flex-nowrap justify-center max-[1120px]:flex-wrap gap-6 md:gap-8 max-[1120px]:justify-center">
-      {#each servicesSvg as s, i}
-        {@const IconComp = s.icon}
-        <div use:reveal={{ delay: i * 80 }} class="reveal group bg-white rounded-lg p-7 w-[314px] h-[420px] box-border shrink-0 transform-gpu will-change-transform transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl border border-transparent hover:border-slate-200">
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] flex items-center justify-center mb-6 transform-gpu transition-all duration-300 ease-out group-hover:ring-4 ring-[hsl(215,70%,56%)]/30">
+      {#each servicesSvg as s, i} 
+        {@const IconComp = s.icon} 
+        <div class="group w-[314px] h-[420px] box-border shrink-0">
+          <div use:reveal={{ delay: i * 80 }} class="reveal bg-white rounded-lg p-7 w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200"> 
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] flex items-center justify-center mb-6 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(215,70%,46%)]/30">
             <IconComp
               class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
               absoluteStrokeWidth
@@ -287,9 +291,10 @@
                 {$t(`services.cards.${serviceKeys[i]}.features.${fi}`)}
               </li>
             {/each}
-          </ul>
-        </div>
-      {/each}
+          </ul> 
+          </div> 
+        </div> 
+      {/each} 
     </div>
   </div>
 </section>
@@ -303,9 +308,10 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto">
       {#each benefitsSvg.slice(0, 4) as b, i}
         {@const BIcon = b.icon}
-        <div use:reveal={{ delay: i * 90 }} class="reveal group bg-white rounded-lg p-7 overflow-hidden transform-gpu will-change-transform transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl border border-transparent hover:border-slate-200">
+        <div class="group w-full">
+          <div use:reveal={{ delay: i * 90 }} class="reveal bg-white rounded-lg p-7 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200">
           <div class="flex items-start gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-300 ease-out group-hover:ring-4 ring-[#5177FF]/30">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
               <BIcon
                 class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
                 absoluteStrokeWidth
@@ -318,28 +324,31 @@
               <p class="text-slate-600">{$t(`why.items.${i}.text`)}</p>
             </div>
           </div>
+          </div>
         </div>
       {/each}
 
       <!-- Full width last card -->
-      <div use:reveal={{ delay: 140 }} class="reveal group bg-white rounded-lg p-7 overflow-hidden transform-gpu will-change-transform transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl border border-transparent hover:border-slate-200 md:col-span-2 w-full max-w-[640px] mx-auto">
-        {#if benefitsSvg[4]}
-          {@const LastIcon = benefitsSvg[4].icon}
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-300 ease-out group-hover:ring-4 ring-[#5177FF]/30">
-              <LastIcon
-                class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
-                absoluteStrokeWidth
-                style="shape-rendering:geometricPrecision; vector-effect: non-scaling-stroke"
-                aria-hidden="true"
-              />
+      <div class="group md:col-span-2 w-full max-w-[640px] mx-auto">
+        <div use:reveal={{ delay: 140 }} class="reveal bg-white rounded-lg p-7 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200">
+          {#if benefitsSvg[4]}
+            {@const LastIcon = benefitsSvg[4].icon}
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-300 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
+                <LastIcon
+                  class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
+                  absoluteStrokeWidth
+                  style="shape-rendering:geometricPrecision; vector-effect: non-scaling-stroke"
+                  aria-hidden="true"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1">{$t('why.items.4.title')}</h3>
+                <p class="text-slate-600">{$t('why.items.4.text')}</p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-lg font-bold text-slate-900 mb-1">{$t('why.items.4.title')}</h3>
-              <p class="text-slate-600">{$t('why.items.4.text')}</p>
-            </div>
-          </div>
-        {/if}
+          {/if}
+        </div>
       </div>
     </div>
   </div>
@@ -385,7 +394,7 @@
             </div>
           </div>
 
-          <button class="w-full inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 hover:bg-slate-50 transition px-4 py-3 font-semibold text-slate-800">
+          <button type="button" class="w-full inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 hover:bg-slate-50 transition px-4 py-3 font-semibold text-slate-800">
             View Case Study <LinkIcon class="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
@@ -450,7 +459,7 @@
 </section>
 
 <!-- Testimonials -->
-<section id="testimonials" class="relative isolate overflow-hidden py-24 text-white before:absolute before:inset-[-40%] before:z-[1] before:content-[''] before:pointer-events-none before:[mix-blend-mode:soft-light] before:bg-[radial-gradient(80%_60%_at_10%_0%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_60%),radial-gradient(60%_50%_at_90%_100%,rgba(88,130,193,0.06)_0%,rgba(88,130,193,0)_60%)] before:bg-no-repeat before:[background-size:100%_100%] before:[will-change:transform] before:opacity-60 before:animate-[layer-float_28s_ease-in-out_infinite] after:absolute after:inset-[-10%] after:z-[2] after:content-[''] after:pointer-events-none after:bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] after:[mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[-webkit-mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[mix-blend-mode:overlay] after:opacity-30 after:animate-[sheen-sweep_12s_ease-in-out_infinite]">
+<section id="testimonials" class="relative isolate overflow-hidden py-24 text-white before:absolute before:inset-[-40%] before:z-[1] before:content-[''] before:pointer-events-none before:[mix-blend-mode:soft-light] before:bg-[radial-gradient(80%_60%_at_10%_0%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_60%),radial-gradient(60%_50%_at_90%_100%,rgba(88,130,193,0.06)_0%,rgba(88,130,193,0)_60%)] before:bg-no-repeat before:[background-size:100%_100%] before:[will-change:transform] before:opacity-60 before:animate-[layer-float_18s_ease-in-out_infinite] after:absolute after:inset-[-10%] after:z-[2] after:content-[''] after:pointer-events-none after:bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] after:[mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[-webkit-mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[mix-blend-mode:overlay] after:opacity-30 after:animate-[sheen-sweep_6s_ease-in-out_infinite]">
 
   <!-- Overscan gradient layer to avoid edges while panning -->
   <div class="absolute inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_35%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
@@ -490,7 +499,7 @@
       <div class="absolute inset-0 z-[1] pointer-events-none [mix-blend-mode:soft-light] bg-[radial-gradient(60%_35%_at_20%_0%,rgba(255,255,255,0.02)_0%,transparent_60%),radial-gradient(50%_40%_at_80%_100%,rgba(88,130,193,0.05)_0%,transparent_60%)]"></div>
       
       <div class="relative z-10 text-center px-6 sm:px-10 md:px-16 py-16">
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
           {$t('cta.title_prefix')}
           <span class="bg-gradient-to-r from-[hsl(215,24%,70%)] to-[hsl(215,36%,58%)] bg-clip-text text-transparent">{$t('cta.title_highlight')}</span>
           {$t('cta.title_suffix')}
@@ -500,13 +509,13 @@
         <div class="flex flex-wrap gap-4 justify-center mt-8">
           <a
           href="mailto:info@yntra.com"
-          class="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] hover:opacity-95 transition shadow"
+          class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
           >
             <MailIcon class="w-5 h-5" aria-hidden="true" /> {$t('cta.hire_us')} <ArrowRight class="w-5 h-5" aria-hidden="true" />
           </a>
           <button
             type="button"
-            class="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold border border-white/20 bg-white/10 hover:bg-white/15 transition"
+            class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold border border-white/20 bg-white/10 hover:bg-white/15 shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
           >
             <CalendarIcon class="w-5 h-5" aria-hidden="true" /> {$t('cta.schedule_call')}
           </button>

@@ -10,8 +10,8 @@
 
   let open = $state(false);
   let focusedIndex = $state<number>(-1);
-  let buttonEl: HTMLButtonElement | null = null;
-  let listEl: HTMLUListElement | null = null;
+  let buttonEl = $state<HTMLButtonElement | null>(null);
+  let listEl = $state<HTMLUListElement | null>(null);
 
   function toggle() {
     open = !open;
@@ -113,6 +113,7 @@
           aria-selected={code === $i18nLocale}
           class="flex items-center justify-between gap-2 px-2 py-2 rounded-md cursor-pointer hover:bg-slate-50 focus:bg-slate-50"
           onclick={() => select(code)}
+          onkeydown={(e) => { const k = e.key; if (k === 'Enter' || k === ' ') { e.preventDefault(); select(code); } }}
         >
           <div class="flex items-center gap-2">
             <span class="inline-flex h-5 w-8 items-center justify-center text-xs font-semibold rounded bg-slate-100 text-slate-700">

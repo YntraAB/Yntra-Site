@@ -95,7 +95,7 @@
     "subtitle": "Únete a cientos de empresas que han transformado su presencia digital con nuestro talento de primer nivel. Hablemos de tu proyecto y creemos algo extraordinario juntos.",
     "hire_us": "Contrátanos",
     "schedule_call": "Agendar una llamada",
-    "stats": { "projects": "Proyectos entregados", "satisfaction": "Satisfacción del cliente", "support": "Soporte disponible" }
+    "stats": { "projects": "Proyectos", "satisfaction": "Satisfacción del cliente", "support": "Soporte disponible" }
   },
   "footer": {
     "sections": { "services": "Servicios", "company": "Empresa", "contact": "Ponte en contacto", "resources": "Recursos" },
