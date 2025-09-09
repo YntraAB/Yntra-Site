@@ -110,6 +110,22 @@
     { abbr: 'DF', name: 'DigitalFirst' }
   ];
 
+  // Showcase media (PNG) — drop files into static/images and adjust names if needed
+  type ShowcaseMedia = { src: string };
+  const showcaseMedia: ShowcaseMedia[] = [
+    { src: '/images/omsorgPreview.png' }, // index 0
+    { src: '/images/React Pro.png' },     // index 1 (React Pro)
+    { src: '/images/showcase-2.png' },    // index 2
+    { src: '/images/React Pro.png' }      // index 3 (temporary until you add a 4th)
+  ];
+  // Four list buttons mapped to three content cards (some reuse OK), but only one button can be selected
+  const listItems: number[] = [0, 1, 2, 3]; // four distinct buttons mapping to 4 card indices
+  let selectedListIndex = $state(0);
+  const selectedCardIndex = $derived(listItems[selectedListIndex]);
+  function selectList(i: number) {
+    selectedListIndex = i;
+  }
+
   const servicesSvg = [
     { icon: Monitor, title: 'Websites', desc: 'Beautiful, responsive, conversion-focused websites that drive results and engage your audience.', features: ['Responsive Design', 'SEO Optimized', 'Fast Performance', 'CMS Integration'] },
     { icon: Smartphone, title: 'System Apps', desc: 'Custom-built tools and applications to streamline business operations and boost productivity.', features: ['Custom Development', 'API Integration', 'Cloud Deployment', 'Scalable Architecture'] },
@@ -262,6 +278,18 @@
   </div>
 </section>
 
+<style>
+  .gradient-animated {
+    background-size: 200% 200%;
+    animation: gradient-pan 6s ease-in-out infinite;
+  }
+  @keyframes gradient-pan {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+</style>
+
 <!-- Trusted By -->
 <section class="py-24 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
   <div class="max-w-[1400px] mx-auto px-6 md:px-8">
@@ -380,18 +408,18 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
       <!-- Project card -->
-        <div use:reveal={{ delay: 60, variant: 'up' }} class="reveal bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
-        <div class="relative h-96">
+        <div use:reveal={{ delay: 60, variant: 'up' }} class="reveal group relative rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200/70 shadow-sm overflow-hidden transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-2xl hover:border-slate-300">
+        <div class="relative overflow-hidden h-[clamp(160px,35vw,280px)] md:h-[clamp(220px,30vw,340px)]">
           <img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='400' viewBox='0 0 500 400'%3E%3Crect width='500' height='400' fill='%23f0f0f0'/%3E%3Ctext x='250' y='200' text-anchor='middle' dy='.3em' font-family='Arial' font-size='20'%3EE-commerce Platform Revolution%3C/text%3E%3C/svg%3E"
-            alt="E-commerce Platform Revolution"
-            class="w-full h-full object-cover"
+            src={showcaseMedia[selectedCardIndex].src}
+            alt={selectedCardIndex < 3 ? $t(`showcase.cards.${selectedCardIndex}.title`) : 'Custom Project'}
+            class="w-full h-full object-cover transform-gpu will-change-transform transition-transform duration-500 ease-out group-hover:scale-[1.03]"
           />
-          <span class="absolute top-4 right-4 bg-[var(--accent)] text-white text-xs font-semibold px-3 py-1 rounded-full">{$t('showcase.cards.1.tag')}</span>
+          <span class="absolute top-4 right-4 bg-[var(--accent)] text-white text-xs font-semibold px-3 py-1 rounded-full">{selectedCardIndex < 3 ? $t(`showcase.cards.${selectedCardIndex}.tag`) : 'Custom'}</span>
         </div>
         <div class="p-6">
-          <h3 class="text-xl font-bold text-slate-900 mb-2">{$t('showcase.cards.1.title')}</h3>
-          <p class="text-slate-600 mb-4">{$t('showcase.cards.1.desc')}</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">{selectedCardIndex < 3 ? $t(`showcase.cards.${selectedCardIndex}.title`) : 'Custom Project'}</h3>
+          <p class="text-slate-600 mb-4">{selectedCardIndex < 3 ? $t(`showcase.cards.${selectedCardIndex}.desc`) : 'Your fourth showcase description goes here.'}</p>
 
           <div class="mb-4">
             <h4 class="font-semibold text-slate-900 mb-2">Key Results</h4>
@@ -412,65 +440,37 @@
             </div>
           </div>
 
-          <button type="button" class="w-full inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 hover:bg-slate-50 transition px-4 py-3 font-semibold text-slate-800">
-            View Case Study <LinkIcon class="w-5 h-5" aria-hidden="true" />
-          </button>
+          
         </div>
       </div>
 
       <!-- Project list -->
       <div class="space-y-4">
-        <div use:reveal={{ delay: 120, variant: 'left' }} class="reveal cursor-pointer rounded-lg p-7 bg-gradient-to-r from-indigo-400 to-violet-400 text-white">
-          <div class="flex items-center justify-between">
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <h3 class="font-bold">{$t('showcase.cards.1.title')}</h3>
-                <span class="bg-white/20 text-xs px-2 py-0.5 rounded-full">{$t('showcase.cards.1.tag')}</span>
+        {#each listItems as cardIdx, li}
+          <div
+            class={`cursor-pointer rounded-lg p-7 transition-colors duration-300 ease-out focus-visible:outline-none ${
+              li === selectedListIndex
+                ? 'text-white bg-gradient-to-r from-indigo-400 to-violet-400 gradient-animated hover:brightness-110 ring-2 ring-indigo-300'
+                : 'bg-white text-slate-900 hover:bg-slate-50 hover:shadow-md hover:ring-1 hover:ring-slate-200'
+            }`}
+            role="button"
+            onclick={() => selectList(li)}
+            aria-pressed={li === selectedListIndex}
+            tabindex="0"
+            onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') selectList(li); }}
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <h3 class="font-bold">{$t(`showcase.cards.${cardIdx}.title`)}</h3>
+                  <span class={`${li === selectedListIndex ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-700'} text-xs px-2 py-0.5 rounded-full`}>{$t(`showcase.cards.${cardIdx}.tag`)}</span>
+                </div>
+                <p class="text-sm opacity-80">{$t(`showcase.cards.${cardIdx}.desc`)}</p>
               </div>
-              <p class="text-sm text-white/80">{$t('showcase.cards.1.desc')}</p>
+              <ArrowRight class={`w-5 h-5 ${li === selectedListIndex ? 'text-white' : 'text-slate-500'}`} aria-hidden="true" />
             </div>
-            <ArrowRight class="w-5 h-5" aria-hidden="true" />
           </div>
-        </div>
-
-        <div use:reveal={{ delay: 180, variant: 'right' }} class="reveal cursor-pointer rounded-lg p-7 bg-white transition hover:shadow-md">
-          <div class="flex items-center justify-between">
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <h3 class="font-bold text-slate-900">{$t('showcase.cards.0.title')}</h3>
-                <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded-full">{$t('showcase.cards.0.tag')}</span>
-              </div>
-              <p class="text-sm text-slate-600">{$t('showcase.cards.0.desc')}</p>
-            </div>
-            <ArrowRight class="w-5 h-5 text-slate-500" aria-hidden="true" />
-          </div>
-        </div>
-
-        <div use:reveal={{ delay: 240, variant: 'left' }} class="reveal cursor-pointer rounded-lg p-7 bg-white transition hover:shadow-md">
-          <div class="flex items-center justify-between">
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <h3 class="font-bold text-slate-900">{$t('showcase.cards.1.title')}</h3>
-                <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded-full">{$t('showcase.cards.1.tag')}</span>
-              </div>
-              <p class="text-sm text-slate-600">{$t('showcase.cards.1.desc')}</p>
-            </div>
-            <ArrowRight class="w-5 h-5 text-slate-500" aria-hidden="true" />
-          </div>
-        </div>
-
-        <div use:reveal={{ delay: 300, variant: 'right' }} class="reveal cursor-pointer rounded-lg p-7 bg-white transition hover:shadow-md">
-          <div class="flex items-center justify-between">
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <h3 class="font-bold text-slate-900">{$t('showcase.cards.2.title')}</h3>
-                <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded-full">{$t('showcase.cards.2.tag')}</span>
-              </div>
-              <p class="text-sm text-slate-600">{$t('showcase.cards.2.desc')}</p>
-            </div>
-            <ArrowRight class="w-5 h-5 text-slate-500" aria-hidden="true" />
-          </div>
-        </div>
+        {/each}
       </div>
     </div>
   </div>
