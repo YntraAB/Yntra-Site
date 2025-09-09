@@ -30,8 +30,8 @@
       { "title": "Corporate Website", "subtitle": "Professional business presence", "alt": "Corporate Website" }
     ],
     "system": [
-      { "title": "Analytics Dashboard", "subtitle": "Data-driven business insights", "alt": "Analytics Dashboard" },
-      { "title": "Project Management System", "subtitle": "Streamlined team collaboration", "alt": "Project Management System" }
+      { "title": "Omsorg", "subtitle": "Custom system app", "alt": "Omsorg" },
+      { "title": "Avelonia", "subtitle": "Custom system app", "alt": "Avelonia" }
     ]
   },
   "trusted": {

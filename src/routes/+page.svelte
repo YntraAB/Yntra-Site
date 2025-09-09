@@ -33,32 +33,28 @@
       {
         title: 'Modern E-commerce Platform',
         subtitle: 'High-converting online store',
-        src:
-          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f0f0f0'/%3E%3Ctext x='200' y='150' text-anchor='middle' dy='.3em' font-family='Arial' font-size='18'%3EModern E-commerce Platform%3C/text%3E%3C/svg%3E",
+        src: '/images/EcoSync.png',
         alt: 'Modern E-commerce Platform'
       },
       {
         title: 'Corporate Website',
         subtitle: 'Professional business presence',
-        src:
-          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e0e0e0'/%3E%3Ctext x='200' y='150' text-anchor='middle' dy='.3em' font-family='Arial' font-size='18'%3ECorporate Website%3C/text%3E%3C/svg%3E",
+        src: '/images/Stalker-one.png',
         alt: 'Corporate Website'
       }
     ],
     system: [
       {
-        title: 'Analytics Dashboard',
-        subtitle: 'Data-driven business insights',
-        src:
-          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23d0d0d0'/%3E%3Ctext x='200' y='150' text-anchor='middle' dy='.3em' font-family='Arial' font-size='18'%3EAnalytics Dashboard%3C/text%3E%3C/svg%3E",
-        alt: 'Analytics Dashboard'
+        title: 'Omsorg',
+        subtitle: 'Custom system app',
+        src: '/images/Omsorg.png',
+        alt: 'Omsorg'
       },
       {
-        title: 'Project Management System',
-        subtitle: 'Streamlined team collaboration',
-        src:
-          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23c0c0c0'/%3E%3Ctext x='200' y='150' text-anchor='middle' dy='.3em' font-family='Arial' font-size='18'%3EProject Management System%3C/text%3E%3C/svg%3E",
-        alt: 'Project Management System'
+        title: 'Avelonia',
+        subtitle: 'Custom system app',
+        src: '/images/Avelonia.png',
+        alt: 'Avelonia'
       }
     ]
   };
@@ -67,10 +63,12 @@
   function toggleShowcase(type: ShowcaseType) {
     currentShowcaseType = type;
     currentSlideIndex = 0;
+    restartAutoAdvance();
   }
 
   function setSlide(index: number) {
     currentSlideIndex = index;
+    restartAutoAdvance();
   }
 
   function smoothScroll(e: MouseEvent, selector: string) {
@@ -79,15 +77,28 @@
     el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // Auto-advance carousel
+  // Auto-advance carousel with reset on interaction
   let interval: ReturnType<typeof setInterval> | null = null;
-  onMount(() => {
+  function startAutoAdvance() {
+    stopAutoAdvance();
     interval = setInterval(() => {
       const len = slides[currentShowcaseType].length;
       currentSlideIndex = (currentSlideIndex + 1) % len;
     }, 5000);
+  }
+  function stopAutoAdvance() {
+    if (interval) {
+      clearInterval(interval);
+      interval = null;
+    }
+  }
+  function restartAutoAdvance() {
+    startAutoAdvance();
+  }
+  onMount(() => {
+    startAutoAdvance();
   });
-  onDestroy(() => interval && clearInterval(interval));
+  onDestroy(() => stopAutoAdvance());
 
   // Data sets for sections
   const companies = [
@@ -213,12 +224,19 @@
       <div class="relative h-96 rounded-2xl overflow-hidden bg-white/10 backdrop-blur shadow-xl ring-1 ring-white/10">
         {#each slides[currentShowcaseType] as s, i}
           <div
-            class={`absolute inset-0 transition-transform duration-500 ${
-              i === currentSlideIndex ? 'translate-x-0' : 'translate-x-full'
+            class={`absolute inset-0 transition-[transform,opacity] duration-500 ${
+              i === currentSlideIndex ? 'translate-x-0 opacity-100 z-[1]' : 'translate-x-[110%] opacity-0 pointer-events-none'
             }`}
             aria-hidden={i !== currentSlideIndex}
           >
-            <img src={s.src} alt={$t(`slides.${currentShowcaseType}.${i}.alt`)} class="w-full h-full object-cover" />
+            <img
+              src={s.src}
+              alt={$t(`slides.${currentShowcaseType}.${i}.alt`)}
+              class={`absolute inset-0 w-full h-full object-cover origin-center scale-[1.4] will-change-transform [backface-visibility:hidden] ${
+                s.src.endsWith('Stalker-one.png') ? 'translate-y-[-2%]' : ''
+              }`}
+              style={`object-position: ${'50% 50%'}`}
+            />
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
               <h3 class="text-lg font-semibold mb-1">{$t(`slides.${currentShowcaseType}.${i}.title`)}</h3>
               <p class="text-white/80 text-sm">{$t(`slides.${currentShowcaseType}.${i}.subtitle`)}</p>
@@ -226,15 +244,16 @@
           </div>
         {/each}
 
-        <div class="absolute left-1/2 -translate-x-1/2 bottom-4 flex gap-2">
+        <div class="absolute left-1/2 -translate-x-1/2 bottom-4 flex gap-2 z-[5]">
           {#each slides[currentShowcaseType] as _, i}
             <button
               type="button"
-              class={`h-2 rounded-full bg-white/50 transition-all ${
-                i === currentSlideIndex ? 'w-6 bg-[var(--accent)]' : 'w-2'
+              class={`h-2 rounded-full transition-all transition-colors duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:bg-[var(--accent)] focus-visible:text-white focus-visible:w-6 cursor-pointer ${
+                i === currentSlideIndex ? 'w-6 bg-[var(--accent)] text-white' : 'w-2 bg-white/50'
               }`}
             onclick={() => setSlide(i)}
             aria-label={$t('aria.go_to_slide') + ' ' + (i + 1)}
+            aria-pressed={i === currentSlideIndex}
             ></button>
           {/each}
         </div>
