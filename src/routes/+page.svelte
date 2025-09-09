@@ -19,6 +19,8 @@
   import { t, locale as i18nLocale } from '$lib/i18n';
   const serviceKeys = ['websites','systems','uiux','support'] as const;
   import { fitLines } from '$lib/actions/fitLines';
+  import ContactModal from '$lib/components/ContactModal.svelte';
+  import ScheduleCallModal from '$lib/components/ScheduleCallModal.svelte';
   
 
   type ShowcaseType = 'website' | 'system';
@@ -26,6 +28,8 @@
   // State (Svelte 5 runes)
   let currentShowcaseType = $state<ShowcaseType>('website');
   let currentSlideIndex = $state(0);
+  let showContact = $state(false);
+  let showSchedule = $state(false);
 
   // Carousel data
   const slides: Record<ShowcaseType, { title: string; subtitle: string; src: string; alt: string }[]> = {
@@ -525,15 +529,17 @@
         <p class="text-lg text-white/80 max-w-3xl mx-auto">{$t('cta.subtitle')}</p>
 
         <div class="flex flex-wrap gap-4 justify-center mt-8">
-          <a
-          href="mailto:info@yntra.com"
-          class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+          <button
+            type="button"
+            class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+            onclick={() => (showContact = true)}
           >
             <MailIcon class="w-5 h-5" aria-hidden="true" /> {$t('cta.hire_us')} <ArrowRight class="w-5 h-5" aria-hidden="true" />
-          </a>
+          </button>
           <button
             type="button"
             class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold border border-white/20 bg-white/10 hover:bg-white/15 shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+            onclick={() => (showSchedule = true)}
           >
             <CalendarIcon class="w-5 h-5" aria-hidden="true" /> {$t('cta.schedule_call')}
           </button>
@@ -557,3 +563,14 @@
     </div>
   </div>
 </section>
+
+<!-- Contact Modal Mount -->
+<ContactModal bind:open={showContact} onsubmit={(e) => {
+  // You can wire this up to an API or email service
+  console.log('contact form submitted', Array.from(e.detail.entries()));
+}} />
+
+<ScheduleCallModal bind:open={showSchedule} onsubmit={(e) => {
+  // Handle booking payload here; e.detail contains the booking details
+  console.log('schedule submitted', e.detail);
+}} />

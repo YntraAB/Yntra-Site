@@ -1,0 +1,53 @@
+import base from './en.json';
+
+export default {
+  ...base,
+  modal: {
+    title: 'Contact us',
+    desc: 'Share a few details and we’ll get back to you shortly.',
+    company_label: 'Company name',
+    company_placeholder: 'e.g. Yntra AB',
+    tel_label: 'Tel',
+    tel_placeholder: 'e.g. +46 70 123 45 67',
+    email_label: 'Email',
+    email_placeholder: 'e.g. you@company.com',
+    message_label: 'Message',
+    message_placeholder: 'Tell us about your project or question...',
+    cancel: 'Cancel',
+    send: 'Send',
+    privacy: 'We’ll never share your info.',
+    close: 'Close'
+  },
+  schedule: {
+    title: 'Book a call',
+    desc: 'Pick a time that works for you. We’ll meet online and discuss your needs and next steps.',
+    length_label: 'Duration',
+    min: 'min',
+    type_label: 'Meeting type',
+    type_phone: 'Phone',
+    pick_time: 'Pick a day and time',
+    timezone_prefix: 'Times shown in',
+    custom_label: 'Custom…',
+    custom_pick_label: 'Pick a date',
+    no_slots: 'No available slots on this day',
+    name_label: 'Name',
+    name_placeholder: 'e.g. Jane Doe',
+    email_label: 'Email',
+    email_placeholder: 'e.g. you@company.com',
+    company_label: 'Company',
+    company_placeholder: 'e.g. Yntra AB',
+    tel_label: 'Tel',
+    tel_placeholder: 'e.g. +46 70 123 45 67',
+    notes_label: 'Notes (optional)',
+    notes_placeholder: 'Anything specific you’d like to cover?',
+    cancel: 'Cancel',
+    confirm: 'Confirm booking',
+    privacy: 'We’ll send a confirmation and calendar invite.' ,
+    close: 'Close',
+    select_time_required: 'Please select a time slot.',
+    prev_day: 'Previous day',
+    next_day: 'Next day',
+    calendar_open: 'Open calendar',
+    clear_date: 'Clear date'
+  }
+};

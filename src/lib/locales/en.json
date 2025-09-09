@@ -107,4 +107,21 @@
     "copyright": "© 2024 Yntra Development Agency. All rights reserved."
   },
   "aria": { "toggle_menu": "Toggle menu", "go_to_slide": "Go to slide {num}" }
+  ,
+  "modal": {
+    "title": "Contact us",
+    "desc": "Share a few details and we’ll get back to you shortly.",
+    "company_label": "Company name",
+    "company_placeholder": "e.g. Yntra AB",
+    "tel_label": "Tel",
+    "tel_placeholder": "e.g. +46 70 123 45 67",
+    "email_label": "Email",
+    "email_placeholder": "e.g. you@company.com",
+    "message_label": "Message",
+    "message_placeholder": "Tell us about your project or question...",
+    "cancel": "Cancel",
+    "send": "Send",
+    "privacy": "We’ll never share your info.",
+    "close": "Close"
+  }
 }

@@ -2,11 +2,11 @@ import { browser } from '$app/environment';
 import { init, register, locale as localeStore, t as tStore, waitLocale as waitLocaleFn } from 'svelte-i18n';
 
 // Register locales (dynamic imports)
-register('sv', () => import('./locales/sv'));
-register('en', () => import('./locales/en.json'));
-register('es', () => import('./locales/es.json'));
-register('de', () => import('./locales/de.json'));
-register('fr', () => import('./locales/fr.json'));
+register('sv', () => import('./locales/sv_full'));
+register('en', () => import('./locales/en'));
+register('es', () => import('./locales/es'));
+register('de', () => import('./locales/de'));
+register('fr', () => import('./locales/fr'));
 
 let initialized = false;
 
