@@ -9,7 +9,6 @@
   import Mail from 'lucide-svelte/icons/mail';
   import Phone from 'lucide-svelte/icons/phone';
   import MapPin from 'lucide-svelte/icons/map-pin';
-  import Globe from 'lucide-svelte/icons/globe';
   import { setupI18n, t, locale as i18nLocale } from '$lib/i18n';
   import LanguageSelector from '$lib/components/LanguageSelector.svelte';
 
