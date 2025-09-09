@@ -198,7 +198,7 @@
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
           <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.0')}</a></li>
           <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.1')}</a></li>
-          <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.2')}</a></li>
+          <li><a href="/privacy-policy" class="hover:text-slate-900">{$t('footer.resource_links.2')}</a></li>
         </ul>
       </div>
     </div>

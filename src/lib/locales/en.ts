@@ -2,6 +2,72 @@ import base from './en.json';
 
 export default {
   ...base,
+  privacy: {
+    title: 'Privacy Policy',
+    meta_description: 'How Yntra handles your personal data: collection, use, and protection.',
+    hero: 'How we handle your personal data when you visit our website or use our services.',
+    last_updated_label: 'Last updated',
+    intro_card: 'We value your privacy and protect your personal data. This policy explains how we collect, use, and safeguard your information when you visit our website or use our services.',
+    s1: {
+      title: '1. Information We Collect',
+      intro: 'We may collect the following types of information:',
+      personal: {
+        title: 'Personal Information',
+        desc: 'Such as your name, email address, phone number, and company details when you contact us or request a service.'
+      },
+      technical: {
+        title: 'Technical Information',
+        desc: 'Such as IP address, browser type, device information, and usage data collected automatically when you interact with our website.'
+      }
+    },
+    s2: {
+      title: '2. How We Use the Data',
+      intro: 'We use the data to:',
+      items: [
+        'Provide, operate, and improve our services',
+        'Communicate with you about inquiries, projects, and support',
+        'Analyze site usage and improve the experience',
+        'Comply with legal obligations'
+      ]
+    },
+    s3: {
+      title: '3. Sharing of Data',
+      dont_sell: 'We do not sell, trade, or rent your personal data.',
+      only_share_with: 'We share data only with:',
+      items: {
+        providers: 'Trusted service providers who assist in operating our website and delivering services.',
+        legal: 'Legal authorities if required by law or to protect our rights.'
+      }
+    },
+    s4: {
+      title: '4. Data Security',
+      text: 'We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.'
+    },
+    s5: {
+      title: '5. Your Rights',
+      intro: 'Depending on your location, you may have the right to:',
+      items: [
+        'Access, correct, or delete your personal information',
+        'Restrict or object to the processing of your data',
+        'Request data portability',
+        'Withdraw consent at any time'
+      ],
+      contact_hint: 'To exercise these rights, please contact us at'
+    },
+    s6: {
+      title: '6. Cookies',
+      text: 'Our website may use cookies and similar technologies to enhance your browsing experience. You can manage or disable cookies through your browser settings.'
+    },
+    s7: {
+      title: '7. Changes to This Policy',
+      text: 'We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.'
+    },
+    cta: {
+      title: 'Questions About This Policy?',
+      desc: "If you have any questions about this Privacy Policy, please don't hesitate to contact us.",
+      button: 'Contact Us'
+    }
+  },
   modal: {
     title: 'Contact us',
     desc: 'Share a few details and we’ll get back to you shortly.',

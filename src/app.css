@@ -162,3 +162,10 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
     --cta2-h: 222; --cta2-s: 20%; --cta2-l: 10%;
   }
 }
+
+/* Soft pulsing halo for bullet indicators */
+@keyframes pulse-soft {
+  0%   { transform: scale(0.9); opacity: 0.55; }
+  60%  { transform: scale(1.75); opacity: 0.0; }
+  100% { transform: scale(1.75); opacity: 0.0; }
+}
