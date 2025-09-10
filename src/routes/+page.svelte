@@ -539,12 +539,12 @@
   </div>
 </section>
 
-<ContactModal bind:open={showContact} onsubmit={(e) => {
+<ContactModal bind:open={showContact} on:submit={(e: CustomEvent<FormData>) => {
 
   console.log('contact form submitted', Array.from(e.detail.entries()));
 }} />
 
-<ScheduleCallModal bind:open={showSchedule} onsubmit={(e) => {
+<ScheduleCallModal bind:open={showSchedule} on:submit={(e: CustomEvent<any>) => {
 
   console.log('schedule submitted', e.detail);
 }} />

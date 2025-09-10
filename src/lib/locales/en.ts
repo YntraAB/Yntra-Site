@@ -2,6 +2,17 @@ import base from './en.json';
 
 export default {
   ...base,
+  nav: {
+    ...(base as any).nav,
+    helpcenter: 'Help Center'
+  },
+  footer: {
+    ...(base as any).footer,
+    resource_links: [
+      ...(((base as any).footer?.resource_links) ?? []),
+      'Terms of Service'
+    ]
+  },
   terms: {
     title: 'Terms of Service',
     meta_description: 'Terms governing your use of Yntra’s website and services.',

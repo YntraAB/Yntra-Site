@@ -20,7 +20,8 @@
     { key: 'nav.services', href: '#services' },
     { key: 'nav.why', href: '#why-us' },
     { key: 'nav.testimonials', href: '#testimonials' },
-    { key: 'nav.contact', href: '#contact' }
+    { key: 'nav.contact', href: '#contact' },
+    { key: 'nav.helpcenter', href: '/help-center' }
   ];
 
   let mobileOpen = $state(false);
@@ -67,11 +68,18 @@
 
     <nav class="hidden md:flex items-center gap-6 text-sm justify-self-center" aria-label="Primary">
       {#each navLinks as l}
-        <a
-          href={l.href}
-          class="text-slate-600 hover:text-slate-900 transition-colors"
-          onclick={(e) => smoothScroll(e, l.href)}
-        >{$t(l.key)}</a>
+        {#if l.href.startsWith('#')}
+          <a
+            href={l.href}
+            class="text-slate-600 hover:text-slate-900 transition-colors"
+            onclick={(e) => smoothScroll(e, l.href)}
+          >{$t(l.key)}</a>
+        {:else}
+          <a
+            href={l.href}
+            class="text-slate-600 hover:text-slate-900 transition-colors"
+          >{$t(l.key)}</a>
+        {/if}
       {/each}
     </nav>
 
@@ -100,11 +108,19 @@
     <div class="md:hidden border-t border-slate-200 bg-white/95 backdrop-blur">
       <nav class="max-w-7xl mx-auto px-6 md:px-8 py-4 grid gap-2" aria-label="Mobile">
         {#each navLinks as l}
-          <a
-            href={l.href}
-            class="block rounded-md px-3 py-2 text-slate-700 hover:bg-slate-100"
-            onclick={(e) => { smoothScroll(e, l.href); mobileOpen = false; }}
-          >{$t(l.key)}</a>
+          {#if l.href.startsWith('#')}
+            <a
+              href={l.href}
+              class="block rounded-md px-3 py-2 text-slate-700 hover:bg-slate-100"
+              onclick={(e) => { smoothScroll(e, l.href); mobileOpen = false; }}
+            >{$t(l.key)}</a>
+          {:else}
+            <a
+              href={l.href}
+              class="block rounded-md px-3 py-2 text-slate-700 hover:bg-slate-100"
+              onclick={() => { mobileOpen = false; }}
+            >{$t(l.key)}</a>
+          {/if}
         {/each}
         <div class="mt-2">
           <LanguageSelector variant="mobile" />
@@ -116,7 +132,7 @@
 
 <main id="content">{@render children?.()}</main>
 
-<footer class="mt-24 border-t bg-white">
+<footer class="border-t bg-white">
   <div class="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14">
     <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-10">
       <div class="lg:col-span-2">
@@ -184,9 +200,9 @@
       <div class="hidden sm:block">
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.resources')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
-          <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.0')}</a></li>
-          <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.1')}</a></li>
-          <li><a href="/privacy-policy" class="hover:text-slate-900">{$t('footer.resource_links.2')}</a></li>
+          <li><a href="/help-center" class="hover:text-slate-900">{$t('footer.resource_links.0')}</a></li>
+          <li><a href="/privacy-policy" class="hover:text-slate-900">{$t('footer.resource_links.1')}</a></li>
+          <li><a href="/terms-of-service" class="hover:text-slate-900">{$t('footer.resource_links.2')}</a></li>
         </ul>
       </div>
     </div>

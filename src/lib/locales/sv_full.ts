@@ -2,6 +2,10 @@ import base from './sv.json';
 
 export default {
   ...base,
+  nav: {
+    ...(base as any).nav,
+    helpcenter: 'Hjälpcenter'
+  },
   footer: {
     ...(base as any).footer,
     resource_links: [
@@ -95,12 +99,7 @@ export default {
     keywords:
       'anst\u00E4ll utvecklare, b\u00E4sta designers, webbutveckling, apputveckling, digital byr\u00E5, skr\u00E4ddarsydd mjukvara'
   },
-  nav: {
-    services: 'Tj\u00E4nster',
-    why: 'Varf\u00F6r vi',
-    testimonials: 'Omd\u00F6men',
-    contact: 'Kontakt'
-  },
+  
   hero: {
     looking_for: 'Jag letar efter',
     btn: { website: 'Webbplats', system: 'Systemapp' },

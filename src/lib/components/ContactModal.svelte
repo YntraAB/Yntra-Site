@@ -91,7 +91,7 @@
       aria-describedby="contact-modal-desc"
       tabindex="-1"
       in:scale={{ duration: 160, start: 0.98 }}
-      out:scale={{ duration: 120, end: 0.98 }}
+      out:scale={{ duration: 120, start: 0.98 }}
     >
       <div class="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(88,130,193,0.18),transparent_60%)]"></div>
       <div class="pointer-events-none absolute -bottom-28 -left-28 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(147,112,219,0.16),transparent_60%)]"></div>

@@ -104,7 +104,7 @@
 
   function formatDate(d: Date) {
     try {
-      return new Intl.DateTimeFormat($i18nLocale, {
+      return new Intl.DateTimeFormat($i18nLocale ?? 'en', {
         weekday: 'long',
         year: 'numeric',
         month: 'long',
@@ -124,7 +124,7 @@
 
   function formatChipDate(d: Date) {
     try {
-      return new Intl.DateTimeFormat($i18nLocale, { day: 'numeric', month: 'short' }).format(d);
+      return new Intl.DateTimeFormat($i18nLocale ?? 'en', { day: 'numeric', month: 'short' }).format(d);
     } catch {
       return d.getDate() + '/' + (d.getMonth() + 1);
     }
@@ -137,7 +137,7 @@
       weekdayLabels = Array.from({ length: 7 }, (_, i) => {
         const d = new Date(baseMonday);
         d.setDate(baseMonday.getDate() + i);
-        return new Intl.DateTimeFormat($i18nLocale, { weekday: 'narrow' }).format(d);
+        return new Intl.DateTimeFormat($i18nLocale ?? 'en', { weekday: 'narrow' }).format(d);
       });
     } catch {
       weekdayLabels = ['M','T','W','T','F','S','S'];
@@ -168,7 +168,7 @@
   function formatMonthYear(y: number, m: number) {
     const d = new Date(y, m, 1);
     try {
-      return new Intl.DateTimeFormat($i18nLocale, { month: 'long', year: 'numeric' }).format(d);
+      return new Intl.DateTimeFormat($i18nLocale ?? 'en', { month: 'long', year: 'numeric' }).format(d);
     } catch {
       return `${d.getFullYear()}-${pad(d.getMonth() + 1)}`;
     }
@@ -338,7 +338,7 @@
       aria-describedby="schedule-modal-desc"
       tabindex="-1"
       in:scale={{ duration: 160, start: 0.98 }}
-      out:scale={{ duration: 120, end: 0.98 }}
+      out:scale={{ duration: 120, start: 0.98 }}
     >
       <div class="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(88,130,193,0.16),transparent_60%)]"></div>
       <div class="pointer-events-none absolute -bottom-28 -left-28 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(147,112,219,0.14),transparent_60%)]"></div>
