@@ -1,15 +1,13 @@
 type Options = {
   lines?: number;
-  min?: number; // minimum font-size in px
-  max?: number; // maximum font-size in px (defaults to computed)
-  trigger?: unknown; // any reactive value to retrigger measurement
+  min?: number;
+  max?: number;
+  trigger?: unknown;
 };
 
 export function fitLines(node: HTMLElement, options: Options = {}) {
   let { lines = 2, min, max } = options;
 
-  // Capture the original computed font size once, so we can grow back to it.
-  // Using the live computed size here would cap future runs at the previously-shrunk size.
   const originalComputedSize = (() => {
     const size = parseFloat(getComputedStyle(node).fontSize);
     return Number.isFinite(size) && size > 0 ? size : 32;
@@ -17,24 +15,21 @@ export function fitLines(node: HTMLElement, options: Options = {}) {
 
   const measureAndFit = () => {
     const computed = getComputedStyle(node);
-    // Use the original computed size as our default ceiling so we can grow after shrinking.
     const maxPx = max ?? originalComputedSize;
     const minPx = Math.max(10, min ?? Math.round(maxPx * 0.6));
 
-    // Start from the largest size to allow growth when text gets shorter
     node.style.fontSize = maxPx + 'px';
 
     const fitsAtCurrent = () => {
       const cs = getComputedStyle(node);
       const lh = parseFloat(cs.lineHeight) || (parseFloat(cs.fontSize) * 1.25);
-      const allowed = lh * lines + 0.5; // small fudge factor
+      const allowed = lh * lines + 0.5;
       const h = node.scrollHeight;
-      return h <= allowed + 1; // allow 1px rounding
+      return h <= allowed + 1;
     };
 
-    if (fitsAtCurrent()) return; // already fits in desired lines
+    if (fitsAtCurrent()) return;
 
-    // Binary search the font size
     let low = minPx;
     let high = maxPx;
     let best = low;
@@ -43,23 +38,20 @@ export function fitLines(node: HTMLElement, options: Options = {}) {
       node.style.fontSize = mid + 'px';
       if (fitsAtCurrent()) {
         best = mid;
-        low = mid; // try larger
+        low = mid;
       } else {
-        high = mid; // need smaller
+        high = mid;
       }
     }
     node.style.fontSize = Math.max(minPx, Math.min(best, maxPx)).toFixed(2) + 'px';
   };
 
   const rafFit = () => requestAnimationFrame(measureAndFit);
-
   const ro = new ResizeObserver(() => rafFit());
   ro.observe(node);
 
   const mo = new MutationObserver(() => rafFit());
   mo.observe(node, { childList: true, characterData: true, subtree: true });
-
-  // initial
   rafFit();
 
   return {

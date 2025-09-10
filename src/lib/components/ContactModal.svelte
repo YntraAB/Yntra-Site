@@ -32,13 +32,11 @@
   let formEl: HTMLFormElement | null = null;
 
   function handleSubmit(e: Event) {
-    // Always prevent native submit (Enter, implicit submissions)
     e.preventDefault();
   }
 
   function handleButtonClick() {
     if (!formEl) return;
-    // Use built-in validation; show messages if invalid
     if (!formEl.checkValidity()) {
       formEl.reportValidity();
       return;
@@ -54,7 +52,6 @@
     return () => window.removeEventListener('keydown', handler);
   });
 
-  // Lock body scroll while open (browser only)
   $: {
     if (browser) {
       if (open) {
@@ -65,7 +62,6 @@
     }
   }
 
-  // Focus dialog content when opened
   $: if (browser && open) {
     queueMicrotask(() => dialogEl?.focus());
   }
@@ -78,7 +74,6 @@
     tabindex="0"
     onclick={onBackdropClick}
     onkeydown={(e) => {
-      // Only close on Enter/Space when the backdrop itself is focused
       if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar')) {
         e.preventDefault();
         close();
@@ -98,7 +93,6 @@
       in:scale={{ duration: 160, start: 0.98 }}
       out:scale={{ duration: 120, end: 0.98 }}
     >
-      <!-- Decorative background glows -->
       <div class="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(88,130,193,0.18),transparent_60%)]"></div>
       <div class="pointer-events-none absolute -bottom-28 -left-28 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(147,112,219,0.16),transparent_60%)]"></div>
       <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)]"></div>

@@ -21,17 +21,14 @@
   import { fitLines } from '$lib/actions/fitLines';
   import ContactModal from '$lib/components/ContactModal.svelte';
   import ScheduleCallModal from '$lib/components/ScheduleCallModal.svelte';
-  
 
   type ShowcaseType = 'website' | 'system';
 
-  // State (Svelte 5 runes)
   let currentShowcaseType = $state<ShowcaseType>('website');
   let currentSlideIndex = $state(0);
   let showContact = $state(false);
   let showSchedule = $state(false);
 
-  // Carousel data
   const slides: Record<ShowcaseType, { title: string; subtitle: string; src: string; alt: string }[]> = {
     website: [
       {
@@ -63,7 +60,6 @@
     ]
   };
 
-  // Actions
   function toggleShowcase(type: ShowcaseType) {
     currentShowcaseType = type;
     currentSlideIndex = 0;
@@ -81,7 +77,6 @@
     el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // Auto-advance carousel with reset on interaction
   let interval: ReturnType<typeof setInterval> | null = null;
   function startAutoAdvance() {
     stopAutoAdvance();
@@ -104,7 +99,6 @@
   });
   onDestroy(() => stopAutoAdvance());
 
-  // Data sets for sections
   const companies = [
     { abbr: 'TC', name: 'TechCorp' },
     { abbr: 'IL', name: 'InnovateLab' },
@@ -114,16 +108,15 @@
     { abbr: 'DF', name: 'DigitalFirst' }
   ];
 
-  // Showcase media (PNG) — drop files into static/images and adjust names if needed
   type ShowcaseMedia = { src: string };
   const showcaseMedia: ShowcaseMedia[] = [
-    { src: '/images/omsorgPreview.png' }, // index 0
-    { src: '/images/React Pro.png' },     // index 1 (React Pro)
-    { src: '/images/showcase-2.png' },    // index 2
-    { src: '/images/React Pro.png' }      // index 3 (temporary until you add a 4th)
+    { src: '/images/omsorgPreview.png' }, 
+    { src: '/images/React Pro.png' },     
+    { src: '/images/showcase-2.png' },    
+    { src: '/images/React Pro.png' }      
   ];
-  // Four list buttons mapped to three content cards (some reuse OK), but only one button can be selected
-  const listItems: number[] = [0, 1, 2, 3]; // four distinct buttons mapping to 4 card indices
+
+  const listItems: number[] = [0, 1, 2, 3]; 
   let selectedListIndex = $state(0);
   const selectedCardIndex = $derived(listItems[selectedListIndex]);
   function selectList(i: number) {
@@ -190,16 +183,12 @@
   <meta property="og:type" content="website" />
 </svelte:head>
 
-
-<!-- Hero Section -->
 <section id="home" class="relative isolate min-h-[100svh] flex items-center text-white overflow-hidden">
-  <!-- Overscan moving gradient as a child layer (no ::before) -->
   <div class="absolute inset-[-20%] sm:inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_38%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:220%_220%] sm:[background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
   <div class="absolute inset-0 z-[1] pointer-events-none [background:linear-gradient(45deg,rgba(0,0,0,.08)_0%,transparent_50%,rgba(0,0,0,.08)_100%)]"></div>
-  
+
   <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center py-16">
-      <!-- Left -->
       <div>
         <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 sm:gap-2 gap-y-1 bg-white/90 supports-[backdrop-filter]:bg-white/75 backdrop-blur rounded-lg sm:rounded-xl px-2 py-1.5 sm:py-1 mb-6 sm:mb-8 shadow-sm w-full sm:w-auto">
           <span class="text-black/60 text-xs sm:text-sm px-2 py-0.5">{$t('hero.looking_for')}</span>
@@ -240,7 +229,6 @@
         </a> 
       </div>
 
-      <!-- Right: Carousel -->
       <div class="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden bg-white/10 backdrop-blur shadow-lg md:shadow-xl ring-1 ring-white/10">
         {#each slides[currentShowcaseType] as s, i}
           <div
@@ -294,7 +282,6 @@
   }
 </style>
 
-<!-- Trusted By -->
 <section class="py-24 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
   <div class="max-w-[1400px] mx-auto px-6 md:px-8">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('trusted.title')}</h2>
@@ -313,7 +300,6 @@
   </div>
 </section>
 
-<!-- Services -->
 <section id="services" class="py-24">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('services.title')}</h2>
@@ -349,7 +335,6 @@
   </div>
 </section>
 
-<!-- Why Choose Us -->
 <section id="why-us" class="py-24 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('why.title')}</h2>
@@ -378,7 +363,6 @@
         </div>
       {/each}
 
-      <!-- Full width last card -->
       <div class="group md:col-span-2 w-full max-w-[640px] mx-auto">
           <div use:reveal={{ delay: 140 }} class="reveal bg-white rounded-lg p-7 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200">
           {#if benefitsSvg[4]}
@@ -404,14 +388,12 @@
   </div>
 </section>
 
-<!-- Showcase -->
 <section class="py-24">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('showcase.title')}</h2>
     <p class="text-slate-600 text-center max-w-3xl mx-auto mb-16 text-base sm:text-lg md:text-xl">{$t('showcase.subtitle')}</p>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-      <!-- Project card -->
         <div use:reveal={{ delay: 60, variant: 'up' }} class="reveal group relative rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200/70 shadow-sm overflow-hidden transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-2xl hover:border-slate-300">
         <div class="relative overflow-hidden h-[clamp(160px,35vw,280px)] md:h-[clamp(220px,30vw,340px)]">
           <img
@@ -444,11 +426,9 @@
             </div>
           </div>
 
-          
         </div>
       </div>
 
-      <!-- Project list -->
       <div class="space-y-4">
         {#each listItems as cardIdx, li}
           <div
@@ -480,12 +460,9 @@
   </div>
 </section>
 
-<!-- Testimonials -->
 <section id="testimonials" class="relative isolate overflow-hidden py-24 text-white before:absolute before:inset-[-40%] before:z-[1] before:content-[''] before:pointer-events-none before:[mix-blend-mode:soft-light] before:bg-[radial-gradient(80%_60%_at_10%_0%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_60%),radial-gradient(60%_50%_at_90%_100%,rgba(88,130,193,0.06)_0%,rgba(88,130,193,0)_60%)] before:bg-no-repeat before:[background-size:100%_100%] before:[will-change:transform] before:opacity-60 before:animate-[layer-float_18s_ease-in-out_infinite] after:absolute after:inset-[-10%] after:z-[2] after:content-[''] after:pointer-events-none after:bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] after:[mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[-webkit-mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[mix-blend-mode:overlay] after:opacity-30 after:animate-[sheen-sweep_6s_ease-in-out_infinite]">
-
-  <!-- Overscan gradient layer to avoid edges while panning -->
   <div class="absolute inset-[-20%] sm:inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_35%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:220%_220%] sm:[background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
-  
+
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">{$t('testimonials.title')}</h2>
     <p class="text-center text-white/80 max-w-3xl mx-auto mb-16 text-base sm:text-lg md:text-xl">{$t('testimonials.subtitle')}</p>
@@ -513,13 +490,11 @@
   </div>
 </section>
 
-<!-- Final CTA -->
 <section id="contact" class="py-24 bg-[var(--background)]">
   <div class="max-w-6xl mx-auto px-6">
     <div use:reveal={{ delay: 80, variant: 'scale', scaleFrom: 0.97 }} class="reveal relative overflow-hidden rounded-3xl shadow-2xl ring-1 ring-black/5 text-white bg-[linear-gradient(135deg,var(--primary)_0%,hsl(var(--cta1-h),var(--cta1-s),var(--cta1-l))_35%,hsl(var(--cta2-h),var(--cta2-s),var(--cta2-l))_65%,var(--primary)_100%)] animate-[cta-shift_60s_ease-in-out_infinite_alternate]">
-      <!-- Subtle, static glows (further softened) -->
       <div class="absolute inset-0 z-[1] pointer-events-none [mix-blend-mode:soft-light] bg-[radial-gradient(60%_35%_at_20%_0%,rgba(255,255,255,0.02)_0%,transparent_60%),radial-gradient(50%_40%_at_80%_100%,rgba(88,130,193,0.05)_0%,transparent_60%)]"></div>
-      
+
       <div class="relative z-10 text-center px-6 sm:px-10 md:px-16 py-16">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
           {$t('cta.title_prefix')}
@@ -564,13 +539,12 @@
   </div>
 </section>
 
-<!-- Contact Modal Mount -->
 <ContactModal bind:open={showContact} onsubmit={(e) => {
-  // You can wire this up to an API or email service
+
   console.log('contact form submitted', Array.from(e.detail.entries()));
 }} />
 
 <ScheduleCallModal bind:open={showSchedule} onsubmit={(e) => {
-  // Handle booking payload here; e.detail contains the booking details
+
   console.log('schedule submitted', e.detail);
 }} />

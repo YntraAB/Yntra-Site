@@ -22,7 +22,7 @@
       length: number;
       type: MeetingType;
       timezone: string;
-      dateISO: string; // start time ISO
+      dateISO: string;
       name: string;
       email: string;
       company?: string;
@@ -35,12 +35,11 @@
   let dialogEl: HTMLDivElement | null = null;
   let formEl: HTMLFormElement | null = null;
 
-  // UI state
-  let selectedLength = 30; // minutes (fixed)
+  let selectedLength = 30;
   let selectedType: MeetingType = 'meet';
   let tz = 'UTC';
   let days: Date[] = [];
-  let selectedDayIndex = 0; // 0..6 for the first week
+  let selectedDayIndex = 0;
   let useCustomDate = false;
   let customDateStr: string = '';
   let customDay: Date | null = null;
@@ -48,11 +47,11 @@
   let customInputEl: HTMLInputElement | null = null;
   let showCustomPopover = false;
   let viewYear = 0;
-  let viewMonth = 0; // 0-11
+  let viewMonth = 0;
   let popoverEl: HTMLDivElement | null = null;
   let popoverTriggerEl: HTMLButtonElement | null = null;
   let slots: string[] = [];
-  let selectedTime: string | null = null; // 'HH:mm'
+  let selectedTime: string | null = null;
 
   function close() {
     open = false;
@@ -83,11 +82,10 @@
 
   function genSlots(day: Date, stepMin = 30) {
     const results: string[] = [];
-    const startH = 9; // 09:00
-    const endH = 17; // up to 17:00 end
+    const startH = 9;
+    const endH = 17;
     const endMinutes = endH * 60;
     for (let m = startH * 60; m < endMinutes; m += stepMin) {
-      // Ensure meeting fits before end of day
       if (m + selectedLength <= endMinutes) {
         const hh = Math.floor(m / 60);
         const mm = m % 60;
@@ -135,7 +133,7 @@
   let weekdayLabels: string[] = [];
   $: {
     try {
-      const baseMonday = new Date(2023, 0, 2); // Mon
+      const baseMonday = new Date(2023, 0, 2);
       weekdayLabels = Array.from({ length: 7 }, (_, i) => {
         const d = new Date(baseMonday);
         d.setDate(baseMonday.getDate() + i);
@@ -162,7 +160,7 @@
     const base = customDay ?? minDateObj();
     const next = new Date(base);
     next.setDate(base.getDate() + delta);
-    if (next < minDateObj()) return; // don't go before min
+    if (next < minDateObj()) return;
     customDay = next;
     customDateStr = formatLocalYMD(next);
   }
@@ -187,27 +185,23 @@
   }
 
   function getCalendarCells(y: number, m: number) {
-    // Monday-first grid (42 cells)
     const first = new Date(y, m, 1);
     const last = new Date(y, m + 1, 0);
-    const firstDow = (first.getDay() + 6) % 7; // 0=Mon
+    const firstDow = (first.getDay() + 6) % 7;
     const daysInMonth = last.getDate();
     const cells: { date: Date; inMonth: boolean; disabled: boolean; today: boolean }[] = [];
     const min = minDateObj();
 
-    // days from prev month
     for (let i = 0; i < firstDow; i++) {
       const d = new Date(y, m, 1 - (firstDow - i));
       const sd = startOfDay(d);
       cells.push({ date: d, inMonth: false, disabled: sd < min, today: isSameDate(sd, startOfDay(new Date())) });
     }
-    // days in current month
     for (let day = 1; day <= daysInMonth; day++) {
       const d = new Date(y, m, day);
       const sd = startOfDay(d);
       cells.push({ date: d, inMonth: true, disabled: sd < min, today: isSameDate(sd, startOfDay(new Date())) });
     }
-    // fill next month
     while (cells.length % 7 !== 0) {
       const lastCell = cells[cells.length - 1].date;
       const d = new Date(lastCell);
@@ -215,7 +209,6 @@
       const sd = startOfDay(d);
       cells.push({ date: d, inMonth: false, disabled: sd < min, today: isSameDate(sd, startOfDay(new Date())) });
     }
-    // ensure 6 rows
     while (cells.length < 42) {
       const lastCell = cells[cells.length - 1].date;
       const d = new Date(lastCell);
@@ -236,7 +229,6 @@
   function changeMonth(delta: number) {
     const next = new Date(viewYear, viewMonth + delta, 1);
     const min = minDateObj();
-    // block navigating to a month entirely before min
     const beforeMin = next.getFullYear() < min.getFullYear() || (next.getFullYear() === min.getFullYear() && next.getMonth() < min.getMonth());
     if (beforeMin) return;
     viewYear = next.getFullYear();
@@ -295,7 +287,6 @@
     if (browser) {
       tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
       days = genDays(7);
-      // compute min selectable date for custom (day after the last chip)
       const d = new Date(days[days.length - 1]);
       d.setDate(d.getDate() + 1);
       customMin = formatLocalYMD(d);
@@ -307,21 +298,17 @@
     };
   });
 
-  // Lock body scroll while open (browser only)
   $: {
     if (browser) {
       document.body.style.overflow = open ? 'hidden' : '';
     }
   }
 
-  // When deps change, recompute
   $: if (browser) {
-    // refresh on relevant changes
-    selectedLength, selectedDayIndex, days, useCustomDate, customDay; // tracked
+    selectedLength, selectedDayIndex, days, useCustomDate, customDay;
     refreshSlots();
   }
 
-  // Focus dialog content when opened
   $: if (browser && open) {
     queueMicrotask(() => dialogEl?.focus());
   }
@@ -353,7 +340,6 @@
       in:scale={{ duration: 160, start: 0.98 }}
       out:scale={{ duration: 120, end: 0.98 }}
     >
-      <!-- Decorative background glows -->
       <div class="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(88,130,193,0.16),transparent_60%)]"></div>
       <div class="pointer-events-none absolute -bottom-28 -left-28 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(147,112,219,0.14),transparent_60%)]"></div>
       <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)]"></div>
@@ -383,7 +369,6 @@
             e.preventDefault();
           }
         }}>
-          <!-- Controls: meeting type only -->
           <div class="grid grid-cols-1 gap-4">
             <div class="grid gap-2">
               <label class="text-sm font-medium text-slate-700">{$t('schedule.type_label')}</label>
@@ -404,7 +389,6 @@
             </div>
           </div>
 
-          <!-- Date + time selector -->
           <div class="grid gap-3">
             <div class="flex items-center justify-between mb-1">
               <div class="text-sm font-medium text-slate-700">{$t('schedule.pick_time')}</div>
@@ -425,7 +409,6 @@
             </div>
             {#if useCustomDate}
               <div class="pt-1">
-                <!-- Hidden native input to trigger picker -->
                 <input
                   type="date"
                   bind:this={customInputEl}
@@ -520,7 +503,6 @@
             {/if}
           </div>
 
-          <!-- Lead info -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="grid gap-2">
               <label for="name" class="text-sm font-medium text-slate-700">{$t('schedule.name_label')}</label>

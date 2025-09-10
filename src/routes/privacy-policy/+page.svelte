@@ -16,7 +16,7 @@
       case 'de': return 'de-DE';
       case 'fr': return 'fr-FR';
       case 'es': return 'es-ES';
-      default: return 'en-US';
+      default: return 'sv-SE';
     }
   }
   function formatDate(d: Date, code: string) {
@@ -42,11 +42,10 @@
   <meta name="description" content={$t('privacy.meta_description')} />
 </svelte:head>
 
-<!-- Hero (same background + animation, ~450px tall) -->
 <section class="relative isolate min-h-[450px] flex items-center text-white overflow-hidden">
-  <!-- Animated background layer -->
+  
   <div class="absolute inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_38%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
-  <!-- Soft overlay -->
+  
   <div class="absolute inset-0 z-[1] pointer-events-none [background:linear-gradient(45deg,rgba(0,0,0,.08)_0%,transparent_50%,rgba(0,0,0,.08)_100%)]"></div>
 
   <div class="relative z-10 w-full max-w-[895px] mx-auto px-6 md:px-0 py-12 md:py-16">
@@ -55,22 +54,21 @@
   </div>
 </section>
 
-<!-- Main content: cards with ~45px gap, fonts aligned with main page -->
 <section class="py-12 md:py-16">
   <div class="max-w-[895px] mx-auto px-6 md:px-0 space-y-[45px]">
-    <!-- Last updated chip -->
+    
     <div class="-mt-2">
       <div class="inline-flex items-center gap-2 rounded-lg bg-white shadow-sm ring-1 ring-slate-200/70 px-3 py-1.5 text-xs text-slate-600">
         <span class="h-1.5 w-1.5 rounded-full bg-[var(--accent)]"></span>
         <span>{$t('privacy.last_updated_label')}: {lastUpdated}</span>
       </div>
     </div>
-    <!-- Intro note card -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-8">
       <p class="text-slate-700 text-base md:text-lg leading-relaxed">{$t('privacy.intro_card')}</p>
     </div>
 
-    <!-- Section 1 card -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -82,7 +80,7 @@
       <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('privacy.s1.intro')}</p>
 
       <div class="mt-6 grid gap-[20px]">
-        <!-- Personal Information -->
+        
         <div class="relative pl-8">
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] [border-color:color-mix(in_oklab,var(--accent)_92%,white)]"></div>
           <div>
@@ -91,7 +89,7 @@
           </div>
         </div>
 
-        <!-- Technical Information -->
+        
         <div class="relative pl-8">
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] border-black/80"></div>
           <div>
@@ -102,7 +100,7 @@
       </div>
     </div>
 
-    <!-- Section 2 card -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -153,7 +151,7 @@
       </div>
     </div>
 
-    <!-- Section 3 card -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -183,7 +181,7 @@
       </div>
     </div>
 
-    <!-- Section 4 card -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -197,7 +195,7 @@
       </div>
     </div>
 
-    <!-- Section 5 card -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -252,7 +250,7 @@
       </div>
     </div>
 
-    <!-- Section 6 card -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -266,7 +264,7 @@
       </div>
     </div>
 
-    <!-- Section 7 card (dark) -->
+    
     <div class="rounded-2xl p-6 md:p-10 bg-gradient-to-br from-[hsl(222,22%,16%)] to-[hsl(222,22%,10%)] text-white ring-1 ring-white/10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-white/10 text-white grid place-items-center ring-1 ring-white/20">
@@ -277,7 +275,7 @@
       <p class="mt-4 text-white/90 text-base md:text-lg">{$t('privacy.s7.text')}</p>
     </div>
 
-    <!-- CTA: Questions -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-8 md:p-10 text-center">
       <h3 class="text-xl md:text-2xl font-semibold text-slate-900">{$t('privacy.cta.title')}</h3>
       <p class="mt-2 text-slate-500">{$t('privacy.cta.desc')}</p>

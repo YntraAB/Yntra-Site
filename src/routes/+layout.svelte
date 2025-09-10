@@ -31,7 +31,6 @@
     return () => unsub();
   });
 
-  // Keep <html lang="..."> in sync for better hyphenation/accessibility
   $effect(() => {
     if (typeof document !== 'undefined') {
       document.documentElement.setAttribute('lang', currentLocale || 'sv');
@@ -59,7 +58,6 @@
   <meta name="description" content="We design and build high-performing websites, apps, and digital systems that help businesses scale faster and work smarter." />
 </svelte:head>
 
-<!-- Site Header -->
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200/60">
   <div class="max-w-7xl mx-auto px-6 md:px-8 h-16 grid grid-cols-3 items-center">
     <a href="/" class="flex items-center gap-2 text-slate-900 font-semibold tracking-tight justify-self-start">
@@ -118,11 +116,9 @@
 
 <main id="content">{@render children?.()}</main>
 
-<!-- Site Footer -->
 <footer class="mt-24 border-t bg-white">
   <div class="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14">
     <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-10">
-      <!-- Brand + Tagline + Social -->
       <div class="lg:col-span-2">
         <div class="flex items-center gap-2 mb-4">
           <img src={favicon} alt={$t('brand.logo_alt')} class="h-6 w-6" />
@@ -130,19 +126,18 @@
         </div>
         <p class="text-slate-600 max-w-md">{$t('meta.description')}</p>
         <div class="mt-6 flex items-center gap-3">
-          <a href="https://x.com/yntra" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+          <a href="https://x.com/yntraAB" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
             <Twitter class="h-5 w-5" aria-hidden="true" />
           </a>
-          <a href="https://github.com/yntra" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+          <a href="https://github.com/yntraAB" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
             <Github class="h-5 w-5" aria-hidden="true" />
           </a>
-          <a href="https://linkedin.com/company/yntra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+          <a href="https://linkedin.com/company/yntraAB" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50">
             <Linkedin class="h-5 w-5" aria-hidden="true" />
           </a>
         </div>
       </div>
 
-      <!-- Services -->
       <div>
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.services')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
@@ -153,7 +148,6 @@
         </ul>
       </div>
 
-      <!-- Company -->
       <div class="hidden sm:block">
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.company')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
@@ -162,7 +156,6 @@
         </ul>
       </div>
 
-      <!-- Contact -->
       <div>
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.contact')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
@@ -188,7 +181,6 @@
         </ul>
       </div>
 
-      <!-- Resources -->
       <div class="hidden sm:block">
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.resources')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">

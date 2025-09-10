@@ -4,13 +4,13 @@ export type RevealOptions = {
   threshold?: number;
   rootMargin?: string;
   once?: boolean;
-  activeClass?: string; // when visible
-  inactiveClass?: string; // initial class
-  delay?: number; // ms
+  activeClass?: string; 
+  inactiveClass?: string; 
+  delay?: number; 
   variant?: RevealVariant;
-  distance?: number; // px for translate
-  scaleFrom?: number; // starting scale for 'scale'
-  blurFrom?: number; // px for 'blur'
+  distance?: number; 
+  scaleFrom?: number; 
+  blurFrom?: number; 
 };
 
 export function reveal(node: HTMLElement, options: RevealOptions = {}) {
@@ -29,7 +29,6 @@ export function reveal(node: HTMLElement, options: RevealOptions = {}) {
 
   let hasIntersected = false;
 
-  // Ensure base class and delay are applied
   node.classList.add(inactiveClass);
   node.style.transitionDelay = `${delay}ms`;
 
@@ -86,7 +85,7 @@ export function reveal(node: HTMLElement, options: RevealOptions = {}) {
       observer.disconnect();
     },
     update(newOpts: RevealOptions) {
-      // Allow delay updates
+
       if (newOpts?.delay !== undefined) {
         node.style.transitionDelay = `${newOpts.delay}ms`;
       }
@@ -96,7 +95,7 @@ export function reveal(node: HTMLElement, options: RevealOptions = {}) {
       if (newOpts?.distance || newOpts?.scaleFrom || newOpts?.blurFrom) {
         applyVariant(newOpts.variant ?? variant);
       }
-      // If toggling once->false after intersect, re-observe if needed
+
       if (!once && hasIntersected) {
         observer.observe(node);
       }

@@ -41,7 +41,6 @@
   <meta name="description" content={$t('terms.meta_description')} />
 </svelte:head>
 
-<!-- Hero (same background + animation) -->
 <section class="relative isolate min-h-[450px] flex items-center text-white overflow-hidden">
   <div class="absolute inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_38%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
   <div class="absolute inset-0 z-[1] pointer-events-none [background:linear-gradient(45deg,rgba(0,0,0,.08)_0%,transparent_50%,rgba(0,0,0,.08)_100%)]"></div>
@@ -52,29 +51,23 @@
   </div>
 </section>
 
-<!-- Main content (same card style as privacy-policy) -->
 <section class="py-12 md:py-16">
   <div class="max-w-[895px] mx-auto px-6 md:px-0 space-y-[45px]">
-    <!-- Last updated chip -->
     <div class="-mt-2">
       <div class="inline-flex items-center gap-2 rounded-lg bg-white shadow-sm ring-1 ring-slate-200/70 px-3 py-1.5 text-xs text-slate-600">
         <span class="h-1.5 w-1.5 rounded-full bg-[var(--accent)]"></span>
         <span>{$t('terms.last_updated_label')}: {lastUpdated}</span>
       </div>
     </div>
-
-    <!-- Intro note -->
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-8">
       <p class="text-slate-700 text-base md:text-lg leading-relaxed">{$t('terms.intro_card')}</p>
     </div>
-
-    <!-- Section 1: Acceptance & Changes -->
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <FileText class="h-5 w-5" aria-hidden="true" />
         </div>
-<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s1.title')}</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s1.title')}</h2>
       </div>
 
       <div class="mt-6 grid gap-[20px]">
@@ -95,17 +88,14 @@
       </div>
     </div>
 
-    <!-- Section 2: Services & Use (bullet list) -->
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Settings class="h-5 w-5" aria-hidden="true" />
         </div>
-<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s2.title')}</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s2.title')}</h2>
       </div>
-
       <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('terms.s2.intro')}</p>
-
       <div class="mt-6 grid gap-3">
         <div class="bg-white rounded-xl ring-1 ring-slate-200/70 p-4 md:p-5" >
           <div class="flex items-start gap-3">
@@ -134,7 +124,6 @@
       </div>
     </div>
 
-    <!-- Section 3: Orders, Fees, Payment (notice + bullets) -->
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -170,7 +159,7 @@
       </div>
     </div>
 
-    <!-- Section 4: IP (notice) -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -183,7 +172,7 @@
       </div>
     </div>
 
-    <!-- Section 5: Confidentiality & Data (grid bullets) -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -238,7 +227,7 @@
       </div>
     </div>
 
-    <!-- Section 6: Acceptable Use -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -249,7 +238,7 @@
       <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('terms.s6.text')}</p>
     </div>
 
-    <!-- Section 7: Third‑Party Services -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -262,7 +251,7 @@
       </div>
     </div>
 
-    <!-- Section 8: Warranties & Disclaimers (dark card) -->
+    
     <div class="rounded-2xl p-6 md:p-10 bg-gradient-to-br from-[hsl(222,22%,16%)] to-[hsl(222,22%,10%)] text-white ring-1 ring-white/10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-white/10 text-white grid place-items-center ring-1 ring-white/20">
@@ -273,7 +262,7 @@
       <p class="mt-4 text-white/90 text-base md:text-lg">{$t('terms.s8.text')}</p>
     </div>
 
-    <!-- Section 9: Liability & Termination -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -286,7 +275,7 @@
       </div>
     </div>
 
-    <!-- Section 10: Governing Law -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -297,7 +286,7 @@
       <p class="mt-6 text-slate-700 text-sm md:text-base">{$t('terms.s10.text')}</p>
     </div>
 
-    <!-- CTA -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-8 md:p-10 text-center">
       <h3 class="text-xl md:text-2xl font-semibold text-slate-900">{$t('terms.cta.title')}</h3>
       <p class="mt-2 text-slate-500">{$t('terms.cta.desc')}</p>
