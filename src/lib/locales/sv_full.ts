@@ -127,23 +127,23 @@ export default {
     cards: {
       websites: {
         title: 'Webbplatser',
-        desc: 'Vackra, responsiva och konverteringsfokuserade webbplatser som skapar resultat och engagerar din m\u00E5lgrupp.',
+        desc: 'Vi planerar, designar och utvecklar skräddarsydda webbplatser som laddar snabbt, konverterar bättre och är enkla att förvalta. Sökoptimerade, tillgängliga och byggda för tillväxt och mätbara resultat.',
         features: ['Responsiv design', 'SEO-optimerad', 'Snabb prestanda', 'CMS-integrering']
       },
       systems: {
         title: 'Systemappar',
-        desc: 'Skr\u00E4ddarsydda verktyg och applikationer som effektiviserar verksamheten och \u00F6kar produktiviteten.',
+        desc: 'Vi bygger system och verktyg som automatiserar processer, integrerar med dina befintliga plattformar och gör data användbar i vardagen. Skalbart, säkert och anpassat efter din verksamhet.',
         features: ['Anpassad utveckling', 'API-integrering', 'Molndistribution', 'Skalbar arkitektur']
       },
       uiux: {
         title: 'UI/UX-design',
-        desc: 'Anv\u00E4ndarcentrerade gr\u00E4nssnitt som engagerar och gl\u00E4djer, baserade p\u00E5 djup f\u00F6rst\u00E5else f\u00F6r beteenden.',
-        features: ['Anv\u00E4ndarunders\u00F6kning', 'Prototypning', 'Designsystem', 'Anv\u00E4ndbarhetstester']
+        desc: 'Vi kombinerar research och design för att skapa tydliga flöden och ett varumärkesstarkt UI. Prototyper testas tidigt, och designsystem ger hastighet, kvalitet och konsekvent upplevelse i alla kanaler.',
+        features: ['Användarundersökning', 'Prototypning', 'Designsystem', 'Användbarhetstester']
       },
       support: {
-        title: 'L\u00F6pande support',
-        desc: 'Underh\u00E5ll, skalning och optimering som h\u00E5ller dina digitala tillg\u00E5ngar p\u00E5 toppniv\u00E5.',
-        features: ['\u00D6vervakning 24/7', 'Regelbundna uppdateringar', 'Prestandaoptimering', 'Teknisk support']
+        title: 'Löpande support',
+        desc: 'Vi övervakar, uppdaterar och förbättrar kontinuerligt så att allt rullar. Proaktiv prestanda- och säkerhetsoptimering, snabba åtgärder vid incidenter och en partner som finns till hands när du behöver det.',
+        features: ['Övervakning 24/7', 'Regelbundna uppdateringar', 'Prestandaoptimering', 'Teknisk support']
       }
     }
   },

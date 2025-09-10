@@ -222,3 +222,13 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
     [class*="text-[16px]"] { font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1rem) !important; }
   }
 }
+
+/* Ensure exact three-line descriptions when desired */
+@layer utilities {
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

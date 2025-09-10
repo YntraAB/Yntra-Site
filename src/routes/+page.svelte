@@ -319,21 +319,21 @@
     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('services.title')}</h2>
     <p class="text-slate-600 text-center max-w-3xl mx-auto mb-16 text-base sm:text-lg md:text-xl">{$t('services.subtitle')}</p>
 
-        <div class="flex flex-nowrap justify-center max-[1120px]:flex-wrap gap-5 md:gap-8 max-[1120px]:justify-center">
+        <div class="flex flex-nowrap justify-center max-[1120px]:flex-wrap gap-6 md:gap-8 max-[1120px]:justify-center">
       {#each servicesSvg as s, i} 
         {@const IconComp = s.icon} 
-        <div class="group w-[280px] h-[380px] sm:w-[314px] sm:h-[420px] box-border shrink-0">
-           <div use:reveal={{ delay: i * 80 }} class="reveal bg-white rounded-md sm:rounded-lg p-5 sm:p-6 md:p-7 w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out md:group-hover:-translate-y-0.5 md:group-hover:shadow-2xl border border-transparent group-hover:border-slate-200"> 
-          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] flex items-center justify-center mb-5 sm:mb-6 transform-gpu transition-all duration-200 ease-out md:group-hover:ring-4 ring-[hsl(215,70%,46%)]/30">
+        <div class="group w-[314px] h-[420px] box-border shrink-0">
+           <div use:reveal={{ delay: i * 80 }} class="reveal bg-white rounded-lg p-7 w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200"> 
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] flex items-center justify-center mb-6 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(215,70%,46%)]/30">
             <IconComp
-              class="w-6 h-6 sm:w-7 sm:h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-7 group-hover:h-7 sm:group-hover:w-8 sm:group-hover:h-8"
+              class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
               absoluteStrokeWidth
               style="shape-rendering:geometricPrecision; vector-effect: non-scaling-stroke"
               aria-hidden="true"
             />
           </div>
           <h3 class="text-xl font-bold text-slate-900 mb-2">{$t(`services.cards.${serviceKeys[i]}.title`)}</h3>
-          <p class="text-slate-600 mb-4">{$t(`services.cards.${serviceKeys[i]}.desc`)}</p>
+          <p class="text-slate-600 mb-4 line-clamp-3">{$t(`services.cards.${serviceKeys[i]}.desc`)}</p>
           <ul class="space-y-2">
             {#each [0,1,2,3] as fi}
               <li class="flex items-center text-sm text-slate-500">
@@ -359,11 +359,11 @@
       {#each benefitsSvg.slice(0, 4) as b, i}
         {@const BIcon = b.icon}
         <div class="group w-full">
-          <div use:reveal={{ delay: i * 90 }} class="reveal bg-white rounded-md sm:rounded-lg p-5 sm:p-6 md:p-7 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out md:group-hover:-translate-y-0.5 md:group-hover:shadow-2xl border border-transparent group-hover:border-slate-200">
-          <div class="flex items-start gap-3 sm:gap-4">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
+          <div use:reveal={{ delay: i * 90 }} class="reveal bg-white rounded-lg p-7 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200">
+          <div class="flex items-start gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
               <BIcon
-                 class="w-6 h-6 sm:w-7 sm:h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-7 group-hover:h-7 sm:group-hover:w-8 sm:group-hover:h-8"
+                 class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
                 absoluteStrokeWidth
                 style="shape-rendering:geometricPrecision; vector-effect: non-scaling-stroke"
                 aria-hidden="true"
@@ -379,12 +379,12 @@
       {/each}
 
       <!-- Full width last card -->
-        <div class="group md:col-span-2 w-full max-w-[640px] mx-auto">
-          <div use:reveal={{ delay: 140 }} class="reveal bg-white rounded-md sm:rounded-lg p-5 sm:p-6 md:p-7 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out md:group-hover:-translate-y-0.5 md:group-hover:shadow-2xl border border-transparent group-hover:border-slate-200">
+      <div class="group md:col-span-2 w-full max-w-[640px] mx-auto">
+          <div use:reveal={{ delay: 140 }} class="reveal bg-white rounded-lg p-7 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200">
           {#if benefitsSvg[4]}
             {@const LastIcon = benefitsSvg[4].icon}
             <div class="flex items-start gap-4">
-              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-300 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-300 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
                 <LastIcon
                   class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
                   absoluteStrokeWidth
