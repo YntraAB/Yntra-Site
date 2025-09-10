@@ -80,7 +80,7 @@ export default {
     },
     s10: {
       title: '10. Droit applicable et litiges',
-      text: 'Les présentes Conditions sont régies par les lois de la juridiction où Yntra est établie, à l’exclusion des règles de conflit de lois. Les litiges seront d’abord réglés à l’amiable ; à défaut, ils seront portés devant les tribunaux compétents de cette juridiction.'
+      text: 'Les présentes Conditions sont régies par le droit suédois et le droit de l’UE applicable, à l’exclusion des règles de conflit de lois. Les litiges seront d’abord réglés à l’amiable ; à défaut, ils seront portés devant les tribunaux compétents en Suède.'
     },
     cta: {
       title: 'Des questions sur ces conditions ?',

@@ -80,7 +80,7 @@ export default {
     },
     s10: {
       title: '10. Anwendbares Recht und Streitigkeiten',
-      text: 'Diese Bedingungen unterliegen den Gesetzen der Gerichtsbarkeit, in der Yntra ansässig ist, unter Ausschluss von Kollisionsnormen. Streitigkeiten werden zunächst gütlich geklärt; andernfalls sind die zuständigen Gerichte dieser Gerichtsbarkeit angerufen.'
+      text: 'Diese Bedingungen unterliegen schwedischem Recht und dem anwendbaren EU‑Recht, unter Ausschluss von Kollisionsnormen. Streitigkeiten werden zunächst gütlich beigelegt; andernfalls sind die zuständigen Gerichte in Schweden anzurufen.'
     },
     cta: {
       title: 'Fragen zu diesen Bedingungen?',

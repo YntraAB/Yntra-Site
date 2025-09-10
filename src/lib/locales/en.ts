@@ -72,7 +72,7 @@ export default {
     },
     s10: {
       title: '10. Governing Law and Disputes',
-      text: 'These Terms are governed by the laws of the jurisdiction where Yntra is established, excluding conflict-of-law rules. Disputes will be resolved by good-faith negotiations; if unresolved, they may be brought in the competent courts of that jurisdiction.'
+      text: 'These Terms are governed by the laws of Sweden and applicable EU law, excluding conflict-of-law rules. Disputes will be resolved by good-faith negotiations; if unresolved, they may be brought before the competent courts in Sweden.'
     },
     cta: {
       title: 'Questions About These Terms?',

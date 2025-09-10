@@ -80,7 +80,7 @@ export default {
     },
     s10: {
       title: '10. Tillämplig lag och tvister',
-      text: 'Dessa Villkor regleras av lagarna i den jurisdiktion där Yntra är etablerat, med undantag för lagvalsregler. Tvister ska i första hand lösas genom förhandling; i andra hand prövas de i behörig domstol i nämnda jurisdiktion.'
+      text: 'Dessa Villkor regleras av svensk lag och tillämplig EU‑lagstiftning, med undantag för lagvalsregler. Tvister ska i första hand lösas genom förhandling; i andra hand prövas de av behörig domstol i Sverige.'
     },
     cta: {
       title: 'Frågor om dessa villkor?',

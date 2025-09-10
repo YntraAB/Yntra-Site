@@ -80,7 +80,7 @@ export default {
     },
     s10: {
       title: '10. Ley aplicable y disputas',
-      text: 'Estos Términos se rigen por las leyes de la jurisdicción donde se encuentra Yntra, excluyendo sus normas sobre conflictos de leyes. Las disputas se resolverán de buena fe; de lo contrario, podrán someterse a los tribunales competentes de dicha jurisdicción.'
+      text: 'Estos Términos se rigen por las leyes de Suecia y la normativa de la UE aplicable, excluyendo sus normas sobre conflictos de leyes. Las disputas se resolverán de buena fe; de no resolverse, podrán someterse a los tribunales competentes en Suecia.'
     },
     cta: {
       title: '¿Preguntas sobre estos términos?',
