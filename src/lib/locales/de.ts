@@ -11,81 +11,81 @@ export default {
   },
   terms: {
     title: 'Nutzungsbedingungen',
-    meta_description: 'Die Bedingungen, die Ihre Nutzung der Website und Dienste von Yntra regeln.',
-    hero: 'Bitte lesen Sie diese Bedingungen sorgfältig. Durch den Zugriff auf unsere Website oder die Nutzung unserer Dienste erklären Sie sich damit einverstanden, an sie gebunden zu sein.',
+    meta_description: 'Bedingungen, die Ihre Nutzung der Website und Dienste von Yntra regeln.',
+    hero: 'Bitte lesen Sie diese Bedingungen sorgfältig. Durch den Besuch der Website oder die Nutzung unserer Dienste stimmen Sie ihnen zu.',
     last_updated_label: 'Zuletzt aktualisiert',
     intro_card:
-      'Diese Nutzungsbedingungen ("Bedingungen") regeln Ihren Zugriff auf die Website von Yntra sowie die Nutzung unserer Dienste. Wenn Sie diese Bedingungen im Namen eines Unternehmens oder einer juristischen Person akzeptieren, versichern Sie, hierzu bevollmächtigt zu sein. Wenn Sie nicht einverstanden sind, nutzen Sie unsere Website oder Dienste nicht.',
+      'Diese Nutzungsbedingungen ("Bedingungen") regeln Ihren Zugriff auf die Website von Yntra und die von uns angebotenen Dienste. Wenn Sie die Bedingungen im Namen eines Unternehmens akzeptieren, versichern Sie, dass Sie befugt sind, dieses Unternehmen zu binden. Wenn Sie die Bedingungen nicht akzeptieren, nutzen Sie bitte weder unsere Website noch unsere Dienste. Besteht eine separate, unterzeichnete Kundenvereinbarung ("Kundenvertrag"), hat diese im Konfliktfall Vorrang vor diesen Bedingungen.',
     s1: {
       title: '1. Zustimmung und Änderungen',
       acceptance: {
         title: 'Zustimmung zu den Bedingungen',
-        desc: 'Durch Zugriff auf die Website oder Nutzung der Dienste stimmen Sie diesen Bedingungen und unserer Datenschutzerklärung zu. Besteht ein gesonderter, unterzeichneter Vertrag mit Yntra, geht dieser im Konfliktfall vor.'
+        desc: 'Durch die Nutzung der Website und der Dienste akzeptieren Sie diese Bedingungen sowie unsere Datenschutzrichtlinie.'
       },
       changes: {
         title: 'Änderungen der Bedingungen',
-        desc: 'Wir können diese Bedingungen gelegentlich aktualisieren. Wesentliche Änderungen treten mit Veröffentlichung in Kraft. Ihre fortgesetzte Nutzung nach Inkrafttreten gilt als Zustimmung zu den aktualisierten Bedingungen.'
+        desc: 'Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Änderungen treten mit ihrer Veröffentlichung in Kraft. Wenn Sie einen Kundenvertrag haben, bleibt dieser unberührt, sofern keine ausdrückliche schriftliche Zustimmung vorliegt.'
       }
     },
     s2: {
-      title: '2. Leistungen und Nutzung',
-      intro: 'Sie verpflichten sich, unsere Dienste rechtmäßig und verantwortungsvoll zu nutzen. Insbesondere verpflichten Sie sich,',
+      title: '2. Dienste und Nutzung',
+      intro: 'Sie verpflichten sich, unsere Dienste rechtmäßig und verantwortungsbewusst zu nutzen. Insbesondere verpflichten Sie sich dazu:',
       items: [
-        'korrekte Angaben zu machen und Ihre Daten aktuell zu halten',
-        'die Dienste nur zu rechtmäßigen Zwecken und gemäß diesen Bedingungen zu verwenden',
-        'zumutbare Nutzungslimits und unsere Anweisungen einzuhalten',
-        'nicht zu versuchen, unsere Systeme zu stören, zu reverse‑engineeren oder unbefugten Zugriff zu erlangen'
+        'Richtige Angaben zu machen und diese aktuell zu halten',
+        'Die Dienste nur für rechtmäßige Zwecke und im Einklang mit diesen Bedingungen zu verwenden',
+        'Angemessene Nutzungsgrenzen und unsere Anweisungen einzuhalten',
+        'Nicht zu versuchen, unsere Systeme zu stören, zurückzuentwickeln oder sich unbefugten Zugang zu verschaffen'
       ]
     },
     s3: {
-      title: '3. Bestellungen, Gebühren und Zahlung',
-      summary: 'Angebote, Leistungsbeschreibungen (SOW) oder Bestellungen definieren Umfang, Deliverables, Zeitpläne und Preise.',
-      includes: 'Sofern nicht anders schriftlich vereinbart, umfassen Abrechnung und Zahlung:',
+      title: '3. Bestellungen, Gebühren und Zahlungen',
+      summary: 'Angebote, Leistungsbeschreibungen oder Bestellungen legen Umfang, Liefergegenstände, Zeitpläne und Preise fest.',
+      includes: 'Sofern im Kundenvertrag nicht anders vereinbart:',
       items: {
-        quotes: 'Angebote/SOW: Umfang, Annahmen, Deliverables, Meilensteine, Abnahmekriterien',
-        invoicing: 'Abrechnung: erfolgt nach Erreichen von Meilensteinen oder monatlich nachträglich',
-        late: 'Zahlungsverzug: kann Zinsen nach sich ziehen und/oder nach vorheriger Ankündigung zur Arbeitspause führen'
+        quotes: 'Angebote/Bestellungen: Umfang, Annahmen, Liefergegenstände, wichtige Termine, Abnahmekriterien',
+        invoicing: 'Rechnungsstellung: erfolgt bei Erreichen von Meilensteinen oder monatlich nachträglich',
+        late: 'Verspätete Zahlungen: können Zinsen und/oder eine Unterbrechung der Arbeiten nach vorheriger Mitteilung nach sich ziehen'
       }
     },
     s4: {
       title: '4. Geistiges Eigentum',
-      text: 'Sofern nicht anders in einem unterzeichneten Vertrag geregelt, behalten wir Rechte an vorbestehenden Materialien, Know‑how und Tools. Nach vollständiger Zahlung erhalten Sie eine weltweite, nicht‑exklusive Lizenz zur Nutzung der Deliverables für interne Geschäftszwecke. Komponenten Dritter unterliegen deren Lizenzbedingungen.'
+      text: 'Yntra behält das Eigentum an vorbestehendem Material, Know-how und Werkzeugen. Nach vollständiger Zahlung erhalten Sie eine weltweite, nicht-exklusive Lizenz zur Nutzung der Liefergegenstände für interne Geschäftszwecke. Wenn ein Kundenvertrag ausdrücklich die Übertragung von Rechten vorsieht, hat dieser Vorrang. Drittkomponenten unterliegen stets ihren jeweiligen Lizenzen.'
     },
     s5: {
       title: '5. Vertraulichkeit und Datenschutz',
-      intro: 'Beide Parteien können vertrauliche Informationen austauschen. Jede Partei verpflichtet sich,',
+      intro: 'Die Parteien können vertrauliche Informationen austauschen. Jede Partei verpflichtet sich dazu:',
       items: [
-        'vertrauliche Informationen der anderen Partei nur zur Vertragserfüllung zu verwenden',
-        'diese Informationen mit angemessener Sorgfalt zu schützen und nicht an Dritte weiterzugeben',
-        'vertrauliche Informationen auf Anfrage zurückzugeben oder zu löschen, sofern keine gesetzliche Aufbewahrungspflicht besteht',
-        'personenbezogene Daten gemäß anwendbarem Datenschutzrecht zu verarbeiten'
+        'Die vertraulichen Informationen der anderen Partei nur zur Erfüllung der Verpflichtungen gemäß diesen Bedingungen zu verwenden',
+        'Solche Informationen mit angemessener Sorgfalt zu schützen und nicht an Dritte weiterzugeben',
+        'Vertrauliche Informationen auf Anfrage zurückzugeben oder zu löschen, es sei denn, die Aufbewahrung ist gesetzlich vorgeschrieben',
+        'Personenbezogene Daten gemäß den geltenden Datenschutzgesetzen zu verarbeiten'
       ],
-      contact_hint: 'Fragen zum Umgang mit Daten? Kontaktieren Sie uns unter'
+      contact_hint: 'Fragen zur Datenverarbeitung? Kontaktieren Sie uns unter'
     },
     s6: {
       title: '6. Zulässige Nutzung',
-      text: 'Sie dürfen die Website oder Dienste nicht verwenden, um: schädlichen Code hochzuladen, Rechte an geistigem Eigentum zu verletzen, die Privatsphäre zu beeinträchtigen, andere zu belästigen oder zu schädigen oder die Integrität bzw. Sicherheit des Dienstes zu gefährden.'
+      text: 'Sie dürfen die Website oder Dienste nicht nutzen, um: schädlichen Code hochzuladen, Rechte an geistigem Eigentum zu verletzen, die Privatsphäre zu verletzen, andere zu belästigen oder zu schädigen oder anderweitig die Integrität oder Sicherheit der Dienste zu gefährden.'
     },
     s7: {
       title: '7. Dienste Dritter',
-      text: 'Unsere Deliverables können sich mit Diensten oder Bibliotheken Dritter integrieren. Wir kontrollieren diese nicht und haften nicht für Inhalte, Richtlinien oder Leistung Dritter. Deren Nutzung unterliegt den jeweiligen Nutzungsbedingungen.'
+      text: 'Unsere Liefergegenstände können Dienste oder Bibliotheken Dritter integrieren. Wir sind nicht verantwortlich für Inhalte, Richtlinien oder Leistungen Dritter. Die Nutzung solcher Dienste unterliegt deren eigenen Bedingungen.'
     },
     s8: {
-      title: '8. Gewährleistung und Haftungsausschluss',
-      text: 'Sofern nicht ausdrücklich in einem unterzeichneten Vertrag geregelt, werden Website und Dienste „wie besehen“ und „wie verfügbar“ bereitgestellt. Wir lehnen alle stillschweigenden Gewährleistungen ab, einschließlich Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung.'
+      title: '8. Gewährleistungen und Haftungsausschlüsse',
+      text: 'Sofern im Kundenvertrag nicht ausdrücklich anders angegeben, werden die Website und Dienste "wie besehen" und "wie verfügbar" bereitgestellt. Wir schließen stillschweigende Gewährleistungen, einschließlich der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten, aus.'
     },
     s9: {
       title: '9. Haftung und Kündigung',
-      text: 'Soweit gesetzlich zulässig, haftet Yntra nicht für indirekte, beiläufige, spezielle oder Folgeschäden. Unsere Gesamthaftung ist auf die Beträge beschränkt, die Sie für die Leistungen gezahlt haben, die den Anspruch innerhalb der vorangegangenen 3 Monate begründen. Wir können bei Verstoß den Zugang aussetzen oder kündigen. Sie können mit schriftlicher Mitteilung kündigen; geleistete Arbeit und nicht stornierbare Verpflichtungen sind zu vergüten.'
+      text: 'Soweit gesetzlich zulässig, haftet Yntra nicht für indirekte, zufällige oder Folgeschäden. Unsere Gesamthaftung ist auf die Beträge beschränkt, die Sie für die Dienste gezahlt haben, die den Anspruch begründet haben, und zwar während der letzten sechs (6) Monate, sofern im Kundenvertrag nicht anders festgelegt. Wir können den Zugang bei Vertragsverletzungen aussetzen oder beenden. Sie können mit schriftlicher Mitteilung kündigen; bereits erbrachte Leistungen und nicht kündbare Verpflichtungen sind zu bezahlen. Wenn ein Kundenvertrag bestimmte Kündigungsfristen vorsieht, haben diese Vorrang.'
     },
     s10: {
       title: '10. Anwendbares Recht und Streitigkeiten',
-      text: 'Diese Bedingungen unterliegen schwedischem Recht und dem anwendbaren EU‑Recht, unter Ausschluss von Kollisionsnormen. Streitigkeiten werden zunächst gütlich beigelegt; andernfalls sind die zuständigen Gerichte in Schweden anzurufen.'
+      text: 'Diese Bedingungen unterliegen schwedischem Recht und dem anwendbaren EU-Recht unter Ausschluss von Kollisionsnormen. Streitigkeiten sind zunächst durch Verhandlungen beizulegen; andernfalls werden sie von den zuständigen Gerichten in Schweden entschieden, sofern im Kundenvertrag nichts anderes festgelegt ist.'
     },
     cta: {
       title: 'Fragen zu diesen Bedingungen?',
-      desc: 'Unklarheiten oder Bedarf an einem individuellen Vertrag? Melden Sie sich gern.',
-      button: 'Kontaktieren Sie uns'
+      desc: 'Benötigen Sie Klarstellungen oder eine maßgeschneiderte Vereinbarung? Kontaktieren Sie uns.',
+      button: 'Kontakt aufnehmen'
     }
   },
   privacy: {

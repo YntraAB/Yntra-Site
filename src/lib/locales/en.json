@@ -99,15 +99,14 @@
   },
   "footer": {
     "sections": { "services": "Services", "company": "Company", "contact": "Get in Touch", "resources": "Resources" },
-    "service_links": ["Website Design", "System Applications", "UI/UX Design", "Mobile Apps", "E-commerce", "Brand Identity"],
-    "company_links": ["About Us", "Our Process", "Case Studies", "Careers", "Blog"],
-    "resource_links": ["Documentation", "Help Center", "Privacy Policy", "Terms of Service"],
-    "address": { "line1": "123 Innovation Street", "line2": "Tech City, TC 12345" },
-    "built_with": "Built with SvelteKit",
-    "copyright": "© 2024 Yntra Development Agency. All rights reserved."
+    "service_links": ["Design", "Applications", "E-Commerce", "Brand Identity"],
+    "company_links": ["About Us", "Our Process"],
+    "resource_links": ["Help Center", "Privacy Policy"],
+    "address": { "line1": "Edevägen 5", "line2": "824 71 Delsbo, Sweden" },
+    "built_with": "Built with Svelte",
+    "copyright": "© 2025 Yntra AB. All rights reserved."
   },
-  "aria": { "toggle_menu": "Toggle menu", "go_to_slide": "Go to slide {num}" }
-  ,
+  "aria": { "toggle_menu": "Toggle menu", "go_to_slide": "Go to slide {num}" },
   "modal": {
     "title": "Contact us",
     "desc": "Share a few details and we’ll get back to you shortly.",

@@ -15,16 +15,16 @@ export default {
     hero: 'Läs dessa villkor noggrant. Genom att besöka webbplatsen eller använda våra tjänster godkänner du dem.',
     last_updated_label: 'Senast uppdaterad',
     intro_card:
-      'Dessa användarvillkor ("Villkor") styr din åtkomst till och användning av Yntras webbplats samt de tjänster vi tillhandahåller. Om du ingår villkoren för ett företags räkning intygar du att du har behörighet att binda företaget. Om du inte accepterar villkoren ska du inte använda vår webbplats eller våra tjänster.',
+      'Dessa användarvillkor ("Villkor") styr din åtkomst till och användning av Yntras webbplats samt de tjänster vi tillhandahåller. Om du ingår villkoren för ett företags räkning intygar du att du har behörighet att binda företaget. Om du inte accepterar villkoren ska du inte använda vår webbplats eller våra tjänster. Om ett separat, undertecknat kundavtal finns gäller det i första hand vid konflikt mellan detta dokument och kundavtalet.',
     s1: {
       title: '1. Godkännande och ändringar',
       acceptance: {
         title: 'Godkännande av villkoren',
-        desc: 'Genom att använda webbplatsen och tjänsterna accepterar du dessa Villkor och vår Integritetspolicy. Om ett separat, undertecknat avtal med Yntra finns gäller det i den mån det avviker.'
+        desc: 'Genom att använda webbplatsen och tjänsterna accepterar du dessa Villkor och vår Integritetspolicy.'
       },
       changes: {
         title: 'Ändringar av villkoren',
-        desc: 'Vi kan uppdatera villkoren då och då. Väsentliga ändringar gäller från det att de publiceras. Fortsatt användning efter att ändringarna trätt i kraft innebär att du accepterar de uppdaterade villkoren.'
+        desc: 'Vi kan uppdatera villkoren då och då. Ändringar gäller från det att de publiceras. Om du har ett separat Kundavtal påverkas detta inte utan skriftligt medgivande.'
       }
     },
     s2: {
@@ -40,7 +40,7 @@ export default {
     s3: {
       title: '3. Beställningar, avgifter och betalning',
       summary: 'Offerter, uppdragsbeskrivningar eller order anger omfattning, leverabler, tidslinjer och prissättning.',
-      includes: 'Om inte annat avtalats skriftligen omfattar fakturering och betalning:',
+      includes: 'Om inte annat avtalats i Kundavtal gäller:',
       items: {
         quotes: 'Offerter/uppdrag: omfattning, antaganden, leverabler, viktiga datum, acceptanskriterier',
         invoicing: 'Fakturering: utfärdas när milstolpar nås eller månadsvis i efterskott',
@@ -49,7 +49,7 @@ export default {
     },
     s4: {
       title: '4. Immateriella rättigheter',
-      text: 'Om inte annat anges i undertecknat avtal behåller vi ägandet av förhandsmaterial, know-how och verktyg. Efter full betalning får du en global, icke-exklusiv licens att använda leverabler för interna affärssyften. Tredjepartskomponenter omfattas av sina respektive licenser.'
+      text: 'Yntra behåller äganderätten till förhandsmaterial, know-how och verktyg. Efter full betalning får du en global, icke-exklusiv licens att använda leverabler för interna affärssyften. Om Kundavtal uttryckligen anger överlåtelse av rättigheter gäller detta före denna punkt. Tredjepartskomponenter omfattas av sina respektive licenser.'
     },
     s5: {
       title: '5. Sekretess och dataskydd',
@@ -72,15 +72,15 @@ export default {
     },
     s8: {
       title: '8. Garantier och friskrivningar',
-      text: 'Om inte annat uttryckligen anges i undertecknat avtal tillhandahålls webbplats och tjänster i befintligt skick (“as is”) och i mån de finns tillgängliga (“as available”). Vi friskriver oss från underförstådda garantier, inklusive säljbarhet, lämplighet för visst ändamål och icke-intrång.'
+      text: 'Om inte annat uttryckligen anges i Kundavtal tillhandahålls webbplats och tjänster i befintligt skick (“as is”) och i mån de finns tillgängliga (“as available”). Vi friskriver oss från underförstådda garantier, inklusive säljbarhet, lämplighet för visst ändamål och icke-intrång.'
     },
     s9: {
       title: '9. Ansvar och uppsägning',
-      text: 'I den utsträckning lagen medger ansvarar Yntra inte för indirekta, tillfälliga eller följdskador. Vårt sammanlagda ansvar är begränsat till de belopp du betalat för de tjänster som gett upphov till kravet under de tre föregående månaderna. Vi kan pausa eller avsluta åtkomst vid avtalsbrott. Du kan säga upp med skriftligt meddelande; arbete utfört och icke uppsägningsbara åtaganden ska ersättas.'
+      text: 'I den utsträckning lagen medger ansvarar Yntra inte för indirekta, tillfälliga eller följdskador. Vårt sammanlagda ansvar är begränsat till de belopp du betalat för de tjänster som gett upphov till kravet under de sex föregående månaderna, om inte annat avtalats i Kundavtal. Vi kan pausa eller avsluta åtkomst vid avtalsbrott. Du kan säga upp med skriftligt meddelande; arbete utfört och icke uppsägningsbara åtaganden ska ersättas. Om Kundavtal anger särskilda uppsägningstider gäller dessa i första hand.'
     },
     s10: {
       title: '10. Tillämplig lag och tvister',
-      text: 'Dessa Villkor regleras av svensk lag och tillämplig EU‑lagstiftning, med undantag för lagvalsregler. Tvister ska i första hand lösas genom förhandling; i andra hand prövas de av behörig domstol i Sverige.'
+      text: 'Dessa Villkor regleras av svensk lag och tillämplig EU-lagstiftning, med undantag för lagvalsregler. Tvister ska i första hand lösas genom förhandling; i andra hand prövas de av behörig domstol i Sverige, om inte annat framgår av Kundavtal.'
     },
     cta: {
       title: 'Frågor om dessa villkor?',

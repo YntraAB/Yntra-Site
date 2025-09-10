@@ -10,81 +10,81 @@ export default {
     ]
   },
   terms: {
-    title: 'Términos del servicio',
-    meta_description: 'Los términos y condiciones que rigen tu uso del sitio web y los servicios de Yntra.',
-    hero: 'Lee atentamente estos términos. Al acceder a nuestro sitio web o utilizar nuestros servicios, aceptas quedar vinculado por ellos.',
+    title: 'Términos de Servicio',
+    meta_description: 'Términos que regulan el uso de la página web y los servicios de Yntra.',
+    hero: 'Por favor, lee estos términos con atención. Al visitar el sitio web o utilizar nuestros servicios aceptas estos términos.',
     last_updated_label: 'Última actualización',
     intro_card:
-      'Estos Términos del servicio ("Términos") regulan tu acceso y uso del sitio web de Yntra y de cualquier servicio que prestemos. Si aceptas estos Términos en nombre de una empresa u otra entidad jurídica, declaras que tienes autoridad para vincular a dicha entidad. Si no estás de acuerdo con estos Términos, no utilices nuestro sitio ni nuestros servicios.',
+      'Estos Términos de Servicio ("Términos") regulan tu acceso y uso del sitio web de Yntra y de los servicios que proporcionamos. Si aceptas los Términos en nombre de una empresa, declaras que tienes la autoridad para obligar a dicha empresa. Si no aceptas los Términos, no utilices nuestro sitio web ni nuestros servicios. Si existe un acuerdo de cliente firmado ("Acuerdo de Cliente"), este prevalecerá en caso de conflicto con los presentes Términos.',
     s1: {
-      title: '1. Aceptación y cambios',
+      title: '1. Aceptación y Cambios',
       acceptance: {
-        title: 'Aceptación de los términos',
-        desc: 'Al acceder o utilizar el sitio y los servicios, aceptas estos Términos y nuestra Política de privacidad. Si existe un acuerdo firmado con Yntra, dicho acuerdo prevalecerá en caso de conflicto.'
+        title: 'Aceptación de los Términos',
+        desc: 'Al utilizar el sitio web y los servicios aceptas estos Términos y nuestra Política de Privacidad.'
       },
       changes: {
-        title: 'Cambios en los términos',
-        desc: 'Podemos actualizar estos Términos periódicamente. Los cambios materiales serán efectivos al publicarse. Tu uso continuado del sitio o de los servicios tras la entrada en vigor de los cambios implica la aceptación de los Términos actualizados.'
+        title: 'Cambios en los Términos',
+        desc: 'Podemos actualizar estos Términos de vez en cuando. Los cambios entran en vigor cuando se publican. Si tienes un Acuerdo de Cliente, este no se verá afectado sin consentimiento expreso por escrito.'
       }
     },
     s2: {
-      title: '2. Servicios y uso',
-      intro: 'Te comprometes a usar nuestros servicios de forma lícita y responsable. En particular, te comprometes a:',
+      title: '2. Servicios y Uso',
+      intro: 'Te comprometes a utilizar nuestros servicios de manera legal y responsable. En particular, te comprometes a:',
       items: [
-        'Proporcionar información veraz y mantener tus datos actualizados',
-        'Utilizar los servicios solo para fines legales y conforme a estos Términos',
-        'Cumplir los límites de uso razonables y las instrucciones que facilitemos',
+        'Proporcionar información precisa y mantenerla actualizada',
+        'Utilizar los servicios solo para fines legales y de conformidad con estos Términos',
+        'Cumplir con límites de uso razonables e instrucciones que proporcionemos',
         'No intentar interrumpir, realizar ingeniería inversa ni obtener acceso no autorizado a nuestros sistemas'
       ]
     },
     s3: {
-      title: '3. Pedidos, tarifas y pagos',
-      summary: 'Los presupuestos, declaraciones de trabajo (SOW) u órdenes describen el alcance, los entregables, los plazos y los precios.',
-      includes: 'Salvo acuerdo escrito en contrario, la facturación y el pago incluyen:',
+      title: '3. Pedidos, Tarifas y Pago',
+      summary: 'Los presupuestos, descripciones de trabajo u órdenes definen el alcance, entregables, plazos y precios.',
+      includes: 'A menos que se acuerde lo contrario en un Acuerdo de Cliente:',
       items: {
-        quotes: 'Presupuestos/SOW: alcance, supuestos, entregables, hitos y criterios de aceptación',
-        invoicing: 'Facturación: emitida a medida que se cumplen hitos o mensualmente a mes vencido',
-        late: 'Pagos atrasados: pueden devengar intereses y/o conllevar la suspensión del trabajo previo aviso'
+        quotes: 'Presupuestos/órdenes: alcance, supuestos, entregables, fechas clave, criterios de aceptación',
+        invoicing: 'Facturación: emitida cuando se alcancen hitos o mensualmente a mes vencido',
+        late: 'Pagos atrasados: pueden generar intereses y/o la suspensión del trabajo previa notificación'
       }
     },
     s4: {
-      title: '4. Propiedad intelectual',
-      text: 'Salvo que se acuerde lo contrario por escrito, conservamos la titularidad de nuestros materiales preexistentes, know-how y herramientas. Tras el pago íntegro, recibirás una licencia mundial y no exclusiva para usar los entregables en tus fines empresariales internos. Los componentes de terceros están sujetos a sus licencias.'
+      title: '4. Propiedad Intelectual',
+      text: 'Yntra conserva la propiedad de materiales preexistentes, conocimientos y herramientas. Tras el pago completo recibirás una licencia mundial, no exclusiva, para usar los entregables con fines comerciales internos. Si un Acuerdo de Cliente concede expresamente la transferencia de derechos, dicho acuerdo prevalecerá. Los componentes de terceros están sujetos a sus respectivas licencias.'
     },
     s5: {
-      title: '5. Confidencialidad y protección de datos',
-      intro: 'Ambas partes pueden intercambiar información confidencial. Cada parte se compromete a:',
+      title: '5. Confidencialidad y Protección de Datos',
+      intro: 'Las partes pueden intercambiar información confidencial. Cada parte se compromete a:',
       items: [
-        'Usar la información confidencial de la otra parte solo para cumplir con estos Términos',
-        'Proteger dicha información con la debida diligencia y no divulgarla a terceros',
-        'Devolver o destruir la información confidencial cuando se solicite, salvo obligación legal de conservarla',
-        'Tratar los datos personales según la normativa aplicable en materia de protección de datos'
+        'Usar la información confidencial de la otra parte únicamente para cumplir con las obligaciones según estos Términos',
+        'Proteger dicha información con un cuidado razonable y no divulgarla a terceros',
+        'Devolver o eliminar la información confidencial a petición, salvo que la retención sea requerida por ley',
+        'Tratar los datos personales en cumplimiento de la legislación aplicable en materia de protección de datos'
       ],
-      contact_hint: '¿Preguntas sobre el tratamiento de datos? Escríbenos a'
+      contact_hint: '¿Preguntas sobre el manejo de datos? Contáctanos en'
     },
     s6: {
-      title: '6. Uso aceptable',
-      text: 'No puedes usar el sitio o los servicios para: subir código malicioso, infringir derechos de propiedad intelectual, vulnerar la privacidad, acosar o dañar a terceros, o realizar cualquier actividad que comprometa la integridad o seguridad del servicio.'
+      title: '6. Uso Aceptable',
+      text: 'No puedes utilizar el sitio web ni los servicios para: subir código malicioso, infringir derechos de propiedad intelectual, violar la privacidad, acosar o dañar a otros, o de otro modo comprometer la integridad o seguridad de los servicios.'
     },
     s7: {
-      title: '7. Servicios de terceros',
-      text: 'Nuestros entregables pueden integrarse con servicios o bibliotecas de terceros. No controlamos ni respondemos por el contenido, las políticas o el rendimiento de terceros. El uso de servicios de terceros se rige por sus propios términos.'
+      title: '7. Servicios de Terceros',
+      text: 'Nuestros entregables pueden integrar servicios o bibliotecas de terceros. No somos responsables del contenido, políticas o rendimiento de terceros. El uso de dichos servicios está sujeto a sus propios términos.'
     },
     s8: {
-      title: '8. Garantías y exenciones de responsabilidad',
-      text: 'Salvo que se indique expresamente en un acuerdo firmado, el sitio y los servicios se proporcionan “tal cual” y “según disponibilidad”. Rechazamos toda garantía implícita, incluidas las de comerciabilidad, idoneidad para un fin particular y no infracción.'
+      title: '8. Garantías y Exenciones de Responsabilidad',
+      text: 'Salvo que se indique expresamente en un Acuerdo de Cliente, el sitio web y los servicios se proporcionan “tal cual” y “según disponibilidad”. Renunciamos a las garantías implícitas, incluidas la comerciabilidad, la idoneidad para un fin determinado y la no infracción.'
     },
     s9: {
-      title: '9. Responsabilidad y terminación',
-      text: 'En la máxima medida permitida por la ley, Yntra no será responsable de daños indirectos, incidentales, especiales o consecuentes. Nuestra responsabilidad total acumulada se limita a las cantidades pagadas por los servicios que dieron lugar a la reclamación en los 3 meses anteriores al hecho. Podemos suspender o terminar el acceso por incumplimiento. Puedes resolver por conveniencia con notificación escrita, sujeto al pago del trabajo realizado y compromisos no cancelables.'
+      title: '9. Responsabilidad y Terminación',
+      text: 'En la medida en que lo permita la ley, Yntra no será responsable de daños indirectos, incidentales o consecuentes. Nuestra responsabilidad total se limita a las cantidades que hayas pagado por los servicios que dieron lugar a la reclamación durante los seis (6) meses anteriores, salvo que se especifique lo contrario en un Acuerdo de Cliente. Podemos suspender o cancelar el acceso por incumplimiento. Puedes rescindir con notificación por escrito; el trabajo realizado y los compromisos no cancelables deben pagarse. Si un Acuerdo de Cliente establece plazos de notificación específicos, estos prevalecerán.'
     },
     s10: {
-      title: '10. Ley aplicable y disputas',
-      text: 'Estos Términos se rigen por las leyes de Suecia y la normativa de la UE aplicable, excluyendo sus normas sobre conflictos de leyes. Las disputas se resolverán de buena fe; de no resolverse, podrán someterse a los tribunales competentes en Suecia.'
+      title: '10. Ley Aplicable y Disputas',
+      text: 'Estos Términos se rigen por la legislación sueca y la legislación aplicable de la UE, excluyendo las normas de conflicto de leyes. Las disputas se resolverán primero mediante negociación; en su defecto, se resolverán ante los tribunales competentes en Suecia, salvo que un Acuerdo de Cliente disponga lo contrario.'
     },
     cta: {
-      title: '¿Preguntas sobre estos términos?',
-      desc: 'Si algo no te queda claro o necesitas un acuerdo personalizado, ponte en contacto.',
+      title: '¿Preguntas sobre estos Términos?',
+      desc: '¿Necesitas aclaraciones o un acuerdo personalizado? Ponte en contacto con nosotros.',
       button: 'Contáctanos'
     }
   },

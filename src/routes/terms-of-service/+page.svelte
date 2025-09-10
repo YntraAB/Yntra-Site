@@ -234,7 +234,7 @@
       </div>
 
       <div class="mt-6 rounded-xl bg-[#F6F8FF] border border-[#D4DFFF] px-4 py-3">
-        <p class="text-slate-700 text-sm md:text-base">{$t('terms.s5.contact_hint')} <a style="color:#4C79FF" class="underline decoration-slate-300 hover:decoration-slate-500" href="mailto:info@yntra.com">info@yntra.com</a>.</p>
+        <p class="text-slate-700 text-sm md:text-base">{$t('terms.s5.contact_hint')} <a style="color:#4C79FF" class="underline decoration-slate-300 hover:decoration-slate-500" href="mailto:info@yntra.se">info@yntra.se</a>.</p>
       </div>
     </div>
 

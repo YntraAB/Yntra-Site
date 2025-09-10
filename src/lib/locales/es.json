@@ -99,12 +99,12 @@
   },
   "footer": {
     "sections": { "services": "Servicios", "company": "Empresa", "contact": "Ponte en contacto", "resources": "Recursos" },
-    "service_links": ["Diseño web", "Aplicaciones de sistema", "Diseño UI/UX", "Apps móviles", "E‑commerce", "Identidad de marca"],
-    "company_links": ["Sobre nosotros", "Nuestro proceso", "Casos de estudio", "Carreras", "Blog"],
-    "resource_links": ["Documentación", "Centro de ayuda", "Política de privacidad"],
-    "address": { "line1": "Calle Innovación 123", "line2": "Tech City, TC 12345" },
-    "built_with": "Construido con SvelteKit",
-    "copyright": "© 2024 Yntra Development Agency. Todos los derechos reservados."
+    "service_links": ["Diseño", "Aplicaciones", "Comercio electrónico", "Identidad de marca"],
+    "company_links": ["Sobre nosotros", "Nuestro proceso"],
+    "resource_links": ["Centro de ayuda", "Política de privacidad"],
+    "address": { "line1": "Edevägen 5", "line2": "824 71 Delsbo, Suecia" },
+    "built_with": "Construido con Svelte",
+    "copyright": "© 2025 Yntra AB. Todos los derechos reservados."
   },
   "aria": { "toggle_menu": "Alternar menú", "go_to_slide": "Ir a la diapositiva {num}" }
 }

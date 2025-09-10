@@ -150,8 +150,6 @@
           <li><a href="#services" class="hover:text-slate-900" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.1')}</a></li>
           <li><a href="#services" class="hover:text-slate-900" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.2')}</a></li>
           <li><a href="#services" class="hover:text-slate-900" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.3')}</a></li>
-          <li><a href="#services" class="hover:text-slate-900" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.4')}</a></li>
-          <li><a href="#services" class="hover:text-slate-900" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.5')}</a></li>
         </ul>
       </div>
 
@@ -161,9 +159,6 @@
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
           <li><a href="/" class="hover:text-slate-900">{$t('footer.company_links.0')}</a></li>
           <li><a href="/" class="hover:text-slate-900">{$t('footer.company_links.1')}</a></li>
-          <li><a href="/" class="hover:text-slate-900">{$t('footer.company_links.2')}</a></li>
-          <li><a href="/" class="hover:text-slate-900">{$t('footer.company_links.3')}</a></li>
-          <li><a href="/" class="hover:text-slate-900">{$t('footer.company_links.4')}</a></li>
         </ul>
       </div>
 
@@ -172,13 +167,13 @@
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.contact')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
           <li>
-            <a href="mailto:info@yntra.com" class="inline-flex items-center gap-2 hover:text-slate-900">
-              <Mail class="h-4 w-4" aria-hidden="true" /> info@yntra.com
+            <a href="mailto:info@yntra.se" class="inline-flex items-center gap-2 hover:text-slate-900">
+              <Mail class="h-4 w-4" aria-hidden="true" /> info@yntra.se
             </a>
           </li>
           <li>
             <a href="tel:+15551234567" class="inline-flex items-center gap-2 hover:text-slate-900">
-              <Phone class="h-4 w-4" aria-hidden="true" /> +1 (555) 123-4567
+              <Phone class="h-4 w-4" aria-hidden="true" /> +46 76 102 33 00
             </a>
           </li>
           <li>
@@ -200,7 +195,6 @@
           <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.0')}</a></li>
           <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.1')}</a></li>
           <li><a href="/privacy-policy" class="hover:text-slate-900">{$t('footer.resource_links.2')}</a></li>
-          <li><a href="/terms-of-service" class="hover:text-slate-900">{$t('footer.resource_links.3')}</a></li>
         </ul>
       </div>
     </div>
