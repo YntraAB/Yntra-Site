@@ -408,7 +408,7 @@
           <div class="grid gap-3">
             <div class="flex items-center justify-between mb-1">
               <div class="text-sm font-medium text-slate-700">{$t('schedule.pick_time')}</div>
-              <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] text-slate-600 shadow-sm">
+<div class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs text-slate-600 shadow-sm">
                 <Globe class="w-3.5 h-3.5" aria-hidden="true" />
                 <span>{$t('schedule.timezone_prefix')} {tz}</span>
               </div>

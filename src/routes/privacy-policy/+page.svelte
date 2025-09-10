@@ -76,7 +76,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <FileText class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('privacy.s1.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('privacy.s1.title')}</h2>
       </div>
 
       <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('privacy.s1.intro')}</p>
@@ -108,7 +108,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Settings class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('privacy.s2.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('privacy.s2.title')}</h2>
       </div>
 
       <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('privacy.s2.intro')}</p>
@@ -159,7 +159,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Share2 class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('privacy.s3.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('privacy.s3.title')}</h2>
       </div>
 
       <div class="mt-6 rounded-xl bg-[#F6F8FF] border border-[#D4DFFF] px-4 py-3">
@@ -189,7 +189,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Shield class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('privacy.s4.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('privacy.s4.title')}</h2>
       </div>
 
       <div class="mt-6 rounded-xl bg-[#F6F8FF] border border-[#D4DFFF] px-4 py-3">
@@ -203,7 +203,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <ShieldCheck class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('privacy.s5.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('privacy.s5.title')}</h2>
       </div>
 
       <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('privacy.s5.intro')}</p>
@@ -258,7 +258,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Cookie class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('privacy.s6.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('privacy.s6.title')}</h2>
       </div>
 
       <div class="mt-6 rounded-xl bg-[#F6F8FF] border border-[#D4DFFF] px-4 py-3">
@@ -272,7 +272,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-white/10 text-white grid place-items-center ring-1 ring-white/20">
           <FileText class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold">{$t('privacy.s7.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold">{$t('privacy.s7.title')}</h2>
       </div>
       <p class="mt-4 text-white/90 text-base md:text-lg">{$t('privacy.s7.text')}</p>
     </div>

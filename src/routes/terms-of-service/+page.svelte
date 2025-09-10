@@ -74,7 +74,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <FileText class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('terms.s1.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s1.title')}</h2>
       </div>
 
       <div class="mt-6 grid gap-[20px]">
@@ -101,7 +101,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Settings class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('terms.s2.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s2.title')}</h2>
       </div>
 
       <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('terms.s2.intro')}</p>
@@ -140,7 +140,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Share2 class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('terms.s3.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s3.title')}</h2>
       </div>
 
       <div class="mt-6 rounded-xl bg-[#F6F8FF] border border-[#D4DFFF] px-4 py-3">
@@ -176,7 +176,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Shield class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('terms.s4.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s4.title')}</h2>
       </div>
       <div class="mt-6 rounded-xl bg-[#F6F8FF] border border-[#D4DFFF] px-4 py-3">
         <p class="text-slate-700 text-sm md:text-base">{$t('terms.s4.text')}</p>
@@ -189,7 +189,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <ShieldCheck class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('terms.s5.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s5.title')}</h2>
       </div>
 
       <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('terms.s5.intro')}</p>
@@ -244,7 +244,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <FileText class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('terms.s6.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s6.title')}</h2>
       </div>
       <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('terms.s6.text')}</p>
     </div>
@@ -255,7 +255,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Share2 class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('terms.s7.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s7.title')}</h2>
       </div>
       <div class="mt-6 rounded-xl bg-[#F6F8FF] border border-[#D4DFFF] px-4 py-3">
         <p class="text-slate-700 text-sm md:text-base">{$t('terms.s7.text')}</p>
@@ -268,7 +268,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-white/10 text-white grid place-items-center ring-1 ring-white/20">
           <Shield class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold">{$t('terms.s8.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold">{$t('terms.s8.title')}</h2>
       </div>
       <p class="mt-4 text-white/90 text-base md:text-lg">{$t('terms.s8.text')}</p>
     </div>
@@ -279,7 +279,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <ShieldCheck class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('terms.s9.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s9.title')}</h2>
       </div>
       <div class="mt-6 rounded-xl bg-[#F6F8FF] border border-[#D4DFFF] px-4 py-3">
         <p class="text-slate-700 text-sm md:text-base">{$t('terms.s9.text')}</p>
@@ -292,7 +292,7 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <FileText class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-[26px] font-bold text-slate-900">{$t('terms.s10.title')}</h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s10.title')}</h2>
       </div>
       <p class="mt-6 text-slate-700 text-sm md:text-base">{$t('terms.s10.text')}</p>
     </div>
@@ -309,4 +309,3 @@
     </div>
   </div>
 </section>
-

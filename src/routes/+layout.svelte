@@ -54,6 +54,7 @@
 
 <svelte:head>
   <link rel="icon" href={favicon} />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Yntra — Design & Development Studio</title>
   <meta name="description" content="We design and build high-performing websites, apps, and digital systems that help businesses scale faster and work smarter." />
 </svelte:head>
@@ -119,7 +120,7 @@
 
 <!-- Site Footer -->
 <footer class="mt-24 border-t bg-white">
-  <div class="max-w-7xl mx-auto px-6 md:px-8 py-14">
+  <div class="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14">
     <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-10">
       <!-- Brand + Tagline + Social -->
       <div class="lg:col-span-2">
@@ -155,7 +156,7 @@
       </div>
 
       <!-- Company -->
-      <div>
+      <div class="hidden sm:block">
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.company')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
           <li><a href="/" class="hover:text-slate-900">{$t('footer.company_links.0')}</a></li>
@@ -193,7 +194,7 @@
       </div>
 
       <!-- Resources -->
-      <div>
+      <div class="hidden sm:block">
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.resources')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
           <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.0')}</a></li>
@@ -204,9 +205,9 @@
       </div>
     </div>
 
-    <div class="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-slate-200 pt-6">
+    <div class="mt-10 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-slate-200 pt-6">
       <p class="text-sm text-slate-500">{$t('footer.copyright')}</p>
-      <div class="text-xs text-slate-500">{$t('footer.built_with')}</div>
+      <div class="hidden sm:block text-xs text-slate-500">{$t('footer.built_with')}</div>
     </div>
   </div>
 </footer>
