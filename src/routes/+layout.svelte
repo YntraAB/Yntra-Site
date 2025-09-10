@@ -199,6 +199,7 @@
           <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.0')}</a></li>
           <li><a href="/" class="hover:text-slate-900">{$t('footer.resource_links.1')}</a></li>
           <li><a href="/privacy-policy" class="hover:text-slate-900">{$t('footer.resource_links.2')}</a></li>
+          <li><a href="/terms-of-service" class="hover:text-slate-900">{$t('footer.resource_links.3')}</a></li>
         </ul>
       </div>
     </div>

@@ -2,6 +2,92 @@ import base from './es.json';
 
 export default {
   ...base,
+  footer: {
+    ...(base as any).footer,
+    resource_links: [
+      ...(((base as any).footer?.resource_links) ?? []),
+      'Términos del servicio'
+    ]
+  },
+  terms: {
+    title: 'Términos del servicio',
+    meta_description: 'Los términos y condiciones que rigen tu uso del sitio web y los servicios de Yntra.',
+    hero: 'Lee atentamente estos términos. Al acceder a nuestro sitio web o utilizar nuestros servicios, aceptas quedar vinculado por ellos.',
+    last_updated_label: 'Última actualización',
+    intro_card:
+      'Estos Términos del servicio ("Términos") regulan tu acceso y uso del sitio web de Yntra y de cualquier servicio que prestemos. Si aceptas estos Términos en nombre de una empresa u otra entidad jurídica, declaras que tienes autoridad para vincular a dicha entidad. Si no estás de acuerdo con estos Términos, no utilices nuestro sitio ni nuestros servicios.',
+    s1: {
+      title: '1. Aceptación y cambios',
+      acceptance: {
+        title: 'Aceptación de los términos',
+        desc: 'Al acceder o utilizar el sitio y los servicios, aceptas estos Términos y nuestra Política de privacidad. Si existe un acuerdo firmado con Yntra, dicho acuerdo prevalecerá en caso de conflicto.'
+      },
+      changes: {
+        title: 'Cambios en los términos',
+        desc: 'Podemos actualizar estos Términos periódicamente. Los cambios materiales serán efectivos al publicarse. Tu uso continuado del sitio o de los servicios tras la entrada en vigor de los cambios implica la aceptación de los Términos actualizados.'
+      }
+    },
+    s2: {
+      title: '2. Servicios y uso',
+      intro: 'Te comprometes a usar nuestros servicios de forma lícita y responsable. En particular, te comprometes a:',
+      items: [
+        'Proporcionar información veraz y mantener tus datos actualizados',
+        'Utilizar los servicios solo para fines legales y conforme a estos Términos',
+        'Cumplir los límites de uso razonables y las instrucciones que facilitemos',
+        'No intentar interrumpir, realizar ingeniería inversa ni obtener acceso no autorizado a nuestros sistemas'
+      ]
+    },
+    s3: {
+      title: '3. Pedidos, tarifas y pagos',
+      summary: 'Los presupuestos, declaraciones de trabajo (SOW) u órdenes describen el alcance, los entregables, los plazos y los precios.',
+      includes: 'Salvo acuerdo escrito en contrario, la facturación y el pago incluyen:',
+      items: {
+        quotes: 'Presupuestos/SOW: alcance, supuestos, entregables, hitos y criterios de aceptación',
+        invoicing: 'Facturación: emitida a medida que se cumplen hitos o mensualmente a mes vencido',
+        late: 'Pagos atrasados: pueden devengar intereses y/o conllevar la suspensión del trabajo previo aviso'
+      }
+    },
+    s4: {
+      title: '4. Propiedad intelectual',
+      text: 'Salvo que se acuerde lo contrario por escrito, conservamos la titularidad de nuestros materiales preexistentes, know-how y herramientas. Tras el pago íntegro, recibirás una licencia mundial y no exclusiva para usar los entregables en tus fines empresariales internos. Los componentes de terceros están sujetos a sus licencias.'
+    },
+    s5: {
+      title: '5. Confidencialidad y protección de datos',
+      intro: 'Ambas partes pueden intercambiar información confidencial. Cada parte se compromete a:',
+      items: [
+        'Usar la información confidencial de la otra parte solo para cumplir con estos Términos',
+        'Proteger dicha información con la debida diligencia y no divulgarla a terceros',
+        'Devolver o destruir la información confidencial cuando se solicite, salvo obligación legal de conservarla',
+        'Tratar los datos personales según la normativa aplicable en materia de protección de datos'
+      ],
+      contact_hint: '¿Preguntas sobre el tratamiento de datos? Escríbenos a'
+    },
+    s6: {
+      title: '6. Uso aceptable',
+      text: 'No puedes usar el sitio o los servicios para: subir código malicioso, infringir derechos de propiedad intelectual, vulnerar la privacidad, acosar o dañar a terceros, o realizar cualquier actividad que comprometa la integridad o seguridad del servicio.'
+    },
+    s7: {
+      title: '7. Servicios de terceros',
+      text: 'Nuestros entregables pueden integrarse con servicios o bibliotecas de terceros. No controlamos ni respondemos por el contenido, las políticas o el rendimiento de terceros. El uso de servicios de terceros se rige por sus propios términos.'
+    },
+    s8: {
+      title: '8. Garantías y exenciones de responsabilidad',
+      text: 'Salvo que se indique expresamente en un acuerdo firmado, el sitio y los servicios se proporcionan “tal cual” y “según disponibilidad”. Rechazamos toda garantía implícita, incluidas las de comerciabilidad, idoneidad para un fin particular y no infracción.'
+    },
+    s9: {
+      title: '9. Responsabilidad y terminación',
+      text: 'En la máxima medida permitida por la ley, Yntra no será responsable de daños indirectos, incidentales, especiales o consecuentes. Nuestra responsabilidad total acumulada se limita a las cantidades pagadas por los servicios que dieron lugar a la reclamación en los 3 meses anteriores al hecho. Podemos suspender o terminar el acceso por incumplimiento. Puedes resolver por conveniencia con notificación escrita, sujeto al pago del trabajo realizado y compromisos no cancelables.'
+    },
+    s10: {
+      title: '10. Ley aplicable y disputas',
+      text: 'Estos Términos se rigen por las leyes de la jurisdicción donde se encuentra Yntra, excluyendo sus normas sobre conflictos de leyes. Las disputas se resolverán de buena fe; de lo contrario, podrán someterse a los tribunales competentes de dicha jurisdicción.'
+    },
+    cta: {
+      title: '¿Preguntas sobre estos términos?',
+      desc: 'Si algo no te queda claro o necesitas un acuerdo personalizado, ponte en contacto.',
+      button: 'Contáctanos'
+    }
+  },
   privacy: {
     title: 'Política de Privacidad',
     meta_description: 'Cómo Yntra recopila, usa y protege tus datos personales.',
@@ -118,4 +204,3 @@ export default {
     clear_date: 'Borrar fecha'
   }
 };
-

@@ -101,7 +101,7 @@
     "sections": { "services": "Services", "company": "Company", "contact": "Get in Touch", "resources": "Resources" },
     "service_links": ["Website Design", "System Applications", "UI/UX Design", "Mobile Apps", "E-commerce", "Brand Identity"],
     "company_links": ["About Us", "Our Process", "Case Studies", "Careers", "Blog"],
-    "resource_links": ["Documentation", "Help Center", "Privacy Policy"],
+    "resource_links": ["Documentation", "Help Center", "Privacy Policy", "Terms of Service"],
     "address": { "line1": "123 Innovation Street", "line2": "Tech City, TC 12345" },
     "built_with": "Built with SvelteKit",
     "copyright": "© 2024 Yntra Development Agency. All rights reserved."

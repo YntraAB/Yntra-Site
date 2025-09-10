@@ -2,6 +2,92 @@ import base from './sv.json';
 
 export default {
   ...base,
+  footer: {
+    ...(base as any).footer,
+    resource_links: [
+      ...(((base as any).footer?.resource_links) ?? []),
+      'Användarvillkor'
+    ]
+  },
+  terms: {
+    title: 'Användarvillkor',
+    meta_description: 'Villkor som reglerar din användning av Yntras webbplats och tjänster.',
+    hero: 'Läs dessa villkor noggrant. Genom att besöka webbplatsen eller använda våra tjänster godkänner du dem.',
+    last_updated_label: 'Senast uppdaterad',
+    intro_card:
+      'Dessa användarvillkor ("Villkor") styr din åtkomst till och användning av Yntras webbplats samt de tjänster vi tillhandahåller. Om du ingår villkoren för ett företags räkning intygar du att du har behörighet att binda företaget. Om du inte accepterar villkoren ska du inte använda vår webbplats eller våra tjänster.',
+    s1: {
+      title: '1. Godkännande och ändringar',
+      acceptance: {
+        title: 'Godkännande av villkoren',
+        desc: 'Genom att använda webbplatsen och tjänsterna accepterar du dessa Villkor och vår Integritetspolicy. Om ett separat, undertecknat avtal med Yntra finns gäller det i den mån det avviker.'
+      },
+      changes: {
+        title: 'Ändringar av villkoren',
+        desc: 'Vi kan uppdatera villkoren då och då. Väsentliga ändringar gäller från det att de publiceras. Fortsatt användning efter att ändringarna trätt i kraft innebär att du accepterar de uppdaterade villkoren.'
+      }
+    },
+    s2: {
+      title: '2. Tjänster och användning',
+      intro: 'Du åtar dig att använda våra tjänster lagligt och ansvarsfullt. Särskilt åtar du dig att:',
+      items: [
+        'Lämna korrekta uppgifter och hålla dem uppdaterade',
+        'Använda tjänsterna endast för lagliga syften och i enlighet med dessa Villkor',
+        'Följa rimliga användningsgränser och instruktioner som vi tillhandahåller',
+        'Inte försöka störa, bakåtkompilera eller få obehörig åtkomst till våra system'
+      ]
+    },
+    s3: {
+      title: '3. Beställningar, avgifter och betalning',
+      summary: 'Offerter, uppdragsbeskrivningar eller order anger omfattning, leverabler, tidslinjer och prissättning.',
+      includes: 'Om inte annat avtalats skriftligen omfattar fakturering och betalning:',
+      items: {
+        quotes: 'Offerter/uppdrag: omfattning, antaganden, leverabler, viktiga datum, acceptanskriterier',
+        invoicing: 'Fakturering: utfärdas när milstolpar nås eller månadsvis i efterskott',
+        late: 'Försena betalningar: kan medföra ränta och/eller pausat arbete efter föregående avisering'
+      }
+    },
+    s4: {
+      title: '4. Immateriella rättigheter',
+      text: 'Om inte annat anges i undertecknat avtal behåller vi ägandet av förhandsmaterial, know-how och verktyg. Efter full betalning får du en global, icke-exklusiv licens att använda leverabler för interna affärssyften. Tredjepartskomponenter omfattas av sina respektive licenser.'
+    },
+    s5: {
+      title: '5. Sekretess och dataskydd',
+      intro: 'Parterna kan utbyta konfidentiell information. Varje part åtar sig att:',
+      items: [
+        'Använda den andra partens konfidentiella information endast för att fullgöra åtaganden enligt dessa Villkor',
+        'Skydda sådan information med rimlig aktsamhet och inte röja den för tredje part',
+        'Skicka tillbaka eller radera konfidentiell information på begäran, om inte lag kräver bevarande',
+        'Behandla personuppgifter i enlighet med tillämplig dataskyddslagstiftning'
+      ],
+      contact_hint: 'Frågor om datahantering? Kontakta oss på'
+    },
+    s6: {
+      title: '6. Godtagbar användning',
+      text: 'Du får inte använda webbplatsen eller tjänsterna för att: ladda upp skadlig kod, göra intrång i immateriella rättigheter, kränka integritet, trakassera eller skada andra, eller på annat sätt äventyra tjänsternas integritet eller säkerhet.'
+    },
+    s7: {
+      title: '7. Tredjepartstjänster',
+      text: 'Våra leverabler kan integrera tredjepartstjänster eller bibliotek. Vi ansvarar inte för tredjepartsinnehåll, -policyer eller -prestanda. Användning av sådana tjänster sker enligt deras villkor.'
+    },
+    s8: {
+      title: '8. Garantier och friskrivningar',
+      text: 'Om inte annat uttryckligen anges i undertecknat avtal tillhandahålls webbplats och tjänster i befintligt skick (“as is”) och i mån de finns tillgängliga (“as available”). Vi friskriver oss från underförstådda garantier, inklusive säljbarhet, lämplighet för visst ändamål och icke-intrång.'
+    },
+    s9: {
+      title: '9. Ansvar och uppsägning',
+      text: 'I den utsträckning lagen medger ansvarar Yntra inte för indirekta, tillfälliga eller följdskador. Vårt sammanlagda ansvar är begränsat till de belopp du betalat för de tjänster som gett upphov till kravet under de tre föregående månaderna. Vi kan pausa eller avsluta åtkomst vid avtalsbrott. Du kan säga upp med skriftligt meddelande; arbete utfört och icke uppsägningsbara åtaganden ska ersättas.'
+    },
+    s10: {
+      title: '10. Tillämplig lag och tvister',
+      text: 'Dessa Villkor regleras av lagarna i den jurisdiktion där Yntra är etablerat, med undantag för lagvalsregler. Tvister ska i första hand lösas genom förhandling; i andra hand prövas de i behörig domstol i nämnda jurisdiktion.'
+    },
+    cta: {
+      title: 'Frågor om dessa villkor?',
+      desc: 'Behöver du förtydliganden eller ett anpassat avtal? Hör av dig.',
+      button: 'Kontakta oss'
+    }
+  },
   meta: {
     title: 'Yntra \u2014 Design- och utvecklingsbyr\u00E5',
     description:

@@ -2,6 +2,84 @@ import base from './en.json';
 
 export default {
   ...base,
+  terms: {
+    title: 'Terms of Service',
+    meta_description: 'The terms and conditions that govern your use of Yntra’s website and services.',
+    hero: 'Please read these terms carefully. By accessing our website or using our services, you agree to be bound by them.',
+    last_updated_label: 'Last updated',
+    intro_card: 'These Terms of Service ("Terms") govern your access to and use of Yntra’s website and any services we provide. If you are entering into these Terms on behalf of a company or other legal entity, you represent that you have authority to bind that entity. If you do not agree to these Terms, do not use our website or services.',
+    s1: {
+      title: '1. Acceptance and Changes',
+      acceptance: {
+        title: 'Acceptance of Terms',
+        desc: 'By accessing or using the website and services, you agree to these Terms and our Privacy Policy. If you are under a separate signed agreement with Yntra, that agreement will prevail to the extent of any conflict.'
+      },
+      changes: {
+        title: 'Changes to Terms',
+        desc: 'We may update these Terms from time to time. Material changes will be effective when posted. Your continued use of the website or services after changes become effective constitutes acceptance of the updated Terms.'
+      }
+    },
+    s2: {
+      title: '2. Services and Use',
+      intro: 'You agree to use our services lawfully and responsibly. In particular, you agree to:',
+      items: [
+        'Provide accurate information and keep your details current',
+        'Use the services only for lawful purposes and in accordance with these Terms',
+        'Comply with any reasonable usage limits and instructions we provide',
+        'Not attempt to disrupt, reverse-engineer, or gain unauthorized access to our systems'
+      ]
+    },
+    s3: {
+      title: '3. Orders, Fees and Payment',
+      summary: 'Quotes, statements of work, or order forms describe scope, deliverables, timelines, and pricing.',
+      includes: 'Unless otherwise agreed in writing, billing and payment include:',
+      items: {
+        quotes: 'Quotes/SOWs: scope, assumptions, deliverables, key dates, acceptance criteria',
+        invoicing: 'Invoicing: issued as milestones are met or monthly in arrears',
+        late: 'Late payments: may accrue interest and/or suspend work after prior notice'
+      }
+    },
+    s4: {
+      title: '4. Intellectual Property',
+      text: 'Unless otherwise stated in a signed agreement, we retain ownership of our pre-existing materials, know-how, and tools. Upon full payment, you receive a worldwide, non-exclusive license to use deliverables for your internal business purposes. Third-party components remain subject to their respective licenses.'
+    },
+    s5: {
+      title: '5. Confidentiality and Data Protection',
+      intro: 'Both parties may exchange confidential information. Each party agrees to:',
+      items: [
+        'Use the other party’s confidential information only for performing obligations under these Terms',
+        'Protect such information with reasonable care and not disclose it to third parties',
+        'Promptly return or destroy confidential information upon request, unless retention is required by law',
+        'Handle personal data in accordance with applicable data protection laws'
+      ],
+      contact_hint: 'Questions about data handling? Contact us at'
+    },
+    s6: {
+      title: '6. Acceptable Use',
+      text: 'You may not use the website or services to: upload malicious code, infringe intellectual property rights, violate privacy rights, harass or harm others, or engage in any activity that disrupts service integrity or security.'
+    },
+    s7: {
+      title: '7. Third‑Party Services',
+      text: 'Our deliverables may integrate with third-party services or libraries. We do not control and are not responsible for third-party content, policies, or performance. Use of third-party services is subject to their terms.'
+    },
+    s8: {
+      title: '8. Warranties and Disclaimers',
+      text: 'Except as expressly stated in a signed agreement, the website and services are provided “as is” and “as available.” We disclaim all implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.'
+    },
+    s9: {
+      title: '9. Liability and Termination',
+      text: 'To the maximum extent permitted by law, Yntra is not liable for indirect, incidental, special, or consequential damages. Our total aggregate liability is limited to the amounts paid by you for the services giving rise to the claim in the 3 months preceding the event. We may suspend or terminate access for breach. You may terminate for convenience with written notice, subject to payment for work performed and non-cancellable commitments.'
+    },
+    s10: {
+      title: '10. Governing Law and Disputes',
+      text: 'These Terms are governed by the laws of the jurisdiction where Yntra is established, excluding conflict-of-law rules. Disputes will be resolved by good-faith negotiations; if unresolved, they may be brought in the competent courts of that jurisdiction.'
+    },
+    cta: {
+      title: 'Questions About These Terms?',
+      desc: 'If anything is unclear or you need a custom agreement, please reach out.',
+      button: 'Contact Us'
+    }
+  },
   privacy: {
     title: 'Privacy Policy',
     meta_description: 'How Yntra handles your personal data: collection, use, and protection.',
