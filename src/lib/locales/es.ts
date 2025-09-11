@@ -2,6 +2,7 @@ import base from './es.json';
 
 export default {
   ...base,
+  nav: { ...(base as any).nav, helpcenter: 'Centro de ayuda' },
   footer: {
     ...(base as any).footer,
     resource_links: [
@@ -202,5 +203,189 @@ export default {
     next_day: 'Día siguiente',
     calendar_open: 'Abrir calendario',
     clear_date: 'Borrar fecha'
+  },
+  help: {
+    meta_title: 'Centro de ayuda — Yntra',
+    meta_description: 'Encuentra respuestas, guías y recursos para empezar y tener éxito con Yntra.',
+    title: 'Centro de ayuda',
+    subtitle: 'Encuentra respuestas rápidas a preguntas frecuentes, lee guías y obtén soporte cuando lo necesites.',
+    search_open_aria: 'Abrir búsqueda',
+    search_input_aria: 'Buscar en el Centro de ayuda',
+    search_placeholder: 'Buscar en el Centro de ayuda…',
+    search_suggestions_aria: 'Sugerencias de búsqueda',
+    categories: {
+      title: 'Explorar categorías',
+      subtitle: 'Hemos agrupado lo esencial para ayudarte a empezar, entender los precios y cómo entregamos.',
+      more_help: '¿Necesitas más ayuda?'
+    },
+    groups: {
+      getting_started: { title: 'Primeros pasos' },
+      services_pricing: { title: 'Servicios y precios' },
+      project_delivery: { title: 'Proyecto y entrega' },
+      tech_hosting: { title: 'Tecnología y hosting' },
+      billing: { title: 'Facturación' },
+      contact: { title: 'Contacto' }
+    },
+    articles: {
+      'getting-started': { title: '¿Cómo empiezo un proyecto?', category: 'Primeros pasos' },
+      pricing: { title: '¿Cuánto cuesta un sitio web?', category: 'Servicios y precios' },
+      process: { title: '¿Cuál es el proceso de principio a fin?', category: 'Proyecto y entrega' },
+      tech: { title: '¿Qué stack y hosting utilizáis?', category: 'Tecnología y hosting' },
+      billing: { title: '¿Cómo funcionan la facturación y el pago?', category: 'Facturación' },
+      'contact-support': { title: '¿Cómo contacto con soporte?', category: 'Contacto' },
+      requirements: { title: '¿Qué necesitáis de nuestra parte?', category: 'Primeros pasos' },
+      scope: { title: '¿Qué incluye cada paquete?', category: 'Servicios y precios' },
+      addons: { title: 'Complementos y postventa', category: 'Servicios y precios' },
+      quality: { title: 'Calidad y pruebas', category: 'Proyecto y entrega' },
+      handover: { title: 'Lanzamiento y entrega', category: 'Proyecto y entrega' },
+      performance: { title: 'Rendimiento y SEO', category: 'Tecnología y hosting' },
+      security: { title: 'Seguridad y copias de seguridad', category: 'Tecnología y hosting' },
+      payments: { title: 'Formas de pago', category: 'Facturación' },
+      terms: { title: 'Contratos y rescisión', category: 'Facturación' },
+      slas: { title: 'Tiempos de respuesta (SLA)', category: 'Contacto' },
+      book: { title: 'Reservar una llamada', category: 'Contacto' }
+    },
+    answers: {
+      more_info: 'Más información',
+      fallback: 'Detalles próximamente.',
+      'getting-started': {
+        title: 'Inicio de proyecto y onboarding',
+        paragraphs: [
+          'Describe objetivos, público y requisitos clave del negocio. Te enviaremos la solución recomendada, cronograma y modelo de costes.',
+          'Al empezar configuramos un canal compartido (p. ej., Slack) y alineamos alcance y prioridades.'
+        ]
+      },
+      pricing: {
+        title: 'Modelos de precios',
+        paragraphs: [
+          'Paquetes cerrados cuando los entregables están claros; tiempo y materiales para desarrollo iterativo.',
+          'Todos los modelos incluyen QA, soporte de lanzamiento y gestión de proyecto en alcance razonable.'
+        ]
+      },
+      process: {
+        title: 'Proceso de diseño y desarrollo',
+        paragraphs: [
+          'Descubrimiento → Diseño → Desarrollo → Pruebas → Lanzamiento → Soporte.',
+          'Trabajamos de forma transparente con demos periódicas e iteraciones cortas para feedback rápido.'
+        ]
+      },
+      requirements: {
+        title: 'Qué necesitamos de ti',
+        paragraphs: [
+          'Activos como logotipo, guías de marca, contenido existente y referencias.',
+          'Accesos para integraciones (claves API, etc.) y una persona de contacto para decisiones rápidas.'
+        ]
+      },
+      scope: {
+        title: 'Qué incluye cada paquete',
+        paragraphs: [
+          'Los entregables se detallan en la propuesta/SoW: páginas, vistas, funciones, integraciones y handover.',
+          'Se pueden añadir complementos según necesidad.'
+        ]
+      },
+      addons: {
+        title: 'Complementos y postventa',
+        paragraphs: [
+          'Ejemplos: idiomas extra, más plantillas de página, experimentos de growth, tests A/B, SEO ampliado.',
+          'Se pueden contratar planes de soporte y mejora continua.'
+        ]
+      },
+      quality: {
+        title: 'Calidad y pruebas',
+        paragraphs: [
+          'Ejecutamos pruebas automatizadas y manuales, además de controles de rendimiento y accesibilidad.',
+          'Los errores detectados dentro del periodo acordado se corrigen sin coste adicional.'
+        ]
+      },
+      handover: {
+        title: 'Lanzamiento y entrega',
+        paragraphs: [
+          'Plan de lanzamiento con estrategia de rollback, documentación y transferencia de conocimiento.',
+          'También ofrecemos seguimiento y medición post‑lanzamiento.'
+        ]
+      },
+      tech: {
+        title: 'Stack y herramientas',
+        paragraphs: [
+          'Stack web moderno (p. ej., SvelteKit) con foco en rendimiento, seguridad y DX.',
+          'El hosting se elige según requisitos: edge/CDN o entornos en contenedores.'
+        ]
+      },
+      performance: {
+        title: 'Rendimiento y SEO',
+        paragraphs: [
+          'Core Web Vitals, optimización de imágenes y caché por defecto.',
+          'SEO técnico y datos estructurados cuando sea relevante.'
+        ]
+      },
+      security: {
+        title: 'Seguridad y backup',
+        paragraphs: [
+          'Dependencias seguras, protección contra ataques comunes y acceso basado en roles.',
+          'Procedimientos de copia y restauración según RPO/RTO acordados.'
+        ]
+      },
+      billing: {
+        title: 'Frecuencia de facturación',
+        paragraphs: [
+          'Mensual a mes vencido o por hito. 30 días neto por defecto.',
+          'El tiempo no utilizado puede compensarse según contrato.'
+        ]
+      },
+      payments: {
+        title: 'Formas de pago',
+        paragraphs: [
+          'Transferencia bancaria, tarjeta o transferencia internacional según la entidad.',
+          'La factura incluye registro de horas y entregables por periodo.'
+        ]
+      },
+      terms: {
+        title: 'Contratos y rescisión',
+        paragraphs: [
+          'Plazos y condiciones constan en el Acuerdo de Cliente/SoW.',
+          'El trabajo puede pausarse por impago tras aviso, según las condiciones.'
+        ]
+      },
+      'contact-support': {
+        title: 'Canales de soporte',
+        paragraphs: [
+          'Escríbenos a info@yntra.se para cualquier consulta. Para proyectos en curso usamos un canal de Slack dedicado.',
+          'Las incidencias urgentes se priorizan según el SLA acordado.'
+        ]
+      },
+      slas: {
+        title: 'Tiempos de respuesta (SLA)',
+        paragraphs: [
+          'Consultas habituales: respuesta en 1 día laborable. Urgentes: acuse inmediato y plan de acción.',
+          'La disponibilidad y guardias pueden incluirse en planes de soporte.'
+        ]
+      },
+      book: {
+        title: 'Reservar una llamada',
+        paragraphs: [
+          'Elige la hora que te convenga. Revisaremos necesidades, alcance y siguientes pasos.',
+          'La reserva genera invitación de calendario y confirmación por correo.'
+        ]
+      }
+    },
+    faq: {
+      title: 'Preguntas frecuentes',
+      items: [
+        { q: '¿Qué tan rápido respondéis a nuevas consultas?', a: 'Normalmente en 1 día laborable. Las urgentes se atienden más rápido.' },
+        { q: '¿Incluís garantía y corrección de errores tras la entrega?', a: 'Sí, dentro del periodo acordado corregimos sin coste adicional.' },
+        { q: '¿Podéis trabajar con un código/diseño existente?', a: 'Claro. Hacemos una revisión técnica/UX rápida y recomendamos la mejor vía.' },
+        { q: '¿Cómo gestionáis cambios durante el proyecto?', a: 'Priorizamos en backlog y estimamos impacto. Ajustes menores suelen entrar en sprint.' },
+        { q: '¿Ofrecéis soporte continuo tras el lanzamiento?', a: 'Sí — planes flexibles (SLA, mejoras, monitorización e incidencias).' }
+      ]
+    },
+    cta: {
+      title: '¿No encuentras lo que buscas?',
+      subtitle: 'Nuestro equipo responde encantado a tus dudas y te guía hacia la solución adecuada.',
+      contact: 'Contáctanos',
+      book_call: 'Reservar una llamada'
+    },
+    actions: {
+      close: 'Cerrar'
+    }
   }
 };

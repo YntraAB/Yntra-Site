@@ -11,6 +11,7 @@
   import MapPin from 'lucide-svelte/icons/map-pin';
   import { setupI18n, t, locale as i18nLocale } from '$lib/i18n';
   import LanguageSelector from '$lib/components/LanguageSelector.svelte';
+  import ContactModal from '$lib/components/ContactModal.svelte';
 
   let { children } = $props();
 
@@ -26,6 +27,7 @@
 
   let mobileOpen = $state(false);
   let currentLocale = $state('sv');
+  let globalContactOpen = $state(false);
 
   $effect(() => {
     const unsub = i18nLocale.subscribe((v) => (currentLocale = v ?? 'sv'));
@@ -48,6 +50,20 @@
     e.preventDefault();
     const el = document.querySelector(selector);
     el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Open Contact modal for any element with [data-open-contact]
+  if (typeof document !== 'undefined') {
+    const handler = (e: MouseEvent) => {
+      const t = e.target as HTMLElement | null;
+      const el = t?.closest('[data-open-contact]') as HTMLElement | null;
+      if (el) {
+        e.preventDefault();
+        globalContactOpen = true;
+      }
+    };
+    document.addEventListener('click', handler);
+    $effect(() => () => document.removeEventListener('click', handler));
   }
 
 </script>
@@ -132,6 +148,8 @@
 
 <main id="content">{@render children?.()}</main>
 
+<ContactModal bind:open={globalContactOpen} on:close={() => (globalContactOpen = false)} />
+
 <footer class="border-t bg-white">
   <div class="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14">
     <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-10">
@@ -167,7 +185,7 @@
       <div class="hidden sm:block">
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.company')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
-          <li><a href="/" class="hover:text-slate-900">{$t('footer.company_links.0')}</a></li>
+          <li><a href="/about" class="hover:text-slate-900">{$t('footer.company_links.0')}</a></li>
           <li><a href="/" class="hover:text-slate-900">{$t('footer.company_links.1')}</a></li>
         </ul>
       </div>
@@ -181,7 +199,7 @@
             </a>
           </li>
           <li>
-            <a href="tel:+15551234567" class="inline-flex items-center gap-2 hover:text-slate-900">
+            <a href="tel:+46761023300" class="inline-flex items-center gap-2 hover:text-slate-900">
               <Phone class="h-4 w-4" aria-hidden="true" /> +46 76 102 33 00
             </a>
           </li>

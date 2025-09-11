@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import Monitor from 'lucide-svelte/icons/monitor';
   import Smartphone from 'lucide-svelte/icons/smartphone';
@@ -12,6 +12,7 @@
   import MailIcon from 'lucide-svelte/icons/mail';
   import CalendarIcon from 'lucide-svelte/icons/calendar';
   import ArrowRight from 'lucide-svelte/icons/arrow-right';
+  import ChevronRight from 'lucide-svelte/icons/chevron-right';
   import LinkIcon from 'lucide-svelte/icons/link';
   import Star from 'lucide-svelte/icons/star';
   import Quote from 'lucide-svelte/icons/quote';
@@ -19,16 +20,13 @@
   import { t, locale as i18nLocale } from '$lib/i18n';
   const serviceKeys = ['websites','systems','uiux','support'] as const;
   import { fitLines } from '$lib/actions/fitLines';
-  import ContactModal from '$lib/components/ContactModal.svelte';
   import ScheduleCallModal from '$lib/components/ScheduleCallModal.svelte';
-
+  
   type ShowcaseType = 'website' | 'system';
-
   let currentShowcaseType = $state<ShowcaseType>('website');
   let currentSlideIndex = $state(0);
-  let showContact = $state(false);
+  
   let showSchedule = $state(false);
-
   const slides: Record<ShowcaseType, { title: string; subtitle: string; src: string; alt: string }[]> = {
     website: [
       {
@@ -112,7 +110,7 @@
   const showcaseMedia: ShowcaseMedia[] = [
     { src: '/images/omsorgPreview.png' }, 
     { src: '/images/React Pro.png' },     
-    { src: '/images/showcase-2.png' },    
+    { src: '/images/Omsorg.png' },        
     { src: '/images/React Pro.png' }      
   ];
 
@@ -164,7 +162,7 @@
 </script>
 
 <svelte:head>
-  <title>Yntra — Design & Development Studio</title>
+  <title>Yntra â€” Design & Development Studio</title>
   <meta
     name="description"
     content="Design and build high-performing websites, apps, and digital systems. We help businesses scale faster, look better, and work smarter."
@@ -175,7 +173,7 @@
     content="hire developers, top designers, web development, app development, digital agency, custom software"
   />
 
-  <meta property="og:title" content="Yntra — Design & Development Studio" />
+  <meta property="og:title" content="Yntra â€” Design & Development Studio" />
   <meta
     property="og:description"
     content="We design and build high-performing websites, apps, and digital systems that help businesses scale faster, look better, and work smarter."
@@ -222,10 +220,12 @@
 
         <a 
           href="#contact" 
-          class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl bg-[var(--accent)] text-white px-10 py-2.5 text-lg shadow-sm transform transition-all duration-200 ease-out md:hover:scale-105 md:hover:shadow-md md:hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50" 
+          class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 cursor-pointer s-y_bCXRrkrYfP" 
           onclick={(e) => smoothScroll(e as MouseEvent, '#contact')}
         > 
-          {$t('hero.cta_hire')} <ArrowRight class="w-4 h-4" aria-hidden="true" /> 
+          <MailIcon class="w-6 h-6 text-white" aria-hidden="true" />
+          <span class="text-white">{$t('hero.cta_hire')}</span>
+          <ChevronRight class="w-5 h-5 text-white" aria-hidden="true" />
         </a> 
       </div>
 
@@ -240,6 +240,9 @@
             <img
               src={s.src}
               alt={$t(`slides.${currentShowcaseType}.${i}.alt`)}
+              loading={i === currentSlideIndex ? 'eager' : 'lazy'}
+              decoding="async"
+              sizes="(min-width: 768px) 50vw, 100vw"
               class={`absolute inset-0 w-full h-full object-cover origin-center scale-[1.3] sm:scale-[1.35] md:scale-[1.4] will-change-transform [backface-visibility:hidden] ${
                 s.src.endsWith('Stalker-one.png') ? 'translate-y-[-2%]' : ''
               }`}
@@ -506,16 +509,14 @@
         <div class="flex flex-wrap gap-4 justify-center mt-8">
           <button
             type="button"
-            class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 cursor-pointer" 
-            onclick={() => (showContact = true)}
+            class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 cursor-pointer s-y_bCXRrkrYfP" 
+            data-open-contact
           >
-            <MailIcon class="w-5 h-5" aria-hidden="true" /> {$t('cta.hire_us')} <ArrowRight class="w-5 h-5" aria-hidden="true" />
+            <MailIcon class="w-6 h-6" aria-hidden="true" /> {$t('cta.hire_us')} <ChevronRight class="w-5 h-5" aria-hidden="true" />
           </button>
-          <button
-            type="button"
+          <button type="button"
             class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold border border-white/20 bg-white/10 hover:bg-white/15 shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 cursor-pointer"
-            onclick={() => (showSchedule = true)}
-          >
+            onclick={() => (showSchedule = true)}>
             <CalendarIcon class="w-5 h-5" aria-hidden="true" /> {$t('cta.schedule_call')}
           </button>
         </div>
@@ -539,12 +540,12 @@
   </div>
 </section>
 
-<ContactModal bind:open={showContact} on:submit={(e: CustomEvent<FormData>) => {
-
-  console.log('contact form submitted', Array.from(e.detail.entries()));
-}} />
+ 
 
 <ScheduleCallModal bind:open={showSchedule} on:submit={(e: CustomEvent<any>) => {
-
   console.log('schedule submitted', e.detail);
 }} />
+
+
+
+

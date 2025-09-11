@@ -205,5 +205,235 @@ export default {
     next_day: 'Next day',
     calendar_open: 'Open calendar',
     clear_date: 'Clear date'
+  },
+  about: {
+    title: 'About Us',
+    meta_description: 'We build high‑performing websites, systems, and apps with clean custom code — no templates.',
+    hero: 'We build custom websites and business systems/apps. Mostly in Svelte, Tailwind, and TypeScript — and happily in other stacks on request. No templates or WordPress — just clean, handcrafted code that fits your business and scales with you.',
+    s1: {
+      title: 'What we do',
+      intro: 'From marketing sites to mission‑critical internal tools — we design, build, and ship fast, robust, and maintainable products.',
+      items: {
+        websites: { title: 'Websites', desc: 'Modern, accessible, fast websites that convert and are easy to manage.' },
+        apps: { title: 'Systems & Apps', desc: 'Custom business tools, dashboards, portals, and integrations that streamline work.' },
+        integrations: { title: 'Integrations & Automation', desc: 'APIs, data sync, background jobs, and workflows that remove manual steps.' },
+        design: { title: 'Design & UX', desc: 'User‑first interfaces, design systems, and thoughtful micro‑interactions.' }
+      }
+    },
+    s2: {
+      title: 'How we build',
+      items: [
+        'Custom code only — never templates or generic CMS themes',
+        'SvelteKit + Tailwind + TypeScript by default; other stacks on request',
+        'Strong foundations: a11y, performance, security, and clean architecture',
+        'End‑to‑end testing where it matters; CI checks and previews',
+        'Own the code: handover, docs, and maintainability baked in',
+        'Transparent collaboration: short iterations, demos, and async updates'
+      ]
+    },
+    s3: {
+      title: 'Our process',
+      steps: [
+        { title: 'Discovery', desc: 'Goals, users, constraints, success metrics — align on scope and assumptions.' },
+        { title: 'Design', desc: 'Flows, low‑/high‑fidelity, design tokens, and component system.' },
+        { title: 'Build', desc: 'Iterative delivery with CI, code reviews, and staging previews.' },
+        { title: 'Integrate', desc: 'APIs, auth, payments, analytics, content, and automation.' },
+        { title: 'Test & Optimize', desc: 'Functional, performance, and accessibility checks; profiling and polish.' },
+        { title: 'Launch & Support', desc: 'Rollout plan, handover, docs, and optional ongoing support.' }
+      ]
+    },
+    s4: {
+      title: 'Tech & tools',
+      text: 'We favor SvelteKit, Tailwind CSS, and TypeScript for speed and maintainability, but can deliver in React, Vue, or modern server runtimes if preferred. We design for long‑term ownership: minimal dependencies, clear boundaries, and infrastructure that scales.'
+    },
+    cta: {
+      title: 'Ready to build together?',
+      desc: 'Tell us about your goals. We’ll propose a pragmatic plan that balances speed, quality, and budget — and then ship it.',
+      contact: 'Start a conversation'
+    }
+  },
+  help: {
+    meta_title: 'Help Center — Yntra',
+    meta_description: 'Find answers, guides, and resources to get started and succeed with Yntra.',
+    title: 'Help Center',
+    subtitle: 'Find quick answers to common questions, read guides, and get support when you need it.',
+    search_open_aria: 'Open search',
+    search_input_aria: 'Search in Help Center',
+    search_placeholder: 'Search the Help Center…',
+    search_suggestions_aria: 'Search suggestions',
+    categories: {
+      title: 'Explore categories',
+      subtitle: 'We’ve grouped the essentials to help you get started, understand pricing, and how we deliver.',
+      more_help: 'Need more help?'
+    },
+    groups: {
+      getting_started: { title: 'Getting started' },
+      services_pricing: { title: 'Services & pricing' },
+      project_delivery: { title: 'Project & delivery' },
+      tech_hosting: { title: 'Tech & hosting' },
+      billing: { title: 'Billing' },
+      contact: { title: 'Contact' }
+    },
+    articles: {
+      'getting-started': { title: 'How do I get started with a project?', category: 'Getting started' },
+      pricing: { title: 'How much does a website cost?', category: 'Services & pricing' },
+      process: { title: 'What does the end‑to‑end process look like?', category: 'Project & delivery' },
+      tech: { title: 'What stack and hosting do you use?', category: 'Tech & hosting' },
+      billing: { title: 'How does billing and payment work?', category: 'Billing' },
+      'contact-support': { title: 'How do I reach support?', category: 'Contact' },
+      requirements: { title: 'What do you need from us?', category: 'Getting started' },
+      scope: { title: 'What’s included in the packages?', category: 'Services & pricing' },
+      addons: { title: 'Add‑ons & post‑purchase', category: 'Services & pricing' },
+      quality: { title: 'Quality & testing', category: 'Project & delivery' },
+      handover: { title: 'Launch & handover', category: 'Project & delivery' },
+      performance: { title: 'Performance & SEO', category: 'Tech & hosting' },
+      security: { title: 'Security & backup', category: 'Tech & hosting' },
+      payments: { title: 'Payment methods', category: 'Billing' },
+      terms: { title: 'Contracts & termination', category: 'Billing' },
+      slas: { title: 'Response times (SLA)', category: 'Contact' },
+      book: { title: 'Book a call', category: 'Contact' }
+    },
+    answers: {
+      more_info: 'More information',
+      fallback: 'Details coming soon.',
+      'getting-started': {
+        title: 'Project kickoff & onboarding',
+        paragraphs: [
+          'Start by describing your goals, audience, and key business requirements. We’ll return with a recommended solution, timeline, and pricing model.',
+          'At kickoff we set up a shared channel (e.g., Slack) and align scope and priorities.'
+        ]
+      },
+      pricing: {
+        title: 'Pricing models',
+        paragraphs: [
+          'Fixed packages when deliverables are clear; time & materials for iterative development.',
+          'All models include QA, release support, and project management within a reasonable scope.'
+        ]
+      },
+      process: {
+        title: 'Design & development process',
+        paragraphs: [
+          'Discovery → Design → Development → Testing → Launch → Support.',
+          'We work transparently with demo check‑ins and short iterations for fast feedback.'
+        ]
+      },
+      requirements: {
+        title: 'What we need from you',
+        paragraphs: [
+          'Assets like logo, brand guidelines, existing content, and any references.',
+          'Access for integrations (API keys, etc.) and a contact for quick decisions.'
+        ]
+      },
+      scope: {
+        title: 'What’s included in the packages?',
+        paragraphs: [
+          'Deliverables are specified in the quote/SoW: pages, views, features, integrations, and handover.',
+          'Add‑ons can be added as needed.'
+        ]
+      },
+      addons: {
+        title: 'Add‑ons & post‑purchase',
+        paragraphs: [
+          'Examples: extra languages, more page templates, growth experiments, A/B testing, extended SEO.',
+          'Support and improvement plans can be subscribed to on an ongoing basis.'
+        ]
+      },
+      quality: {
+        title: 'Quality & testing',
+        paragraphs: [
+          'We run automated and manual tests plus performance and accessibility checks.',
+          'Bugs found within the agreed window are fixed at no extra cost.'
+        ]
+      },
+      handover: {
+        title: 'Launch & handover',
+        paragraphs: [
+          'Release plan with rollback strategy, documentation, and knowledge transfer included.',
+          'We also offer post‑launch follow‑up and measurement.'
+        ]
+      },
+      tech: {
+        title: 'Stack & tools',
+        paragraphs: [
+          'Modern web stack (e.g., SvelteKit) focused on performance, security, and DX.',
+          'Hosting is chosen based on requirements: edge/CDN or containerized environments.'
+        ]
+      },
+      performance: {
+        title: 'Performance & SEO',
+        paragraphs: [
+          'Core Web Vitals, image optimization, and caching as standard.',
+          'Technical SEO and structured data are implemented when relevant.'
+        ]
+      },
+      security: {
+        title: 'Security & backup',
+        paragraphs: [
+          'Secure dependencies, protection against common attacks, and role‑based access.',
+          'Backup and restore procedures per agreed RPO/RTO.'
+        ]
+      },
+      billing: {
+        title: 'Billing cadence',
+        paragraphs: [
+          'Monthly in arrears or per milestone. 30 days net by default.',
+          'Unused time may be credited according to the agreement.'
+        ]
+      },
+      payments: {
+        title: 'Payment methods',
+        paragraphs: [
+          'Bank transfer, card, or international wire depending on entity.',
+          'Invoice specification includes time logs and deliverables per period.'
+        ]
+      },
+      terms: {
+        title: 'Contracts & termination',
+        paragraphs: [
+          'Terms and notice periods are stated in the Customer Agreement/SoW.',
+          'Work may be paused for late payment after notice, in line with the terms.'
+        ]
+      },
+      'contact-support': {
+        title: 'Support channels',
+        paragraphs: [
+          'Email info@yntra.se for all requests. A dedicated Slack channel is used for ongoing projects.',
+          'Urgent incidents are prioritized according to the agreed SLA.'
+        ]
+      },
+      slas: {
+        title: 'Response times (SLA)',
+        paragraphs: [
+          'Standard requests: reply within 1 business day. Urgent: immediate acknowledgment and action plan.',
+          'Availability and on‑call can be included in support plans.'
+        ]
+      },
+      book: {
+        title: 'Book a call',
+        paragraphs: [
+          'Pick a time that suits you. We’ll review needs, scope, and next steps.',
+          'The booking creates a calendar invite and confirmation by email.'
+        ]
+      }
+    },
+    faq: {
+      title: 'Frequently asked questions',
+      items: [
+        { q: 'How fast do you respond to new inquiries?', a: 'Typically within 1 business day. Urgent requests are handled faster.' },
+        { q: 'Do you include warranty and bug fixes after delivery?', a: 'Yes — within the agreed window we fix issues at no extra cost.' },
+        { q: 'Can you work with an existing codebase/design?', a: 'Absolutely. We do a quick technical/UX review and recommend the best path forward.' },
+        { q: 'How do you handle change requests during a project?', a: 'We prioritize in the backlog and estimate impact. Smaller adjustments often fit into a sprint.' },
+        { q: 'Do you offer ongoing support after launch?', a: 'Yes — flexible support plans (SLA, improvements, monitoring, and incident handling).' }
+      ]
+    },
+    cta: {
+      title: 'Can’t find what you’re looking for?',
+      subtitle: 'Our team is happy to answer questions and guide you to the right solution.',
+      contact: 'Contact us',
+      book_call: 'Schedule a call'
+    },
+    actions: {
+      close: 'Close'
+    }
   }
 };

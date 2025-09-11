@@ -2,6 +2,7 @@ import base from './fr.json';
 
 export default {
   ...base,
+  nav: { ...(base as any).nav, helpcenter: 'Centre d’aide' },
   footer: {
     ...(base as any).footer,
     resource_links: [
@@ -153,6 +154,190 @@ export default {
       title: 'Des questions au sujet de cette politique ?',
       desc: 'Si vous avez des questions concernant cette politique de confidentialité, n’hésitez pas à nous contacter.',
       button: 'Nous contacter'
+    }
+  },
+  help: {
+    meta_title: 'Centre d’aide — Yntra',
+    meta_description: 'Trouvez des réponses, des guides et des ressources pour bien démarrer avec Yntra.',
+    title: 'Centre d’aide',
+    subtitle: 'Des réponses rapides aux questions fréquentes, des guides à lire et de l’assistance quand vous en avez besoin.',
+    search_open_aria: 'Ouvrir la recherche',
+    search_input_aria: 'Rechercher dans le Centre d’aide',
+    search_placeholder: 'Rechercher dans le Centre d’aide…',
+    search_suggestions_aria: 'Suggestions de recherche',
+    categories: {
+      title: 'Explorer les catégories',
+      subtitle: 'L’essentiel regroupé pour démarrer, comprendre les tarifs et notre mode de livraison.',
+      more_help: 'Besoin de plus d’aide ?'
+    },
+    groups: {
+      getting_started: { title: 'Bien démarrer' },
+      services_pricing: { title: 'Services & tarifs' },
+      project_delivery: { title: 'Projet & livraison' },
+      tech_hosting: { title: 'Technologie & hébergement' },
+      billing: { title: 'Facturation' },
+      contact: { title: 'Contact' }
+    },
+    articles: {
+      'getting-started': { title: 'Comment démarrer un projet ?', category: 'Bien démarrer' },
+      pricing: { title: 'Combien coûte un site web ?', category: 'Services & tarifs' },
+      process: { title: 'Quel est le processus de bout en bout ?', category: 'Projet & livraison' },
+      tech: { title: 'Quelle stack et quel hébergement utilisez-vous ?', category: 'Technologie & hébergement' },
+      billing: { title: 'Comment fonctionnent la facturation et le paiement ?', category: 'Facturation' },
+      'contact-support': { title: 'Comment contacter le support ?', category: 'Contact' },
+      requirements: { title: 'De quoi avons‑nous besoin de votre part ?', category: 'Bien démarrer' },
+      scope: { title: 'Que comprend chaque offre ?', category: 'Services & tarifs' },
+      addons: { title: 'Options & post‑achat', category: 'Services & tarifs' },
+      quality: { title: 'Qualité & tests', category: 'Projet & livraison' },
+      handover: { title: 'Mise en ligne & passation', category: 'Projet & livraison' },
+      performance: { title: 'Performance & SEO', category: 'Technologie & hébergement' },
+      security: { title: 'Sécurité & sauvegarde', category: 'Technologie & hébergement' },
+      payments: { title: 'Modes de paiement', category: 'Facturation' },
+      terms: { title: 'Contrats & résiliation', category: 'Facturation' },
+      slas: { title: 'Délais de réponse (SLA)', category: 'Contact' },
+      book: { title: 'Planifier un appel', category: 'Contact' }
+    },
+    answers: {
+      more_info: 'Plus d’informations',
+      fallback: 'Détails à venir.',
+      'getting-started': {
+        title: 'Lancement de projet & onboarding',
+        paragraphs: [
+          'Décrivez vos objectifs, votre audience et les exigences clés. Nous reviendrons avec une solution recommandée, un calendrier et un modèle de tarification.',
+          'Au démarrage, nous ouvrons un canal commun (ex. Slack) et alignons le périmètre et les priorités.'
+        ]
+      },
+      pricing: {
+        title: 'Modèles de tarification',
+        paragraphs: [
+          'Forfaits fixes quand les livrables sont clairs ; régie (T&M) pour un développement itératif.',
+          'Tous les modèles incluent QA, support de mise en ligne et gestion de projet dans un périmètre raisonnable.'
+        ]
+      },
+      process: {
+        title: 'Processus de design & développement',
+        paragraphs: [
+          'Discovery → Design → Développement → Tests → Mise en ligne → Support.',
+          'Travail transparent avec démos régulières et itérations courtes pour un feedback rapide.'
+        ]
+      },
+      requirements: {
+        title: 'Ce dont nous avons besoin',
+        paragraphs: [
+          'Assets (logo, guidelines), contenus existants et éventuelles références.',
+          'Accès pour les intégrations (clés API, etc.) et un contact pour des décisions rapides.'
+        ]
+      },
+      scope: {
+        title: 'Ce que comprennent les offres',
+        paragraphs: [
+          'Livrables précisés dans le devis/SoW : pages, vues, fonctionnalités, intégrations et passation.',
+          'Des options peuvent être ajoutées selon les besoins.'
+        ]
+      },
+      addons: {
+        title: 'Options & post‑achat',
+        paragraphs: [
+          'Exemples : langues supplémentaires, modèles de page, expériences growth, A/B tests, SEO étendu.',
+          'Des offres de support et d’amélioration continue peuvent être souscrites.'
+        ]
+      },
+      quality: {
+        title: 'Qualité & tests',
+        paragraphs: [
+          'Tests automatisés et manuels, contrôles de performance et d’accessibilité.',
+          'Les anomalies détectées dans la fenêtre convenue sont corrigées sans frais.'
+        ]
+      },
+      handover: {
+        title: 'Mise en ligne & passation',
+        paragraphs: [
+          'Plan de mise en ligne avec stratégie de rollback, documentation et transfert de connaissances.',
+          'Suivi et mesure post‑lancement possibles.'
+        ]
+      },
+      tech: {
+        title: 'Stack & outils',
+        paragraphs: [
+          'Stack web moderne (ex. SvelteKit) orienté performance, sécurité et DX.',
+          'Hébergement selon les besoins : edge/CDN ou environnements conteneurisés.'
+        ]
+      },
+      performance: {
+        title: 'Performance & SEO',
+        paragraphs: [
+          'Core Web Vitals, optimisation d’images et cache par défaut.',
+          'SEO technique et données structurées lorsque pertinent.'
+        ]
+      },
+      security: {
+        title: 'Sécurité & sauvegarde',
+        paragraphs: [
+          'Dépendances sécurisées, protection contre les attaques courantes, accès basé sur les rôles.',
+          'Procédures de sauvegarde et restauration selon RPO/RTO convenus.'
+        ]
+      },
+      billing: {
+        title: 'Rythme de facturation',
+        paragraphs: [
+          'Mensuel à terme échu ou par jalon. 30 jours nets par défaut.',
+          'Le temps non utilisé peut être imputé selon l’accord.'
+        ]
+      },
+      payments: {
+        title: 'Modes de paiement',
+        paragraphs: [
+          'Virement, carte ou transfert international selon l’entité.',
+          'La facture comprend les temps et livrables par période.'
+        ]
+      },
+      terms: {
+        title: 'Contrats & résiliation',
+        paragraphs: [
+          'Conditions et délais indiqués dans l’Accord Client/SoW.',
+          'Le travail peut être suspendu en cas de retard de paiement après notification.'
+        ]
+      },
+      'contact-support': {
+        title: 'Canaux de support',
+        paragraphs: [
+          'Écrivez‑nous à info@yntra.se pour toute demande. Pour les projets en cours, nous utilisons un canal Slack dédié.',
+          'Les incidents urgents sont priorisés conformément au SLA convenu.'
+        ]
+      },
+      slas: {
+        title: 'Délais de réponse (SLA)',
+        paragraphs: [
+          'Demandes standard : réponse sous 1 jour ouvré. Urgent : accusé immédiat et plan d’action.',
+          'Disponibilité et astreintes possibles via des offres de support.'
+        ]
+      },
+      book: {
+        title: 'Planifier un appel',
+        paragraphs: [
+          'Choisissez un créneau adapté. Nous passerons en revue les besoins, le périmètre et les prochaines étapes.',
+          'Vous recevez une invitation calendrier et une confirmation par e‑mail.'
+        ]
+      }
+    },
+    faq: {
+      title: 'Questions fréquentes',
+      items: [
+        { q: 'À quelle vitesse répondez‑vous aux nouvelles demandes ?', a: 'Généralement sous 1 jour ouvré. Plus rapidement pour les urgences.' },
+        { q: 'Incluez‑vous une garantie et des correctifs après la livraison ?', a: 'Oui — pendant la période convenue, nous corrigeons sans frais.' },
+        { q: 'Pouvez‑vous travailler sur une base de code/design existante ?', a: 'Oui. Nous faisons une revue technique/UX et recommandons la meilleure voie.' },
+        { q: 'Comment gérez‑vous les changements en cours de projet ?', a: 'Priorisation dans le backlog et estimation de l’impact. Les petits ajustements tiennent souvent dans un sprint.' },
+        { q: 'Proposez‑vous un support continu après la mise en ligne ?', a: 'Oui — offres flexibles (SLA, améliorations, monitoring, incidents).' }
+      ]
+    },
+    cta: {
+      title: 'Vous ne trouvez pas ce que vous cherchez ?',
+      subtitle: 'Notre équipe sera ravie de répondre à vos questions et de vous orienter vers la bonne solution.',
+      contact: 'Nous contacter',
+      book_call: 'Planifier un appel'
+    },
+    actions: {
+      close: 'Fermer'
     }
   },
   modal: {

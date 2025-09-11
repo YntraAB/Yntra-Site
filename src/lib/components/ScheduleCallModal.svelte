@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte';
   import X from 'lucide-svelte/icons/x';
   import Calendar from 'lucide-svelte/icons/calendar';
@@ -317,21 +317,13 @@
 {#if open}
   <div
     class="fixed inset-0 z-[100] grid place-items-center bg-black/60 backdrop-blur-sm p-4"
-    aria-hidden="true"
-    tabindex="0"
     onclick={onBackdropClick}
-    onkeydown={(e) => {
-      if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar')) {
-        e.preventDefault();
-        close();
-      }
-    }}
     in:fade={{ duration: 120 }}
     out:fade={{ duration: 120 }}
   >
     <div
       bind:this={dialogEl}
-      class="relative w-full max-w-3xl overflow-hidden rounded-2xl bg-white text-slate-900 shadow-2xl ring-1 ring-black/10"
+      class="relative w-full max-w-3xl max-h-[92svh] overflow-hidden rounded-2xl bg-white text-slate-900 shadow-2xl ring-1 ring-black/10"
       role="dialog"
       aria-modal="true"
       aria-labelledby="schedule-modal-title"
@@ -353,7 +345,7 @@
         <X class="w-5 h-5" aria-hidden="true" />
       </button>
 
-      <div class="p-6 sm:p-8">
+      <div class="p-4 sm:p-6 md:p-8 overflow-y-auto max-h-[80svh]">
         <div class="mb-6 flex items-start gap-3">
           <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[hsl(215,70%,56%)] text-white shadow-sm"><Calendar class="w-5 h-5" aria-hidden="true"/></div>
           <div>
@@ -371,7 +363,7 @@
         }}>
           <div class="grid grid-cols-1 gap-4">
             <div class="grid gap-2">
-              <label class="text-sm font-medium text-slate-700">{$t('schedule.type_label')}</label>
+              <div class="text-sm font-medium text-slate-700">{$t('schedule.type_label')}</div>
               <div class="flex flex-wrap gap-2">
                 <button type="button" class={`inline-flex items-center gap-2 rounded-xl border ${selectedType==='meet'?'border-[hsl(215,70%,56%)] bg-[hsl(215,70%,56%)]/10 text-[hsl(215,70%,30%)]':'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'} px-3 py-2 text-sm font-medium`} onclick={() => selectedType='meet'}>
                   <Video class="w-4 h-4" aria-hidden="true"/> Google Meet
@@ -552,3 +544,5 @@
     }
   }
  </style>
+
+

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from 'svelte';
   import { t, locale as i18nLocale } from '$lib/i18n';
   import { get } from 'svelte/store';
@@ -7,7 +7,7 @@
   import Shield from 'lucide-svelte/icons/shield';
   import ShieldCheck from 'lucide-svelte/icons/shield-check';
   import Share2 from 'lucide-svelte/icons/share-2';
-
+  import ChevronRight from 'lucide-svelte/icons/chevron-right';
   let lastUpdated = '';
   function toLocaleTag(code: string) {
     switch (code) {
@@ -47,7 +47,7 @@
 
   <div class="relative z-10 w-full max-w-[895px] mx-auto px-6 md:px-0 py-12 md:py-16">
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">{$t('terms.title')}</h1>
-    <p class="mt-4 text-white/80 max-w-2xl text-base md:text-lg">{$t('terms.hero')}</p>
+    <p class="mt-4 text-white/80 max-w-2xl text-base">{$t('terms.hero')}</p>
   </div>
 </section>
 
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-8">
-      <p class="text-slate-700 text-base md:text-lg leading-relaxed">{$t('terms.intro_card')}</p>
+      <p class="text-slate-700 text-base leading-relaxed">{$t('terms.intro_card')}</p>
     </div>
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
@@ -75,14 +75,14 @@
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] [border-color:color-mix(in_oklab,var(--accent)_92%,white)]"></div>
           <div>
             <div class="font-semibold text-slate-900">{$t('terms.s1.acceptance.title')}</div>
-            <p class="mt-1 text-slate-600 text-base md:text-lg">{$t('terms.s1.acceptance.desc')}</p>
+            <p class="mt-1 text-slate-600 text-base">{$t('terms.s1.acceptance.desc')}</p>
           </div>
         </div>
         <div class="relative pl-8">
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] border-black/80"></div>
           <div>
             <div class="font-semibold text-slate-900">{$t('terms.s1.changes.title')}</div>
-            <p class="mt-1 text-slate-600 text-base md:text-lg">{$t('terms.s1.changes.desc')}</p>
+            <p class="mt-1 text-slate-600 text-base">{$t('terms.s1.changes.desc')}</p>
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
         </div>
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s2.title')}</h2>
       </div>
-      <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('terms.s2.intro')}</p>
+      <p class="mt-4 text-slate-700 text-base">{$t('terms.s2.intro')}</p>
       <div class="mt-6 grid gap-3">
         <div class="bg-white rounded-xl ring-1 ring-slate-200/70 p-4 md:p-5" >
           <div class="flex items-start gap-3">
@@ -181,7 +181,7 @@
 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s5.title')}</h2>
       </div>
 
-      <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('terms.s5.intro')}</p>
+      <p class="mt-4 text-slate-700 text-base">{$t('terms.s5.intro')}</p>
 
       <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="bg-white rounded-xl ring-1 ring-slate-200/70 p-4 md:p-5">
@@ -235,7 +235,7 @@
         </div>
 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('terms.s6.title')}</h2>
       </div>
-      <p class="mt-4 text-slate-700 text-base md:text-lg">{$t('terms.s6.text')}</p>
+      <p class="mt-4 text-slate-700 text-base">{$t('terms.s6.text')}</p>
     </div>
 
     
@@ -259,7 +259,7 @@
         </div>
 <h2 class="text-2xl sm:text-3xl font-bold">{$t('terms.s8.title')}</h2>
       </div>
-      <p class="mt-4 text-white/90 text-base md:text-lg">{$t('terms.s8.text')}</p>
+      <p class="mt-4 text-white/90 text-base">{$t('terms.s8.text')}</p>
     </div>
 
     
@@ -291,10 +291,20 @@
       <h3 class="text-xl md:text-2xl font-semibold text-slate-900">{$t('terms.cta.title')}</h3>
       <p class="mt-2 text-slate-500">{$t('terms.cta.desc')}</p>
       <div class="mt-6">
-        <a href="/#contact" class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl bg-[var(--accent)] text-white px-6 py-2.5 text-base shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50">
-          {$t('terms.cta.button')}
-        </a>
+        <button type="button" data-open-contact class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 cursor-pointer s-y_bCXRrkrYfP">
+          <span class="text-white">{$t('terms.cta.button')}</span>
+          <ChevronRight class="w-5 h-5" aria-hidden="true" />
+        </button>
       </div>
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte';
   import X from 'lucide-svelte/icons/x';
   import Send from 'lucide-svelte/icons/send';
@@ -70,8 +70,8 @@
 {#if open}
   <div
     class="fixed inset-0 z-[100] grid place-items-center bg-black/60 backdrop-blur-sm p-4"
-    aria-hidden="true"
-    tabindex="0"
+    
+    role="button" tabindex="0" aria-label="Close"
     onclick={onBackdropClick}
     onkeydown={(e) => {
       if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar')) {
@@ -84,7 +84,7 @@
   >
     <div
       bind:this={dialogEl}
-      class="relative w-full max-w-xl overflow-hidden rounded-2xl bg-white text-slate-900 shadow-2xl ring-1 ring-black/10"
+      class="relative w-full max-w-xl max-h-[92svh] overflow-hidden rounded-2xl bg-white text-slate-900 shadow-2xl ring-1 ring-black/10"
       role="dialog"
       aria-modal="true"
       aria-labelledby="contact-modal-title"
@@ -102,10 +102,10 @@
         aria-label={$t('modal.close')}
         onclick={close}
       >
-        <X class="w-5 h-5" aria-hidden="true" />
+        <X class="w-5 h-5"  />
       </button>
 
-      <div class="p-6 sm:p-8">
+      <div class="p-4 sm:p-6 md:p-8 overflow-y-auto max-h-[80svh]">
         <div class="mb-6">
           <h3 id="contact-modal-title" class="text-xl sm:text-2xl font-bold tracking-tight">
             {$t('modal.title')}
@@ -113,18 +113,12 @@
           <p id="contact-modal-desc" class="mt-1 text-slate-600">{$t('modal.desc')}</p>
         </div>
 
-        <form bind:this={formEl} class="grid gap-4" onsubmit={handleSubmit} onkeydown={(e) => {
-          const ke = e as KeyboardEvent;
-          const target = ke.target as HTMLElement | null;
-          if (ke.key === 'Enter' && target && target.tagName !== 'TEXTAREA') {
-            e.preventDefault();
-          }
-        }}>
+        <form bind:this={formEl} class="grid gap-4" onsubmit={handleSubmit}>
           <div class="grid gap-2">
             <label for="company" class="text-sm font-medium text-slate-700">{$t('modal.company_label')}</label>
             <div class="relative">
               <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
-                <Building2 class="w-4 h-4" aria-hidden="true" />
+                <Building2 class="w-4 h-4"  />
               </span>
               <input
                 id="company"
@@ -142,7 +136,7 @@
               <label for="tel" class="text-sm font-medium text-slate-700">{$t('modal.tel_label')}</label>
               <div class="relative">
                 <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
-                  <Phone class="w-4 h-4" aria-hidden="true" />
+                  <Phone class="w-4 h-4"  />
                 </span>
                 <input
                   id="tel"
@@ -158,7 +152,7 @@
               <label for="email" class="text-sm font-medium text-slate-700">{$t('modal.email_label')}</label>
               <div class="relative">
                 <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
-                  <Mail class="w-4 h-4" aria-hidden="true" />
+                  <Mail class="w-4 h-4"  />
                 </span>
                 <input
                   id="email"
@@ -176,7 +170,7 @@
             <label for="message" class="text-sm font-medium text-slate-700">{$t('modal.message_label')}</label>
             <div class="relative">
               <span class="pointer-events-none absolute left-3 top-3 text-slate-400">
-                <MessageSquare class="w-4 h-4" aria-hidden="true" />
+                <MessageSquare class="w-4 h-4"  />
               </span>
               <textarea
                 id="message"
@@ -203,7 +197,7 @@
                 class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-[1.02] hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(215,70%,56%)]/40"
                 onclick={handleButtonClick}
               >
-                <Send class="w-4 h-4" aria-hidden="true" /> {$t('modal.send')}
+                <Send class="w-4 h-4"  /> {$t('modal.send')}
               </button>
             </div>
           </div>
@@ -222,3 +216,4 @@
     }
   }
 </style>
+

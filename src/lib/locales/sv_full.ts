@@ -294,6 +294,236 @@ export default {
     calendar_open: 'Öppna kalendern',
     clear_date: 'Rensa datum'
   },
+  about: {
+    title: 'Om oss',
+    meta_description: 'Vi bygger skräddarsydda webbplatser, system och appar med ren, anpassad kod — inga mallar.',
+    hero: 'Vi bygger skräddarsydda webbplatser och system/appar för företag. Oftast i Svelte, Tailwind och TypeScript — men gärna i andra språk/stacks om du önskar. Inga templates eller WordPress — bara ren, handskriven kod som passar ditt företag och skalar med dig.',
+    s1: {
+      title: 'Vad vi gör',
+      intro: 'Från marknadsplatser till affärskritiska interna verktyg — vi designar, bygger och levererar snabba, robusta och lättskötta lösningar.',
+      items: {
+        websites: { title: 'Webbplatser', desc: 'Moderna, tillgängliga och snabba sajter som konverterar och är enkla att förvalta.' },
+        apps: { title: 'System & appar', desc: 'Skräddarsydda verktyg, dashboards, portaler och integrationer som effektiviserar arbetet.' },
+        integrations: { title: 'Integrationer & automation', desc: 'API:er, datasync, jobb och flöden som tar bort manuella steg.' },
+        design: { title: 'Design & UX', desc: 'Användarcentrerade gränssnitt, designsystem och omtänksamma mikrointeraktioner.' }
+      }
+    },
+    s2: {
+      title: 'Hur vi bygger',
+      items: [
+        'Endast skräddarsydd kod — aldrig mallar eller generiska CMS‑teman',
+        'SvelteKit + Tailwind + TypeScript som standard; andra stackar vid behov',
+        'Stark grund: tillgänglighet, prestanda, säkerhet och tydlig arkitektur',
+        'Test där det gör mest nytta; CI‑kontroller och förhandsgranskningar',
+        'Ni äger koden: handover, dokumentation och långsiktig förvaltbarhet',
+        'Transparens: korta iterationer, demoavstämningar och asynkrona uppdateringar'
+      ]
+    },
+    s3: {
+      title: 'Vår process',
+      steps: [
+        { title: 'Discovery', desc: 'Mål, användare, begränsningar, mått på framgång — vi linjerar scope och antaganden.' },
+        { title: 'Design', desc: 'Flöden, låg-/högfidelity, designtokens och komponentbibliotek.' },
+        { title: 'Bygg', desc: 'Iterativ leverans med CI, kodgranskningar och staging‑miljöer.' },
+        { title: 'Integrera', desc: 'API:er, auth, betalningar, analys, innehåll och automation.' },
+        { title: 'Testa & optimera', desc: 'Funktion, prestanda och tillgänglighet; profilering och finputs.' },
+        { title: 'Lansera & stöd', desc: 'Utrullningsplan, överlämning, dokumentation och valfritt löpande stöd.' }
+      ]
+    },
+    s4: {
+      title: 'Teknik & verktyg',
+      text: 'Vi föredrar SvelteKit, Tailwind CSS och TypeScript för tempo och förvaltbarhet, men levererar gärna i React, Vue eller moderna servermiljöer om ni önskar. Vi designar för ägande över tid: minimalt beroende, tydliga gränser och infrastruktur som skalar.'
+    },
+    cta: {
+      title: 'Redo att bygga tillsammans?',
+      desc: 'Berätta om dina mål så föreslår vi en pragmatisk plan som balanserar tempo, kvalitet och budget — och levererar.',
+      contact: 'Ta kontakt'
+    }
+  },
+  help: {
+    meta_title: 'Hjälpcenter — Yntra',
+    meta_description: 'Hitta svar, guider och resurser för att komma igång och lyckas med Yntra.',
+    title: 'Hjälpcenter',
+    subtitle: 'Hitta snabba svar på vanliga frågor, läs guider och få stöd när du behöver det.',
+    search_open_aria: 'Öppna sök',
+    search_input_aria: 'Sök i Hjälpcenter',
+    search_placeholder: 'Sök i Hjälpcenter…',
+    search_suggestions_aria: 'Sökförslag',
+    categories: {
+      title: 'Utforska kategorier',
+      subtitle: 'Vi har samlat det viktigaste för att komma igång, förstå priser och hur vi levererar.',
+      more_help: 'Behöver du mer hjälp?'
+    },
+    groups: {
+      getting_started: { title: 'Kom igång' },
+      services_pricing: { title: 'Tjänster & priser' },
+      project_delivery: { title: 'Projekt & leverans' },
+      tech_hosting: { title: 'Teknik & hosting' },
+      billing: { title: 'Fakturering' },
+      contact: { title: 'Kontakt' }
+    },
+    articles: {
+      'getting-started': { title: 'Hur kommer jag igång med ett projekt?', category: 'Kom igång' },
+      pricing: { title: 'Vad kostar en webbplats?', category: 'Tjänster & priser' },
+      process: { title: 'Hur ser processen ut från start till lansering?', category: 'Projekt & leverans' },
+      tech: { title: 'Vilken stack och hosting använder ni?', category: 'Teknik & hosting' },
+      billing: { title: 'Hur fungerar fakturering och betalning?', category: 'Fakturering' },
+      'contact-support': { title: 'Hur når jag supporten?', category: 'Kontakt' },
+      requirements: { title: 'Vad behöver vi från dig?', category: 'Kom igång' },
+      scope: { title: 'Vad ingår i paketen?', category: 'Tjänster & priser' },
+      addons: { title: 'Tillval & efterköp', category: 'Tjänster & priser' },
+      quality: { title: 'Kvalitet & test', category: 'Projekt & leverans' },
+      handover: { title: 'Lansering & överlämning', category: 'Projekt & leverans' },
+      performance: { title: 'Prestanda & SEO', category: 'Teknik & hosting' },
+      security: { title: 'Säkerhet & backup', category: 'Teknik & hosting' },
+      payments: { title: 'Betalningssätt', category: 'Fakturering' },
+      terms: { title: 'Avtal & uppsägning', category: 'Fakturering' },
+      slas: { title: 'Svarstider (SLA)', category: 'Kontakt' },
+      book: { title: 'Boka ett samtal', category: 'Kontakt' }
+    },
+    answers: {
+      more_info: 'Mer information',
+      fallback: 'Detaljer kommer snart.',
+      'getting-started': {
+        title: 'Projektstart & onboarding',
+        paragraphs: [
+          'Börja med att beskriva mål, målgrupp och viktigaste affärskraven. Vi återkommer med rekommenderad lösning, tidslinje och kostnadsmodell.',
+          'Vid start sätter vi upp gemensam kanal (t.ex. Slack) och kör en kickoff för att säkerställa scope och prioriteringar.'
+        ]
+      },
+      pricing: {
+        title: 'Prismodeller',
+        paragraphs: [
+          'Fasta paket när leverabler är tydliga; löpande (T&M) för iterativ utveckling.',
+          'Alla upplägg inkluderar kvalitetssäkring, release-stöd och projektledning i rimlig omfattning.'
+        ]
+      },
+      process: {
+        title: 'Design- och utvecklingsprocess',
+        paragraphs: [
+          'Discovery → Design → Utveckling → Test → Lansering → Support.',
+          'Vi jobbar transparent med demoavstämningar och korta iterationer för snabb feedback.'
+        ]
+      },
+      requirements: {
+        title: 'Vad behöver vi från dig?',
+        paragraphs: [
+          'Material som logotyp, brandguidelines, befintligt innehåll och eventuella referenser.',
+          'Tillgångar för integrationer (API-nycklar etc.) samt kontaktperson för snabba beslut.'
+        ]
+      },
+      scope: {
+        title: 'Vad ingår i paketen?',
+        paragraphs: [
+          'Leverabler specificeras i offert/SoW: sidor, vyer, funktioner, integrationer och handover.',
+          'Utöver detta kan tillval läggas till vid behov.'
+        ]
+      },
+      addons: {
+        title: 'Tillval & efterköp',
+        paragraphs: [
+          'Exempel: extra språk, fler sidmallar, growth‑experiment, A/B‑test, utökad SEO.',
+          'Support- och förbättringspaket kan tecknas löpande.'
+        ]
+      },
+      quality: {
+        title: 'Kvalitet & test',
+        paragraphs: [
+          'Vi kör automatiserade och manuella tester samt prestanda‑ och tillgänglighetskontroller.',
+          'Buggar som upptäcks inom överenskommen period åtgärdas utan extra kostnad.'
+        ]
+      },
+      handover: {
+        title: 'Lansering & överlämning',
+        paragraphs: [
+          'Releaseplan med rollback‑strategi, dokumentation och kunskapsöverföring ingår.',
+          'Vi erbjuder även post‑launch uppföljning och mätning.'
+        ]
+      },
+      tech: {
+        title: 'Stack & verktyg',
+        paragraphs: [
+          'Modern webbstack (t.ex. SvelteKit) med fokus på prestanda, säkerhet och DX.',
+          'Hosting väljs efter krav: edge/CDN eller containerbaserad miljö.'
+        ]
+      },
+      performance: {
+        title: 'Prestanda & SEO',
+        paragraphs: [
+          'Core Web Vitals, bildoptimering och caching är standard.',
+          'Teknisk SEO och strukturerad data implementeras vid relevant scope.'
+        ]
+      },
+      security: {
+        title: 'Säkerhet & backup',
+        paragraphs: [
+          'Säkra beroenden, skydd mot vanliga attacker, och rollbaserad åtkomst.',
+          'Backup‑ och återställningsrutiner enligt överenskomna RPO/RTO.'
+        ]
+      },
+      billing: {
+        title: 'Fakturaintervall',
+        paragraphs: [
+          'Månadsvis i efterskott eller per milstolpe. 30 dagar netto som standard.',
+          'Outnyttjad tid kan kvittas enligt avtal.'
+        ]
+      },
+      payments: {
+        title: 'Betalningssätt',
+        paragraphs: [
+          'Bankgiro, kort eller internationell överföring beroende på bolagstillhörighet.',
+          'Fakturaspecifikation innehåller tidsloggar och leverabler per period.'
+        ]
+      },
+      terms: {
+        title: 'Avtal & uppsägning',
+        paragraphs: [
+          'Villkor och uppsägningstid framgår av Kundavtal/SoW.',
+          'Arbete kan pausas vid sen betalning efter avisering enligt villkor.'
+        ]
+      },
+      'contact-support': {
+        title: 'Supportkanaler',
+        paragraphs: [
+          'E‑post till info@yntra.se för alla ärenden. Dedikerad Slack‑kanal för pågående projekt.',
+          'Akuta driftfrågor prioriteras enligt överenskommen SLA.'
+        ]
+      },
+      slas: {
+        title: 'Svarstider (SLA)',
+        paragraphs: [
+          'Vanliga ärenden: svar inom 1 arbetsdag. Akuta ärenden: omedelbar bekräftelse och åtgärdsplan.',
+          'Tillgänglighet och beredskap kan avtalas i supportpaket.'
+        ]
+      },
+      book: {
+        title: 'Boka ett samtal',
+        paragraphs: [
+          'Välj en tid som passar. Vi går igenom behov, scope och nästa steg.',
+          'Bokningen genererar kalenderinbjudan och bekräftelse via e‑post.'
+        ]
+      }
+    },
+    faq: {
+      title: 'Vanliga frågor',
+      items: [
+        { q: 'Hur snabbt får jag återkoppling på nya förfrågningar?', a: 'Vi återkommer normalt inom 1 arbetsdag. Brådskande ärenden besvaras snabbare.' },
+        { q: 'Ingår garanti och buggfix efter leverans?', a: 'Ja, inom en överenskommen period åtgärdar vi fel utan extra kostnad.' },
+        { q: 'Kan ni arbeta med befintlig kodbas/design?', a: 'Absolut. Vi gör en snabb teknisk/UX‑genomlysning och rekommenderar bästa vägen framåt.' },
+        { q: 'Hur hanterar ni ändringsönskemål under projektets gång?', a: 'Vi prioriterar i backlog och estimerar påverkan. Mindre justeringar ryms ofta inom sprint.' },
+        { q: 'Erbjuder ni löpande support efter lansering?', a: 'Ja, via flexibla supportpaket (SLA, förbättringar, övervakning och incidenthantering).' }
+      ]
+    },
+    cta: {
+      title: 'Hittar du inte det du söker?',
+      subtitle: 'Vårt team svarar gärna på frågor och guidar dig till rätt lösning.',
+      contact: 'Kontakta oss',
+      book_call: 'Boka ett samtal'
+    },
+    actions: {
+      close: 'Stäng'
+    }
+  },
   trusted: {
     ...(base as any).trusted,
     title: 'Framtidens digitala lösningar',
