@@ -186,7 +186,7 @@
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.company')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
           <li><a href="/about" class="hover:text-slate-900">{$t('footer.company_links.0')}</a></li>
-          <li><a href="/" class="hover:text-slate-900">{$t('footer.company_links.1')}</a></li>
+          <li><a href="/process" class="hover:text-slate-900">{$t('footer.company_links.1')}</a></li>
         </ul>
       </div>
 

@@ -6,6 +6,74 @@ export default {
     ...(base as any).nav,
     helpcenter: 'Help Center'
   },
+  process: {
+    title: 'Our process',
+    subtitle: 'From idea to launch — transparent, efficient, and quality at every step.',
+    overview: {
+      title: 'One focus: outcomes, without friction',
+      text: 'We guide you from idea to launch through a clear, transparent process that reduces risk and maximizes speed. You get visible progress every week, short decision cycles, and a team owning the whole — design, development, integrations, testing, and handover.',
+      points: [
+        'Short iterations with weekly demos',
+        'Traceable backlog and clear deliverables',
+        'Accessibility, performance, and security from day one',
+        'Handover and docs for long‑term ownership'
+      ]
+    },
+    timeline_title: 'Step by step',
+    durations: {
+      discovery: 'Discovery',
+      design: 'Design',
+      build: 'Build',
+      integrate: 'Integrate',
+      test: 'Test & optimize',
+      launch: 'Launch & support'
+    },
+    timeframes: {
+      title: 'Typical timelines',
+      marketing_title: 'Marketing website',
+      marketing_desc: '4–8 weeks — depending on page count, content, and integrations.',
+      product_title: 'System/app',
+      product_desc: '6–12+ weeks — driven by complexity, data model, and external dependencies.'
+    },
+    details: {
+      discovery: ['OKRs/KPIs', 'Sitemap/flows', 'Backlog/SoW', 'Plan & risks'],
+      design: ['Wireframes', 'UI mockups', 'Component library', 'Interactive prototype'],
+      build: ['Completed views/components', 'API integrations', 'Release notes', 'Weekly demos'],
+      integrate: ['Configured integrations', 'Test data & environments', 'Technical documentation'],
+      test: ['Checklist & bug fixing', 'Lighthouse/a11y reports'],
+      launch: ['Ops & backup procedures', 'Final documentation']
+    },
+    collaboration: {
+      title: 'Collaboration & communication',
+      items: [
+        'Weekly meetings + demo/check‑ins',
+        'Async updates and release notes',
+        'Single point of contact, fast feedback',
+        'Access to backlog and issues'
+      ]
+    },
+    quality: {
+      title: 'Quality & security',
+      items: [
+        'Code review, CI checks, and staging',
+        'Accessibility (WCAG), performance, and SEO basics',
+        'Secure dependencies and update routines',
+        'Roles, access, and backup strategy'
+      ]
+    },
+    pricing: {
+      title: 'Pricing & engagement',
+      fixed_title: 'Fixed price',
+      fixed_desc: 'When scope is well‑defined. Quote with deliverables, milestones, and dates.',
+      tm_title: 'Time & Materials',
+      tm_desc: 'For iterative development. Weekly reporting and clear priorities.'
+    },
+    cta: {
+      title: 'Ready to build together?',
+      desc: 'Tell us your goals. We’ll propose a pragmatic plan that balances speed, quality, and budget — and deliver.',
+      contact: 'Contact us'
+    }
+  },
   footer: {
     ...(base as any).footer,
     resource_links: [

@@ -10,6 +10,74 @@ export default {
       'Conditions d’utilisation'
     ]
   },
+  process: {
+    title: 'Notre processus',
+    subtitle: 'De l’idée au lancement — transparent, efficace et de qualité à chaque étape.',
+    overview: {
+      title: 'Un seul objectif : des résultats sans friction',
+      text: 'Nous vous accompagnons de l’idée au lancement avec un processus clair et transparent qui réduit les risques et maximise la vitesse. Avancées visibles chaque semaine, cycles de décision courts et une équipe responsable de bout en bout : design, développement, intégrations, tests et handover.',
+      points: [
+        'Itérations courtes avec démos hebdomadaires',
+        'Backlog traçable et livrables clairs',
+        'Accessibilité, performance et sécurité dès le premier jour',
+        'Handover et documentation pour une propriété à long terme'
+      ]
+    },
+    timeline_title: 'Étape par étape',
+    durations: {
+      discovery: 'Discovery',
+      design: 'Design',
+      build: 'Développer',
+      integrate: 'Intégrer',
+      test: 'Tester & optimiser',
+      launch: 'Lancer & support'
+    },
+    timeframes: {
+      title: 'Délais typiques',
+      marketing_title: 'Site marketing',
+      marketing_desc: '4–8 semaines — selon le nombre de pages, le contenu et les intégrations.',
+      product_title: 'Système/app',
+      product_desc: '6–12+ semaines — selon la complexité, le modèle de données et les dépendances externes.'
+    },
+    collaboration: {
+      title: 'Collaboration & communication',
+      items: [
+        'Réunions hebdomadaires + démos',
+        'Mises à jour asynchrones et notes de version',
+        'Un point de contact, retours rapides',
+        'Accès au backlog et aux issues'
+      ]
+    },
+    quality: {
+      title: 'Qualité & sécurité',
+      items: [
+        'Revue de code, vérifications CI et staging',
+        'Accessibilité (WCAG), performance et SEO basique',
+        'Dépendances sécurisées et routines de mise à jour',
+        'Rôles, accès et stratégie de sauvegarde'
+      ]
+    },
+    details: {
+      discovery: ['Objectifs & KPIs', 'Sitemap/flows', 'Backlog/SoW', 'Plan & risques'],
+      design: ['Wireframes', 'Maquettes UI', 'Bibliothèque de composants', 'Prototype interactif'],
+      build: ['Vues/composants terminés', 'Intégrations d’API', 'Notes de version', 'Démos hebdomadaires'],
+      integrate: ['Intégrations configurées', 'Données de test & environnements', 'Documentation technique'],
+      test: ['Checklist & corrections de bugs', 'Rapports Lighthouse/a11y'],
+      launch: ['Procédures d’exploitation & sauvegarde', 'Documentation finale']
+    },
+    pricing: {
+      title: 'Tarification & engagement',
+      fixed_title: 'Prix fixe',
+      fixed_desc: 'Quand le périmètre est bien défini. Devis avec livrables, jalons et dates.',
+      tm_title: 'Temps & Matériaux',
+      tm_desc: 'Pour un développement itératif. Rapport hebdomadaire et priorités claires.'
+    },
+    cta: {
+      title: 'Prêts à construire ensemble ?',
+      desc: 'Parlez‑nous de vos objectifs. Nous proposerons un plan pragmatique qui équilibre vitesse, qualité et budget — et nous livrerons.',
+      contact: 'Nous contacter'
+    }
+  },
   terms: {
     title: 'Conditions d’utilisation',
     meta_description: 'Conditions régissant votre utilisation du site web et des services de Yntra.',

@@ -10,6 +10,74 @@ export default {
       'Términos del servicio'
     ]
   },
+  process: {
+    title: 'Nuestro proceso',
+    subtitle: 'De la idea al lanzamiento — transparente, eficiente y con calidad en cada paso.',
+    overview: {
+      title: 'Un enfoque: resultados, sin fricción',
+      text: 'Os guiamos desde la idea hasta el lanzamiento con un proceso claro y transparente que reduce riesgos y maximiza la velocidad. Recibirás avances visibles cada semana, ciclos de decisión cortos y un equipo que se responsabiliza de todo: diseño, desarrollo, integraciones, pruebas y handover.',
+      points: [
+        'Iteraciones cortas con demos semanales',
+        'Backlog trazable y entregables claros',
+        'Accesibilidad, rendimiento y seguridad desde el primer día',
+        'Handover y documentación para la propiedad a largo plazo'
+      ]
+    },
+    timeline_title: 'Paso a paso',
+    durations: {
+      discovery: 'Discovery',
+      design: 'Diseño',
+      build: 'Desarrollar',
+      integrate: 'Integrar',
+      test: 'Probar y optimizar',
+      launch: 'Lanzar y soporte'
+    },
+    timeframes: {
+      title: 'Tiempos típicos',
+      marketing_title: 'Sitio de marketing',
+      marketing_desc: '4–8 semanas — según número de páginas, contenido e integraciones.',
+      product_title: 'Sistema/app',
+      product_desc: '6–12+ semanas — según complejidad, modelo de datos y dependencias externas.'
+    },
+    collaboration: {
+      title: 'Colaboración y comunicación',
+      items: [
+        'Reuniones semanales + demos',
+        'Actualizaciones asíncronas y notas de versión',
+        'Un punto de contacto, feedback rápido',
+        'Acceso al backlog y a issues'
+      ]
+    },
+    quality: {
+      title: 'Calidad y seguridad',
+      items: [
+        'Revisión de código, checks de CI y staging',
+        'Accesibilidad (WCAG), rendimiento y SEO básico',
+        'Dependencias seguras y rutinas de actualización',
+        'Roles, accesos y estrategia de backup'
+      ]
+    },
+    details: {
+      discovery: ['OKRs/KPIs', 'Mapa del sitio/flows', 'Backlog/SoW', 'Plan y riesgos'],
+      design: ['Wireframes', 'Mockups de UI', 'Librería de componentes', 'Prototipo interactivo'],
+      build: ['Vistas/componentes completados', 'Integraciones de API', 'Notas de versión', 'Demos semanales'],
+      integrate: ['Integraciones configuradas', 'Datos de prueba y entornos', 'Documentación técnica'],
+      test: ['Checklist y corrección de bugs', 'Informes Lighthouse/a11y'],
+      launch: ['Procedimientos de operación y backups', 'Documentación final']
+    },
+    pricing: {
+      title: 'Precios y modalidad',
+      fixed_title: 'Precio fijo',
+      fixed_desc: 'Cuando el alcance está bien definido. Propuesta con entregables, hitos y fechas.',
+      tm_title: 'Tiempo y Materiales',
+      tm_desc: 'Para desarrollo iterativo. Reporte semanal y prioridades claras.'
+    },
+    cta: {
+      title: '¿Listos para construir juntos?',
+      desc: 'Cuéntanos tus objetivos. Propondremos un plan pragmático que equilibre velocidad, calidad y presupuesto — y lo entregaremos.',
+      contact: 'Contáctanos'
+    }
+  },
   terms: {
     title: 'Términos de Servicio',
     meta_description: 'Términos que regulan el uso de la página web y los servicios de Yntra.',

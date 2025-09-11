@@ -10,6 +10,74 @@ export default {
       'Nutzungsbedingungen'
     ]
   },
+  process: {
+    title: 'Unser Prozess',
+    subtitle: 'Von der Idee bis zum Launch — transparent, effizient und mit Qualität in jedem Schritt.',
+    overview: {
+      title: 'Ein Fokus: Ergebnisse ohne Reibung',
+      text: 'Wir führen Sie mit einem klaren, transparenten Prozess von der Idee bis zum Launch – mit minimalem Risiko und hohem Tempo. Wöchentliche sichtbare Ergebnisse, kurze Entscheidungszyklen und ein Team, das Gesamtverantwortung trägt: Design, Entwicklung, Integrationen, Tests und Handover.',
+      points: [
+        'Kurze Iterationen mit wöchentlichen Demos',
+        'Nachvollziehbarer Backlog und klare Deliverables',
+        'Barrierefreiheit, Performance und Sicherheit von Anfang an',
+        'Handover und Dokumentation für langfristiges Ownership'
+      ]
+    },
+    timeline_title: 'Schritt für Schritt',
+    durations: {
+      discovery: 'Discovery',
+      design: 'Design',
+      build: 'Entwickeln',
+      integrate: 'Integrieren',
+      test: 'Testen & Optimieren',
+      launch: 'Launch & Support'
+    },
+    timeframes: {
+      title: 'Typische Zeitrahmen',
+      marketing_title: 'Marketing‑Website',
+      marketing_desc: '4–8 Wochen — abhängig von Seitenanzahl, Inhalten und Integrationen.',
+      product_title: 'System/App',
+      product_desc: '6–12+ Wochen — abhängig von Komplexität, Datenmodell und externen Abhängigkeiten.'
+    },
+    collaboration: {
+      title: 'Zusammenarbeit & Kommunikation',
+      items: [
+        'Wöchentliche Meetings + Demos',
+        'Asynchrone Updates und Release Notes',
+        'Ein Ansprechpartner, schnelles Feedback',
+        'Zugriff auf Backlog und Issues'
+      ]
+    },
+    quality: {
+      title: 'Qualität & Sicherheit',
+      items: [
+        'Code‑Reviews, CI‑Checks und Staging',
+        'Barrierefreiheit (WCAG), Performance und SEO‑Basics',
+        'Sichere Abhängigkeiten und Update‑Routinen',
+        'Rollen, Zugriffe und Backup‑Strategie'
+      ]
+    },
+    details: {
+      discovery: ['Ziele & KPIs', 'Sitemap/Flows', 'Backlog/SoW', 'Plan & Risiken'],
+      design: ['Wireframes', 'UI‑Mockups', 'Komponentenbibliothek', 'Interaktiver Prototyp'],
+      build: ['Fertige Views/Komponenten', 'API‑Integrationen', 'Release Notes', 'Wöchentliche Demos'],
+      integrate: ['Konfigurierte Integrationen', 'Testdaten & Umgebungen', 'Technische Dokumentation'],
+      test: ['Checkliste & Bugfixing', 'Lighthouse/A11y‑Reports'],
+      launch: ['Betriebs‑ & Backup‑Prozesse', 'Abschlussdokumentation']
+    },
+    pricing: {
+      title: 'Preise & Vorgehen',
+      fixed_title: 'Festpreis',
+      fixed_desc: 'Wenn der Scope klar definiert ist. Angebot mit Deliverables, Meilensteinen und Terminen.',
+      tm_title: 'Zeit & Material',
+      tm_desc: 'Für iterative Entwicklung. Wöchentliche Reports und klare Prioritäten.'
+    },
+    cta: {
+      title: 'Bereit, gemeinsam zu bauen?',
+      desc: 'Erzählen Sie uns Ihre Ziele. Wir schlagen einen pragmatischen Plan vor, der Tempo, Qualität und Budget ausbalanciert — und liefern.',
+      contact: 'Kontakt aufnehmen'
+    }
+  },
   terms: {
     title: 'Nutzungsbedingungen',
     meta_description: 'Bedingungen, die Ihre Nutzung der Website und Dienste von Yntra regeln.',

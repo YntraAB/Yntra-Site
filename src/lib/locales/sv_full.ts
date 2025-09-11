@@ -6,6 +6,74 @@ export default {
     ...(base as any).nav,
     helpcenter: 'Hjälpcenter'
   },
+  process: {
+    title: 'Vår process',
+    subtitle: 'Så tar vi er från idé till lansering – transparent, effektivt och med kvalitet i varje steg.',
+    overview: {
+      title: 'Ett fokus: resultat, utan onödig friktion',
+      text: 'Vi leder er från idé till lansering genom en tydlig, transparent process som minimerar risk och maximerar tempo. Ni får synliga delresultat varje vecka, korta beslutscykler och ett team som tar ansvar för helheten – design, utveckling, integrationer, test och handover.',
+      points: [
+        'Korta iterationer och demo varje vecka',
+        'Spårbar backlog och tydliga leverabler',
+        'Tillgänglighet, prestanda och säkerhet från start',
+        'Handover och dokumentation för ägande över tid'
+      ]
+    },
+    timeline_title: 'Steg för steg',
+    durations: {
+      discovery: 'Discovery',
+      design: 'Design',
+      build: 'Bygg',
+      integrate: 'Integrera',
+      test: 'Testa & optimera',
+      launch: 'Lansera & stöd'
+    },
+    timeframes: {
+      title: 'Typiska tidsramar',
+      marketing_title: 'Marknadswebbplats',
+      marketing_desc: '4–8 veckor – beroende på antal sidor, innehåll och integrationer.',
+      product_title: 'System/app',
+      product_desc: '6–12+ veckor – styrt av komplexitet, datamodell och externa beroenden.'
+    },
+    collaboration: {
+      title: 'Samarbete & kommunikation',
+      items: [
+        'Veckomöten + demo/avstämning',
+        'Asynkrona uppdateringar och release notes',
+        'En kontaktpunkt, snabb återkoppling',
+        'Tillgång till backlog och issues'
+      ]
+    },
+    quality: {
+      title: 'Kvalitet & säkerhet',
+      items: [
+        'Kodgranskning, CI‑kontroller och staging',
+        'Tillgänglighet (WCAG), prestanda och SEO‑basics',
+        'Säkra beroenden och uppdateringsrutiner',
+        'Roller, åtkomster och backup‑strategi'
+      ]
+    },
+    details: {
+      discovery: ['Mål & KPI:er', 'Sitemap/flows', 'Backlog/SoW', 'Plan & risker'],
+      design: ['Wireframes', 'UI‑mockups', 'Komponentbibliotek', 'Interaktiv prototyp'],
+      build: ['Färdiga vyer/komponenter', 'API‑integrationer', 'Release notes', 'Veckodemos'],
+      integrate: ['Konfigurerade integrationer', 'Testdata & miljöer', 'Teknisk dokumentation'],
+      test: ['Testlista & buggrättning', 'Lighthouse/a11y‑rapporter'],
+      launch: ['Drift‑ & backup‑rutiner', 'Slutdokumentation']
+    },
+    pricing: {
+      title: 'Pris & upplägg',
+      fixed_title: 'Fast pris',
+      fixed_desc: 'När scope är väldefinierat. Offert med leverabler, milstolpar och tider.',
+      tm_title: 'Löpande (T&M)',
+      tm_desc: 'För iterativ utveckling. Veckovis rapportering och tydliga prioriteringar.'
+    },
+    cta: {
+      title: 'Redo att bygga tillsammans?',
+      desc: 'Berätta om era mål så föreslår vi en pragmatisk plan som balanserar tempo, kvalitet och budget – och levererar.',
+      contact: 'Kontakta oss'
+    }
+  },
   footer: {
     ...(base as any).footer,
     resource_links: [
