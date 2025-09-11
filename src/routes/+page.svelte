@@ -282,7 +282,7 @@
             />
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 sm:p-6 text-white">
               <h3 class="text-lg font-semibold mb-1">{$t(`slides.${currentShowcaseType}.${i}.title`)}</h3>
-              <p class="text-white/80 text-sm">{$t(`slides.${currentShowcaseType}.${i}.subtitle`)}</p>
+              <p class="text-white/80 text-[17px]">{$t(`slides.${currentShowcaseType}.${i}.subtitle`)}</p>
             </div>
           </div>
         {/each}
@@ -468,9 +468,9 @@
           <div class="mb-4">
             <h4 class="font-semibold text-slate-900 mb-2">Key Results</h4>
             <ul class="space-y-2">
-              <li class="flex items-center text-sm text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mr-3"></span> 340% conversion increase</li>
-              <li class="flex items-center text-sm text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mr-3"></span> $2M revenue boost</li>
-              <li class="flex items-center text-sm text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mr-3"></span> 50% faster load times</li>
+              <li class="flex items-center text-[17px] text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mr-3"></span> 340% conversion increase</li>
+              <li class="flex items-center text-[17px] text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mr-3"></span> $2M revenue boost</li>
+              <li class="flex items-center text-[17px] text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mr-3"></span> 50% faster load times</li>
             </ul>
           </div>
 
@@ -507,7 +507,7 @@
                   <h3 class="font-bold">{$t(`showcase.cards.${cardIdx}.title`)}</h3>
                   <span class={`${li === selectedListIndex ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-700'} text-xs px-2 py-0.5 rounded-full`}>{$t(`showcase.cards.${cardIdx}.tag`)}</span>
                 </div>
-                <p class="text-sm opacity-80">{$t(`showcase.cards.${cardIdx}.desc`)}</p>
+                <p class="text-[17px] opacity-80">{$t(`showcase.cards.${cardIdx}.desc`)}</p>
               </div>
               <ArrowRight class={`w-5 h-5 ${li === selectedListIndex ? 'text-white' : 'text-slate-500'}`} aria-hidden="true" />
             </div>

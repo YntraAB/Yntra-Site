@@ -31,7 +31,7 @@
       <Server class="h-4 w-4" aria-hidden="true" /> <span>{$t('system.badge')}</span>
     </div>
     <h1 class="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">{$t('system.title')}</h1>
-    <p class="mt-4 text-white/85 max-w-2xl">{$t('system.hero')}</p>
+    <p class="mt-4 text-white/85 text-[17px] max-w-2xl">{$t('system.hero')}</p>
     <div class="mt-6 flex gap-3">
       <button type="button" data-open-contact class="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition hover:scale-105 hover:shadow-md active:scale-100">
         <span>{$t('system.cta_primary')}</span>
@@ -49,9 +49,9 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Boxes class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('system.s1.title')}</h2>
+        <h2 class="text-[30px] font-bold text-slate-900">{$t('system.s1.title')}</h2>
       </div>
-      <p class="mt-4 text-slate-700">{$t('system.s1.intro')}</p>
+      <p class="mt-4 text-slate-700 text-[17px]">{$t('system.s1.intro')}</p>
       <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
         {#each ['internal','automation','enterprise','custom'] as key}
           <div class="rounded-xl ring-1 ring-slate-200/70 p-5">
@@ -61,7 +61,7 @@
               {#if key==='enterprise'}<Building2 class="h-4 w-4" aria-hidden="true" />{/if}
               {#if key==='custom'}<Settings class="h-4 w-4" aria-hidden="true" />{/if}
               {$t(`system.s1.${key}.title`)}</div>
-            <p class="mt-1 text-slate-600">{$t(`system.s1.${key}.desc`)}</p>
+            <p class="mt-1 text-slate-600 text-[17px]">{$t(`system.s1.${key}.desc`)}</p>
           </div>
         {/each}
       </div>
@@ -73,11 +73,11 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <ShieldCheck class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('system.s2.title')}</h2>
+        <h2 class="text-[30px] font-bold text-slate-900">{$t('system.s2.title')}</h2>
       </div>
       <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
         {#each [0,1,2,3] as i}
-          <li class="inline-flex items-start gap-2"><ShieldCheck class="h-5 w-5 text-[var(--accent)] mt-0.5" /> {$t(`system.s2.items.${i}`)}</li>
+          <li class="inline-flex items-start gap-2 text-[17px]"><ShieldCheck class="h-5 w-5 text-[var(--accent)] mt-0.5" /> {$t(`system.s2.items.${i}`)}</li>
         {/each}
       </ul>
     </div>
@@ -88,16 +88,16 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Code2 class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('system.s3.title')}</h2>
+        <h2 class="text-[30px] font-bold text-slate-900">{$t('system.s3.title')}</h2>
       </div>
       <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700">
         <div class="rounded-xl ring-1 ring-slate-200/70 p-4 bg-slate-50/60">
           <div class="font-semibold text-slate-900">{$t('system.s3.stack_title')}</div>
-          <p class="mt-1">{$t('system.s3.stack_text')}</p>
+          <p class="mt-1 text-[17px]">{$t('system.s3.stack_text')}</p>
         </div>
         <div class="rounded-xl ring-1 ring-slate-200/70 p-4 bg-slate-50/60">
           <div class="font-semibold text-slate-900">{$t('system.s3.delivery_title')}</div>
-          <p class="mt-1">{$t('system.s3.delivery_text')}</p>
+          <p class="mt-1 text-[17px]">{$t('system.s3.delivery_text')}</p>
         </div>
       </div>
       <div class="mt-4 grid grid-cols-3 gap-3 text-center">
@@ -122,9 +122,9 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Gauge class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('system.cta_title')}</h2>
+        <h2 class="text-[30px] font-bold text-slate-900">{$t('system.cta_title')}</h2>
       </div>
-      <p class="mt-4 text-slate-700">{$t('system.cta_desc')}</p>
+      <p class="mt-4 text-slate-700 text-[17px]">{$t('system.cta_desc')}</p>
       <div class="mt-6 flex flex-wrap gap-3">
         <button type="button" data-open-contact
           class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition hover:scale-105 hover:shadow-md active:scale-100">
@@ -135,4 +135,3 @@
     </div>
   </div>
 </section>
-

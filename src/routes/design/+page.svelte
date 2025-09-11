@@ -30,7 +30,7 @@
       <Palette class="h-4 w-4" aria-hidden="true" /> <span>{$t('design.badge')}</span>
     </div>
     <h1 class="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">{$t('design.title')}</h1>
-    <p class="mt-4 text-white/85 max-w-2xl">{$t('design.hero')}</p>
+    <p class="mt-4 text-white/85 text-[17px] max-w-2xl">{$t('design.hero')}</p>
     <div class="mt-6 flex gap-3">
       <button type="button" data-open-contact class="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition hover:scale-105 hover:shadow-md active:scale-100">
         <span>{$t('design.cta_primary')}</span>
@@ -48,25 +48,25 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <LayoutGrid class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('design.s1.title')}</h2>
+        <h2 class="text-[30px] font-bold text-slate-900">{$t('design.s1.title')}</h2>
       </div>
-      <p class="mt-4 text-slate-700">{$t('design.s1.intro')}</p>
+      <p class="mt-4 text-slate-700 text-[17px]">{$t('design.s1.intro')}</p>
       <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="rounded-xl ring-1 ring-slate-200/70 p-5">
           <div class="inline-flex items-center gap-2 font-semibold text-slate-900"><Monitor class="h-4 w-4" /> {$t('design.s1.web.title')}</div>
-          <p class="mt-1 text-slate-600">{$t('design.s1.web.desc')}</p>
+          <p class="mt-1 text-slate-600 text-[17px]">{$t('design.s1.web.desc')}</p>
         </div>
         <div class="rounded-xl ring-1 ring-slate-200/70 p-5">
           <div class="inline-flex items-center gap-2 font-semibold text-slate-900"><Smartphone class="h-4 w-4" /> {$t('design.s1.apps.title')}</div>
-          <p class="mt-1 text-slate-600">{$t('design.s1.apps.desc')}</p>
+          <p class="mt-1 text-slate-600 text-[17px]">{$t('design.s1.apps.desc')}</p>
         </div>
         <div class="rounded-xl ring-1 ring-slate-200/70 p-5">
           <div class="inline-flex items-center gap-2 font-semibold text-slate-900"><Palette class="h-4 w-4" /> {$t('design.s1.brand.title')}</div>
-          <p class="mt-1 text-slate-600">{$t('design.s1.brand.desc')}</p>
+          <p class="mt-1 text-slate-600 text-[17px]">{$t('design.s1.brand.desc')}</p>
         </div>
         <div class="rounded-xl ring-1 ring-slate-200/70 p-5">
           <div class="inline-flex items-center gap-2 font-semibold text-slate-900"><Layers class="h-4 w-4" /> {$t('design.s1.systems.title')}</div>
-          <p class="mt-1 text-slate-600">{$t('design.s1.systems.desc')}</p>
+          <p class="mt-1 text-slate-600 text-[17px]">{$t('design.s1.systems.desc')}</p>
         </div>
       </div>
     </div>
@@ -77,11 +77,11 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Sparkles class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('design.s2.title')}</h2>
+        <h2 class="text-[30px] font-bold text-slate-900">{$t('design.s2.title')}</h2>
       </div>
       <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
         {#each [0,1,2,3] as i}
-          <li class="inline-flex items-start gap-2"><CheckCircle2 class="h-5 w-5 text-[var(--accent)] mt-0.5" /> {$t(`design.s2.items.${i}`)}</li>
+          <li class="inline-flex items-start gap-2 text-[17px]"><CheckCircle2 class="h-5 w-5 text-[var(--accent)] mt-0.5" /> {$t(`design.s2.items.${i}`)}</li>
         {/each}
       </ul>
     </div>
@@ -92,13 +92,13 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <Layers class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('design.s3.title')}</h2>
+        <h2 class="text-[30px] font-bold text-slate-900">{$t('design.s3.title')}</h2>
       </div>
       <div class="mt-6 grid gap-3">
         {#each [0,1,2,3] as i}
           <div class="rounded-xl ring-1 ring-slate-200/70 p-4">
             <div class="font-semibold text-slate-900">{$t(`design.s3.steps.${i}.title`)}</div>
-            <p class="mt-1 text-slate-600">{$t(`design.s3.steps.${i}.desc`)}</p>
+            <p class="mt-1 text-slate-600 text-[17px]">{$t(`design.s3.steps.${i}.desc`)}</p>
           </div>
         {/each}
       </div>
@@ -110,9 +110,9 @@
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
           <ChevronRight class="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">{$t('design.cta_title')}</h2>
+        <h2 class="text-[30px] font-bold text-slate-900">{$t('design.cta_title')}</h2>
       </div>
-      <p class="mt-4 text-slate-700">{$t('design.cta_desc')}</p>
+      <p class="mt-4 text-slate-700 text-[17px]">{$t('design.cta_desc')}</p>
       <div class="mt-6 flex flex-wrap gap-3">
         <button type="button" data-open-contact
           class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition hover:scale-105 hover:shadow-md active:scale-100">
