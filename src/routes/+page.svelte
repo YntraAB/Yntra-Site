@@ -97,6 +97,26 @@
   });
   onDestroy(() => stopAutoAdvance());
 
+  // Hero background video playback
+  let videoEl: HTMLVideoElement | null = null;
+
+  function handleLoadedMetadata() {
+    if (!videoEl) return;
+    // Start playback
+    videoEl.playbackRate = 1;
+    // Autoplay can fail without user gesture on some browsers; muted helps
+    videoEl.play().catch(() => {/* ignore */});
+  }
+
+  function handleCanPlay() {
+    if (!videoEl) return;
+    if (videoEl.paused) {
+      videoEl.playbackRate = 1;
+      videoEl.play().catch(() => {/* ignore */});
+    }
+  }
+
+
   const companies = [
     { abbr: 'TC', name: 'TechCorp' },
     { abbr: 'IL', name: 'InnovateLab' },
@@ -182,8 +202,20 @@
 </svelte:head>
 
 <section id="home" class="relative isolate min-h-[100svh] flex items-center text-white overflow-hidden">
-  <div class="absolute inset-[-20%] sm:inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_38%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:220%_220%] sm:[background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
+  <video
+    class="absolute inset-0 z-0 w-full h-full min-w-full min-h-full object-cover object-center pointer-events-none scale-[1.15] sm:scale-100 origin-center will-change-transform"
+    src="/media/main.mp4?v=2"
+    muted
+    autoplay
+    playsinline
+    loop
+    preload="auto"
+    bind:this={videoEl}
+    onloadedmetadata={handleLoadedMetadata}
+    oncanplay={handleCanPlay}
+  ></video>
   <div class="absolute inset-0 z-[1] pointer-events-none [background:linear-gradient(45deg,rgba(0,0,0,.08)_0%,transparent_50%,rgba(0,0,0,.08)_100%)]"></div>
+  <div class="absolute inset-0 z-[1] pointer-events-none bg-black/50"></div>
 
   <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center py-16">
@@ -214,18 +246,18 @@
 
         <h1 use:fitLines={{ lines: 2, min: 18, trigger: $i18nLocale }} class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
           {$t('hero.title_prefix')}
-          <span class="bg-gradient-to-r from-[hsl(215,24%,70%)] to-[hsl(215,36%,58%)] bg-clip-text text-transparent"> {$t('hero.title_highlight')}</span>
+          <span class="text-[var(--accent)]"> {$t('hero.title_highlight')}</span>
         </h1>
-        <p class="text-base sm:text-lg md:text-xl text-white/80 max-w-xl mb-8">{$t('hero.subtitle')}</p>
+        <p class="mt-0.5 text-white/80 text-[17px] max-w-xl mb-8">{$t('hero.subtitle')}</p>
 
         <a 
           href="#contact" 
-          class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 cursor-pointer s-y_bCXRrkrYfP" 
+          class="inline-flex items-center gap-2 whitespace-nowrap rounded-lg px-5 py-2.5 text-[17px] font-medium text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transition-all duration-200 ease-out hover:shadow-md hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(215,70%,56%)]/40 cursor-pointer s-y_bCXRrkrYfP" 
           onclick={(e) => smoothScroll(e as MouseEvent, '#contact')}
         > 
-          <MailIcon class="w-6 h-6 text-white" aria-hidden="true" />
+          <MailIcon class="w-4 h-4 text-white" aria-hidden="true" />
           <span class="text-white">{$t('hero.cta_hire')}</span>
-          <ChevronRight class="w-5 h-5 text-white" aria-hidden="true" />
+          <ChevronRight class="w-4 h-4 text-white" aria-hidden="true" />
         </a> 
       </div>
 
@@ -285,52 +317,53 @@
   }
 </style>
 
-<section class="py-24 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
+<section class="py-12 md:py-16 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
   <div class="max-w-[1400px] mx-auto px-6 md:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('trusted.title')}</h2>
-    <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12 text-base sm:text-lg md:text-xl">{$t('trusted.subtitle')}</p>
+    <h2 class="text-[30px] font-semibold text-slate-900 text-center mb-4">{$t('trusted.title')}</h2>
+    <p class="mt-0 text-slate-600 text-[17px] text-center max-w-2xl mx-auto mb-6">{$t('trusted.subtitle')}</p>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
       {#each companies as c, i}
-        <div use:reveal={{ delay: i * 50 }} class="reveal bg-white rounded-lg hover:shadow-md transition p-4 sm:p-6 text-center">
-          <div class="w-16 h-16 mx-auto mb-3 rounded-xl flex items-center justify-center font-bold text-white text-lg bg-gradient-to-br from-slate-800 to-slate-600">
+        <div use:reveal={{ delay: i * 50 }} class="reveal bg-white rounded-md hover:shadow-sm transition p-3 sm:p-4 text-center">
+          <div class="w-14 h-14 mx-auto mb-3 rounded-xl flex items-center justify-center font-bold text-white text-sm sm:text-base bg-gradient-to-br from-slate-800 to-slate-600">
             {c.abbr}
           </div>
-          <p class="font-semibold text-slate-500">{c.name}</p>
+          <p class="font-medium text-slate-500 text-[17px]">{c.name}</p>
         </div>
       {/each}
     </div>
   </div>
 </section>
 
-<section id="services" class="py-24">
+<section id="services" class="py-20">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('services.title')}</h2>
-    <p class="text-slate-600 text-center max-w-3xl mx-auto mb-16 text-base sm:text-lg md:text-xl">{$t('services.subtitle')}</p>
+    <h2 class="text-[30px] font-semibold text-slate-900 text-center mb-4">{$t('services.title')}</h2>
+    <p class="mt-0.5 text-slate-600 text-[17px] text-center max-w-3xl mx-auto mb-8">{$t('services.subtitle')}</p>
 
         <div class="flex flex-nowrap justify-center max-[1120px]:flex-wrap gap-6 md:gap-8 max-[1120px]:justify-center">
       {#each servicesSvg as s, i} 
         {@const IconComp = s.icon} 
-        <div class="group w-[314px] h-[420px] box-border shrink-0">
-           <div use:reveal={{ delay: i * 80 }} class="reveal bg-white rounded-lg p-7 w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200"> 
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] flex items-center justify-center mb-6 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(215,70%,46%)]/30">
+        <div class="group w-[280px] h-[360px] box-border shrink-0">
+           <div use:reveal={{ delay: i * 80 }} class="reveal bg-white rounded-md p-5 pb-10 w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-xl border border-transparent group-hover:border-slate-200"> 
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] flex items-center justify-center mb-5 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(215,70%,46%)]/30">
             <IconComp
-              class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
+              class="w-6 h-6 text-white transition-[width,height] duration-200 ease-out group-hover:w-7 group-hover:h-7"
               absoluteStrokeWidth
               style="shape-rendering:geometricPrecision; vector-effect: non-scaling-stroke"
               aria-hidden="true"
             />
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-2">{$t(`services.cards.${serviceKeys[i]}.title`)}</h3>
-          <p class="text-slate-600 mb-4 line-clamp-3">{$t(`services.cards.${serviceKeys[i]}.desc`)}</p>
-          <ul class="space-y-2">
-            {#each [0,1,2,3] as fi}
-              <li class="flex items-center text-sm text-slate-500">
-                <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mr-3"></span>
-                {$t(`services.cards.${serviceKeys[i]}.features.${fi}`)}
-              </li>
-            {/each}
-          </ul> 
+          <h3 class="text-lg font-semibold text-slate-900 mb-1.5">{$t(`services.cards.${serviceKeys[i]}.title`)}</h3>
+          <p class="text-slate-600 text-[17px] mb-3 line-clamp-3">{$t(`services.cards.${serviceKeys[i]}.desc`)}</p>
+          <ul class="space-y-1.5 mb-6">
+             {#each [0,1,2,3] as fi}
+               <li class="flex items-center text-xs md:text-sm text-slate-500">
+                 <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mr-3"></span>
+                 {$t(`services.cards.${serviceKeys[i]}.features.${fi}`)}
+               </li>
+             {/each}
+           </ul> 
+          
           </div> 
         </div> 
       {/each} 
@@ -338,28 +371,50 @@
   </div>
 </section>
 
-<section id="why-us" class="py-24 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
+<!-- Stats section extracted from CTA -->
+<section class="py-8 md:py-12 bg-[var(--muted)]">
+  <div class="max-w-6xl mx-auto px-6 md:px-8">
+    <div use:reveal={{ delay: 60, variant: 'scale', scaleFrom: 0.98 }} class="reveal">
+      <div class="grid grid-cols-1 sm:grid-cols-3 sm:divide-x sm:divide-slate-200 gap-4 sm:gap-0">
+        <div class="text-center sm:text-left sm:px-4">
+          <div class="text-xl md:text-2xl font-semibold text-slate-900 tracking-tight">100+</div>
+          <div class="mt-0.5 text-slate-600 text-[17px]">{$t('cta.stats.projects')}</div>
+        </div>
+        <div class="text-center sm:text-left sm:px-4">
+          <div class="text-xl md:text-2xl font-semibold text-slate-900 tracking-tight">100%</div>
+          <div class="mt-0.5 text-slate-600 text-[17px]">{$t('cta.stats.satisfaction')}</div>
+        </div>
+        <div class="text-center sm:text-left sm:px-4">
+          <div class="text-xl md:text-2xl font-semibold text-slate-900 tracking-tight">24/7</div>
+          <div class="mt-0.5 text-slate-600 text-[17px]">{$t('cta.stats.support')}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-us" class="py-20 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('why.title')}</h2>
-    <p class="text-slate-600 text-center max-w-3xl mx-auto mb-16 text-base sm:text-lg md:text-xl">{$t('why.subtitle')}</p>
+    <h2 class="text-[30px] font-semibold text-slate-900 text-center mb-4">{$t('why.title')}</h2>
+    <p class="mt-0.5 text-slate-600 text-[17px] text-center max-w-3xl mx-auto mb-16">{$t('why.subtitle')}</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto">
       {#each benefitsSvg.slice(0, 4) as b, i}
         {@const BIcon = b.icon}
         <div class="group w-full">
-          <div use:reveal={{ delay: i * 90 }} class="reveal bg-white rounded-lg p-7 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200">
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
+          <div use:reveal={{ delay: i * 90 }} class="reveal bg-white rounded-md p-5 pb-6 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-xl border border-transparent group-hover:border-slate-200">
+          <div class="flex items-start gap-3.5">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
               <BIcon
-                 class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
-                absoluteStrokeWidth
-                style="shape-rendering:geometricPrecision; vector-effect: non-scaling-stroke"
-                aria-hidden="true"
-              />
+                 class="w-6 h-6 text-white transition-[width,height] duration-200 ease-out group-hover:w-7 group-hover:h-7"
+                 absoluteStrokeWidth
+                 style="shape-rendering:geometricPrecision; vector-effect: non-scaling-stroke"
+                 aria-hidden="true"
+               />
             </div>
             <div>
-              <h3 class="text-lg font-bold text-slate-900 mb-1">{$t(`why.items.${i}.title`)}</h3>
-              <p class="text-slate-600">{$t(`why.items.${i}.text`)}</p>
+              <h3 class="text-base font-semibold text-slate-900 mb-1">{$t(`why.items.${i}.title`)}</h3>
+              <p class="text-slate-600 text-[17px]">{$t(`why.items.${i}.text`)}</p>
             </div>
           </div>
           </div>
@@ -367,21 +422,21 @@
       {/each}
 
       <div class="group md:col-span-2 w-full max-w-[640px] mx-auto">
-          <div use:reveal={{ delay: 140 }} class="reveal bg-white rounded-lg p-7 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-2xl border border-transparent group-hover:border-slate-200">
-          {#if benefitsSvg[4]}
-            {@const LastIcon = benefitsSvg[4].icon}
-            <div class="flex items-start gap-4">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-300 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
+          <div use:reveal={{ delay: 140 }} class="reveal bg-white rounded-md p-5 pb-6 overflow-hidden w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-xl border border-transparent group-hover:border-slate-200">
+            {#if benefitsSvg[4]}
+              {@const LastIcon = benefitsSvg[4].icon}
+            <div class="flex items-start gap-3.5">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center flex-shrink-0 transform-gpu transition-all duration-300 ease-out group-hover:ring-4 ring-[hsl(220,50%,32%)]/30">
                 <LastIcon
-                  class="w-7 h-7 text-white transition-[width,height] duration-200 ease-out group-hover:w-8 group-hover:h-8"
+                  class="w-6 h-6 text-white transition-[width,height] duration-200 ease-out group-hover:w-7 group-hover:h-7"
                   absoluteStrokeWidth
                   style="shape-rendering:geometricPrecision; vector-effect: non-scaling-stroke"
                   aria-hidden="true"
                 />
               </div>
               <div>
-                <h3 class="text-lg font-bold text-slate-900 mb-1">{$t('why.items.4.title')}</h3>
-                <p class="text-slate-600">{$t('why.items.4.text')}</p>
+                <h3 class="text-base font-semibold text-slate-900 mb-1">{$t('why.items.4.title')}</h3>
+                <p class="text-slate-600 text-[17px]">{$t('why.items.4.text')}</p>
               </div>
             </div>
           {/if}
@@ -391,10 +446,10 @@
   </div>
 </section>
 
-<section class="py-24">
+<section class="py-20">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">{$t('showcase.title')}</h2>
-    <p class="text-slate-600 text-center max-w-3xl mx-auto mb-16 text-base sm:text-lg md:text-xl">{$t('showcase.subtitle')}</p>
+    <h2 class="text-[30px] font-semibold text-slate-900 text-center mb-4">{$t('showcase.title')}</h2>
+    <p class="mt-0.5 text-slate-600 text-[17px] text-center max-w-3xl mx-auto mb-16">{$t('showcase.subtitle')}</p>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         <div use:reveal={{ delay: 60, variant: 'up' }} class="reveal group relative rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200/70 shadow-sm overflow-hidden transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-2xl hover:border-slate-300">
@@ -408,7 +463,7 @@
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-slate-900 mb-2">{selectedCardIndex < 3 ? $t(`showcase.cards.${selectedCardIndex}.title`) : 'Custom Project'}</h3>
-          <p class="text-slate-600 mb-4">{selectedCardIndex < 3 ? $t(`showcase.cards.${selectedCardIndex}.desc`) : 'Your fourth showcase description goes here.'}</p>
+          <p class="text-slate-600 text-[17px] mb-4">{selectedCardIndex < 3 ? $t(`showcase.cards.${selectedCardIndex}.desc`) : 'Your fourth showcase description goes here.'}</p>
 
           <div class="mb-4">
             <h4 class="font-semibold text-slate-900 mb-2">Key Results</h4>
@@ -463,28 +518,28 @@
   </div>
 </section>
 
-<section id="testimonials" class="relative isolate overflow-hidden py-24 text-white before:absolute before:inset-[-40%] before:z-[1] before:content-[''] before:pointer-events-none before:[mix-blend-mode:soft-light] before:bg-[radial-gradient(80%_60%_at_10%_0%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_60%),radial-gradient(60%_50%_at_90%_100%,rgba(88,130,193,0.06)_0%,rgba(88,130,193,0)_60%)] before:bg-no-repeat before:[background-size:100%_100%] before:[will-change:transform] before:opacity-60 before:animate-[layer-float_18s_ease-in-out_infinite] after:absolute after:inset-[-10%] after:z-[2] after:content-[''] after:pointer-events-none after:bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] after:[mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[-webkit-mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[mix-blend-mode:overlay] after:opacity-30 after:animate-[sheen-sweep_6s_ease-in-out_infinite]">
+<section id="testimonials" class="relative isolate overflow-hidden py-12 md:py-13 text-white before:absolute before:inset-[-40%] before:z-[1] before:content-[''] before:pointer-events-none before:[mix-blend-mode:soft-light] before:bg-[radial-gradient(80%_60%_at_10%_0%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_60%),radial-gradient(60%_50%_at_90%_100%,rgba(88,130,193,0.06)_0%,rgba(88,130,193,0)_60%)] before:bg-no-repeat before:[background-size:100%_100%] before:[will-change:transform] before:opacity-60 before:animate-[layer-float_18s_ease-in-out_infinite] after:absolute after:inset-[-10%] after:z-[2] after:content-[''] after:pointer-events-none after:bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] after:[mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[-webkit-mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[mix-blend-mode:overlay] after:opacity-30 after:animate-[sheen-sweep_6s_ease-in-out_infinite]">
   <div class="absolute inset-[-20%] sm:inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_35%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:220%_220%] sm:[background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">{$t('testimonials.title')}</h2>
-    <p class="text-center text-white/80 max-w-3xl mx-auto mb-16 text-base sm:text-lg md:text-xl">{$t('testimonials.subtitle')}</p>
+    <h2 class="text-[30px] font-semibold text-center mb-4">{$t('testimonials.title')}</h2>
+    <p class="mt-0.5 text-center text-white/80 text-[17px] max-w-3xl mx-auto mb-7">{$t('testimonials.subtitle')}</p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
       {#each testimonials as t, i}
-        <div use:reveal={{ delay: i * 60, variant: 'blur', blurFrom: 6 }} class="reveal relative bg-white/10 backdrop-blur rounded-2xl p-6">
-          <Quote class="absolute top-4 right-4 w-10 h-10 opacity-30" aria-hidden="true" />
-          <div class="flex items-center gap-1 text-[var(--accent)] mb-3">
+        <div use:reveal={{ delay: i * 60, variant: 'blur', blurFrom: 6 }} class="reveal relative bg-white/10 backdrop-blur rounded-2xl p-4 md:p-5">
+          <Quote class="absolute top-3 right-3 w-7 h-7 opacity-30" aria-hidden="true" />
+          <div class="flex items-center gap-1 text-[var(--accent)] mb-1.5">
             {#each Array(5) as _}
-              <Star class="w-4 h-4" aria-hidden="true" />
+              <Star class="w-3.5 h-3.5" aria-hidden="true" />
             {/each}
           </div>
-          <p class="italic leading-relaxed mb-6">"{t.text}"</p>
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center font-bold">{t.initials}</div>
+          <p class="italic text-xs md:text-sm leading-relaxed mb-3">"{t.text}"</p>
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center font-medium">{t.initials}</div>
             <div>
-              <h4 class="font-bold text-white">{t.author}</h4>
-              <p class="text-sm text-white/70">{t.role}</p>
+              <h4 class="font-medium text-white text-xs md:text-sm">{t.author}</h4>
+              <p class="text-xs text-white/70 md:text-sm">{t.role}</p>
             </div>
           </div>
         </div>
@@ -493,48 +548,32 @@
   </div>
 </section>
 
-<section id="contact" class="py-24 bg-[var(--background)]">
+<section id="contact" class="py-8 md:py-12 bg-[var(--muted)]">
   <div class="max-w-6xl mx-auto px-6">
-    <div use:reveal={{ delay: 80, variant: 'scale', scaleFrom: 0.97 }} class="reveal relative overflow-hidden rounded-3xl shadow-2xl ring-1 ring-black/5 text-white bg-[linear-gradient(135deg,var(--primary)_0%,hsl(var(--cta1-h),var(--cta1-s),var(--cta1-l))_35%,hsl(var(--cta2-h),var(--cta2-s),var(--cta2-l))_65%,var(--primary)_100%)] animate-[cta-shift_60s_ease-in-out_infinite_alternate]">
-      <div class="absolute inset-0 z-[1] pointer-events-none [mix-blend-mode:soft-light] bg-[radial-gradient(60%_35%_at_20%_0%,rgba(255,255,255,0.02)_0%,transparent_60%),radial-gradient(50%_40%_at_80%_100%,rgba(88,130,193,0.05)_0%,transparent_60%)]"></div>
-
-      <div class="relative z-10 text-center px-6 sm:px-10 md:px-16 py-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+    <div use:reveal={{ delay: 80, variant: 'scale', scaleFrom: 0.98 }} class="reveal text-center">
+      <div class="mx-auto max-w-4xl px-6 md:px-8">
+        <h2 class="text-[30px] text-slate-900 font-semibold leading-tight tracking-tight mb-3">
           {$t('cta.title_prefix')}
-          <span class="bg-gradient-to-r from-[hsl(215,24%,70%)] to-[hsl(215,36%,58%)] bg-clip-text text-transparent">{$t('cta.title_highlight')}</span>
+          <span class="text-[var(--accent)]">{$t('cta.title_highlight')}</span>
           {$t('cta.title_suffix')}
         </h2>
-    <p class="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto">{$t('cta.subtitle')}</p>
+    <p class="mt-0.5 text-slate-600 text-[17px] max-w-3xl mx-auto">{$t('cta.subtitle')}</p>
 
-        <div class="flex flex-wrap gap-4 justify-center mt-8">
+        <div class="flex flex-wrap gap-3 md:gap-4 justify-center mt-6">
           <button
             type="button"
-            class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 cursor-pointer s-y_bCXRrkrYfP" 
+            class="inline-flex items-center gap-2 whitespace-nowrap rounded-lg px-5 py-2.5 text-[17px] font-medium text-white bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] shadow-sm transition-all duration-200 ease-out hover:shadow-md hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(215,70%,56%)]/40 cursor-pointer s-y_bCXRrkrYfP" 
             data-open-contact
           >
-            <MailIcon class="w-6 h-6" aria-hidden="true" /> {$t('cta.hire_us')} <ChevronRight class="w-5 h-5" aria-hidden="true" />
+            <MailIcon class="w-4 h-4" aria-hidden="true" /> {$t('cta.hire_us')} <ChevronRight class="w-4 h-4" aria-hidden="true" />
           </button>
           <button type="button"
-            class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-6 py-3 text-base font-semibold border border-white/20 bg-white/10 hover:bg-white/15 shadow-sm transform transition-all duration-200 ease-out hover:scale-105 hover:shadow-md hover:brightness-110 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 cursor-pointer"
+            class="inline-flex items-center gap-2 whitespace-nowrap rounded-lg px-5 py-2.5 text-[17px] font-medium border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 shadow-sm transition-all duration-200 ease-out hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-200 cursor-pointer"
             onclick={() => (showSchedule = true)}>
-            <CalendarIcon class="w-5 h-5" aria-hidden="true" /> {$t('cta.schedule_call')}
+            <CalendarIcon class="w-4 h-4" aria-hidden="true" /> {$t('cta.schedule_call')}
           </button>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mt-12 pt-6 border-t border-white/10">
-          <div class="text-center">
-            <div class="text-2xl font-bold text-[var(--accent)] mb-1">100+</div>
-            <div class="text-white/80">{$t('cta.stats.projects')}</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl font-bold text-[var(--accent)] mb-1">100%</div>
-            <div class="text-white/80">{$t('cta.stats.satisfaction')}</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl font-bold text-[var(--accent)] mb-1">24/7</div>
-            <div class="text-white/80">{$t('cta.stats.support')}</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
