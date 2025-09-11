@@ -10,6 +10,42 @@ export default {
       'Nutzungsbedingungen'
     ]
   },
+  design: {
+    title: 'Design',
+    meta_description: 'Wir gestalten klare, markenstarke Erlebnisse für Web und Apps — von Research bis zum produktionsreifen Designsystem.',
+    badge: 'Design‑Expertise',
+    hero: 'Jahrelange Erfahrung in UX/UI und markenorientiertem Design für Websites und geschäftskritische Apps. Wir kombinieren Research, klare Flows und konsistentes UI zu Lösungen, die besser konvertieren und sich richtig anfühlen.',
+    cta_primary: 'Über Design sprechen',
+    s1: {
+      title: 'Was wir gestalten',
+      intro: 'Von Marketing‑Websites bis zu Produkt‑Interfaces und Designsystemen — wir liefern konsistentes, skalierbares Design für den Alltag.',
+      web: { title: 'Websites', desc: 'Marketing, Kampagnen und Corporate‑Sites, die schnell laden und konvertieren.' },
+      apps: { title: 'Systeme & Apps', desc: 'Dashboards, interne Tools und Portale – klar und effizient.' },
+      brand: { title: 'Brand & UI', desc: 'Visuelle Identität, Tonalität und UI‑Komponenten, die das Ganze stärken.' },
+      systems: { title: 'Designsysteme', desc: 'Tokens, Komponentenbibliotheken und Guidelines für Tempo und Qualität.' }
+    },
+    s2: {
+      title: 'Unsere Prinzipien',
+      items: [
+        'Klarheit zuerst — jedes Screen mit klarem Ziel',
+        'Konsistenz & Skalierung — gemeinsame Muster, schnellere Teams',
+        'Performance & Gefühl — schnelle, leicht navigierbare Erlebnisse',
+        'Barrierefreiheit (WCAG) — Design für alle Nutzer'
+      ]
+    },
+    s3: {
+      title: 'Designprozess kurz & bündig',
+      steps: [
+        { title: 'Research & Definition', desc: 'Ziele, Nutzer, Markt und Rahmen. Wir definieren Problem und Erfolg.' },
+        { title: 'Flows & Wireframes', desc: 'Task‑Flows und Low‑Fidelity für frühe Entscheidungen und Feedback.' },
+        { title: 'UI & Prototyp', desc: 'Visuelle Exploration, Komponenten und interaktiver Prototyp zur Validierung.' },
+        { title: 'Designsystem & Handover', desc: 'Tokens, Richtlinien, Doku und Support während der Implementierung.' }
+      ]
+    },
+    cta_title: 'Bereit für besseres Design?',
+    cta_desc: 'Erzählen Sie uns Zielgruppe und Herausforderung — wir schlagen einen pragmatischen, lauffähigen Plan vor.',
+    tools_title: 'Tools & Deliverables'
+  },
   process: {
     title: 'Unser Prozess',
     subtitle: 'Von der Idee bis zum Launch — transparent, effizient und mit Qualität in jedem Schritt.',

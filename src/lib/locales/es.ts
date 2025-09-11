@@ -10,6 +10,42 @@ export default {
       'Términos del servicio'
     ]
   },
+  design: {
+    title: 'Diseño',
+    meta_description: 'Creamos experiencias claras y coherentes para web y apps — desde la investigación hasta un sistema de diseño listo para producción.',
+    badge: 'Experiencia en diseño',
+    hero: 'Años de experiencia en UX/UI y diseño orientado a marca para sitios web y apps críticas. Combinamos investigación, flujos claros y UI consistente en soluciones que convierten mejor y se sienten naturales.',
+    cta_primary: 'Hablemos de diseño',
+    s1: {
+      title: 'Qué diseñamos',
+      intro: 'De sitios de marketing a interfaces de producto y sistemas de diseño — entregamos diseño consistente y escalable que funciona en la práctica.',
+      web: { title: 'Sitios web', desc: 'Marketing, campañas y corporativos que cargan rápido y convierten.' },
+      apps: { title: 'Sistemas y Apps', desc: 'Dashboards, herramientas internas y portales enfocados en claridad y eficiencia.' },
+      brand: { title: 'Marca y UI', desc: 'Identidad visual, voz y componentes que fortalecen la experiencia.' },
+      systems: { title: 'Sistemas de diseño', desc: 'Tokens, librerías de componentes y guías para escalar con calidad.' }
+    },
+    s2: {
+      title: 'Nuestros principios',
+      items: [
+        'Claridad primero — cada pantalla con un objetivo claro',
+        'Consistencia y escala — patrones compartidos, equipos más rápidos',
+        'Rendimiento y sensación — experiencias rápidas y fáciles de navegar',
+        'Accesibilidad (WCAG) — diseño para todos'
+      ]
+    },
+    s3: {
+      title: 'Proceso de diseño',
+      steps: [
+        { title: 'Research y definición', desc: 'Objetivos, usuarios, mercado y restricciones. Definimos problemas y métricas.' },
+        { title: 'Flows y wireframes', desc: 'Flujos de tareas y baja fidelidad para decisiones y feedback tempranos.' },
+        { title: 'UI y prototipo', desc: 'Exploración visual, componentes y prototipo interactivo para validar.' },
+        { title: 'Design system y handover', desc: 'Tokens, guías, documentación y soporte durante implementación.' }
+      ]
+    },
+    cta_title: '¿Listos para elevar su diseño?',
+    cta_desc: 'Cuéntanos tu audiencia y reto — propondremos un plan pragmático y lanzable.',
+    tools_title: 'Herramientas y entregables'
+  },
   process: {
     title: 'Nuestro proceso',
     subtitle: 'De la idea al lanzamiento — transparente, eficiente y con calidad en cada paso.',

@@ -6,6 +6,42 @@ export default {
     ...(base as any).nav,
     helpcenter: 'Help Center'
   },
+  design: {
+    title: 'Design',
+    meta_description: 'We craft clear, brand‑strong experiences for web and apps — from research to a production‑ready design system.',
+    badge: 'Design Expertise',
+    hero: 'Years of experience in UX/UI and brand‑driven design for websites and mission‑critical apps. We combine research, clear flows, and consistent UI into solutions that convert better and feel right in hand.',
+    cta_primary: 'Talk design with us',
+    s1: {
+      title: 'What we design',
+      intro: 'From marketing sites to product interfaces and design systems — we deliver consistent, scalable design that works in the real world.',
+      web: { title: 'Websites', desc: 'Marketing, campaign, and corporate sites that load fast and convert.' },
+      apps: { title: 'Systems & Apps', desc: 'Dashboards, internal tools, and portals focused on clarity and efficiency.' },
+      brand: { title: 'Brand & UI', desc: 'Visual identity, voice, and UI components that strengthen the whole.' },
+      systems: { title: 'Design Systems', desc: 'Tokens, component libraries, and guidelines for speed and quality over time.' }
+    },
+    s2: {
+      title: 'Our principles',
+      items: [
+        'Clarity first — every screen needs a clear goal',
+        'Consistency and scale — shared patterns, faster teams',
+        'Performance and feel — fast, easy‑to‑navigate experiences',
+        'Accessibility (WCAG) — design for all users'
+      ]
+    },
+    s3: {
+      title: 'Design process at a glance',
+      steps: [
+        { title: 'Research & definition', desc: 'Goals, users, market, and constraints. We frame the problems and success metrics.' },
+        { title: 'Flows & wireframes', desc: 'Task flows and low‑fidelity that unlock early decisions and feedback.' },
+        { title: 'UI & prototype', desc: 'Visual exploration, components, and interactive prototype for fast validation.' },
+        { title: 'Design system & handover', desc: 'Tokens, guidelines, documentation, and support during implementation.' }
+      ]
+    },
+    cta_title: 'Ready to elevate your design?',
+    cta_desc: 'Tell us about your audience and challenge — we’ll propose a pragmatic, launchable plan.',
+    tools_title: 'Tools & deliverables'
+  },
   process: {
     title: 'Our process',
     subtitle: 'From idea to launch — transparent, efficient, and quality at every step.',

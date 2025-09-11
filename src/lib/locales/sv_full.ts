@@ -6,6 +6,42 @@ export default {
     ...(base as any).nav,
     helpcenter: 'Hjälpcenter'
   },
+  design: {
+    title: 'Design',
+    meta_description: 'Vi skapar tydliga, varumärkesstarka upplevelser för webb och appar — från research till färdigt designsystem.',
+    badge: 'Designexpertis',
+    hero: 'Många års erfarenhet av UX/UI och varumärkesdriven design för både webbplatser och affärskritiska appar. Vi kombinerar research, tydliga flöden och konsekvent UI till lösningar som konverterar bättre och känns rätt i handen.',
+    cta_primary: 'Prata design med oss',
+    s1: {
+      title: 'Vad vi designar',
+      intro: 'Från marknadswebbplatser till produktgränssnitt och design­system — vi levererar konsekvent, skalbar design som fungerar i verkligheten.',
+      web: { title: 'Webbplatser', desc: 'Marknadsplatser, kampanjer och corporate-sajter som laddar snabbt och konverterar.' },
+      apps: { title: 'System & appar', desc: 'Dashboards, interna verktyg och kundportaler med fokus på effektivitet och klarhet.' },
+      brand: { title: 'Varumärke & UI', desc: 'Visuell identitet, ton och UI‑komponenter som stärker helheten.' },
+      systems: { title: 'Designsystem', desc: 'Tokens, komponentbibliotek och riktlinjer för tempo och kvalitet över tid.' }
+    },
+    s2: {
+      title: 'Våra principer',
+      items: [
+        'Klarhet först — varje skärm ska ha ett tydligt mål',
+        'Konsekvens och skalbarhet — samma mönster, snabbare team',
+        'Prestanda och känsla — snabba, lättnavigerade upplevelser',
+        'Tillgänglighet (WCAG) — design för alla användare'
+      ]
+    },
+    s3: {
+      title: 'Designprocess i korthet',
+      steps: [
+        { title: 'Research & definition', desc: 'Mål, användare, marknad och krav. Vi ringar in problemen och måtten på framgång.' },
+        { title: 'Flows & wireframes', desc: 'Task‑flöden och lågfidelity som låser upp tidiga beslut och feedback.' },
+        { title: 'UI & prototyp', desc: 'Visuell utforskning, komponenter och interaktiv prototyp för snabb validering.' },
+        { title: 'Designsystem & handover', desc: 'Tokens, riktlinjer, dokumentation och stöd vid implementering.' }
+      ]
+    },
+    cta_title: 'Redo att höja er design?',
+    cta_desc: 'Berätta om målgruppen och utmaningen — vi föreslår en pragmatisk designplan som går att lansera.',
+    tools_title: 'Verktyg & leverabler'
+  },
   process: {
     title: 'Vår process',
     subtitle: 'Så tar vi er från idé till lansering – transparent, effektivt och med kvalitet i varje steg.',
