@@ -518,16 +518,15 @@
   </div>
 </section>
 
-<section id="testimonials" class="relative isolate overflow-hidden py-12 md:py-13 text-white before:absolute before:inset-[-40%] before:z-[1] before:content-[''] before:pointer-events-none before:[mix-blend-mode:soft-light] before:bg-[radial-gradient(80%_60%_at_10%_0%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_60%),radial-gradient(60%_50%_at_90%_100%,rgba(88,130,193,0.06)_0%,rgba(88,130,193,0)_60%)] before:bg-no-repeat before:[background-size:100%_100%] before:[will-change:transform] before:opacity-60 before:animate-[layer-float_18s_ease-in-out_infinite] after:absolute after:inset-[-10%] after:z-[2] after:content-[''] after:pointer-events-none after:bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] after:[mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[-webkit-mask-image:linear-gradient(120deg,transparent_35%,black_50%,transparent_65%)] after:[mix-blend-mode:overlay] after:opacity-30 after:animate-[sheen-sweep_6s_ease-in-out_infinite]">
-  <div class="absolute inset-[-20%] sm:inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_35%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:220%_220%] sm:[background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
+<section id="testimonials" class="py-20 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
-    <h2 class="text-[30px] font-semibold text-center mb-4">{$t('testimonials.title')}</h2>
-    <p class="mt-0.5 text-center text-white/80 text-[17px] max-w-3xl mx-auto mb-7">{$t('testimonials.subtitle')}</p>
+    <h2 class="text-[30px] font-semibold text-slate-900 text-center mb-4">{$t('testimonials.title')}</h2>
+    <p class="mt-0.5 text-center text-slate-600 text-[17px] max-w-3xl mx-auto mb-7">{$t('testimonials.subtitle')}</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
       {#each testimonials as t, i}
-        <div use:reveal={{ delay: i * 60, variant: 'blur', blurFrom: 6 }} class="reveal relative bg-white/10 backdrop-blur rounded-2xl p-4 md:p-5">
+        <div use:reveal={{ delay: i * 60, variant: 'blur', blurFrom: 6 }} class="reveal relative bg-white rounded-2xl p-4 md:p-5 shadow-sm ring-1 ring-black/5">
           <Quote class="absolute top-3 right-3 w-7 h-7 opacity-30" aria-hidden="true" />
           <div class="flex items-center gap-1 text-[var(--accent)] mb-1.5">
             {#each Array(5) as _}
@@ -538,8 +537,8 @@
           <div class="flex items-center gap-2">
             <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center font-medium">{t.initials}</div>
             <div>
-              <h4 class="font-medium text-white text-xs md:text-sm">{t.author}</h4>
-              <p class="text-xs text-white/70 md:text-sm">{t.role}</p>
+              <h4 class="font-medium text-slate-900 text-xs md:text-sm">{t.author}</h4>
+              <p class="text-xs text-slate-500 md:text-sm">{t.role}</p>
             </div>
           </div>
         </div>
@@ -548,7 +547,7 @@
   </div>
 </section>
 
-<section id="contact" class="py-8 md:py-12 bg-[var(--muted)]">
+<section id="contact" class="py-20 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
   <div class="max-w-6xl mx-auto px-6">
     <div use:reveal={{ delay: 80, variant: 'scale', scaleFrom: 0.98 }} class="reveal text-center">
       <div class="mx-auto max-w-4xl px-6 md:px-8">
