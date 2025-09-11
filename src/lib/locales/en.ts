@@ -42,6 +42,44 @@ export default {
     cta_desc: 'Tell us about your audience and challenge — we’ll propose a pragmatic, launchable plan.',
     tools_title: 'Tools & deliverables'
   },
+  system: {
+    title: 'Applications',
+    meta_description: 'We design and develop applications for mobile, web, and enterprise — tailored to your needs.',
+    badge: 'Applications',
+    hero: 'We build modern applications — mobile (iOS/Android), web, and desktop. Robust code, sharp UX, and integrations that matter.',
+    cta_primary: 'Talk applications with us',
+    s1: {
+      title: 'What we build',
+      intro: 'Mobile apps, web apps, and enterprise applications — from idea to launch and beyond.',
+      internal: { title: 'Mobile applications', desc: 'iOS/Android with web‑native wrappers (e.g., Capacitor/Tauri) for offline, push, and performance.' },
+      automation: { title: 'Web applications', desc: 'Portals, dashboards, booking, commerce, and real‑time data flows that scale.' },
+      enterprise: { title: 'Enterprise applications', desc: 'RBAC, SSO, audit trails, scalability, and reliable operations (CI/CD + monitoring).' },
+      custom: { title: 'Integrations & automation', desc: 'ERP/CRM integrations, payments, data pipelines, and background jobs.' }
+    },
+    s2: {
+      title: 'Why choose us for applications',
+      items: [
+        'Many years shipping complex applications to production',
+        'Reliability: testing, logging, monitoring, and routines',
+        'Security and access from the start (least‑privilege)',
+        'Clear docs and long‑term maintainability'
+      ]
+    },
+    s3: {
+      title: 'Delivery & tech',
+      stack_title: 'Tech stack',
+      stack_text: 'SvelteKit/Node for web; web‑native wrappers (Capacitor/Tauri) for mobile/desktop. API‑first, strong typing, CI/CD, and cloud ops — pragmatic choices for your context.',
+      delivery_title: 'Delivery approach',
+      delivery_text: 'Short iterations, weekly demos, preview environments, and transparency. We ship value early and often.'
+    },
+    stats: {
+      years: '10+ yrs', years_label: 'Experience',
+      projects: '100+', projects_label: 'System deliveries',
+      uptime: '99.9%', uptime_label: 'Typical uptime'
+    },
+    cta_title: 'Ready to build your next system?',
+    cta_desc: 'Tell us about your processes and goals — we’ll propose a solution that can launch and scale.'
+  },
   process: {
     title: 'Our process',
     subtitle: 'From idea to launch — transparent, efficient, and quality at every step.',

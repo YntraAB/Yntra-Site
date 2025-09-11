@@ -46,6 +46,44 @@ export default {
     cta_desc: 'Parlez‑nous de votre audience et de votre défi — nous proposerons un plan pragmatique, prêt à livrer.',
     tools_title: 'Outils & livrables'
   },
+  system: {
+    title: 'Applications',
+    meta_description: 'Nous concevons et développons des applications pour mobile, web et entreprise — sur‑mesure.',
+    badge: 'Applications',
+    hero: 'Nous créons des applications modernes : mobile (iOS/Android), web et desktop. Code robuste, UX soignée et intégrations utiles.',
+    cta_primary: 'Parler applications',
+    s1: {
+      title: 'Ce que nous construisons',
+      intro: 'Apps mobiles, apps web et applications d’entreprise — de l’idée au lancement et à la maintenance.',
+      internal: { title: 'Applications mobiles', desc: 'iOS/Android avec wrappers web‑natifs (p. ex. Capacitor/Tauri) pour l’offline, les push et la performance.' },
+      automation: { title: 'Applications web', desc: 'Portails, dashboards, réservation, e‑commerce et temps réel à l’échelle.' },
+      enterprise: { title: 'Applications entreprise', desc: 'RBAC, SSO, traçabilité, scalabilité et exploitation fiable (CI/CD + monitoring).' },
+      custom: { title: 'Intégrations & automatisation', desc: 'Intégrations ERP/CRM, paiements, pipelines de données et jobs en arrière‑plan.' }
+    },
+    s2: {
+      title: 'Pourquoi pour les applications',
+      items: [
+        'Des années d’expérience en applications complexes en production',
+        'Fiabilité : tests, logs, monitoring et routines',
+        'Sécurité et accès dès le départ (least‑privilege)',
+        'Documentation claire et maintenabilité durable'
+      ]
+    },
+    s3: {
+      title: 'Livraison & techno',
+      stack_title: 'Stack technique',
+      stack_text: 'SvelteKit/Node pour le web ; wrappers web‑natifs (Capacitor/Tauri) pour mobile/desktop. API‑first, typage fort, CI/CD et cloud — choix pragmatiques.',
+      delivery_title: 'Approche de delivery',
+      delivery_text: 'Itérations courtes, démos hebdo, environnements de preview et transparence. Valeur livrée tôt et souvent.'
+    },
+    stats: {
+      years: '10+ ans', years_label: 'Expérience',
+      projects: '100+', projects_label: 'Projets livrés',
+      uptime: '99.9%', uptime_label: 'Disponibilité typique'
+    },
+    cta_title: 'Prêts pour votre prochain système ?',
+    cta_desc: 'Parlez‑nous de vos processus et objectifs — nous proposerons une solution prête à lancer et à scaler.'
+  },
   process: {
     title: 'Notre processus',
     subtitle: 'De l’idée au lancement — transparent, efficace et de qualité à chaque étape.',

@@ -46,6 +46,44 @@ export default {
     cta_desc: 'Cuéntanos tu audiencia y reto — propondremos un plan pragmático y lanzable.',
     tools_title: 'Herramientas y entregables'
   },
+  system: {
+    title: 'Aplicaciones',
+    meta_description: 'Diseñamos y desarrollamos aplicaciones para móvil, web y empresa — a medida.',
+    badge: 'Aplicaciones',
+    hero: 'Creamos aplicaciones modernas: móvil (iOS/Android), web y desktop. Código robusto, excelente UX e integraciones que importan.',
+    cta_primary: 'Hablemos de aplicaciones',
+    s1: {
+      title: 'Qué construimos',
+      intro: 'Apps móviles, web apps y aplicaciones enterprise — desde la idea hasta el lanzamiento y más allá.',
+      internal: { title: 'Aplicaciones móviles', desc: 'iOS/Android con wrappers web‑native (p.ej. Capacitor/Tauri) para offline, push y rendimiento.' },
+      automation: { title: 'Aplicaciones web', desc: 'Portales, dashboards, reservas, comercio y flujos en tiempo real que escalan.' },
+      enterprise: { title: 'Aplicaciones enterprise', desc: 'RBAC, SSO, auditoría, escalabilidad y operación fiable (CI/CD + monitorización).' },
+      custom: { title: 'Integraciones y automatización', desc: 'Integraciones ERP/CRM, pagos, pipelines de datos y jobs en background.' }
+    },
+    s2: {
+      title: 'Por qué para aplicaciones',
+      items: [
+        'Años entregando aplicaciones complejas en producción',
+        'Fiabilidad: test, logging, monitorización y rutinas',
+        'Seguridad y accesos desde el inicio (least‑privilege)',
+        'Documentación clara y mantenibilidad a largo plazo'
+      ]
+    },
+    s3: {
+      title: 'Entrega y tecnología',
+      stack_title: 'Stack tecnológico',
+      stack_text: 'SvelteKit/Node para web; wrappers web‑native (Capacitor/Tauri) para móvil/desktop. API‑first, tipado fuerte, CI/CD y cloud — decisiones pragmáticas.',
+      delivery_title: 'Forma de entrega',
+      delivery_text: 'Iteraciones cortas, demos semanales, entornos de preview y transparencia. Entregamos valor pronto y a menudo.'
+    },
+    stats: {
+      years: '10+ años', years_label: 'Experiencia',
+      projects: '100+', projects_label: 'Entregas',
+      uptime: '99.9%', uptime_label: 'Uptime típico'
+    },
+    cta_title: '¿Listos para su próximo sistema?',
+    cta_desc: 'Cuéntanos procesos y objetivos — propondremos una solución lista para lanzar y escalar.'
+  },
   process: {
     title: 'Nuestro proceso',
     subtitle: 'De la idea al lanzamiento — transparente, eficiente y con calidad en cada paso.',

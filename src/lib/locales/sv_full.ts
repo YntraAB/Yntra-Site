@@ -42,6 +42,44 @@ export default {
     cta_desc: 'Berätta om målgruppen och utmaningen — vi föreslår en pragmatisk designplan som går att lansera.',
     tools_title: 'Verktyg & leverabler'
   },
+  system: {
+    title: 'Applikationer',
+    meta_description: 'Vi designar och utvecklar applikationer för mobil, webb och företagssystem — skräddarsydda efter behov.',
+    badge: 'Applikationer',
+    hero: 'Vi bygger moderna applikationer: mobil (iOS/Android), webb och desktop. Robust kod, vass UX och integrationer som gör jobbet.',
+    cta_primary: 'Prata applikationer med oss',
+    s1: {
+      title: 'Vad vi bygger',
+      intro: 'Mobila appar, webbappar och företagsapplikationer — från idé till lansering och förvaltning.',
+      internal: { title: 'Mobila applikationer', desc: 'iOS/Android med web‑native wrappers (t.ex. Capacitor/Tauri) för offline, push och hög prestanda.' },
+      automation: { title: 'Webbapplikationer', desc: 'Portaler, dashboards, bokning, e‑handel och realtidsflöden som skalar.' },
+      enterprise: { title: 'Företagsapplikationer', desc: 'Roller, behörigheter, SSO, revisionsspår och robust drift (CI/CD + övervakning).' },
+      custom: { title: 'Integrationer & automation', desc: 'ERP/CRM‑kopplingar, betalningar, dataflöden och bakgrundsjobb som effektiviserar.' }
+    },
+    s2: {
+      title: 'Varför oss för applikationer',
+      items: [
+        'Många års erfarenhet av komplexa applikationer i produktion',
+        'Tillförlitlighet: test, loggning, övervakning och driftrutiner',
+        'Säkerhet och åtkomster från grunden (least‑privilege)',
+        'Tydlig dokumentation och långsiktig förvaltbarhet'
+      ]
+    },
+    s3: {
+      title: 'Leverans & teknik',
+      stack_title: 'Teknikstack',
+      stack_text: 'SvelteKit/Node för webb, web‑native wrappers (t.ex. Capacitor/Tauri) för mobil/desktop. API‑först, stark typning, CI/CD och molndrift — pragmatiskt val efter behov.',
+      delivery_title: 'Leveranssätt',
+      delivery_text: 'Korta iterationer, demo varje vecka, förhandsmiljöer och transparens. Vi levererar värde tidigt och ofta.'
+    },
+    stats: {
+      years: '10+ år', years_label: 'Erfarenhet',
+      projects: '100+', projects_label: 'Systemleveranser',
+      uptime: '99.9%', uptime_label: 'Typisk drifttid'
+    },
+    cta_title: 'Redo att skapa nästa system?',
+    cta_desc: 'Berätta om era processer och mål — vi föreslår en lösning som går att lansera och skala.'
+  },
   process: {
     title: 'Vår process',
     subtitle: 'Så tar vi er från idé till lansering – transparent, effektivt och med kvalitet i varje steg.',

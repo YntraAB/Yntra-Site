@@ -46,6 +46,44 @@ export default {
     cta_desc: 'Erzählen Sie uns Zielgruppe und Herausforderung — wir schlagen einen pragmatischen, lauffähigen Plan vor.',
     tools_title: 'Tools & Deliverables'
   },
+  system: {
+    title: 'Applikationen',
+    meta_description: 'Wir konzipieren und entwickeln Applikationen für Mobile, Web und Enterprise – maßgeschneidert.',
+    badge: 'Applikationen',
+    hero: 'Wir bauen moderne Applikationen: Mobile (iOS/Android), Web und Desktop. Robuster Code, starke UX und sinnvolle Integrationen.',
+    cta_primary: 'Über Applikationen sprechen',
+    s1: {
+      title: 'Was wir bauen',
+      intro: 'Mobile Apps, Web‑Apps und Enterprise‑Applikationen – von der Idee bis zum Launch und Betrieb.',
+      internal: { title: 'Mobile Applikationen', desc: 'iOS/Android mit Web‑Native‑Wrappers (z. B. Capacitor/Tauri) für Offline, Push und Performance.' },
+      automation: { title: 'Web‑Applikationen', desc: 'Portale, Dashboards, Buchung, Commerce und Echtzeit‑Flows, die skalieren.' },
+      enterprise: { title: 'Enterprise‑Applikationen', desc: 'RBAC, SSO, Audit‑Trails, Skalierbarkeit und verlässlicher Betrieb (CI/CD + Monitoring).' },
+      custom: { title: 'Integrationen & Automatisierung', desc: 'ERP/CRM‑Integrationen, Payments, Datenpipelines und Background‑Jobs.' }
+    },
+    s2: {
+      title: 'Warum für Applikationen',
+      items: [
+        'Langjährige Erfahrung mit komplexen Applikationen in Produktion',
+        'Zuverlässigkeit: Tests, Logging, Monitoring und Routinen',
+        'Sicherheit und Zugriffe von Beginn an (Least‑Privilege)',
+        'Klare Doku und nachhaltige Wartbarkeit'
+      ]
+    },
+    s3: {
+      title: 'Lieferung & Technik',
+      stack_title: 'Technologie‑Stack',
+      stack_text: 'SvelteKit/Node fürs Web; Web‑Native‑Wrappers (Capacitor/Tauri) für Mobile/Desktop. API‑First, starke Typisierung, CI/CD und Cloud‑Ops – pragmatisch passend.',
+      delivery_title: 'Vorgehen',
+      delivery_text: 'Kurze Iterationen, wöchentliche Demos, Preview‑Umgebungen und Transparenz. Früher und häufiger Mehrwert.'
+    },
+    stats: {
+      years: '10+ Jahre', years_label: 'Erfahrung',
+      projects: '100+', projects_label: 'Systeme geliefert',
+      uptime: '99.9%', uptime_label: 'Typische Verfügbarkeit'
+    },
+    cta_title: 'Bereit für Ihr nächstes System?',
+    cta_desc: 'Teilen Sie Prozesse und Ziele — wir schlagen eine Lösung vor, die startet und skaliert.'
+  },
   process: {
     title: 'Unser Prozess',
     subtitle: 'Von der Idee bis zum Launch — transparent, effizient und mit Qualität in jedem Schritt.',

@@ -176,7 +176,7 @@
         <h4 class="text-sm font-semibold text-slate-900 tracking-wide">{$t('footer.sections.services')}</h4>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
           <li><a href="/design" class="hover:text-slate-900">{$t('footer.service_links.0')}</a></li>
-          <li><a href="#services" class="hover:text-slate-900" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.1')}</a></li>
+          <li><a href="/system" class="hover:text-slate-900">{$t('footer.service_links.1')}</a></li>
           <li><a href="#services" class="hover:text-slate-900" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.2')}</a></li>
           <li><a href="#services" class="hover:text-slate-900" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.3')}</a></li>
         </ul>
