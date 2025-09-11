@@ -317,7 +317,17 @@
 {#if open}
   <div
     class="fixed inset-0 z-[100] grid place-items-center bg-black/60 backdrop-blur-sm p-4"
+    role="button"
+    tabindex="0"
+    aria-label={$t('schedule.close')}
     onclick={onBackdropClick}
+    onkeydown={(e) => {
+      const k = (e as KeyboardEvent).key;
+      if (k === 'Enter' || k === ' ' || k === 'Spacebar' || k === 'Escape') {
+        e.preventDefault();
+        close();
+      }
+    }}
     in:fade={{ duration: 120 }}
     out:fade={{ duration: 120 }}
   >
@@ -354,13 +364,7 @@
           </div>
         </div>
 
-        <form bind:this={formEl} class="grid gap-6" onsubmit={(e) => e.preventDefault()} onkeydown={(e) => {
-          const ke = e as KeyboardEvent;
-          const target = ke.target as HTMLElement | null;
-          if (ke.key === 'Enter' && target && target.tagName !== 'TEXTAREA') {
-            e.preventDefault();
-          }
-        }}>
+        <form bind:this={formEl} class="grid gap-6" onsubmit={(e) => e.preventDefault()}>
           <div class="grid grid-cols-1 gap-4">
             <div class="grid gap-2">
               <div class="text-sm font-medium text-slate-700">{$t('schedule.type_label')}</div>

@@ -218,7 +218,7 @@
           <div class="p-6">
             <div class="flex items-center gap-3">
               <div class={`inline-flex h-10 w-10 items-center justify-center rounded-xl ${c.color} text-white`}>
-                <svelte:component this={c.icon}  class="h-5 w-5" aria-hidden="true"  />
+                <c.icon class="h-5 w-5" aria-hidden="true" />
               </div>
               <h3 class="text-lg font-semibold text-slate-900">{c.key}</h3>
             </div>
@@ -250,7 +250,7 @@
   <!-- Modern answer: Slide-in sheet -->
   <svelte:window onkeydown={handleKey} onresize={() => ddOpen && updateDropdownRect()} onclick={handleWindowClick} />
   {#if activeKey}
-    <div class="fixed inset-0 z-40 bg-black/35 backdrop-blur-[2px]" role="button" tabindex="0" aria-label="Close" onclick={() => (activeKey = null)} onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); activeKey = null; } }} in:fade={{ duration: 140 }} out:fade={{ duration: 120 }}></div>
+    <div class="fixed inset-0 z-40 bg-black/35 backdrop-blur-[2px]" role="button" tabindex="0" aria-label="Close" onclick={() => (activeKey = null)} onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar' || e.key === 'Escape') { e.preventDefault(); activeKey = null; } }} in:fade={{ duration: 140 }} out:fade={{ duration: 120 }}></div>
     <div
       class={`fixed right-0 top-0 z-50 h-dvh w-full max-w-xl md:max-w-[42rem] bg-white rounded-l-2xl shadow-2xl transition-transform duration-300 translate-x-0 overflow-y-auto`}
       onclick={(e) => e.stopPropagation()}

@@ -18,8 +18,7 @@
 <!-- Hero with video background -->
 <section class="relative isolate min-h-[520px] flex items-center text-white overflow-hidden">
   <div class="absolute inset-0 -z-10">
-    <video class="h-full w-full object-cover object-[center_85%] md:object-[center_75%] opacity-70" autoplay muted loop playsinline preload="metadata" poster="/images/design-hero-poster.jpg">
-      <source src="/media/UI.webm" type="video/webm" />
+    <video class="h-full w-full object-cover object-[center_85%] md:object-[center_75%] opacity-70" autoplay muted loop playsinline preload="metadata">
       <source src="/media/UI.mp4" type="video/mp4" />
       <!-- Fallback if local file missing -->
       <source src="https://videos.pexels.com/video-files/3048485/3048485-uhd_2560_1440_30fps.mp4" type="video/mp4" />
