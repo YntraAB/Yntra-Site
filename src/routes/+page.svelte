@@ -95,6 +95,15 @@
     startAutoAdvance();
   });
   onDestroy(() => stopAutoAdvance());
+  onDestroy(() => {
+    if (videoEl) {
+      try {
+        videoEl.pause();
+        videoEl.removeAttribute('src');
+        videoEl.load();
+      } catch {}
+    }
+  });
 
   let videoEl: HTMLVideoElement | null = null;
 
@@ -204,13 +213,13 @@
 
 <section id="home" class="relative isolate min-h-[100svh] flex items-center text-white overflow-hidden">
   <video
-    class="absolute inset-0 z-0 w-full h-full min-w-full min-h-full object-cover object-center pointer-events-none scale-[1.15] sm:scale-100 origin-center will-change-transform"
+    class="absolute inset-0 z-0 w-full h-full min-w-full min-h-full object-cover object-center pointer-events-none scale-[1.05] sm:scale-100 origin-center"
     src="/media/main.mp4?v=2"
     muted
     autoplay
     playsinline
     loop
-    preload="auto"
+    preload="metadata"
     bind:this={videoEl}
     onloadedmetadata={handleLoadedMetadata}
     oncanplay={handleCanPlay}
@@ -276,7 +285,7 @@
               loading={i === currentSlideIndex ? 'eager' : 'lazy'}
               decoding="async"
               sizes="(min-width: 768px) 50vw, 100vw"
-              class={`absolute inset-0 w-full h-full object-cover origin-center scale-[1.3] sm:scale-[1.35] md:scale-[1.4] will-change-transform [backface-visibility:hidden] ${
+              class={`absolute inset-0 w-full h-full object-cover origin-center scale-[1.25] sm:scale-[1.3] md:scale-[1.35] [backface-visibility:hidden] ${
                 s.src.endsWith('Stalker-one.png') ? 'translate-y-[-2%]' : ''
               }`}
               style={`object-position: ${'50% 50%'}`}

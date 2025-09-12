@@ -11,7 +11,7 @@
   import MapPin from 'lucide-svelte/icons/map-pin';
   import { setupI18n, t, locale as i18nLocale } from '$lib/i18n';
   import LanguageSelector from '$lib/components/LanguageSelector.svelte';
-  import { afterNavigate, goto } from '$app/navigation';
+  import { afterNavigate, beforeNavigate, goto } from '$app/navigation';
   import ContactModal from '$lib/components/ContactModal.svelte';
   import { env as publicEnv } from '$env/dynamic/public';
 
@@ -80,9 +80,69 @@
     goto('/', { noScroll: false });
   }
 
-  // After route changes, handle deferred smooth scroll from other pages
+  // Aggressive media cleanup before leaving a page: pause and unload videos
+  function releaseMediaIn(el: HTMLElement | null) {
+    if (!el) return;
+    const vids = Array.from(el.querySelectorAll('video')) as HTMLVideoElement[];
+    for (const v of vids) {
+      try {
+        v.pause();
+        // remove sources to free decode buffers, then reload to detach
+        v.removeAttribute('src');
+        Array.from(v.querySelectorAll('source')).forEach((s) => s.removeAttribute('src'));
+        v.load();
+      } catch {}
+    }
+    const auds = Array.from(el.querySelectorAll('audio')) as HTMLAudioElement[];
+    for (const a of auds) {
+      try {
+        a.pause();
+        a.removeAttribute('src');
+        Array.from(a.querySelectorAll('source')).forEach((s) => s.removeAttribute('src'));
+        a.load();
+      } catch {}
+    }
+  }
+
+  // Ensure single registration across HMR reloads for beforeNavigate cleanup
   if (typeof window !== 'undefined') {
-    afterNavigate(({ to }) => {
+    const BEFORE_GUARD_KEY = '__yntra_before_nav_unsub__';
+    try { (window as any)[BEFORE_GUARD_KEY]?.(); } catch {}
+    (window as any)[BEFORE_GUARD_KEY] = beforeNavigate(() => {
+      const content = document.getElementById('content');
+      releaseMediaIn(content);
+    });
+  }
+
+  // Also cleanup media on full page reloads/closing
+  if (typeof window !== 'undefined') {
+    const UNLOAD_GUARD_KEY = '__yntra_unload_cleanup__';
+    try { (window as any)[UNLOAD_GUARD_KEY]?.(); } catch {}
+    const unloadHandler = () => {
+      try {
+        const content = document.getElementById('content');
+        releaseMediaIn(content as HTMLElement | null);
+        // Fallback to whole document if needed
+        if (!content) releaseMediaIn(document.body as unknown as HTMLElement);
+      } catch {}
+    };
+    window.addEventListener('beforeunload', unloadHandler);
+    window.addEventListener('pagehide', unloadHandler);
+    (window as any)[UNLOAD_GUARD_KEY] = () => {
+      try {
+        window.removeEventListener('beforeunload', unloadHandler);
+        window.removeEventListener('pagehide', unloadHandler);
+      } catch {}
+    };
+  }
+
+  // After route changes, handle deferred smooth scroll from other pages
+  let removeAfterNavigate: (() => void) | undefined;
+  if (typeof window !== 'undefined') {
+    // Ensure single registration across HMR reloads
+    const NAV_GUARD_KEY = '__yntra_after_nav_unsub__';
+    try { (window as any)[NAV_GUARD_KEY]?.(); } catch {}
+    removeAfterNavigate = (afterNavigate(({ to }) => {
       let target: string | null = null;
       try { target = sessionStorage.getItem('scroll_target'); } catch {}
       if (target) {
@@ -106,11 +166,22 @@
         const el = document.querySelector(to.url.hash);
         el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    });
+    }) as unknown as (() => void) | undefined);
+    (window as any)[NAV_GUARD_KEY] = removeAfterNavigate;
   }
+
+  $effect(() => () => {
+    // cleanup afterNavigate in dev/HMR
+    try { removeAfterNavigate?.(); } catch {}
+  });
 
   // Open Contact modal for any element with [data-open-contact]
   if (typeof document !== 'undefined') {
+    const CLICK_GUARD_KEY = '__yntra_open_contact_handler__';
+    const prev = (window as any)[CLICK_GUARD_KEY] as ((e: MouseEvent) => void) | undefined;
+    if (prev) {
+      try { document.removeEventListener('click', prev); } catch {}
+    }
     const handler = (e: MouseEvent) => {
       const t = e.target as HTMLElement | null;
       const el = t?.closest('[data-open-contact]') as HTMLElement | null;
@@ -119,8 +190,14 @@
         globalContactOpen = true;
       }
     };
+    (window as any)[CLICK_GUARD_KEY] = handler;
     document.addEventListener('click', handler);
-    $effect(() => () => document.removeEventListener('click', handler));
+    $effect(() => () => {
+      try { document.removeEventListener('click', handler); } catch {}
+      if ((window as any)[CLICK_GUARD_KEY] === handler) {
+        (window as any)[CLICK_GUARD_KEY] = undefined;
+      }
+    });
   }
 
 </script>

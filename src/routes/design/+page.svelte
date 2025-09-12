@@ -1,5 +1,6 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
+  import { onDestroy } from 'svelte';
   import ChevronRight from 'lucide-svelte/icons/chevron-right';
   import Palette from 'lucide-svelte/icons/palette';
   import Monitor from 'lucide-svelte/icons/monitor';
@@ -8,7 +9,16 @@
   import Layers from 'lucide-svelte/icons/layers';
   import CheckCircle2 from 'lucide-svelte/icons/check-circle-2';
   import Sparkles from 'lucide-svelte/icons/sparkles';
+
+  let bgVideo: HTMLVideoElement | null = null;
+  onDestroy(() => {
+    if (bgVideo) {
+      try { bgVideo.pause(); bgVideo.removeAttribute('src'); bgVideo.load(); } catch {}
+    }
+  });
 </script>
+
+
 
 <svelte:head>
   <title>{$t('design.title')} | Yntra</title>
@@ -18,7 +28,7 @@
 <!-- Hero with video background -->
 <section class="relative isolate min-h-[520px] flex items-center text-white overflow-hidden">
   <div class="absolute inset-0 -z-10">
-    <video class="h-full w-full object-cover object-[center_85%] md:object-[center_75%] opacity-70" autoplay muted loop playsinline preload="metadata">
+    <video bind:this={bgVideo} class="h-full w-full object-cover object-[center_85%] md:object-[center_75%] opacity-70" autoplay muted loop playsinline preload="metadata">
       <source src="/media/UI.mp4" type="video/mp4" />
       <!-- Fallback if local file missing -->
       <source src="https://videos.pexels.com/video-files/3048485/3048485-uhd_2560_1440_30fps.mp4" type="video/mp4" />
@@ -123,3 +133,4 @@
     </div>
   </div>
 </section>
+
