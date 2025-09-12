@@ -286,11 +286,15 @@ export default {
     },
     s6: {
       title: '6. Cookies',
-      text: 'Unsere Website verwendet Cookies und ähnliche Technologien, um Ihr Nutzungserlebnis zu verbessern. Sie können Cookies in den Browser-Einstellungen verwalten oder deaktivieren.'
+      text: 'Diese Website verwendet keine Cookies oder ähnliche Tracking-Technologien. Wir speichern oder sammeln keine Informationen über Ihren Besuch durch solche Methoden.'
     },
     s7: {
       title: '7. Änderungen dieser Richtlinie',
       text: 'Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Die jeweils aktuelle Version wird stets auf dieser Seite zusammen mit dem Datum der letzten Aktualisierung veröffentlicht. Sollten wir wesentliche Änderungen vornehmen, die sich auf die Verarbeitung Ihrer personenbezogenen Daten auswirken, werden wir Sie in geeigneter Weise informieren, zum Beispiel per E-Mail oder auf unserer Website.'
+    },
+    s8: {
+      title: '8. Aufbewahrung von Daten',
+      text: 'Wir bewahren personenbezogene Daten nur so lange auf, wie es zur Erfüllung der in dieser Datenschutzerklärung beschriebenen Zwecke erforderlich ist, es sei denn, eine längere Aufbewahrungsfrist ist gesetzlich vorgeschrieben oder zulässig.'
     },
     cta: {
       title: 'Fragen zu dieser Richtlinie?',

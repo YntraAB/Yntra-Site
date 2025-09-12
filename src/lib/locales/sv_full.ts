@@ -378,11 +378,15 @@ export default {
     },
     s6: {
       title: '6. Cookies',
-      text: 'Vi använder cookies och liknande tekniker för att förbättra din upplevelse. Du kan hantera eller inaktivera cookies i din webbläsares inställningar.'
+      text: 'Denna webbplats använder inte cookies eller liknande spårningstekniker. Vi lagrar eller samlar inte in någon information om ditt besök genom sådana metoder.'
     },
     s7: {
       title: '7. Ändringar i denna policy',
       text: 'Vi kan komma att uppdatera denna integritetspolicy från tid till annan. Den senaste versionen finns alltid publicerad på denna sida tillsammans med datum för senaste uppdatering. Om vi gör väsentliga ändringar som påverkar hur vi behandlar dina personuppgifter kommer vi att informera dig på ett tydligt sätt, exempelvis via e-post eller på vår webbplats.'
+    },
+    s8: {
+      title: '8. Lagring av personuppgifter',
+      text: 'Vi behåller personuppgifter endast så länge det är nödvändigt för att uppfylla de syften som anges i denna integritetspolicy, om inte en längre lagringsperiod krävs eller tillåts enligt lag.'
     },
     cta: {
       title: 'Frågor om denna policy?',

@@ -286,11 +286,15 @@ export default {
     },
     s6: {
       title: '6. Cookies',
-      text: 'Notre site utilise des cookies et des technologies similaires pour améliorer votre expérience de navigation. Vous pouvez gérer ou désactiver les cookies dans les paramètres de votre navigateur.'
+      text: 'Ce site web n’utilise pas de cookies ni de technologies de suivi similaires. Nous ne stockons ni ne collectons aucune information concernant votre visite par de tels moyens.'
     },
     s7: {
       title: '7. Modifications de cette politique',
       text: 'Nous pouvons mettre à jour la présente Politique de confidentialité de temps à autre. La version la plus récente sera toujours publiée sur cette page, accompagnée de la date de la dernière mise à jour. Si nous apportons des modifications importantes concernant la manière dont nous traitons vos données personnelles, nous vous en informerons de façon claire, par exemple par e-mail ou sur notre site web.'
+    },
+    s8: {
+      title: '8. Conservation des données',
+      text: 'Nous conservons les données personnelles uniquement pendant la durée nécessaire à la réalisation des finalités décrites dans la présente Politique de confidentialité, sauf si une période de conservation plus longue est requise ou autorisée par la loi.'
     },
     cta: {
       title: 'Des questions au sujet de cette politique ?',

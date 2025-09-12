@@ -182,23 +182,29 @@
 </script>
 
 <svelte:head>
-  <title>Yntra â€” Design & Development Studio</title>
+  <title>Yntra – Webbplatser, Appar & Digitala System</title>
   <meta
     name="description"
-    content="Design and build high-performing websites, apps, and digital systems. We help businesses scale faster, look better, and work smarter."
+    content="Yntra designar och bygger webbplatser, appar och digitala system som hjälper företag att växa snabbare och arbeta smartare. Kontakta oss."
   />
   <meta name="author" content="Yntra" />
-  <meta
-    name="keywords"
-    content="hire developers, top designers, web development, app development, digital agency, custom software"
-  />
+  <link rel="canonical" href="https://yntra.se" />
 
-  <meta property="og:title" content="Yntra â€” Design & Development Studio" />
+  <meta property="og:title" content="Yntra – Webbplatser, Appar & Digitala System" />
   <meta
     property="og:description"
-    content="We design and build high-performing websites, apps, and digital systems that help businesses scale faster, look better, and work smarter."
+    content="Vi skapar högpresterande digitala lösningar – från webbplatser och appar till skräddarsydda system. Hjälper företag att skala snabbare och arbeta smartare."
   />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yntra.se" />
+  <meta property="og:image" content="https://yntra.se/og-image.jpg" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:site_name" content="Yntra" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yntra – Webbplatser, Appar & Digitala System" />
+  <meta name="twitter:description" content="Vi skapar högpresterande digitala lösningar – från webbplatser och appar till skräddarsydda system." />
+  <meta name="twitter:image" content="https://yntra.se/og-image.jpg" />
 </svelte:head>
 
 <section id="home" class="relative isolate min-h-[100svh] flex items-center text-white overflow-hidden">
