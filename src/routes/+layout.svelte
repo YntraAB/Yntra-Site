@@ -1,6 +1,5 @@
 <script lang="ts">
   import '../app.css';
-
   import Menu from 'lucide-svelte/icons/menu';
   import XIcon from 'lucide-svelte/icons/x';
   import Twitter from 'lucide-svelte/icons/twitter';
@@ -70,24 +69,20 @@
     const selector = href.startsWith('/#') ? href.slice(1) : href;
     if (typeof window === 'undefined') return;
     if (window.location.pathname === '/') {
-      // Already on home page: smooth-scroll instead of navigating
       smoothScroll(e, selector);
       return;
     }
-    // Different page: go to top of home first, then smooth-scroll
     e.preventDefault();
     try { sessionStorage.setItem('scroll_target', selector); } catch {}
     goto('/', { noScroll: false });
   }
 
-  // Aggressive media cleanup before leaving a page: pause and unload videos
   function releaseMediaIn(el: HTMLElement | null) {
     if (!el) return;
     const vids = Array.from(el.querySelectorAll('video')) as HTMLVideoElement[];
     for (const v of vids) {
       try {
         v.pause();
-        // remove sources to free decode buffers, then reload to detach
         v.removeAttribute('src');
         Array.from(v.querySelectorAll('source')).forEach((s) => s.removeAttribute('src'));
         v.load();
@@ -104,7 +99,6 @@
     }
   }
 
-  // Ensure single registration across HMR reloads for beforeNavigate cleanup
   if (typeof window !== 'undefined') {
     const BEFORE_GUARD_KEY = '__yntra_before_nav_unsub__';
     try { (window as any)[BEFORE_GUARD_KEY]?.(); } catch {}
@@ -114,7 +108,6 @@
     });
   }
 
-  // Also cleanup media on full page reloads/closing
   if (typeof window !== 'undefined') {
     const UNLOAD_GUARD_KEY = '__yntra_unload_cleanup__';
     try { (window as any)[UNLOAD_GUARD_KEY]?.(); } catch {}
@@ -122,7 +115,6 @@
       try {
         const content = document.getElementById('content');
         releaseMediaIn(content as HTMLElement | null);
-        // Fallback to whole document if needed
         if (!content) releaseMediaIn(document.body as unknown as HTMLElement);
       } catch {}
     };
@@ -136,10 +128,8 @@
     };
   }
 
-  // After route changes, handle deferred smooth scroll from other pages
   let removeAfterNavigate: (() => void) | undefined;
   if (typeof window !== 'undefined') {
-    // Ensure single registration across HMR reloads
     const NAV_GUARD_KEY = '__yntra_after_nav_unsub__';
     try { (window as any)[NAV_GUARD_KEY]?.(); } catch {}
     removeAfterNavigate = (afterNavigate(({ to }) => {
@@ -147,12 +137,10 @@
       try { target = sessionStorage.getItem('scroll_target'); } catch {}
       if (target) {
         try { sessionStorage.removeItem('scroll_target'); } catch {}
-        // Ensure we start at the very top, then animate down
         window.scrollTo({ top: 0, behavior: 'auto' });
         requestAnimationFrame(() => {
           const el = document.querySelector(target!);
           el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Reflect hash in URL without triggering another jump
           try {
             const url = new URL(window.location.href);
             url.hash = target!;
@@ -161,7 +149,6 @@
         });
         return;
       }
-      // Fallback: if navigation includes a hash while already on home
       if (to?.url.hash) {
         const el = document.querySelector(to.url.hash);
         el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -171,11 +158,9 @@
   }
 
   $effect(() => () => {
-    // cleanup afterNavigate in dev/HMR
     try { removeAfterNavigate?.(); } catch {}
   });
 
-  // Open Contact modal for any element with [data-open-contact]
   if (typeof document !== 'undefined') {
     const CLICK_GUARD_KEY = '__yntra_open_contact_handler__';
     const prev = (window as any)[CLICK_GUARD_KEY] as ((e: MouseEvent) => void) | undefined;
@@ -199,27 +184,17 @@
       }
     });
   }
-
 </script>
-
-<!-- legacy head removed:
-  <link rel="icon" type="image/png" href="/images/YntraBLACK_LOGO.png" />
-  <!-- viewport is defined in src/app.html -->
-  <title>Yntra — Design & Development Studio</title>
-  
-svelte:head end -->
 
 <svelte:head>
   <link rel="icon" type="image/png" href="/images/YntraBLACK_LOGO.png" />
   <link rel="apple-touch-icon" href="/images/YntraBLACK_LOGO.png" />
 
-  <!-- Base SEO overrides -->
   <title>{META_TITLE()}</title>
   <meta name="description" content={META_DESC()} />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0f172a" />
 
-  <!-- Canonical (fallback + client) -->
   {#if typeof window === 'undefined'}
     <link rel="canonical" href={`${SITE_URL}/`} />
   {:else}
@@ -227,7 +202,6 @@ svelte:head end -->
     <link rel="canonical" href={_canon} />
   {/if}
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yntra" />
   <meta property="og:title" content={META_TITLE()} />
@@ -239,14 +213,12 @@ svelte:head end -->
   {/if}
   <meta property="og:image" content={`${SITE_URL}/images/YntraBLACK_LOGO.png`} />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@yntraAB" />
   <meta name="twitter:title" content={META_TITLE()} />
   <meta name="twitter:description" content={META_DESC()} />
   <meta name="twitter:image" content={`${SITE_URL}/images/YntraBLACK_LOGO.png`} />
 
-  <!-- Organization Schema.org JSON-LD -->
   <script type="application/ld+json">
     {JSON.stringify({
       '@context': 'https://schema.org',

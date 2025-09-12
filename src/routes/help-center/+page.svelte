@@ -8,16 +8,22 @@
   import ArrowRight from 'lucide-svelte/icons/arrow-right';
   import ChevronRight from 'lucide-svelte/icons/chevron-right';
   import X from 'lucide-svelte/icons/x';
-  
+
   import { fade, fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
   import { t, locale as i18nLocale } from '$lib/i18n';
   import { get } from 'svelte/store';
 
+  const articleIds = Array.from(new Set(groupDefs.flatMap((g) => g.items)));
+  const ddOpen = $derived(results.length > 0);
   let query = $state('');
-  // global contact modal handled in layout
   let activeKey = $state<string | null>(null);
   let searchInputEl: HTMLInputElement | null = null;
+  let searchWrapEl = $state<HTMLDivElement | null>(null);
+  let dropdownEl = $state<HTMLDivElement | null>(null);
+  let ddTop = $state(0);
+  let ddLeft = $state(0);
+  let ddWidth = $state(0);
 
   function handleKey(e: KeyboardEvent) {
     if (e.key === 'Escape') {
@@ -26,10 +32,6 @@
     }
   }
 
-  // Positioning for fixed search dropdown (escapes overflow clipping)
-  let searchWrapEl = $state<HTMLDivElement | null>(null);
-  let dropdownEl = $state<HTMLDivElement | null>(null);
-  // Move dropdown node to <body> to avoid clipping; absolute positioned in page coords
   function toBody(node: HTMLElement) {
     if (typeof document === 'undefined') return {} as any;
     const parent = node.parentNode as Node | null;
@@ -41,9 +43,6 @@
       }
     };
   }
-  let ddTop = $state(0);
-  let ddLeft = $state(0);
-  let ddWidth = $state(0);
 
   function updateDropdownRect() {
     if (!searchWrapEl) return;
@@ -53,15 +52,13 @@
     ddWidth = Math.round(r.width);
   }
 
-  // Recalculate position when results open or query changes
   $effect(() => {
-    const _q = query; // trigger
+    const _q = query;
     if (ddOpen) queueMicrotask(updateDropdownRect);
   });
 
   type Article = { title: string; key: string; category: string };
 
-  // Group definitions (IDs used for i18n lookups)
   const groupDefs = [
     { id: 'getting_started', icon: LifeBuoy, color: 'bg-emerald-500/90', items: ['getting-started', 'process', 'requirements'] },
     { id: 'services_pricing', icon: FileText, color: 'bg-sky-500/90', items: ['pricing', 'scope', 'addons'] },
@@ -71,7 +68,6 @@
     { id: 'contact', icon: MessageCircle, color: 'bg-teal-500/90', items: ['contact-support', 'slas'] }
   ] as const;
 
-  // Localized categories
   const categories = $derived(
     groupDefs.map((g) => ({
       key: $t(`help.groups.${g.id}.title`),
@@ -81,8 +77,6 @@
     }))
   );
 
-  // Build searchable article list from translation keys
-  const articleIds = Array.from(new Set(groupDefs.flatMap((g) => g.items)));
   const articles = $derived<Article[]>(
     articleIds.map((k) => ({
       key: k,
@@ -96,14 +90,11 @@
       ? articles.filter((a) => (a.title + ' ' + a.category).toLowerCase().includes(query.toLowerCase()))
       : []
   );
-  const ddOpen = $derived(results.length > 0);
 
-  // Close search dropdown whenever the right-side sheet opens
   $effect(() => {
     if (activeKey) query = '';
   });
 
-  // Close dropdown on outside click; allow scroll inside menu and keep open on page scroll
   function eventInside(el: HTMLElement | null, e: Event) {
     if (!el) return false;
     const target = e.target as Node | null;
@@ -117,7 +108,6 @@
     query = '';
   }
 
-  // Localized answer content helpers
   function getParagraphs(key: string) {
     const out: string[] = [];
     const tr = get(t);
@@ -131,7 +121,7 @@
   let answerParagraphs = $state<string[]>([]);
   const answerTitle = $derived(activeKey ? $t(`help.answers.${activeKey}.title`) : '');
   $effect(() => {
-    const _l = $i18nLocale; // react to locale changes
+    const _l = $i18nLocale;
     answerParagraphs = activeKey ? getParagraphs(activeKey) : [];
   });
 
@@ -143,7 +133,6 @@
   <meta name="description" content={$t('help.meta_description')} />
 </svelte:head>
 
-<!-- Hero / Search -->
 <section class="relative isolate min-h-[450px] flex items-center text-white overflow-hidden">
   <div class="absolute inset-[-20%] sm:inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_38%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:220%_220%] sm:[background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
   <div class="absolute inset-0 z-[1] pointer-events-none [background:linear-gradient(45deg,rgba(0,0,0,.08)_0%,transparent_50%,rgba(0,0,0,.08)_100%)]"></div>
@@ -204,7 +193,6 @@
   </div>
 </section>
 
-<!-- Categories -->
 <section class="py-16 md:py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <div class="mb-8 md:mb-12">
@@ -243,12 +231,9 @@
       {/each}
     </div>
   </div>
-  
+</section>
 
-  </section>
-
-  <!-- Modern answer: Slide-in sheet -->
-  <svelte:window onkeydown={handleKey} onresize={() => ddOpen && updateDropdownRect()} onclick={handleWindowClick} />
+<svelte:window onkeydown={handleKey} onresize={() => ddOpen && updateDropdownRect()} onclick={handleWindowClick} />
   {#if activeKey}
     <div class="fixed inset-0 z-40 bg-black/35 backdrop-blur-[2px]" role="button" tabindex="0" aria-label="Close" onclick={() => (activeKey = null)} onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar' || e.key === 'Escape') { e.preventDefault(); activeKey = null; } }} in:fade={{ duration: 140 }} out:fade={{ duration: 120 }}></div>
     <div
@@ -280,7 +265,6 @@
     </div>
   {/if}
 
-<!-- FAQ -->
 <section class="py-4 md:py-6 bg-white">
   <div class="max-w-4xl mx-auto px-6 md:px-0">
     <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">{$t('help.faq.title')}</h2>
@@ -300,7 +284,6 @@
   </div>
 </section>
 
-<!-- CTA -->
 <section class="py-10 md:py-14 bg-slate-50">
   <div class="max-w-4xl mx-auto px-6 md:px-0">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-center">
@@ -316,13 +299,12 @@
       </div>
     </div>
   </div>
-
-  
 </section>
 
 <style>
-  /* ensure dropdown scrollbars behave */
-  .hc-scroll { -webkit-overflow-scrolling: touch; }
+  .hc-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
 </style>
 
 
