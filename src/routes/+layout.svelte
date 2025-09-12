@@ -1,6 +1,6 @@
 <script lang="ts">
   import '../app.css';
-  import favicon from '$lib/assets/favicon.svg';
+
   import Menu from 'lucide-svelte/icons/menu';
   import XIcon from 'lucide-svelte/icons/x';
   import Twitter from 'lucide-svelte/icons/twitter';
@@ -114,7 +114,7 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" href={favicon} />
+  <link rel="icon" type="image/png" href="/images/YntraBLACK_LOGO.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Yntra — Design & Development Studio</title>
   <meta name="description" content="We design and build high-performing websites, apps, and digital systems that help businesses scale faster and work smarter." />
