@@ -120,7 +120,7 @@
   <meta name="description" content="We design and build high-performing websites, apps, and digital systems that help businesses scale faster and work smarter." />
 </svelte:head>
 
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200/60">
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200/60">
   <div class="max-w-7xl mx-auto px-6 md:px-8 h-16 grid grid-cols-3 items-center">
     <a href="/" class="flex items-center text-slate-900 font-semibold tracking-tight justify-self-start">
       <img src="/images/YntraBLACK_LOGO.png" alt={$t('brand.logo_alt')} class="h-6 w-auto" style="height:24px;width:auto" />

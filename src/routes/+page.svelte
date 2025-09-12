@@ -224,7 +224,7 @@
           <span class="text-black/60 text-xs sm:text-sm px-2 py-0.5">{$t('hero.looking_for')}</span>
           <button
             type="button"
-            class={`inline-flex items-center whitespace-nowrap px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-sm font-medium transition-colors duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/20 cursor-pointer ${
+            class={`inline-flex items-center whitespace-nowrap px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-sm font-normal transition-colors duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/20 cursor-pointer ${
               currentShowcaseType === 'website' ? 'bg-[var(--accent)] text-white' : 'text-black hover:bg-white'
             }`}
             onclick={() => toggleShowcase('website')}
@@ -234,7 +234,7 @@
           </button>
           <button
             type="button"
-            class={`inline-flex items-center whitespace-nowrap px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-sm font-medium transition-colors duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/20 cursor-pointer ${
+            class={`inline-flex items-center whitespace-nowrap px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-sm font-normal transition-colors duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/20 cursor-pointer ${
               currentShowcaseType === 'system' ? 'bg-[var(--accent)] text-white' : 'text-black hover:bg-white'
             }`}
             onclick={() => toggleShowcase('system')}
