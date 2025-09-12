@@ -382,7 +382,7 @@ export default {
     },
     s7: {
       title: '7. Ändringar i denna policy',
-      text: 'Vi kan uppdatera denna integritetspolicy. Vi publicerar alltid ändringar på denna sida och anger uppdaterat datum.'
+      text: 'Vi kan komma att uppdatera denna integritetspolicy från tid till annan. Den senaste versionen finns alltid publicerad på denna sida tillsammans med datum för senaste uppdatering. Om vi gör väsentliga ändringar som påverkar hur vi behandlar dina personuppgifter kommer vi att informera dig på ett tydligt sätt, exempelvis via e-post eller på vår webbplats.'
     },
     cta: {
       title: 'Frågor om denna policy?',
