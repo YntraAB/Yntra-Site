@@ -11,7 +11,6 @@
   import MapPin from 'lucide-svelte/icons/map-pin';
   import { setupI18n, t, locale as i18nLocale } from '$lib/i18n';
   import LanguageSelector from '$lib/components/LanguageSelector.svelte';
-  import { afterNavigate, goto } from '$app/navigation';
   import ContactModal from '$lib/components/ContactModal.svelte';
 
   let { children } = $props();
@@ -19,10 +18,10 @@
   setupI18n();
 
   const navLinks = [
-    { key: 'nav.services', href: '/#services' },
-    { key: 'nav.why', href: '/#why-us' },
-    { key: 'nav.testimonials', href: '/#testimonials' },
-    { key: 'nav.contact', href: '/#contact' },
+    { key: 'nav.services', href: '#services' },
+    { key: 'nav.why', href: '#why-us' },
+    { key: 'nav.testimonials', href: '#testimonials' },
+    { key: 'nav.contact', href: '#contact' },
     { key: 'nav.helpcenter', href: '/help-center' }
   ];
 
@@ -53,50 +52,6 @@
     el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  function onNavClick(e: MouseEvent, href: string) {
-    if (!href.includes('#')) return;
-    const selector = href.startsWith('/#') ? href.slice(1) : href;
-    if (typeof window === 'undefined') return;
-    if (window.location.pathname === '/') {
-      // Already on home page: smooth-scroll instead of navigating
-      smoothScroll(e, selector);
-      return;
-    }
-    // Different page: go to top of home first, then smooth-scroll
-    e.preventDefault();
-    try { sessionStorage.setItem('scroll_target', selector); } catch {}
-    goto('/', { noScroll: false });
-  }
-
-  // After route changes, handle deferred smooth scroll from other pages
-  if (typeof window !== 'undefined') {
-    afterNavigate(({ to }) => {
-      let target: string | null = null;
-      try { target = sessionStorage.getItem('scroll_target'); } catch {}
-      if (target) {
-        try { sessionStorage.removeItem('scroll_target'); } catch {}
-        // Ensure we start at the very top, then animate down
-        window.scrollTo({ top: 0, behavior: 'auto' });
-        requestAnimationFrame(() => {
-          const el = document.querySelector(target!);
-          el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Reflect hash in URL without triggering another jump
-          try {
-            const url = new URL(window.location.href);
-            url.hash = target!;
-            history.replaceState(history.state, '', url);
-          } catch {}
-        });
-        return;
-      }
-      // Fallback: if navigation includes a hash while already on home
-      if (to?.url.hash) {
-        const el = document.querySelector(to.url.hash);
-        el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  }
-
   // Open Contact modal for any element with [data-open-contact]
   if (typeof document !== 'undefined') {
     const handler = (e: MouseEvent) => {
@@ -122,17 +77,25 @@
 
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200/60">
   <div class="max-w-7xl mx-auto px-6 md:px-8 h-16 grid grid-cols-3 items-center">
-    <a href="/" class="flex items-center text-slate-900 font-semibold tracking-tight justify-self-start">
-      <img src="/images/YntraBLACK_LOGO.png" alt={$t('brand.logo_alt')} class="h-6 w-auto" style="height:24px;width:auto" />
+    <a href="/" class="flex items-center gap-2 text-slate-900 font-semibold tracking-tight justify-self-start">
+      <img src={favicon} alt={$t('brand.logo_alt')} class="h-6 w-6" />
+      <span>{$t('brand.name')}</span>
     </a>
 
     <nav class="hidden md:flex items-center gap-6 text-sm justify-self-center" aria-label="Primary">
       {#each navLinks as l}
-        <a
-          href={l.href}
-          class="text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap"
-          onclick={(e) => onNavClick(e, l.href)}
-        >{$t(l.key)}</a>
+        {#if l.href.startsWith('#')}
+          <a
+            href={l.href}
+            class="text-slate-600 hover:text-slate-900 transition-colors"
+            onclick={(e) => smoothScroll(e, l.href)}
+          >{$t(l.key)}</a>
+        {:else}
+          <a
+            href={l.href}
+            class="text-slate-600 hover:text-slate-900 transition-colors"
+          >{$t(l.key)}</a>
+        {/if}
       {/each}
     </nav>
 
@@ -161,11 +124,19 @@
     <div class="md:hidden border-t border-slate-200 bg-white/95 backdrop-blur">
       <nav class="max-w-7xl mx-auto px-6 md:px-8 py-4 grid gap-2" aria-label="Mobile">
         {#each navLinks as l}
-          <a
-            href={l.href}
-            class="block rounded-md px-3 py-2 text-slate-700 hover:bg-slate-100"
-            onclick={(e) => { onNavClick(e, l.href); mobileOpen = false; }}
-          >{$t(l.key)}</a>
+          {#if l.href.startsWith('#')}
+            <a
+              href={l.href}
+              class="block rounded-md px-3 py-2 text-slate-700 hover:bg-slate-100"
+              onclick={(e) => { smoothScroll(e, l.href); mobileOpen = false; }}
+            >{$t(l.key)}</a>
+          {:else}
+            <a
+              href={l.href}
+              class="block rounded-md px-3 py-2 text-slate-700 hover:bg-slate-100"
+              onclick={() => { mobileOpen = false; }}
+            >{$t(l.key)}</a>
+          {/if}
         {/each}
         <div class="mt-2">
           <LanguageSelector variant="mobile" />
@@ -183,8 +154,9 @@
   <div class="relative max-w-7xl mx-auto px-6 md:px-8 pt-12 pb-8 md:pt-16 md:pb-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12">
       <div class="lg:col-span-5">
-        <div class="flex items-center mb-4">
-          <img src="/images/YntraBLACK_LOGO.png" alt={$t('brand.logo_alt')} class="h-6 w-auto" style="height:24px;width:auto" />
+        <div class="flex items-center gap-2 mb-4">
+          <img src={favicon} alt={$t('brand.logo_alt')} class="h-6 w-6" />
+          <span class="font-semibold tracking-tight text-slate-900">{$t('brand.name')}</span>
         </div>
         <p class="text-slate-600 max-w-md leading-relaxed text-[17px]">{$t('meta.description')}</p>
         <div class="mt-6 flex items-center gap-2">
@@ -206,8 +178,8 @@
           <ul class="mt-3 space-y-2 text-sm text-slate-600">
             <li><a href="/design" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors">{$t('footer.service_links.0')}</a></li>
             <li><a href="/system" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors">{$t('footer.service_links.1')}</a></li>
-            <li><a href="/#services" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors" onclick={(e) => onNavClick(e, '/#services')}>{$t('footer.service_links.2')}</a></li>
-            <li><a href="/#services" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors" onclick={(e) => onNavClick(e, '/#services')}>{$t('footer.service_links.3')}</a></li>
+            <li><a href="#services" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.2')}</a></li>
+            <li><a href="#services" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors" onclick={(e) => smoothScroll(e, '#services')}>{$t('footer.service_links.3')}</a></li>
           </ul>
         </div>
 
@@ -226,38 +198,3 @@
             <li><a href="/privacy-policy" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors">{$t('footer.resource_links.1')}</a></li>
             <li><a href="/terms-of-service" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors">{$t('footer.resource_links.2')}</a></li>
           </ul>
-        </div>
-
-        <div>
-          <h4 class="text-[11px] font-semibold uppercase tracking-wider text-slate-900/80">{$t('footer.sections.contact')}</h4>
-          <ul class="mt-3 space-y-2 text-sm text-slate-600">
-            <li>
-              <a href="mailto:info@yntra.se" class="inline-flex items-center gap-2 hover:text-slate-900 transition-colors">
-                <Mail class="h-4 w-4" aria-hidden="true" /> info@yntra.se
-              </a>
-            </li>
-            <li>
-              <a href="tel:+46761023300" class="inline-flex items-center gap-2 hover:text-slate-900 transition-colors">
-                <Phone class="h-4 w-4" aria-hidden="true" /> +46 76 102 33 00
-              </a>
-            </li>
-            <li>
-              <div class="inline-flex items-start gap-2">
-                <MapPin class="h-4 w-4 mt-0.5" aria-hidden="true" />
-                <address class="not-italic text-slate-600">
-                  {$t('footer.address.line1')}<br />
-                  {$t('footer.address.line2')}
-                </address>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-12 pt-6 border-t border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-      <p class="text-xs text-slate-500/90">{$t('footer.copyright')}</p>
-      <div class="text-xs text-slate-500/90">{$t('footer.built_with')}</div>
-    </div>
-  </div>
-</footer>

@@ -535,7 +535,7 @@
           </div>
           <p class="italic text-xs md:text-sm leading-relaxed mb-3">"{t.text}"</p>
           <div class="flex items-center gap-2">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center font-medium">{t.initials}</div>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center font-medium text-white">{t.initials}</div>
             <div>
               <h4 class="font-medium text-slate-900 text-xs md:text-sm">{t.author}</h4>
               <p class="text-xs text-slate-500 md:text-sm">{t.role}</p>
