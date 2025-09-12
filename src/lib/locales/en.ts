@@ -288,11 +288,15 @@ export default {
     },
     s6: {
       title: '6. Cookies',
-      text: 'Our website may use cookies and similar technologies to enhance your browsing experience. You can manage or disable cookies through your browser settings.'
+      text: 'This website does not use cookies or similar tracking technologies. We do not store or collect any information about your visit through such methods.'
     },
     s7: {
       title: '7. Changes to This Policy',
       text: 'We may update this Privacy Policy from time to time. The latest version will always be published on this page together with the date of the most recent update. If we make significant changes that affect how we process your personal data, we will inform you in a clear manner, for example by email or on our website.'
+    },
+    s8: {
+      title: '8. Data Retention',
+      text: 'We retain personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.'
     },
     cta: {
       title: 'Questions About This Policy?',
