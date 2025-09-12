@@ -290,7 +290,7 @@ export default {
     },
     s7: {
       title: '7. Änderungen dieser Richtlinie',
-      text: 'Wir können diese Datenschutzerklärung aktualisieren. Änderungen veröffentlichen wir auf dieser Seite und versehen sie mit einem aktualisierten Datum.'
+      text: 'Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Die jeweils aktuelle Version wird stets auf dieser Seite zusammen mit dem Datum der letzten Aktualisierung veröffentlicht. Sollten wir wesentliche Änderungen vornehmen, die sich auf die Verarbeitung Ihrer personenbezogenen Daten auswirken, werden wir Sie in geeigneter Weise informieren, zum Beispiel per E-Mail oder auf unserer Website.'
     },
     cta: {
       title: 'Fragen zu dieser Richtlinie?',

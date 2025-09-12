@@ -290,7 +290,7 @@ export default {
     },
     s7: {
       title: '7. Cambios en esta política',
-      text: 'Podemos actualizar esta política de privacidad. Publicaremos los cambios en esta página con la fecha actualizada.'
+      text: 'Podemos actualizar esta Política de Privacidad de vez en cuando. La versión más reciente siempre se publicará en esta página junto con la fecha de la última actualización. Si realizamos cambios significativos que afecten el tratamiento de sus datos personales, le informaremos de manera clara, por ejemplo, por correo electrónico o en nuestro sitio web.'
     },
     cta: {
       title: '¿Preguntas sobre esta política?',

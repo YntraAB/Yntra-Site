@@ -292,7 +292,7 @@ export default {
     },
     s7: {
       title: '7. Changes to This Policy',
-      text: 'We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.'
+      text: 'We may update this Privacy Policy from time to time. The latest version will always be published on this page together with the date of the most recent update. If we make significant changes that affect how we process your personal data, we will inform you in a clear manner, for example by email or on our website.'
     },
     cta: {
       title: 'Questions About This Policy?',

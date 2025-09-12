@@ -290,7 +290,7 @@ export default {
     },
     s7: {
       title: '7. Modifications de cette politique',
-      text: 'Nous pouvons mettre à jour cette politique de confidentialité. Toute modification sera publiée sur cette page avec une date mise à jour.'
+      text: 'Nous pouvons mettre à jour la présente Politique de confidentialité de temps à autre. La version la plus récente sera toujours publiée sur cette page, accompagnée de la date de la dernière mise à jour. Si nous apportons des modifications importantes concernant la manière dont nous traitons vos données personnelles, nous vous en informerons de façon claire, par exemple par e-mail ou sur notre site web.'
     },
     cta: {
       title: 'Des questions au sujet de cette politique ?',
