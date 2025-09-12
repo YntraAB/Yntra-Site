@@ -349,7 +349,7 @@
         <div class="flex flex-nowrap justify-center max-[1120px]:flex-wrap gap-6 md:gap-8 max-[1120px]:justify-center">
       {#each servicesSvg as s, i} 
         {@const IconComp = s.icon} 
-        <div class="group w-[280px] h-[360px] box-border shrink-0">
+        <div class="group w-[280px] h-[380px] box-border shrink-0">
            <div use:reveal={{ delay: i * 80 }} class="reveal bg-white rounded-md p-5 pb-10 w-full h-full transform-gpu will-change-transform transition-all duration-200 ease-out group-hover:-translate-y-0.5 group-hover:shadow-xl border border-transparent group-hover:border-slate-200"> 
           <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-[hsl(215,70%,56%)] to-[hsl(245,70%,62%)] flex items-center justify-center mb-5 transform-gpu transition-all duration-200 ease-out group-hover:ring-4 ring-[hsl(215,70%,46%)]/30">
             <IconComp
