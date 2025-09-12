@@ -672,7 +672,7 @@ export default {
   },
   trusted: {
     ...(base as any).trusted,
-    title: 'Framtidens digitala lösningar',
-    subtitle: 'Företag från olika branscher väljer oss för att driva sin digitala utveckling.'
+    title: 'Teknologier vi använder',
+    subtitle: 'Modern teknik som ger snabbare utveckling, högre prestanda och framtidssäkra lösningar.'
   }
 };

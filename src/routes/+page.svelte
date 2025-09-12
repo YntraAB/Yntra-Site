@@ -13,12 +13,10 @@
   import CalendarIcon from 'lucide-svelte/icons/calendar';
   import ArrowRight from 'lucide-svelte/icons/arrow-right';
   import ChevronRight from 'lucide-svelte/icons/chevron-right';
-  import LinkIcon from 'lucide-svelte/icons/link';
   import Star from 'lucide-svelte/icons/star';
   import Quote from 'lucide-svelte/icons/quote';
   import { reveal } from '$lib/actions/reveal';
   import { t, locale as i18nLocale } from '$lib/i18n';
-  const serviceKeys = ['websites','systems','uiux','support'] as const;
   import { fitLines } from '$lib/actions/fitLines';
   import ScheduleCallModal from '$lib/components/ScheduleCallModal.svelte';
   
@@ -27,6 +25,7 @@
   let currentSlideIndex = $state(0);
   
   let showSchedule = $state(false);
+  const serviceKeys = ['websites','systems','uiux','support'] as const;
   const slides: Record<ShowcaseType, { title: string; subtitle: string; src: string; alt: string }[]> = {
     website: [
       {
@@ -97,41 +96,37 @@
   });
   onDestroy(() => stopAutoAdvance());
 
-  // Hero background video playback
   let videoEl: HTMLVideoElement | null = null;
 
   function handleLoadedMetadata() {
     if (!videoEl) return;
-    // Start playback
     videoEl.playbackRate = 1;
-    // Autoplay can fail without user gesture on some browsers; muted helps
-    videoEl.play().catch(() => {/* ignore */});
+    videoEl.play().catch(() => {});
   }
 
   function handleCanPlay() {
     if (!videoEl) return;
     if (videoEl.paused) {
       videoEl.playbackRate = 1;
-      videoEl.play().catch(() => {/* ignore */});
+      videoEl.play().catch(() => {});
     }
   }
 
-
   const companies = [
-    { abbr: 'TC', name: 'TechCorp' },
-    { abbr: 'IL', name: 'InnovateLab' },
-    { abbr: 'GS', name: 'GlobalSoft' },
-    { abbr: 'NG', name: 'NextGen' },
-    { abbr: 'PS', name: 'ProSystems' },
-    { abbr: 'DF', name: 'DigitalFirst' }
+    { abbr: 'TC', name: 'Figma' },
+    { abbr: 'IL', name: 'VSCode' },
+    { abbr: 'GS', name: 'GitHub' },
+    { abbr: 'NG', name: 'React' },
+    { abbr: 'PS', name: 'Postgresql' },
+    { abbr: 'DF', name: 'Bun' }
   ];
 
   type ShowcaseMedia = { src: string };
   const showcaseMedia: ShowcaseMedia[] = [
-    { src: '/images/omsorgPreview.png' }, 
-    { src: '/images/React Pro.png' },     
-    { src: '/images/Omsorg.png' },        
-    { src: '/images/React Pro.png' }      
+    { src: '/images/omsorgPreview.png' },
+    { src: '/images/React Pro.png' },
+    { src: '/images/Omsorg.png' },
+    { src: '/images/React Pro.png' }
   ];
 
   const listItems: number[] = [0, 1, 2, 3]; 
@@ -311,23 +306,10 @@
   </div>
 </section>
 
-<style>
-  .gradient-animated {
-    background-size: 200% 200%;
-    animation: gradient-pan 6s ease-in-out infinite;
-  }
-  @keyframes gradient-pan {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-</style>
-
 <section class="py-12 md:py-16 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
   <div class="max-w-[1400px] mx-auto px-6 md:px-8">
     <h2 class="text-[30px] font-semibold text-slate-900 text-center mb-4">{$t('trusted.title')}</h2>
     <p class="mt-0 text-slate-600 text-[17px] text-center max-w-2xl mx-auto mb-6">{$t('trusted.subtitle')}</p>
-
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
       {#each companies as c, i}
         <div use:reveal={{ delay: i * 50 }} class="reveal bg-white rounded-md hover:shadow-sm transition p-3 sm:p-4 text-center">
@@ -345,8 +327,7 @@
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <h2 class="text-[30px] font-semibold text-slate-900 text-center mb-4">{$t('services.title')}</h2>
     <p class="mt-0.5 text-slate-600 text-[17px] text-center max-w-3xl mx-auto mb-8">{$t('services.subtitle')}</p>
-
-        <div class="flex flex-nowrap justify-center max-[1120px]:flex-wrap gap-6 md:gap-8 max-[1120px]:justify-center">
+      <div class="flex flex-nowrap justify-center max-[1120px]:flex-wrap gap-6 md:gap-8 max-[1120px]:justify-center">
       {#each servicesSvg as s, i} 
         {@const IconComp = s.icon} 
         <div class="group w-[280px] h-[380px] box-border shrink-0">
@@ -368,8 +349,7 @@
                  {$t(`services.cards.${serviceKeys[i]}.features.${fi}`)}
                </li>
              {/each}
-           </ul> 
-          
+           </ul>
           </div> 
         </div> 
       {/each} 
@@ -377,7 +357,6 @@
   </div>
 </section>
 
-<!-- Stats section extracted from CTA -->
 <section class="py-8 md:py-12 bg-[var(--muted)]">
   <div class="max-w-6xl mx-auto px-6 md:px-8">
     <div use:reveal={{ delay: 60, variant: 'scale', scaleFrom: 0.98 }} class="reveal">
@@ -456,7 +435,6 @@
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <h2 class="text-[30px] font-semibold text-slate-900 text-center mb-4">{$t('showcase.title')}</h2>
     <p class="mt-0.5 text-slate-600 text-[17px] text-center max-w-3xl mx-auto mb-16">{$t('showcase.subtitle')}</p>
-
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         <div use:reveal={{ delay: 60, variant: 'up' }} class="reveal group relative rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200/70 shadow-sm overflow-hidden transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-2xl hover:border-slate-300">
         <div class="relative overflow-hidden h-[clamp(160px,35vw,280px)] md:h-[clamp(220px,30vw,340px)]">
@@ -470,7 +448,6 @@
         <div class="p-6">
           <h3 class="text-xl font-bold text-slate-900 mb-2">{selectedCardIndex < 3 ? $t(`showcase.cards.${selectedCardIndex}.title`) : 'Custom Project'}</h3>
           <p class="text-slate-600 text-[17px] mb-4">{selectedCardIndex < 3 ? $t(`showcase.cards.${selectedCardIndex}.desc`) : 'Your fourth showcase description goes here.'}</p>
-
           <div class="mb-4">
             <h4 class="font-semibold text-slate-900 mb-2">Key Results</h4>
             <ul class="space-y-2">
@@ -479,7 +456,6 @@
               <li class="flex items-center text-[17px] text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mr-3"></span> 50% faster load times</li>
             </ul>
           </div>
-
           <div class="mb-6">
             <h4 class="font-semibold text-slate-900 mb-2">Technologies</h4>
             <div class="flex flex-wrap gap-2 text-xs">
@@ -489,7 +465,6 @@
               <span class="bg-slate-100 text-slate-700 px-2.5 py-1 rounded-full">Analytics</span>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -525,11 +500,9 @@
 </section>
 
 <section id="testimonials" class="py-20 bg-[linear-gradient(180deg,var(--background)_0%,var(--muted)_100%)]">
-
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
     <h2 class="text-[30px] font-semibold text-slate-900 text-center mb-4">{$t('testimonials.title')}</h2>
     <p class="mt-0.5 text-center text-slate-600 text-[17px] max-w-3xl mx-auto mb-7">{$t('testimonials.subtitle')}</p>
-
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
       {#each testimonials as t, i}
         <div use:reveal={{ delay: i * 60, variant: 'blur', blurFrom: 6 }} class="reveal relative bg-white rounded-2xl p-4 md:p-5 shadow-sm ring-1 ring-black/5">
@@ -562,8 +535,7 @@
           <span class="text-[var(--accent)]">{$t('cta.title_highlight')}</span>
           {$t('cta.title_suffix')}
         </h2>
-    <p class="mt-0.5 text-slate-600 text-[17px] max-w-3xl mx-auto">{$t('cta.subtitle')}</p>
-
+        <p class="mt-0.5 text-slate-600 text-[17px] max-w-3xl mx-auto">{$t('cta.subtitle')}</p>
         <div class="flex flex-wrap gap-3 md:gap-4 justify-center mt-6">
           <button
             type="button"
@@ -578,18 +550,23 @@
             <CalendarIcon class="w-4 h-4" aria-hidden="true" /> {$t('cta.schedule_call')}
           </button>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
- 
-
 <ScheduleCallModal bind:open={showSchedule} on:submit={(e: CustomEvent<any>) => {
   console.log('schedule submitted', e.detail);
 }} />
 
-
-
-
+<style>
+  .gradient-animated {
+    background-size: 200% 200%;
+    animation: gradient-pan 6s ease-in-out infinite;
+  }
+  @keyframes gradient-pan {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+</style>
