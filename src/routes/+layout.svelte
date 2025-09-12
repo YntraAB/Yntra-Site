@@ -13,6 +13,7 @@
   import LanguageSelector from '$lib/components/LanguageSelector.svelte';
   import { afterNavigate, goto } from '$app/navigation';
   import ContactModal from '$lib/components/ContactModal.svelte';
+  import { env as publicEnv } from '$env/dynamic/public';
 
   let { children } = $props();
 
@@ -29,6 +30,17 @@
   let mobileOpen = $state(false);
   let currentLocale = $state('sv');
   let globalContactOpen = $state(false);
+  const SITE_URL = publicEnv.PUBLIC_SITE_URL || 'https://yntra.se';
+  const META_TITLE = $derived(() => {
+    const s = $t('meta.title') as unknown as string;
+    if (!s || /\uFFFD/.test(s)) return 'Yntra – Design & Development Studio';
+    return s;
+  });
+  const META_DESC = $derived(() => {
+    const s = $t('meta.description') as unknown as string;
+    if (!s || /\uFFFD/.test(s)) return 'We design and build high-performing websites, apps, and digital systems that help businesses scale faster and work smarter.';
+    return s;
+  });
 
   $effect(() => {
     const unsub = i18nLocale.subscribe((v) => (currentLocale = v ?? 'sv'));
@@ -113,11 +125,82 @@
 
 </script>
 
+<!-- legacy head removed:
+  <link rel="icon" type="image/png" href="/images/YntraBLACK_LOGO.png" />
+  <!-- viewport is defined in src/app.html -->
+  <title>Yntra — Design & Development Studio</title>
+  
+svelte:head end -->
+
 <svelte:head>
   <link rel="icon" type="image/png" href="/images/YntraBLACK_LOGO.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Yntra — Design & Development Studio</title>
-  <meta name="description" content="We design and build high-performing websites, apps, and digital systems that help businesses scale faster and work smarter." />
+  <link rel="apple-touch-icon" href="/images/YntraBLACK_LOGO.png" />
+
+  <!-- Base SEO overrides -->
+  <title>{META_TITLE()}</title>
+  <meta name="description" content={META_DESC()} />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Canonical (fallback + client) -->
+  {#if typeof window === 'undefined'}
+    <link rel="canonical" href={`${SITE_URL}/`} />
+  {:else}
+    {@const _canon = `${SITE_URL}${location.pathname}${location.search}`}
+    <link rel="canonical" href={_canon} />
+  {/if}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yntra" />
+  <meta property="og:title" content={META_TITLE()} />
+  <meta property="og:description" content={META_DESC()} />
+  {#if typeof window === 'undefined'}
+    <meta property="og:url" content={`${SITE_URL}/`} />
+  {:else}
+    <meta property="og:url" content={`${SITE_URL}${location.pathname}${location.search}`} />
+  {/if}
+  <meta property="og:image" content={`${SITE_URL}/images/YntraBLACK_LOGO.png`} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@yntraAB" />
+  <meta name="twitter:title" content={META_TITLE()} />
+  <meta name="twitter:description" content={META_DESC()} />
+  <meta name="twitter:image" content={`${SITE_URL}/images/YntraBLACK_LOGO.png`} />
+
+  <!-- Organization Schema.org JSON-LD -->
+  <script type="application/ld+json">
+    {JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Yntra',
+      url: SITE_URL,
+      logo: `${SITE_URL}/images/YntraBLACK_LOGO.png`,
+      sameAs: [
+        'https://x.com/yntraAB',
+        'https://github.com/yntraAB',
+        'https://linkedin.com/company/yntraAB'
+      ],
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          email: 'info@yntra.se',
+          telephone: '+46 76 102 33 00',
+          areaServed: 'SE'
+        }
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'SE',
+        addressRegion: 'Gävleborg',
+        addressLocality: 'Delsbo',
+        postalCode: '824 71',
+        streetAddress: 'Edevägen 5'
+      }
+    })}
+  </script>
 </svelte:head>
 
 <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200/60">

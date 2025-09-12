@@ -254,6 +254,7 @@
     <div
       class={`fixed right-0 top-0 z-50 h-dvh w-full max-w-xl md:max-w-[42rem] bg-white rounded-l-2xl shadow-2xl transition-transform duration-300 translate-x-0 overflow-y-auto`}
       onclick={(e) => e.stopPropagation()}
+      onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar' || e.key === 'Escape') { e.stopPropagation(); } }}
       role="dialog"
       aria-modal="true"
       aria-labelledby="sheet-title"
