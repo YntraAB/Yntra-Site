@@ -1,5 +1,6 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
+  import { onDestroy } from 'svelte';
   import ChevronRight from 'lucide-svelte/icons/chevron-right';
   import Server from 'lucide-svelte/icons/server';
   import Workflow from 'lucide-svelte/icons/workflow';
@@ -10,6 +11,12 @@
   import Boxes from 'lucide-svelte/icons/boxes';
   import Code2 from 'lucide-svelte/icons/code-2';
   import Zap from 'lucide-svelte/icons/zap';
+  let bgVideo: HTMLVideoElement | null = null;
+  onDestroy(() => {
+    if (bgVideo) {
+      try { bgVideo.pause(); bgVideo.removeAttribute('src'); bgVideo.load(); } catch {}
+    }
+  });
 </script>
 
 <svelte:head>
@@ -20,7 +27,7 @@
 <!-- Hero (same layout as /design) -->
 <section class="relative isolate min-h-[520px] flex items-center text-white overflow-hidden">
   <div class="absolute inset-0 -z-10">
-    <video class="h-full w-full object-cover object-[center_85%] md:object-[center_75%] opacity-70" autoplay muted loop playsinline preload="metadata">
+    <video bind:this={bgVideo} class="h-full w-full object-cover object-[center_85%] md:object-[center_75%] opacity-70" autoplay muted loop playsinline preload="metadata">
       <source src="/media/system.mp4" type="video/mp4" />
       <source src="https://videos.pexels.com/video-files/5561370/5561370-uhd_2560_1440_24fps.mp4" type="video/mp4" />
     </video>
