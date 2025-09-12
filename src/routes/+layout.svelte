@@ -206,8 +206,6 @@
           <ul class="mt-3 space-y-2 text-sm text-slate-600">
             <li><a href="/design" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors">{$t('footer.service_links.0')}</a></li>
             <li><a href="/system" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors">{$t('footer.service_links.1')}</a></li>
-            <li><a href="/#services" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors" onclick={(e) => onNavClick(e, '/#services')}>{$t('footer.service_links.2')}</a></li>
-            <li><a href="/#services" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors" onclick={(e) => onNavClick(e, '/#services')}>{$t('footer.service_links.3')}</a></li>
           </ul>
         </div>
 
