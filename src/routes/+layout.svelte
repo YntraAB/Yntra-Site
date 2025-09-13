@@ -32,7 +32,7 @@
   const SITE_URL = publicEnv.PUBLIC_SITE_URL || 'https://yntra.se';
   const META_TITLE = $derived(() => {
     const s = $t('meta.title') as unknown as string;
-    if (!s || /\uFFFD/.test(s)) return 'Yntra â€“ Design & Development Studio';
+    if (!s || /\uFFFD/.test(s)) return 'Yntra \u2014 Design & Development Studio';
     return s;
   });
   const META_DESC = $derived(() => {
@@ -415,4 +415,5 @@
     </div>
   </div>
 </footer>
+
 

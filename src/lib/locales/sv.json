@@ -1,110 +1,111 @@
-{
+﻿{
   "brand": { "name": "Yntra", "logo_alt": "Yntra logotyp" },
   "meta": {
-    "title": "Yntra – Design- och utvecklingsbyrå",
-    "description": "Vi designar och bygger högpresterande webbplatser, appar och digitala system som hjälper företag att skala snabbare, se bättre ut och arbeta smartare.",
-    "keywords": "anställ utvecklare, bästa designers, webbutveckling, apputveckling, digital byrå, skräddarsydd mjukvara"
+    "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+    "description": "Vi designar och bygger hÃ¶gpresterande webbplatser, appar och digitala system som hjÃ¤lper fÃ¶retag att skala snabbare, se bÃ¤ttre ut och arbeta smartare.",
+    "keywords": "anstÃ¤ll utvecklare, bÃ¤sta designers, webbutveckling, apputveckling, digital byrÃ¥, skrÃ¤ddarsydd mjukvara"
   },
   "nav": {
-    "services": "Tjänster",
-    "why": "Varför vi",
-    "testimonials": "Omdömen",
+    "services": "TjÃ¤nster",
+    "why": "VarfÃ¶r vi",
+    "testimonials": "OmdÃ¶men",
     "contact": "Kontakt"
   },
   "lang": {
-    "label": "Språk",
-    "aria": "Byt språk",
-    "options": { "sv": "Svenska", "en": "English", "es": "Español", "de": "Deutsch", "fr": "Français" }
+    "label": "SprÃ¥k",
+    "aria": "Byt sprÃ¥k",
+    "options": { "sv": "Svenska", "en": "English", "es": "EspaÃ±ol", "de": "Deutsch", "fr": "FranÃ§ais" }
   },
   "hero": {
     "looking_for": "Jag letar efter",
     "btn": { "website": "Webbplats", "system": "Systemapp" },
-    "title_prefix": "Anlita de främsta 3 % av världens",
+    "title_prefix": "Anlita de frÃ¤msta 3 % av vÃ¤rldens",
     "title_highlight": "talanger",
-    "subtitle": "Vi designar och bygger högpresterande webbplatser, appar och digitala system som hjälper företag att skala snabbare, se bättre ut och arbeta smartare.",
+    "subtitle": "Vi designar och bygger hÃ¶gpresterande webbplatser, appar och digitala system som hjÃ¤lper fÃ¶retag att skala snabbare, se bÃ¤ttre ut och arbeta smartare.",
     "cta_hire": "Anlita oss"
   },
   "slides": {
     "website": [
-      { "title": "Modern e‑handelsplattform", "subtitle": "Högkonverterande webbutik", "alt": "Modern e‑handelsplattform" },
-      { "title": "Företagswebbplats", "subtitle": "Professionell affärsnärvaro", "alt": "Företagswebbplats" }
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "subtitle": "HÃ¶gkonverterande webbutik", "alt": "Modern eâ€‘handelsplattform" },
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "subtitle": "Professionell affÃ¤rsnÃ¤rvaro", "alt": "FÃ¶retagswebbplats" }
     ],
     "system": [
-      { "title": "Analysdashboard", "subtitle": "Datadrivna affärsinsikter", "alt": "Analysdashboard" },
-      { "title": "Projektledningssystem", "subtitle": "Effektiviserat teamsamarbete", "alt": "Projektledningssystem" }
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "subtitle": "Datadrivna affÃ¤rsinsikter", "alt": "Analysdashboard" },
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "subtitle": "Effektiviserat teamsamarbete", "alt": "Projektledningssystem" }
     ]
   },
   "trusted": {
-    "title": "Betrodd av företag världen över",
-    "subtitle": "Ledande företag väljer oss för att bygga sin digitala framtid"
+    "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+    "subtitle": "Ledande fÃ¶retag vÃ¤ljer oss fÃ¶r att bygga sin digitala framtid"
   },
   "services": {
-    "title": "Vad vi gör",
-    "subtitle": "Omfattande digitala lösningar anpassade efter dina affärsbehov – levererade av världsledande talanger.",
+    "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+    "subtitle": "Omfattande digitala lÃ¶sningar anpassade efter dina affÃ¤rsbehov â€“ levererade av vÃ¤rldsledande talanger.",
     "cards": {
       "websites": {
-        "title": "Webbplatser",
-        "desc": "Vackra, responsiva och konverteringsfokuserade webbplatser som skapar resultat och engagerar din målgrupp.",
-        "features": ["Responsiv design", "SEO‑optimerad", "Snabb prestanda", "CMS‑integration"]
+        "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+        "desc": "Vackra, responsiva och konverteringsfokuserade webbplatser som skapar resultat och engagerar din mÃ¥lgrupp.",
+        "features": ["Responsiv design", "SEOâ€‘optimerad", "Snabb prestanda", "CMSâ€‘integration"]
       },
       "systems": {
-        "title": "Systemappar",
-        "desc": "Skräddarsydda verktyg och applikationer som effektiviserar verksamheten och ökar produktiviteten.",
-        "features": ["Anpassad utveckling", "API‑integration", "Moln‑distribution", "Skalbar arkitektur"]
+        "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+        "desc": "SkrÃ¤ddarsydda verktyg och applikationer som effektiviserar verksamheten och Ã¶kar produktiviteten.",
+        "features": ["Anpassad utveckling", "APIâ€‘integration", "Molnâ€‘distribution", "Skalbar arkitektur"]
       },
       "uiux": {
-        "title": "UI/UX‑design",
-        "desc": "Användarförst‑gränssnitt som engagerar och gläder, baserade på djup förståelse för användarbeteenden.",
-        "features": ["Användarundersökning", "Prototypning", "Designsystem", "Användbarhetstester"]
+        "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+        "desc": "AnvÃ¤ndarfÃ¶rstâ€‘grÃ¤nssnitt som engagerar och glÃ¤der, baserade pÃ¥ djup fÃ¶rstÃ¥else fÃ¶r anvÃ¤ndarbeteenden.",
+        "features": ["AnvÃ¤ndarundersÃ¶kning", "Prototypning", "Designsystem", "AnvÃ¤ndbarhetstester"]
       },
       "support": {
-        "title": "Löpande support",
-        "desc": "Omfattande underhåll, skalning och optimering som håller dina digitala tillgångar på toppnivå.",
-        "features": ["24/7‑övervakning", "Regelbundna uppdateringar", "Prestandaoptimering", "Teknisk support"]
+        "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+        "desc": "Omfattande underhÃ¥ll, skalning och optimering som hÃ¥ller dina digitala tillgÃ¥ngar pÃ¥ toppnivÃ¥.",
+        "features": ["24/7â€‘Ã¶vervakning", "Regelbundna uppdateringar", "Prestandaoptimering", "Teknisk support"]
       }
     }
   },
   "why": {
-    "title": "Varför arbeta med oss?",
-    "subtitle": "Vi levererar exceptionella resultat genom en kombination av världsledande talang, beprövade processer och spetsteknik.",
+    "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+    "subtitle": "Vi levererar exceptionella resultat genom en kombination av vÃ¤rldsledande talang, beprÃ¶vade processer och spetsteknik.",
     "items": [
-      { "title": "Endast de främsta 3% av designers och utvecklare", "text": "Strikt urval säkerställer att du arbetar med toppkompetens som levererar enastående resultat." },
-      { "title": "Bevisad erfarenhet med globala företag", "text": "Framgångsrikt levererat 500+ projekt – från startups till Fortune 500‑företag." },
-      { "title": "Skräddarsydda lösningar – inga mallar", "text": "Varje projekt byggs från grunden för att passa dina unika behov och ditt varumärke." },
-      { "title": "Skalbar teknik som växer med dig", "text": "Framtidssäker arkitektur och ren kod som anpassas när du expanderar." },
-      { "title": "Kvalitetsgaranti och löpande support", "text": "Omfattande testning, optimering och kontinuerligt stöd för långsiktig framgång." }
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "text": "Strikt urval sÃ¤kerstÃ¤ller att du arbetar med toppkompetens som levererar enastÃ¥ende resultat." },
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "text": "FramgÃ¥ngsrikt levererat 500+ projekt â€“ frÃ¥n startups till Fortune 500â€‘fÃ¶retag." },
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "text": "Varje projekt byggs frÃ¥n grunden fÃ¶r att passa dina unika behov och ditt varumÃ¤rke." },
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "text": "FramtidssÃ¤ker arkitektur och ren kod som anpassas nÃ¤r du expanderar." },
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "text": "Omfattande testning, optimering och kontinuerligt stÃ¶d fÃ¶r lÃ¥ngsiktig framgÃ¥ng." }
     ]
   },
   "showcase": {
-    "title": "Se vårt arbete i praktiken",
-    "subtitle": "Riktiga projekt, verkliga resultat. Upptäck hur vi hjälpt företag att transformera sin digitala närvaro och nå exceptionella resultat.",
+    "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+    "subtitle": "Riktiga projekt, verkliga resultat. UpptÃ¤ck hur vi hjÃ¤lpt fÃ¶retag att transformera sin digitala nÃ¤rvaro och nÃ¥ exceptionella resultat.",
     "cards": [
-      { "title": "Enterprise‑analysdashboard", "tag": "Systemapp", "desc": "Realtidsplattform för affärsintelligens som bearbetar 10M+ datapunkter dagligen för strategiska beslut." },
-      { "title": "Förvandling av företagswebbplats", "tag": "Webbplats", "desc": "Modern företagsnärvaro som stärkte varumärket och genererade 500 % fler kvalificerade leads." },
-      { "title": "Projektledningssvit", "tag": "Systemapp", "desc": "Omfattande projektledningssystem som effektiviserade arbetsflöden för team i 15 länder." }
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "tag": "Systemapp", "desc": "Realtidsplattform fÃ¶r affÃ¤rsintelligens som bearbetar 10M+ datapunkter dagligen fÃ¶r strategiska beslut." },
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "tag": "Webbplats", "desc": "Modern fÃ¶retagsnÃ¤rvaro som stÃ¤rkte varumÃ¤rket och genererade 500 % fler kvalificerade leads." },
+      { "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5", "tag": "Systemapp", "desc": "Omfattande projektledningssystem som effektiviserade arbetsflÃ¶den fÃ¶r team i 15 lÃ¤nder." }
     ]
   },
   "testimonials": {
-    "title": "Vad våra kunder säger",
-    "subtitle": "Ta inte bara oss på orden. Här är vad branschledare säger om att samarbeta med vårt team."
+    "title": "Yntra \u2014 Design- och utvecklingsbyr\u00E5",
+    "subtitle": "Ta inte bara oss pÃ¥ orden. HÃ¤r Ã¤r vad branschledare sÃ¤ger om att samarbeta med vÃ¥rt team."
   },
   "cta": {
     "title_prefix": "Redo att anlita",
-    "title_highlight": "världsklass",
+    "title_highlight": "vÃ¤rldsklass",
     "title_suffix": "designers och utvecklare?",
-    "subtitle": "Gå med i hundratals framgångsrika företag som har transformerat sin digitala närvaro med vår toppkompetens. Låt oss diskutera ditt projekt och skapa något extraordinärt tillsammans.",
+    "subtitle": "GÃ¥ med i hundratals framgÃ¥ngsrika fÃ¶retag som har transformerat sin digitala nÃ¤rvaro med vÃ¥r toppkompetens. LÃ¥t oss diskutera ditt projekt och skapa nÃ¥got extraordinÃ¤rt tillsammans.",
     "hire_us": "Anlita oss",
     "schedule_call": "Boka ett samtal",
-    "stats": { "projects": "Genomförda projekt", "satisfaction": "Kundnöjdhet", "support": "Support tillgänglig" }
+    "stats": { "projects": "GenomfÃ¶rda projekt", "satisfaction": "KundnÃ¶jdhet", "support": "Support tillgÃ¤nglig" }
   },
   "footer": {
-    "sections": { "services": "Tjänster", "company": "Företag", "contact": "Kontakta oss", "resources": "Resurser" },
-    "service_links": ["Design", "Applikationer", "E‑handel", "Varumärkesidentitet"],
-    "company_links": ["Om oss", "Vår process"],
-    "resource_links": ["Hjälpcenter", "Integritetspolicy"],
-    "address": { "line1": "Edevägen 5", "line2": "824 71 Delsbo, Sverige" },
+    "sections": { "services": "TjÃ¤nster", "company": "FÃ¶retag", "contact": "Kontakta oss", "resources": "Resurser" },
+    "service_links": ["Design", "Applikationer", "Eâ€‘handel", "VarumÃ¤rkesidentitet"],
+    "company_links": ["Om oss", "VÃ¥r process"],
+    "resource_links": ["HjÃ¤lpcenter", "Integritetspolicy"],
+    "address": { "line1": "EdevÃ¤gen 5", "line2": "824 71 Delsbo, Sverige" },
     "built_with": "Byggt med Svelte",
-    "copyright": "© 2025 Yntra AB. Alla rättigheter förbehållna."
+    "copyright": "Â© 2025 Yntra AB. Alla rÃ¤ttigheter fÃ¶rbehÃ¥llna."
   },
-  "aria": { "toggle_menu": "Växla meny", "go_to_slide": "Gå till bild {num}" }
+  "aria": { "toggle_menu": "VÃ¤xla meny", "go_to_slide": "GÃ¥ till bild {num}" }
 }
+
