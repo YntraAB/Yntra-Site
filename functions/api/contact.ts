@@ -1,4 +1,10 @@
-export async function onRequestPost({ request }: { request: Request }) {
+export async function onRequest({ request }: { request: Request }) {
+  if (request.method !== 'POST') {
+    return new Response(JSON.stringify({ ok: false, error: 'Method not allowed' }), {
+      status: 405,
+      headers: { 'content-type': 'application/json' }
+    });
+  }
   try {
     const data = (await request.json()) as {
       company?: string;
@@ -63,6 +69,7 @@ export async function onRequestPost({ request }: { request: Request }) {
 
     if (!mcRes.ok) {
       const body = await mcRes.text().catch(() => '');
+      console.error('MailChannels error', mcRes.status, body);
       return new Response(JSON.stringify({ ok: false, error: 'Email send failed', details: body }), {
         status: 502,
         headers: { 'content-type': 'application/json' }
@@ -74,6 +81,7 @@ export async function onRequestPost({ request }: { request: Request }) {
       headers: { 'content-type': 'application/json' }
     });
   } catch (err: any) {
+    console.error('Contact endpoint error', err);
     return new Response(JSON.stringify({ ok: false, error: err?.message || 'Unexpected error' }), {
       status: 500,
       headers: { 'content-type': 'application/json' }
