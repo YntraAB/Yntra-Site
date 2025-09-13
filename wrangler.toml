@@ -3,6 +3,3 @@ pages_build_output_dir = "./build"
 
 [vars]
 API_KEY = "1234567asdf"
-
-[observability.logs]
-enabled = true
