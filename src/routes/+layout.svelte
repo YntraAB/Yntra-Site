@@ -99,6 +99,30 @@
     }
   }
 
+  async function handleContactSubmit(e: CustomEvent<FormData>) {
+    try {
+      const fd = e.detail;
+      const payload = {
+        company: (fd.get('company') as string) || '',
+        tel: (fd.get('tel') as string) || '',
+        email: (fd.get('email') as string) || '',
+        message: (fd.get('message') as string) || ''
+      };
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('Failed to send');
+      const j = await res.json().catch(() => ({}));
+      if (!j?.ok) throw new Error(j?.error || 'Failed');
+      alert('Tack! Vi har mottagit ditt meddelande.');
+    } catch (err) {
+      console.error(err);
+      alert('Kunde inte skicka meddelandet. Försök igen eller maila contact@yntra.se.');
+    }
+  }
+
   if (typeof window !== 'undefined') {
     const BEFORE_GUARD_KEY = '__yntra_before_nav_unsub__';
     try { (window as any)[BEFORE_GUARD_KEY]?.(); } catch {}
@@ -309,7 +333,7 @@
 
 <main id="content">{@render children?.()}</main>
 
-<ContactModal bind:open={globalContactOpen} on:close={() => (globalContactOpen = false)} />
+<ContactModal bind:open={globalContactOpen} on:close={() => (globalContactOpen = false)} on:submit={handleContactSubmit} />
 
 <footer class="relative border-t border-slate-300 bg-white text-slate-700">
   <div class="relative max-w-7xl mx-auto px-6 md:px-8 pt-12 pb-8 md:pt-16 md:pb-10">

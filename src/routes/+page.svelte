@@ -564,8 +564,21 @@
   </div>
 </section>
 
-<ScheduleCallModal bind:open={showSchedule} on:submit={(e: CustomEvent<any>) => {
-  console.log('schedule submitted', e.detail);
+<ScheduleCallModal bind:open={showSchedule} on:submit={async (e: CustomEvent<any>) => {
+  try {
+    const res = await fetch('/api/schedule', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(e.detail)
+    });
+    if (!res.ok) throw new Error('Failed to send');
+    const j = await res.json().catch(() => ({}));
+    if (!j?.ok) throw new Error(j?.error || 'Failed');
+    alert('Tack! Din bokningsförfrågan har skickats.');
+  } catch (err) {
+    console.error(err);
+    alert('Kunde inte skicka bokningen. Försök igen eller maila contact@yntra.se.');
+  }
 }} />
 
 <style>
