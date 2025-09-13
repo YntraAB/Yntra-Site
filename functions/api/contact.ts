@@ -1,4 +1,8 @@
 export async function onRequest({ request }: { request: Request }) {
+  const url = new URL(request.url);
+  const debug = url.searchParams.get('debug') === '1';
+  const dry = url.searchParams.get('dry') === '1';
+  const steps: string[] = [];
   if (request.method !== 'POST') {
     return new Response(JSON.stringify({ ok: false, error: 'Method not allowed' }), {
       status: 405,
@@ -6,13 +10,14 @@ export async function onRequest({ request }: { request: Request }) {
     });
   }
   try {
+    steps.push('begin');
     const data = (await request.json()) as {
       company?: string;
       tel?: string;
       email?: string;
       message?: string;
     };
-
+    steps.push('parsed');
     const company = (data.company || '').toString().trim();
     const tel = (data.tel || '').toString().trim();
     const email = (data.email || '').toString().trim();
@@ -60,29 +65,55 @@ export async function onRequest({ request }: { request: Request }) {
         { type: 'text/plain', value: text }
       ]
     } as const;
+    steps.push('built');
+
+    if (dry) {
+      return new Response(JSON.stringify({ ok: true, mode: 'dry', steps, payload }), {
+        status: 200,
+        headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
+      });
+    }
 
     const mcRes = await fetch('https://api.mailchannels.net/tx/v1/send', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload)
     });
-
+    steps.push('sent');
     if (!mcRes.ok) {
       const body = await mcRes.text().catch(() => '');
-      console.error('MailChannels error', mcRes.status, body);
-      return new Response(JSON.stringify({ ok: false, error: 'Email send failed', details: body }), {
-        status: 502,
-        headers: { 'content-type': 'application/json' }
+      if (debug) {
+        return new Response(JSON.stringify({ ok: false, steps, mcStatus: mcRes.status, details: body }), {
+          status: 200,
+          headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
+        });
+      } else {
+        return new Response(JSON.stringify({ ok: false, error: 'Email send failed' }), {
+          status: 502,
+          headers: { 'content-type': 'application/json' }
+        });
+      }
+    }
+    if (debug) {
+      const body = await mcRes.text().catch(() => '');
+      return new Response(JSON.stringify({ ok: true, steps, mcStatus: mcRes.status, details: body }), {
+        status: 200,
+        headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
       });
     }
-
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,
       headers: { 'content-type': 'application/json' }
     });
   } catch (err: any) {
-    console.error('Contact endpoint error', err);
-    return new Response(JSON.stringify({ ok: false, error: err?.message || 'Unexpected error' }), {
+    const message = (err && (err.message || String(err))) || 'Unexpected error';
+    if (debug) {
+      return new Response(JSON.stringify({ ok: false, steps, error: message }), {
+        status: 200,
+        headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
+      });
+    }
+    return new Response(JSON.stringify({ ok: false, error: message }), {
       status: 500,
       headers: { 'content-type': 'application/json' }
     });
