@@ -14,8 +14,6 @@
   import { t, locale as i18nLocale } from '$lib/i18n';
   import { get } from 'svelte/store';
 
-  const articleIds = Array.from(new Set(groupDefs.flatMap((g) => g.items)));
-  const ddOpen = $derived(results.length > 0);
   let query = $state('');
   let activeKey = $state<string | null>(null);
   let searchInputEl: HTMLInputElement | null = null;
@@ -77,6 +75,7 @@
     }))
   );
 
+  const articleIds = Array.from(new Set(groupDefs.flatMap((g) => g.items)));
   const articles = $derived<Article[]>(
     articleIds.map((k) => ({
       key: k,
@@ -90,6 +89,8 @@
       ? articles.filter((a) => (a.title + ' ' + a.category).toLowerCase().includes(query.toLowerCase()))
       : []
   );
+
+  const ddOpen = $derived(results.length > 0);
 
   $effect(() => {
     if (activeKey) query = '';
