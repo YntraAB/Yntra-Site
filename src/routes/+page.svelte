@@ -1,4 +1,4 @@
-<script lang="ts">
+ï»¿<script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import Monitor from 'lucide-svelte/icons/monitor';
   import Smartphone from 'lucide-svelte/icons/smartphone';
@@ -186,18 +186,18 @@
 </script>
 
 <svelte:head>
-  <title>Yntra – Webbplatser, Appar & Digitala System</title>
+  <title>Yntra ï¿½ Webbplatser, Appar & Digitala System</title>
   <meta
     name="description"
-    content="Yntra designar och bygger webbplatser, appar och digitala system som hjälper företag att växa snabbare och arbeta smartare. Kontakta oss."
+    content="Yntra designar och bygger webbplatser, appar och digitala system som hjï¿½lper fï¿½retag att vï¿½xa snabbare och arbeta smartare. Kontakta oss."
   />
   <meta name="author" content="Yntra" />
   <link rel="canonical" href="https://yntra.se" />
 
-  <meta property="og:title" content="Yntra – Webbplatser, Appar & Digitala System" />
+  <meta property="og:title" content="Yntra ï¿½ Webbplatser, Appar & Digitala System" />
   <meta
     property="og:description"
-    content="Vi skapar högpresterande digitala lösningar – från webbplatser och appar till skräddarsydda system. Hjälper företag att skala snabbare och arbeta smartare."
+    content="Vi skapar hï¿½gpresterande digitala lï¿½sningar ï¿½ frï¿½n webbplatser och appar till skrï¿½ddarsydda system. Hjï¿½lper fï¿½retag att skala snabbare och arbeta smartare."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yntra.se" />
@@ -206,8 +206,8 @@
   <meta property="og:site_name" content="Yntra" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Yntra – Webbplatser, Appar & Digitala System" />
-  <meta name="twitter:description" content="Vi skapar högpresterande digitala lösningar – från webbplatser och appar till skräddarsydda system." />
+  <meta name="twitter:title" content="Yntra ï¿½ Webbplatser, Appar & Digitala System" />
+  <meta name="twitter:description" content="Vi skapar hï¿½gpresterande digitala lï¿½sningar ï¿½ frï¿½n webbplatser och appar till skrï¿½ddarsydda system." />
   <meta name="twitter:image" content="https://yntra.se/og-image.jpg" />
 </svelte:head>
 
@@ -564,8 +564,21 @@
   </div>
 </section>
 
-<ScheduleCallModal bind:open={showSchedule} on:submit={(e: CustomEvent<any>) => {
-  console.log('schedule submitted', e.detail);
+<ScheduleCallModal bind:open={showSchedule} on:submit={async (e: CustomEvent<any>) => {
+  try {
+    const res = await fetch('/api/notify', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(e.detail)
+    });
+    if (!res.ok) throw new Error('Failed');
+    const j = await res.json().catch(() => ({}));
+    if (!j?.ok) throw new Error(j?.error || 'Failed');
+    alert('Tack! Din bokningsfÃ¶rfrÃ¥gan har skickats.');
+  } catch (err) {
+    console.error(err);
+    alert('Kunde inte skicka bokningen. FÃ¶rsÃ¶k igen eller maila contact@yntra.se.');
+  }
 }} />
 <style>
   .gradient-animated {
