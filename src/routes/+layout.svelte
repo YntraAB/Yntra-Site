@@ -119,7 +119,7 @@
       alert('Tack! Vi har mottagit ditt meddelande.');
     } catch (err) {
       console.error(err);
-      alert('Kunde inte skicka meddelandet. FÃ¶rsÃ¶k igen eller maila contact@yntra.se.');
+      alert('Kunde inte skicka meddelandet. F\u00F6rs\u00F6k igen eller maila contact@yntra.se.');
     }
   }
 
@@ -415,3 +415,4 @@
     </div>
   </div>
 </footer>
+

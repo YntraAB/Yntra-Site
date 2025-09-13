@@ -4,7 +4,7 @@ export default {
   ...base,
   nav: {
     ...(base as any).nav,
-    helpcenter: 'HjÃ¤lpcenter'
+    helpcenter: 'Hj\u00E4lpcenter'
   },
   design: {
     title: 'Design',
@@ -158,7 +158,7 @@ export default {
   terms: {
     title: 'AnvÃ¤ndarvillkor',
     meta_description: 'Villkor som reglerar din anvÃ¤ndning av Yntras webbplats och tjÃ¤nster.',
-    hero: 'LÃ¤s dessa villkor noggrant. Genom att besÃ¶ka webbplatsen eller anvÃ¤nda vÃ¥ra tjÃ¤nster godkÃ¤nner du dem.',
+    hero: 'LÃ¤s dessa villkor noggrant. Genom att beSöka webbplatsen eller anvÃ¤nda vÃ¥ra tjÃ¤nster godkÃ¤nner du dem.',
     last_updated_label: 'Senast uppdaterad',
     intro_card:
       'Dessa anvÃ¤ndarvillkor ("Villkor") styr din Ã¥tkomst till och anvÃ¤ndning av Yntras webbplats samt de tjÃ¤nster vi tillhandahÃ¥ller. Om du ingÃ¥r villkoren fÃ¶r ett fÃ¶retags rÃ¤kning intygar du att du har behÃ¶righet att binda fÃ¶retaget. Om du inte accepterar villkoren ska du inte anvÃ¤nda vÃ¥r webbplats eller vÃ¥ra tjÃ¤nster. Om ett separat, undertecknat kundavtal finns gÃ¤ller det i fÃ¶rsta hand vid konflikt mellan detta dokument och kundavtalet.',
@@ -180,7 +180,7 @@ export default {
         'LÃ¤mna korrekta uppgifter och hÃ¥lla dem uppdaterade',
         'AnvÃ¤nda tjÃ¤nsterna endast fÃ¶r lagliga syften och i enlighet med dessa Villkor',
         'FÃ¶lja rimliga anvÃ¤ndningsgrÃ¤nser och instruktioner som vi tillhandahÃ¥ller',
-        'Inte fÃ¶rsÃ¶ka stÃ¶ra, bakÃ¥tkompilera eller fÃ¥ obehÃ¶rig Ã¥tkomst till vÃ¥ra system'
+        'Inte fÃ¶rSöka stÃ¶ra, bakÃ¥tkompilera eller fÃ¥ obehÃ¶rig Ã¥tkomst till vÃ¥ra system'
       ]
     },
     s3: {
@@ -268,7 +268,7 @@ export default {
     cards: {
       websites: {
         title: 'Webbplatser',
-        desc: 'Vi planerar, designar och utvecklar skrÃ¤ddarsydda webbplatser som laddar snabbt, konverterar bÃ¤ttre och Ã¤r enkla att fÃ¶rvalta. SÃ¶koptimerade, tillgÃ¤ngliga och byggda fÃ¶r tillvÃ¤xt och mÃ¤tbara resultat.',
+        desc: 'Vi planerar, designar och utvecklar skrÃ¤ddarsydda webbplatser som laddar snabbt, konverterar bÃ¤ttre och Ã¤r enkla att fÃ¶rvalta. Sökoptimerade, tillgÃ¤ngliga och byggda fÃ¶r tillvÃ¤xt och mÃ¤tbara resultat.',
         features: ['Responsiv design', 'SEO-optimerad', 'Snabb prestanda', 'CMS-integrering']
       },
       systems: {
@@ -279,7 +279,7 @@ export default {
       uiux: {
         title: 'UI/UX-design',
         desc: 'Vi kombinerar research och design fÃ¶r att skapa tydliga flÃ¶den och ett varumÃ¤rkesstarkt UI. Prototyper testas tidigt, och designsystem ger hastighet, kvalitet och konsekvent upplevelse i alla kanaler.',
-        features: ['AnvÃ¤ndarundersÃ¶kning', 'Prototypning', 'Designsystem', 'AnvÃ¤ndbarhetstester']
+        features: ['AnvÃ¤ndarunderSökning', 'Prototypning', 'Designsystem', 'AnvÃ¤ndbarhetstester']
       },
       support: {
         title: 'LÃ¶pande support',
@@ -327,9 +327,9 @@ export default {
   privacy: {
     title: 'Integritetspolicy',
     meta_description: 'SÃ¥ behandlar Yntra dina personuppgifter: insamling, anvÃ¤ndning och skydd.',
-    hero: 'SÃ¥ hÃ¤r behandlar vi dina personuppgifter nÃ¤r du besÃ¶ker vÃ¥r webbplats eller anvÃ¤nder vÃ¥ra tjÃ¤nster.',
+    hero: 'SÃ¥ hÃ¤r behandlar vi dina personuppgifter nÃ¤r du beSöker vÃ¥r webbplats eller anvÃ¤nder vÃ¥ra tjÃ¤nster.',
     last_updated_label: 'Senast uppdaterad',
-    intro_card: 'Vi vÃ¤rnar om din integritet och skyddar dina personuppgifter. Den hÃ¤r integritetspolicyn beskriver hur vi samlar in, anvÃ¤nder och skyddar din information nÃ¤r du besÃ¶ker vÃ¥r webbplats eller anvÃ¤nder vÃ¥ra tjÃ¤nster.',
+    intro_card: 'Vi vÃ¤rnar om din integritet och skyddar dina personuppgifter. Den hÃ¤r integritetspolicyn beskriver hur vi samlar in, anvÃ¤nder och skyddar din information nÃ¤r du beSöker vÃ¥r webbplats eller anvÃ¤nder vÃ¥ra tjÃ¤nster.',
     s1: {
       title: '1. Information vi samlar in',
       intro: 'Vi kan samla in fÃ¶ljande typer av uppgifter:',
@@ -378,7 +378,7 @@ export default {
     },
     s6: {
       title: '6. Cookies',
-      text: 'Denna webbplats anvÃ¤nder inte cookies eller liknande spÃ¥rningstekniker. Vi lagrar eller samlar inte in nÃ¥gon information om ditt besÃ¶k genom sÃ¥dana metoder.'
+      text: 'Denna webbplats anvÃ¤nder inte cookies eller liknande spÃ¥rningstekniker. Vi lagrar eller samlar inte in nÃ¥gon information om ditt beSök genom sÃ¥dana metoder.'
     },
     s7: {
       title: '7. Ã„ndringar i denna policy',
@@ -396,7 +396,7 @@ export default {
   },
   modal: {
     title: 'Kontakta oss',
-    desc: 'Fyll i detaljerna sÃ¥ Ã¥terkommer vi snart.',
+    desc: 'Fyll i detaljerna s\u00E5 \u00E5terkommer vi snart.',
     company_label: 'FÃ¶retagsnamn',
     company_placeholder: 'Ex. Yntra AB',
     tel_label: 'Tel',
@@ -487,14 +487,14 @@ export default {
     }
   },
   help: {
-    meta_title: 'HjÃ¤lpcenter â€” Yntra',
+    meta_title: 'Hjälpcenter â€” Yntra',
     meta_description: 'Hitta svar, guider och resurser fÃ¶r att komma igÃ¥ng och lyckas med Yntra.',
-    title: 'HjÃ¤lpcenter',
+    title: 'Hjälpcenter',
     subtitle: 'Hitta snabba svar pÃ¥ vanliga frÃ¥gor, lÃ¤s guider och fÃ¥ stÃ¶d nÃ¤r du behÃ¶ver det.',
-    search_open_aria: 'Ã–ppna sÃ¶k',
-    search_input_aria: 'SÃ¶k i HjÃ¤lpcenter',
-    search_placeholder: 'SÃ¶k i HjÃ¤lpcenterâ€¦',
-    search_suggestions_aria: 'SÃ¶kfÃ¶rslag',
+    search_open_aria: 'Ã–ppna Sök',
+    search_input_aria: 'Sök i Hjälpcenter',
+    search_placeholder: 'Sök i Hjälpcenterâ€¦',
+    search_suggestions_aria: 'SökfÃ¶rslag',
     categories: {
       title: 'Utforska kategorier',
       subtitle: 'Vi har samlat det viktigaste fÃ¶r att komma igÃ¥ng, fÃ¶rstÃ¥ priser och hur vi levererar.',
@@ -661,7 +661,7 @@ export default {
       ]
     },
     cta: {
-      title: 'Hittar du inte det du sÃ¶ker?',
+      title: 'Hittar du inte det du Söker?',
       subtitle: 'VÃ¥rt team svarar gÃ¤rna pÃ¥ frÃ¥gor och guidar dig till rÃ¤tt lÃ¶sning.',
       contact: 'Kontakta oss',
       book_call: 'Boka ett samtal'
@@ -676,3 +676,7 @@ export default {
     subtitle: 'Modern teknik som ger snabbare utveckling, hÃ¶gre prestanda och framtidssÃ¤kra lÃ¶sningar.'
   }
 };
+
+
+
+
