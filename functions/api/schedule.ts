@@ -76,12 +76,11 @@ export async function onRequestPost({ request }: { request: Request }) {
 
     const payload = {
       personalizations: [
-        { to: [{ email: 'contact@yntra.se', name: 'Yntra Contact' }] },
-        { to: [{ email }] }
+        { to: [{ email: 'contact@yntra.se', name: 'Yntra Contact' }, { email }] }
       ],
       from: { email: 'no-reply@yntra.se', name: 'Yntra Website' },
+      reply_to: { email },
       subject: `Bokning: ${name || company || email}`,
-      headers: { 'Reply-To': email },
       content: [
         { type: 'text/html', value: html },
         { type: 'text/plain', value: text }
@@ -122,4 +121,3 @@ function escapeHtml(input: string) {
     .replace(/\"/g, '&quot;')
     .replace(/'/g, '&#039;');
 }
-
