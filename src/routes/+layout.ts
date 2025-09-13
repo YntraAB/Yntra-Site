@@ -1,4 +1,4 @@
-import '$lib/i18n';
+﻿import '$lib/i18n';
 import { waitLocale } from '$lib/i18n';
 
 export const load = async () => {
@@ -7,4 +7,3 @@ export const load = async () => {
   } catch (_) {}
   return {};
 };
-

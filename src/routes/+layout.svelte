@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import '../app.css';
   import Menu from 'lucide-svelte/icons/menu';
   import XIcon from 'lucide-svelte/icons/x';
@@ -32,7 +32,7 @@
   const SITE_URL = publicEnv.PUBLIC_SITE_URL || 'https://yntra.se';
   const META_TITLE = $derived(() => {
     const s = $t('meta.title') as unknown as string;
-    if (!s || /\uFFFD/.test(s)) return 'Yntra – Design & Development Studio';
+    if (!s || /\uFFFD/.test(s)) return 'Yntra â€“ Design & Development Studio';
     return s;
   });
   const META_DESC = $derived(() => {
@@ -119,7 +119,7 @@
       alert('Tack! Vi har mottagit ditt meddelande.');
     } catch (err) {
       console.error(err);
-      alert('Kunde inte skicka meddelandet. Försök igen eller maila contact@yntra.se.');
+      alert('Kunde inte skicka meddelandet. FÃ¶rsÃ¶k igen eller maila contact@yntra.se.');
     }
   }
 
@@ -267,10 +267,10 @@
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'SE',
-        addressRegion: 'Gävleborg',
+        addressRegion: 'GÃ¤vleborg',
         addressLocality: 'Delsbo',
         postalCode: '824 71',
-        streetAddress: 'Edevägen 5'
+        streetAddress: 'EdevÃ¤gen 5'
       }
     })}
   </script>

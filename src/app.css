@@ -1,6 +1,6 @@
-@import 'tailwindcss';
+﻿@import 'tailwindcss';
 
-/* Typed custom properties so we can animate the primary color softly */
+
 @property --primary-h {
   syntax: '<number>';
   inherits: true;
@@ -17,10 +17,10 @@
   initial-value: 16%;
 }
 
-/* Typed angle for seamless gradient rotation */
-/* removed unused: @property --gradient-angle */
 
-/* CTA gradient stop components (typed for smooth color tweens) */
+
+
+
 @property --cta1-h { syntax: '<number>'; inherits: true; initial-value: 222; }
 @property --cta1-s { syntax: '<percentage>'; inherits: true; initial-value: 18%; }
 @property --cta1-l { syntax: '<percentage>'; inherits: true; initial-value: 20%; }
@@ -32,22 +32,22 @@
   --background: hsl(0, 0%, 99%);
   --foreground: hsl(225, 15%, 8%);
   
-  /* Build primary from components so it can be animated smoothly */
-  --primary-h: 222; /* gray-blue base */
+  
+  --primary-h: 222; 
   --primary-s: 18%;
   --primary-l: 16%;
   --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
   
   --muted: hsl(220, 13%, 96%);
   
-  /* Accent tuned slightly brighter for CTAs */
+  
   --accent: hsl(215, 70%, 56%);
   
-  /* Apply a slightly stronger, quicker color drift */
+  
   animation: primary-shift 48s ease-in-out infinite alternate;
 }
 
-/* Fluid font-size tokens for Tailwind v4 utilities */
+
 @theme {
   --font-size-xs: clamp(0.75rem, 0.70rem + 0.35vw, 0.8125rem);
   --font-size-sm: clamp(0.8125rem, 0.78rem + 0.35vw, 0.9375rem);
@@ -64,7 +64,7 @@ html, body {
   color: var(--foreground);
 }
 
-/* Base typography and interaction improvements */
+
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter,
     "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
@@ -78,20 +78,20 @@ a { color: inherit; text-decoration: none; }
 
 img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
 
-/* Accessible default focus style (customizable per-component with Tailwind) */
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-/* Utilities (removed unused .container, .card, and .btn* classes) */
 
-/* Reduced motion: respect user preference */
+
+
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
 
-/* Scroll-reveal base animation */
+
 .reveal {
   opacity: 0;
   transform: var(--reveal-transform, translateY(12px) scale(0.98));
@@ -111,10 +111,10 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
   .reveal { opacity: 1; transform: none; }
 }
 
-/* Animated gradient keyframes – stronger, corner-to-corner path */
-/* removed unused keyframes: gradient-pan */
 
-/* Subtle elliptical drift for backgrounds (different from gradient-pan) */
+
+
+
 @keyframes diagonal-pan {
   0%   { background-position: 12% 28%; }
   35%  { background-position: 88% 40%; }
@@ -122,14 +122,14 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
   100% { background-position: 12% 28%; }
 }
 
-/* Slow floating movement for highlight layers */
+
 @keyframes layer-float {
   0% { transform: translate3d(-4%, -4%, 0) scale(1); }
   50% { transform: translate3d(4%, 4%, 0) scale(1.02); }
   100% { transform: translate3d(-4%, -4%, 0) scale(1); }
 }
 
-/* Stronger, but still tasteful, hue/sat/light drift for var(--primary) */
+
 @keyframes primary-shift {
   0% {
     --primary-h: 218;
@@ -137,9 +137,9 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
     --primary-l: 15%;
   }
   50% {
-    --primary-h: 226; /* narrow, gray-blue sweep */
-    --primary-s: 22%; /* modest saturation */
-    --primary-l: 18%; /* gentle lift */
+    --primary-h: 226; 
+    --primary-s: 22%; 
+    --primary-l: 18%; 
   }
   100% {
     --primary-h: 218;
@@ -148,7 +148,7 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
   }
 }
 
-/* Soft diagonal sheen sweep for overlay elements */
+
 @keyframes sheen-sweep {
   0% { transform: translate3d(-120%, 0, 0) rotate(8deg); opacity: 0; }
   10% { opacity: 0.35; }
@@ -156,10 +156,10 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
   100% { transform: translate3d(120%, 0, 0) rotate(8deg); opacity: 0; }
 }
 
-/* Perfect-loop gradient spin (no visible endpoints) */
-/* removed unused keyframes: spin-gradient */
 
-/* Soft, noticeable but gentle color shift for CTA gradient */
+
+
+
 @keyframes cta-shift {
   0% {
     --cta1-h: 222; --cta1-s: 16%; --cta1-l: 20%;
@@ -175,22 +175,22 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
   }
 }
 
-/* Soft pulsing halo for bullet indicators */
+
 @keyframes pulse-soft {
   0%   { transform: scale(0.9); opacity: 0.55; }
   60%  { transform: scale(1.75); opacity: 0.0; }
   100% { transform: scale(1.75); opacity: 0.0; }
 }
 
-/* Fluid, mobile-friendly typography */
+
 @layer base {
-  /* Scale the root size smoothly from mobile → desktop */
+  
   html {
-    /* Make body text slightly smaller on narrow screens, scale up to 18px */
+    
     font-size: clamp(14px, 0.7vw + 11.5px, 18px);
   }
 
-  /* Fluid headings for better balance on small screens */
+  
   :where(h1) {
     font-size: clamp(2rem, 1.6rem + 2vw, 3rem);
     line-height: 1.1;
@@ -213,7 +213,7 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
   }
 }
 
-/* Safety net: downsize any hard-coded px text on small screens */
+
 @layer utilities {
   @media (max-width: 640px) {
     [class*="text-[20px]"] { font-size: clamp(0.95rem, 0.9rem + 0.5vw, 1.125rem) !important; }
@@ -223,7 +223,7 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
   }
 }
 
-/* Ensure exact three-line descriptions when desired */
+
 @layer utilities {
   .line-clamp-3 {
     display: -webkit-box;

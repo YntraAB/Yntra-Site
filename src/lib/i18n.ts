@@ -1,4 +1,4 @@
-import { browser } from '$app/environment';
+﻿import { browser } from '$app/environment';
 import { init, register, locale as localeStore, t as tStore, waitLocale as waitLocaleFn } from 'svelte-i18n';
 
 register('sv', () => import('./locales/sv_full'));

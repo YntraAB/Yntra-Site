@@ -1,4 +1,4 @@
-type Options = {
+﻿type Options = {
   lines?: number;
   min?: number;
   max?: number;
@@ -14,7 +14,6 @@ export function fitLines(node: HTMLElement, options: Options = {}) {
   })();
 
   const measureAndFit = () => {
-    const computed = getComputedStyle(node);
     const maxPx = max ?? originalComputedSize;
     const minPx = Math.max(10, min ?? Math.round(maxPx * 0.6));
 

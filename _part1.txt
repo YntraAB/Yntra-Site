@@ -52,7 +52,6 @@
     el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // Open Contact modal for any element with [data-open-contact]
   if (typeof document !== 'undefined') {
     const handler = (e: MouseEvent) => {
       const t = e.target as HTMLElement | null;
@@ -198,3 +197,4 @@
             <li><a href="/privacy-policy" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors">{$t('footer.resource_links.1')}</a></li>
             <li><a href="/terms-of-service" class="hover:text-slate-900 hover:underline underline-offset-4 decoration-slate-300 transition-colors">{$t('footer.resource_links.2')}</a></li>
           </ul>
+

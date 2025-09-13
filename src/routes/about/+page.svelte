@@ -21,7 +21,7 @@
   <meta name="description" content={$t('about.meta_description')} />
 </svelte:head>
 
-<!-- Hero -->
+
 <section class="relative isolate min-h-[450px] flex items-center text-white overflow-hidden">
   <div class="absolute inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_38%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
   <div class="absolute inset-0 z-[1] pointer-events-none [background:linear-gradient(45deg,rgba(0,0,0,.08)_0%,transparent_50%,rgba(0,0,0,.08)_100%)]"></div>
@@ -35,7 +35,7 @@
 
 <section class="py-12 md:py-16">
   <div class="max-w-[895px] mx-auto px-6 md:px-0 space-y-[45px]">
-    <!-- What we do -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -66,7 +66,7 @@
       </div>
     </div>
 
-    <!-- How we build -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -90,7 +90,7 @@
       </ul>
     </div>
 
-    <!-- Process -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -112,7 +112,7 @@
       </div>
     </div>
 
-    <!-- Tech & tools -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -126,7 +126,7 @@
       </div>
     </div>
 
-    <!-- CTA -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -146,10 +146,3 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-

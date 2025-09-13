@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { t } from '$lib/i18n';
   import Settings from 'lucide-svelte/icons/settings';
   import ChevronRight from 'lucide-svelte/icons/chevron-right';
@@ -21,7 +21,7 @@
   <meta name="robots" content="index,follow" />
 </svelte:head>
 
-<!-- Hero -->
+
 <section class="relative isolate min-h-[450px] flex items-center text-white overflow-hidden">
   <div class="absolute inset-[-35%] z-0 pointer-events-none bg-[linear-gradient(135deg,var(--primary)_0%,hsl(222,18%,22%)_38%,hsl(222,22%,12%)_68%,var(--primary)_100%)] bg-no-repeat [background-size:260%_260%] [will-change:background-position] animate-[diagonal-pan_48s_cubic-bezier(0.22,1,0.36,1)_infinite] motion-reduce:animate-none"></div>
   <div class="absolute inset-0 z-[1] pointer-events-none [background:linear-gradient(45deg,rgba(0,0,0,.08)_0%,transparent_50%,rgba(0,0,0,.08)_100%)]"></div>
@@ -32,10 +32,10 @@
   </div>
 </section>
 
-<!-- Content -->
+
 <section class="py-14 md:py-20">
   <div class="max-w-[895px] mx-auto px-6 md:px-0 space-y-10 md:space-y-14">
-    <!-- Overview -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -53,7 +53,7 @@
       </div>
     </div>
 
-    <!-- Timeline -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -63,7 +63,7 @@
       </div>
 
       <div class="mt-6 space-y-6">
-        <!-- Discovery -->
+        
         <div class="relative pl-8">
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] [border-color:color-mix(in_oklab,var(--accent)_92%,white)]"></div>
           <div class="flex items-start gap-3">
@@ -80,7 +80,7 @@
           </div>
         </div>
 
-        <!-- Design -->
+        
         <div class="relative pl-8">
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] [border-color:color-mix(in_oklab,var(--accent)_92%,white)]"></div>
           <div class="flex items-start gap-3">
@@ -97,7 +97,7 @@
           </div>
         </div>
 
-        <!-- Build -->
+        
         <div class="relative pl-8">
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] [border-color:color-mix(in_oklab,var(--accent)_92%,white)]"></div>
           <div class="flex items-start gap-3">
@@ -120,7 +120,7 @@
           </div>
         </div>
 
-        <!-- Integrate -->
+        
         <div class="relative pl-8">
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] [border-color:color-mix(in_oklab,var(--accent)_92%,white)]"></div>
           <div class="flex items-start gap-3">
@@ -137,7 +137,7 @@
           </div>
         </div>
 
-        <!-- Test & optimize -->
+        
         <div class="relative pl-8">
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] [border-color:color-mix(in_oklab,var(--accent)_92%,white)]"></div>
           <div class="flex items-start gap-3">
@@ -154,7 +154,7 @@
           </div>
         </div>
 
-        <!-- Launch & support -->
+        
         <div class="relative pl-8">
           <div class="absolute left-0 top-[-5px] bottom-[-5px] w-[20px] rounded-full border-l-[5px] [border-color:color-mix(in_oklab,var(--accent)_92%,white)]"></div>
           <div class="flex items-start gap-3">
@@ -173,7 +173,7 @@
       </div>
     </div>
 
-    <!-- Timeframes -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -193,7 +193,7 @@
       </div>
     </div>
 
-    <!-- Collaboration -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -208,7 +208,7 @@
       </ul>
     </div>
 
-    <!-- Quality -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -223,7 +223,7 @@
       </ul>
     </div>
 
-    <!-- Pricing -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -243,7 +243,7 @@
       </div>
     </div>
 
-    <!-- CTA -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">

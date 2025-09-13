@@ -1,4 +1,4 @@
-export type RevealVariant = 'up' | 'down' | 'left' | 'right' | 'scale' | 'blur';
+﻿export type RevealVariant = 'up' | 'down' | 'left' | 'right' | 'scale' | 'blur';
 
 export type RevealOptions = {
   threshold?: number;

@@ -1,4 +1,4 @@
-export async function onRequest({ request, env }: { request: Request; env: any }) {
+﻿export async function onRequest({ request, env }: { request: Request; env: Record<string, string | undefined> }) {
   const url = new URL(request.url);
   const debug = url.searchParams.get('debug') === '1';
   const dry = url.searchParams.get('dry') === '1';
@@ -19,9 +19,9 @@ export async function onRequest({ request, env }: { request: Request; env: any }
       });
     }
 
-    const data = (await request.json()) as any;
+    const data = (await request.json()) as Record<string, unknown>;
 
-    const kind: 'contact' | 'schedule' = data?.dateISO || data?.type ? 'schedule' : 'contact';
+    const kind: 'contact' | 'schedule' = ('dateISO' in data) || ('type' in data) ? 'schedule' : 'contact';
     const nowIso = new Date().toISOString();
 
     const fields: Array<{ name: string; value: string; inline?: boolean }> = [];
@@ -31,30 +31,29 @@ export async function onRequest({ request, env }: { request: Request; env: any }
     }
 
     if (kind === 'contact') {
-      add('Företag', data?.company || '—', true);
-      add('E‑post', data?.email || '—', true);
-      add('Telefon', data?.tel || '—', true);
-      add('Meddelande', data?.message || '—');
+      add('FÃ¶retag', data['company'] ?? 'â€”', true);
+      add('Eâ€‘post', data['email'] ?? 'â€”', true);
+      add('Telefon', data['tel'] ?? 'â€”', true);
+      add('Meddelande', data['message'] ?? 'â€”');
     } else {
-      add('Namn', data?.name || '—', true);
-      add('E‑post', data?.email || '—', true);
-      add('Företag', data?.company || '—', true);
-      add('Telefon', data?.tel || '—', true);
-      add('Typ', data?.type || '—', true);
-      add('Längd', (data?.length ? `${data.length} min` : '—'), true);
-      add('Tidszon', data?.timezone || '—', true);
-      add('Tid (ISO)', data?.dateISO || '—');
-      add('Anteckningar', data?.notes || '—');
+      add('Namn', data['name'] ?? 'â€”', true);
+      add('Eâ€‘post', data['email'] ?? 'â€”', true);
+      add('FÃ¶retag', data['company'] ?? 'â€”', true);
+      add('Telefon', data['tel'] ?? 'â€”', true);
+      add('Typ', data['type'] ?? 'â€”', true);
+      add('Tidszon', data['timezone'] ?? 'â€”', true);
+      add('Tid (ISO)', data['dateISO'] ?? 'â€”');
+      add('Anteckningar', data['notes'] ?? 'â€”');
     }
 
-    const title = kind === 'contact' ? 'Ny kontaktförfrågan' : 'Ny samtalsbokning';
-    const color = kind === 'contact' ? 0x3b82f6 : 0x8b5cf6; // blue / violet
+    const title = kind === 'contact' ? 'Ny kontaktfÃ¶rfrÃ¥gan' : 'Ny samtalsbokning';
+    const color = kind === 'contact' ? 0x3b82f6 : 0x8b5cf6;
 
     const embed = {
       title,
       color,
       timestamp: nowIso,
-      fields: fields.length ? fields : [{ name: 'Info', value: 'Inget innehåll' }]
+      fields: fields.length ? fields : [{ name: 'Info', value: 'Inget innehÃ¥ll' }]
     } as const;
 
     const payload = {
@@ -92,11 +91,19 @@ export async function onRequest({ request, env }: { request: Request; env: any }
       status: 200,
       headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
     });
-  } catch (err: any) {
-    return new Response(JSON.stringify({ ok: false, error: err?.message || 'Unexpected error' }), {
+  } catch (err: unknown) {
+    const message = getErrorMessage(err);
+    return new Response(JSON.stringify({ ok: false, error: message }), {
       status: 500,
       headers: { 'content-type': 'application/json' }
     });
   }
 }
 
+function getErrorMessage(err: unknown): string {
+  if (typeof err === 'object' && err !== null && 'message' in err) {
+    const m = (err as { message?: unknown }).message;
+    return typeof m === 'string' ? m : String(m ?? 'Unexpected error');
+  }
+  return 'Unexpected error';
+}

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import Globe from 'lucide-svelte/icons/globe';
   import ChevronDown from 'lucide-svelte/icons/chevron-down';
   import Check from 'lucide-svelte/icons/check';

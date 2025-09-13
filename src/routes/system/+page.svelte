@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { t } from '$lib/i18n';
   import { onDestroy } from 'svelte';
   import ChevronRight from 'lucide-svelte/icons/chevron-right';
@@ -24,7 +24,7 @@
   <meta name="description" content={$t('system.meta_description')} />
 </svelte:head>
 
-<!-- Hero (same layout as /design) -->
+
 <section class="relative isolate min-h-[520px] flex items-center text-white overflow-hidden">
   <div class="absolute inset-0 -z-10">
     <video bind:this={bgVideo} class="h-full w-full object-cover object-[center_85%] md:object-[center_75%] opacity-70" autoplay muted loop playsinline preload="metadata">
@@ -50,7 +50,7 @@
 
 <section class="py-14 md:py-20">
   <div class="max-w-[895px] mx-auto px-6 md:px-0 space-y-10 md:space-y-14">
-    <!-- What we build -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <!-- Why us for systems -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -89,7 +89,7 @@
       </ul>
     </div>
 
-    <!-- Delivery & stack -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -123,7 +123,7 @@
       </div>
     </div>
 
-    <!-- CTA -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">

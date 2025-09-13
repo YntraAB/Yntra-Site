@@ -1,484 +1,484 @@
-import base from './fr.json';
+﻿import base from './fr.json';
 
 export default {
   ...base,
-  nav: { ...(base as any).nav, helpcenter: 'Centre d’aide' },
+  nav: { ...(base as any).nav, helpcenter: 'Centre dâ€™aide' },
   footer: {
     ...(base as any).footer,
     resource_links: [
       ...(((base as any).footer?.resource_links) ?? []),
-      'Conditions d’utilisation'
+      'Conditions dâ€™utilisation'
     ]
   },
   design: {
     title: 'Design',
-    meta_description: 'Nous concevons des expériences claires et cohérentes pour le web et les apps — de la recherche à un design system prêt pour la production.',
+    meta_description: 'Nous concevons des expÃ©riences claires et cohÃ©rentes pour le web et les apps â€” de la recherche Ã  un design system prÃªt pour la production.',
     badge: 'Expertise Design',
-    hero: 'Des années d’expérience en UX/UI et design orienté marque pour des sites et des apps critiques. Nous allions recherche, flux clairs et UI cohérent pour des solutions qui convertissent mieux et sonnent juste.',
+    hero: 'Des annÃ©es dâ€™expÃ©rience en UX/UI et design orientÃ© marque pour des sites et des apps critiques. Nous allions recherche, flux clairs et UI cohÃ©rent pour des solutions qui convertissent mieux et sonnent juste.',
     cta_primary: 'Parler design avec nous',
     s1: {
       title: 'Ce que nous concevons',
-      intro: 'Des sites marketing aux interfaces produit et design systems — nous livrons un design cohérent et scalable pour le réel.',
-      web: { title: 'Sites web', desc: 'Marketing, campagne et corporate — rapides et performants.' },
-      apps: { title: 'Systèmes & Apps', desc: 'Dashboards, outils internes et portails — clairs et efficaces.' },
-      brand: { title: 'Marque & UI', desc: 'Identité visuelle, tonalité et composants qui renforcent l’ensemble.' },
-      systems: { title: 'Design Systems', desc: 'Tokens, bibliothèques de composants et guidelines pour durer.' }
+      intro: 'Des sites marketing aux interfaces produit et design systems â€” nous livrons un design cohÃ©rent et scalable pour le rÃ©el.',
+      web: { title: 'Sites web', desc: 'Marketing, campagne et corporate â€” rapides et performants.' },
+      apps: { title: 'SystÃ¨mes & Apps', desc: 'Dashboards, outils internes et portails â€” clairs et efficaces.' },
+      brand: { title: 'Marque & UI', desc: 'IdentitÃ© visuelle, tonalitÃ© et composants qui renforcent lâ€™ensemble.' },
+      systems: { title: 'Design Systems', desc: 'Tokens, bibliothÃ¨ques de composants et guidelines pour durer.' }
     },
     s2: {
       title: 'Nos principes',
       items: [
-        'Clarté d’abord — chaque écran a un objectif clair',
-        'Cohérence & échelle — des patterns partagés, des équipes plus rapides',
-        'Performance & ressenti — des expériences rapides et fluides',
-        'Accessibilité (WCAG) — concevoir pour tous'
+        'ClartÃ© dâ€™abord â€” chaque Ã©cran a un objectif clair',
+        'CohÃ©rence & Ã©chelle â€” des patterns partagÃ©s, des Ã©quipes plus rapides',
+        'Performance & ressenti â€” des expÃ©riences rapides et fluides',
+        'AccessibilitÃ© (WCAG) â€” concevoir pour tous'
       ]
     },
     s3: {
       title: 'Processus de design',
       steps: [
-        { title: 'Recherche & définition', desc: 'Objectifs, utilisateurs, marché, contraintes. Nous cadrons problèmes et succès.' },
-        { title: 'Flows & wireframes', desc: 'Parcours et low‑fi pour décider et itérer plus tôt.' },
+        { title: 'Recherche & dÃ©finition', desc: 'Objectifs, utilisateurs, marchÃ©, contraintes. Nous cadrons problÃ¨mes et succÃ¨s.' },
+        { title: 'Flows & wireframes', desc: 'Parcours et lowâ€‘fi pour dÃ©cider et itÃ©rer plus tÃ´t.' },
         { title: 'UI & prototype', desc: 'Exploration visuelle, composants et prototype interactif pour valider.' },
-        { title: 'Design system & handover', desc: 'Tokens, guidelines, documentation et support à l’implémentation.' }
+        { title: 'Design system & handover', desc: 'Tokens, guidelines, documentation et support Ã  lâ€™implÃ©mentation.' }
       ]
     },
-    cta_title: 'Prêts à élever votre design ?',
-    cta_desc: 'Parlez‑nous de votre audience et de votre défi — nous proposerons un plan pragmatique, prêt à livrer.',
+    cta_title: 'PrÃªts Ã  Ã©lever votre design ?',
+    cta_desc: 'Parlezâ€‘nous de votre audience et de votre dÃ©fi â€” nous proposerons un plan pragmatique, prÃªt Ã  livrer.',
     tools_title: 'Outils & livrables'
   },
   system: {
     title: 'Applications',
-    meta_description: 'Nous concevons et développons des applications pour mobile, web et entreprise — sur‑mesure.',
+    meta_description: 'Nous concevons et dÃ©veloppons des applications pour mobile, web et entreprise â€” surâ€‘mesure.',
     badge: 'Applications',
-    hero: 'Nous créons des applications modernes : mobile (iOS/Android), web et desktop. Code robuste, UX soignée et intégrations utiles.',
+    hero: 'Nous crÃ©ons des applications modernes : mobile (iOS/Android), web et desktop. Code robuste, UX soignÃ©e et intÃ©grations utiles.',
     cta_primary: 'Parler applications',
     s1: {
       title: 'Ce que nous construisons',
-      intro: 'Apps mobiles, apps web et applications d’entreprise — de l’idée au lancement et à la maintenance.',
-      internal: { title: 'Applications mobiles', desc: 'iOS/Android avec wrappers web‑natifs (p. ex. Capacitor/Tauri) pour l’offline, les push et la performance.' },
-      automation: { title: 'Applications web', desc: 'Portails, dashboards, réservation, e‑commerce et temps réel à l’échelle.' },
-      enterprise: { title: 'Applications entreprise', desc: 'RBAC, SSO, traçabilité, scalabilité et exploitation fiable (CI/CD + monitoring).' },
-      custom: { title: 'Intégrations & automatisation', desc: 'Intégrations ERP/CRM, paiements, pipelines de données et jobs en arrière‑plan.' }
+      intro: 'Apps mobiles, apps web et applications dâ€™entreprise â€” de lâ€™idÃ©e au lancement et Ã  la maintenance.',
+      internal: { title: 'Applications mobiles', desc: 'iOS/Android avec wrappers webâ€‘natifs (p. ex. Capacitor/Tauri) pour lâ€™offline, les push et la performance.' },
+      automation: { title: 'Applications web', desc: 'Portails, dashboards, rÃ©servation, eâ€‘commerce et temps rÃ©el Ã  lâ€™Ã©chelle.' },
+      enterprise: { title: 'Applications entreprise', desc: 'RBAC, SSO, traÃ§abilitÃ©, scalabilitÃ© et exploitation fiable (CI/CD + monitoring).' },
+      custom: { title: 'IntÃ©grations & automatisation', desc: 'IntÃ©grations ERP/CRM, paiements, pipelines de donnÃ©es et jobs en arriÃ¨reâ€‘plan.' }
     },
     s2: {
       title: 'Pourquoi pour les applications',
       items: [
-        'Des années d’expérience en applications complexes en production',
-        'Fiabilité : tests, logs, monitoring et routines',
-        'Sécurité et accès dès le départ (least‑privilege)',
-        'Documentation claire et maintenabilité durable'
+        'Des annÃ©es dâ€™expÃ©rience en applications complexes en production',
+        'FiabilitÃ© : tests, logs, monitoring et routines',
+        'SÃ©curitÃ© et accÃ¨s dÃ¨s le dÃ©part (leastâ€‘privilege)',
+        'Documentation claire et maintenabilitÃ© durable'
       ]
     },
     s3: {
       title: 'Livraison & techno',
       stack_title: 'Stack technique',
-      stack_text: 'SvelteKit/Node pour le web ; wrappers web‑natifs (Capacitor/Tauri) pour mobile/desktop. API‑first, typage fort, CI/CD et cloud — choix pragmatiques.',
+      stack_text: 'SvelteKit/Node pour le web ; wrappers webâ€‘natifs (Capacitor/Tauri) pour mobile/desktop. APIâ€‘first, typage fort, CI/CD et cloud â€” choix pragmatiques.',
       delivery_title: 'Approche de delivery',
-      delivery_text: 'Itérations courtes, démos hebdo, environnements de preview et transparence. Valeur livrée tôt et souvent.'
+      delivery_text: 'ItÃ©rations courtes, dÃ©mos hebdo, environnements de preview et transparence. Valeur livrÃ©e tÃ´t et souvent.'
     },
     stats: {
-      years: '10+ ans', years_label: 'Expérience',
-      projects: '100+', projects_label: 'Projets livrés',
-      uptime: '99.9%', uptime_label: 'Disponibilité typique'
+      years: '10+ ans', years_label: 'ExpÃ©rience',
+      projects: '100+', projects_label: 'Projets livrÃ©s',
+      uptime: '99.9%', uptime_label: 'DisponibilitÃ© typique'
     },
-    cta_title: 'Prêts pour votre prochain système ?',
-    cta_desc: 'Parlez‑nous de vos processus et objectifs — nous proposerons une solution prête à lancer et à scaler.'
+    cta_title: 'PrÃªts pour votre prochain systÃ¨me ?',
+    cta_desc: 'Parlezâ€‘nous de vos processus et objectifs â€” nous proposerons une solution prÃªte Ã  lancer et Ã  scaler.'
   },
   process: {
     title: 'Notre processus',
-    subtitle: 'De l’idée au lancement — transparent, efficace et de qualité à chaque étape.',
+    subtitle: 'De lâ€™idÃ©e au lancement â€” transparent, efficace et de qualitÃ© Ã  chaque Ã©tape.',
     overview: {
-      title: 'Un seul objectif : des résultats sans friction',
-      text: 'Nous vous accompagnons de l’idée au lancement avec un processus clair et transparent qui réduit les risques et maximise la vitesse. Avancées visibles chaque semaine, cycles de décision courts et une équipe responsable de bout en bout : design, développement, intégrations, tests et handover.',
+      title: 'Un seul objectif : des rÃ©sultats sans friction',
+      text: 'Nous vous accompagnons de lâ€™idÃ©e au lancement avec un processus clair et transparent qui rÃ©duit les risques et maximise la vitesse. AvancÃ©es visibles chaque semaine, cycles de dÃ©cision courts et une Ã©quipe responsable de bout en bout : design, dÃ©veloppement, intÃ©grations, tests et handover.',
       points: [
-        'Itérations courtes avec démos hebdomadaires',
-        'Backlog traçable et livrables clairs',
-        'Accessibilité, performance et sécurité dès le premier jour',
-        'Handover et documentation pour une propriété à long terme'
+        'ItÃ©rations courtes avec dÃ©mos hebdomadaires',
+        'Backlog traÃ§able et livrables clairs',
+        'AccessibilitÃ©, performance et sÃ©curitÃ© dÃ¨s le premier jour',
+        'Handover et documentation pour une propriÃ©tÃ© Ã  long terme'
       ]
     },
-    timeline_title: 'Étape par étape',
+    timeline_title: 'Ã‰tape par Ã©tape',
     durations: {
       discovery: 'Discovery',
       design: 'Design',
-      build: 'Développer',
-      integrate: 'Intégrer',
+      build: 'DÃ©velopper',
+      integrate: 'IntÃ©grer',
       test: 'Tester & optimiser',
       launch: 'Lancer & support'
     },
     timeframes: {
-      title: 'Délais typiques',
+      title: 'DÃ©lais typiques',
       marketing_title: 'Site marketing',
-      marketing_desc: '4–8 semaines — selon le nombre de pages, le contenu et les intégrations.',
-      product_title: 'Système/app',
-      product_desc: '6–12+ semaines — selon la complexité, le modèle de données et les dépendances externes.'
+      marketing_desc: '4â€“8 semaines â€” selon le nombre de pages, le contenu et les intÃ©grations.',
+      product_title: 'SystÃ¨me/app',
+      product_desc: '6â€“12+ semaines â€” selon la complexitÃ©, le modÃ¨le de donnÃ©es et les dÃ©pendances externes.'
     },
     collaboration: {
       title: 'Collaboration & communication',
       items: [
-        'Réunions hebdomadaires + démos',
-        'Mises à jour asynchrones et notes de version',
+        'RÃ©unions hebdomadaires + dÃ©mos',
+        'Mises Ã  jour asynchrones et notes de version',
         'Un point de contact, retours rapides',
-        'Accès au backlog et aux issues'
+        'AccÃ¨s au backlog et aux issues'
       ]
     },
     quality: {
-      title: 'Qualité & sécurité',
+      title: 'QualitÃ© & sÃ©curitÃ©',
       items: [
-        'Revue de code, vérifications CI et staging',
-        'Accessibilité (WCAG), performance et SEO basique',
-        'Dépendances sécurisées et routines de mise à jour',
-        'Rôles, accès et stratégie de sauvegarde'
+        'Revue de code, vÃ©rifications CI et staging',
+        'AccessibilitÃ© (WCAG), performance et SEO basique',
+        'DÃ©pendances sÃ©curisÃ©es et routines de mise Ã  jour',
+        'RÃ´les, accÃ¨s et stratÃ©gie de sauvegarde'
       ]
     },
     details: {
       discovery: ['Objectifs & KPIs', 'Sitemap/flows', 'Backlog/SoW', 'Plan & risques'],
-      design: ['Wireframes', 'Maquettes UI', 'Bibliothèque de composants', 'Prototype interactif'],
-      build: ['Vues/composants terminés', 'Intégrations d’API', 'Notes de version', 'Démos hebdomadaires'],
-      integrate: ['Intégrations configurées', 'Données de test & environnements', 'Documentation technique'],
+      design: ['Wireframes', 'Maquettes UI', 'BibliothÃ¨que de composants', 'Prototype interactif'],
+      build: ['Vues/composants terminÃ©s', 'IntÃ©grations dâ€™API', 'Notes de version', 'DÃ©mos hebdomadaires'],
+      integrate: ['IntÃ©grations configurÃ©es', 'DonnÃ©es de test & environnements', 'Documentation technique'],
       test: ['Checklist & corrections de bugs', 'Rapports Lighthouse/a11y'],
-      launch: ['Procédures d’exploitation & sauvegarde', 'Documentation finale']
+      launch: ['ProcÃ©dures dâ€™exploitation & sauvegarde', 'Documentation finale']
     },
     pricing: {
       title: 'Tarification & engagement',
       fixed_title: 'Prix fixe',
-      fixed_desc: 'Quand le périmètre est bien défini. Devis avec livrables, jalons et dates.',
-      tm_title: 'Temps & Matériaux',
-      tm_desc: 'Pour un développement itératif. Rapport hebdomadaire et priorités claires.'
+      fixed_desc: 'Quand le pÃ©rimÃ¨tre est bien dÃ©fini. Devis avec livrables, jalons et dates.',
+      tm_title: 'Temps & MatÃ©riaux',
+      tm_desc: 'Pour un dÃ©veloppement itÃ©ratif. Rapport hebdomadaire et prioritÃ©s claires.'
     },
     cta: {
-      title: 'Prêts à construire ensemble ?',
-      desc: 'Parlez‑nous de vos objectifs. Nous proposerons un plan pragmatique qui équilibre vitesse, qualité et budget — et nous livrerons.',
+      title: 'PrÃªts Ã  construire ensemble ?',
+      desc: 'Parlezâ€‘nous de vos objectifs. Nous proposerons un plan pragmatique qui Ã©quilibre vitesse, qualitÃ© et budget â€” et nous livrerons.',
       contact: 'Nous contacter'
     }
   },
   terms: {
-    title: 'Conditions d’utilisation',
-    meta_description: 'Conditions régissant votre utilisation du site web et des services de Yntra.',
+    title: 'Conditions dâ€™utilisation',
+    meta_description: 'Conditions rÃ©gissant votre utilisation du site web et des services de Yntra.',
     hero: 'Veuillez lire attentivement ces conditions. En visitant le site ou en utilisant nos services, vous les acceptez.',
-    last_updated_label: 'Dernière mise à jour',
+    last_updated_label: 'DerniÃ¨re mise Ã  jour',
     intro_card:
-      'Les présentes Conditions d’utilisation ("Conditions") régissent votre accès au site web de Yntra et l’utilisation des services que nous fournissons. Si vous acceptez ces Conditions au nom d’une entreprise, vous déclarez être habilité à engager ladite entreprise. Si vous n’acceptez pas les Conditions, n’utilisez pas notre site ni nos services. Si un accord client signé ("Accord Client") existe, il prévaut en cas de conflit avec les présentes Conditions.',
+      'Les prÃ©sentes Conditions dâ€™utilisation ("Conditions") rÃ©gissent votre accÃ¨s au site web de Yntra et lâ€™utilisation des services que nous fournissons. Si vous acceptez ces Conditions au nom dâ€™une entreprise, vous dÃ©clarez Ãªtre habilitÃ© Ã  engager ladite entreprise. Si vous nâ€™acceptez pas les Conditions, nâ€™utilisez pas notre site ni nos services. Si un accord client signÃ© ("Accord Client") existe, il prÃ©vaut en cas de conflit avec les prÃ©sentes Conditions.',
     s1: {
       title: '1. Acceptation et Modifications',
       acceptance: {
         title: 'Acceptation des Conditions',
-        desc: 'En utilisant le site et les services, vous acceptez ces Conditions ainsi que notre Politique de confidentialité.'
+        desc: 'En utilisant le site et les services, vous acceptez ces Conditions ainsi que notre Politique de confidentialitÃ©.'
       },
       changes: {
         title: 'Modifications des Conditions',
-        desc: 'Nous pouvons mettre à jour ces Conditions de temps à autre. Les modifications prennent effet dès leur publication. Si vous disposez d’un Accord Client, celui-ci ne sera pas affecté sans un consentement écrit exprès.'
+        desc: 'Nous pouvons mettre Ã  jour ces Conditions de temps Ã  autre. Les modifications prennent effet dÃ¨s leur publication. Si vous disposez dâ€™un Accord Client, celui-ci ne sera pas affectÃ© sans un consentement Ã©crit exprÃ¨s.'
       }
     },
     s2: {
       title: '2. Services et Utilisation',
-      intro: 'Vous vous engagez à utiliser nos services de manière légale et responsable. En particulier, vous vous engagez à :',
+      intro: 'Vous vous engagez Ã  utiliser nos services de maniÃ¨re lÃ©gale et responsable. En particulier, vous vous engagez Ã  :',
       items: [
-        'Fournir des informations exactes et les maintenir à jour',
-        'Utiliser les services uniquement à des fins légales et conformément aux présentes Conditions',
-        'Respecter les limites d’utilisation raisonnables et les instructions que nous fournissons',
-        'Ne pas tenter de perturber, de rétroconcevoir ou d’accéder sans autorisation à nos systèmes'
+        'Fournir des informations exactes et les maintenir Ã  jour',
+        'Utiliser les services uniquement Ã  des fins lÃ©gales et conformÃ©ment aux prÃ©sentes Conditions',
+        'Respecter les limites dâ€™utilisation raisonnables et les instructions que nous fournissons',
+        'Ne pas tenter de perturber, de rÃ©troconcevoir ou dâ€™accÃ©der sans autorisation Ã  nos systÃ¨mes'
       ]
     },
     s3: {
       title: '3. Commandes, Frais et Paiement',
-      summary: 'Les devis, cahiers des charges ou commandes définissent la portée, les livrables, les délais et la tarification.',
+      summary: 'Les devis, cahiers des charges ou commandes dÃ©finissent la portÃ©e, les livrables, les dÃ©lais et la tarification.',
       includes: 'Sauf accord contraire dans un Accord Client :',
       items: {
-        quotes: 'Devis/commandes : portée, hypothèses, livrables, dates clés, critères d’acceptation',
-        invoicing: 'Facturation : émise lors de l’atteinte des jalons ou mensuellement à terme échu',
-        late: 'Retards de paiement : peuvent entraîner des intérêts et/ou une suspension des travaux après notification préalable'
+        quotes: 'Devis/commandes : portÃ©e, hypothÃ¨ses, livrables, dates clÃ©s, critÃ¨res dâ€™acceptation',
+        invoicing: 'Facturation : Ã©mise lors de lâ€™atteinte des jalons ou mensuellement Ã  terme Ã©chu',
+        late: 'Retards de paiement : peuvent entraÃ®ner des intÃ©rÃªts et/ou une suspension des travaux aprÃ¨s notification prÃ©alable'
       }
     },
     s4: {
-      title: '4. Propriété Intellectuelle',
-      text: 'Yntra conserve la propriété des matériels préexistants, du savoir-faire et des outils. Après paiement intégral, vous recevez une licence mondiale et non exclusive pour utiliser les livrables à des fins internes. Si un Accord Client prévoit explicitement un transfert de droits, cet accord prévaut. Les composants tiers restent soumis à leurs licences respectives.'
+      title: '4. PropriÃ©tÃ© Intellectuelle',
+      text: 'Yntra conserve la propriÃ©tÃ© des matÃ©riels prÃ©existants, du savoir-faire et des outils. AprÃ¨s paiement intÃ©gral, vous recevez une licence mondiale et non exclusive pour utiliser les livrables Ã  des fins internes. Si un Accord Client prÃ©voit explicitement un transfert de droits, cet accord prÃ©vaut. Les composants tiers restent soumis Ã  leurs licences respectives.'
     },
     s5: {
-      title: '5. Confidentialité et Protection des Données',
-      intro: 'Les parties peuvent échanger des informations confidentielles. Chaque partie s’engage à :',
+      title: '5. ConfidentialitÃ© et Protection des DonnÃ©es',
+      intro: 'Les parties peuvent Ã©changer des informations confidentielles. Chaque partie sâ€™engage Ã  :',
       items: [
-        'Utiliser les informations confidentielles de l’autre partie uniquement pour remplir les obligations prévues par les présentes Conditions',
-        'Protéger ces informations avec une diligence raisonnable et ne pas les divulguer à des tiers',
+        'Utiliser les informations confidentielles de lâ€™autre partie uniquement pour remplir les obligations prÃ©vues par les prÃ©sentes Conditions',
+        'ProtÃ©ger ces informations avec une diligence raisonnable et ne pas les divulguer Ã  des tiers',
         'Restituer ou supprimer les informations confidentielles sur demande, sauf si la loi impose leur conservation',
-        'Traiter les données personnelles conformément à la législation applicable en matière de protection des données'
+        'Traiter les donnÃ©es personnelles conformÃ©ment Ã  la lÃ©gislation applicable en matiÃ¨re de protection des donnÃ©es'
       ],
-      contact_hint: 'Questions sur la gestion des données ? Contactez-nous à'
+      contact_hint: 'Questions sur la gestion des donnÃ©es ? Contactez-nous Ã '
     },
     s6: {
       title: '6. Utilisation Acceptable',
-      text: 'Vous ne pouvez pas utiliser le site ou les services pour : télécharger du code malveillant, enfreindre des droits de propriété intellectuelle, violer la vie privée, harceler ou nuire à autrui, ou compromettre de quelque manière que ce soit l’intégrité ou la sécurité des services.'
+      text: 'Vous ne pouvez pas utiliser le site ou les services pour : tÃ©lÃ©charger du code malveillant, enfreindre des droits de propriÃ©tÃ© intellectuelle, violer la vie privÃ©e, harceler ou nuire Ã  autrui, ou compromettre de quelque maniÃ¨re que ce soit lâ€™intÃ©gritÃ© ou la sÃ©curitÃ© des services.'
     },
     s7: {
       title: '7. Services Tiers',
-      text: 'Nos livrables peuvent intégrer des services ou bibliothèques tiers. Nous ne sommes pas responsables du contenu, des politiques ou de la performance des tiers. L’utilisation de ces services est soumise à leurs propres conditions.'
+      text: 'Nos livrables peuvent intÃ©grer des services ou bibliothÃ¨ques tiers. Nous ne sommes pas responsables du contenu, des politiques ou de la performance des tiers. Lâ€™utilisation de ces services est soumise Ã  leurs propres conditions.'
     },
     s8: {
       title: '8. Garanties et Exclusions',
-      text: 'Sauf disposition contraire expresse dans un Accord Client, le site et les services sont fournis "en l’état" et "selon disponibilité". Nous déclinons toute garantie implicite, y compris les garanties de qualité marchande, d’adéquation à un usage particulier et de non-contrefaçon.'
+      text: 'Sauf disposition contraire expresse dans un Accord Client, le site et les services sont fournis "en lâ€™Ã©tat" et "selon disponibilitÃ©". Nous dÃ©clinons toute garantie implicite, y compris les garanties de qualitÃ© marchande, dâ€™adÃ©quation Ã  un usage particulier et de non-contrefaÃ§on.'
     },
     s9: {
-      title: '9. Responsabilité et Résiliation',
-      text: 'Dans la mesure permise par la loi, Yntra ne sera pas responsable des dommages indirects, accessoires ou consécutifs. Notre responsabilité totale est limitée aux montants que vous avez payés pour les services ayant donné lieu à la réclamation au cours des six (6) mois précédents, sauf disposition contraire dans un Accord Client. Nous pouvons suspendre ou résilier l’accès en cas de violation. Vous pouvez résilier par notification écrite ; les travaux effectués et les engagements non annulables doivent être payés. Si un Accord Client prévoit des délais de préavis spécifiques, ceux-ci prévalent.'
+      title: '9. ResponsabilitÃ© et RÃ©siliation',
+      text: 'Dans la mesure permise par la loi, Yntra ne sera pas responsable des dommages indirects, accessoires ou consÃ©cutifs. Notre responsabilitÃ© totale est limitÃ©e aux montants que vous avez payÃ©s pour les services ayant donnÃ© lieu Ã  la rÃ©clamation au cours des six (6) mois prÃ©cÃ©dents, sauf disposition contraire dans un Accord Client. Nous pouvons suspendre ou rÃ©silier lâ€™accÃ¨s en cas de violation. Vous pouvez rÃ©silier par notification Ã©crite ; les travaux effectuÃ©s et les engagements non annulables doivent Ãªtre payÃ©s. Si un Accord Client prÃ©voit des dÃ©lais de prÃ©avis spÃ©cifiques, ceux-ci prÃ©valent.'
     },
     s10: {
       title: '10. Droit Applicable et Litiges',
-      text: 'Les présentes Conditions sont régies par le droit suédois et le droit applicable de l’UE, à l’exclusion des règles de conflit de lois. Les litiges doivent d’abord être résolus par négociation ; à défaut, ils seront portés devant les tribunaux compétents en Suède, sauf disposition contraire dans un Accord Client.'
+      text: 'Les prÃ©sentes Conditions sont rÃ©gies par le droit suÃ©dois et le droit applicable de lâ€™UE, Ã  lâ€™exclusion des rÃ¨gles de conflit de lois. Les litiges doivent dâ€™abord Ãªtre rÃ©solus par nÃ©gociation ; Ã  dÃ©faut, ils seront portÃ©s devant les tribunaux compÃ©tents en SuÃ¨de, sauf disposition contraire dans un Accord Client.'
     },
     cta: {
       title: 'Des questions sur ces Conditions ?',
-      desc: 'Vous avez besoin de précisions ou d’un accord personnalisé ? Contactez-nous.',
+      desc: 'Vous avez besoin de prÃ©cisions ou dâ€™un accord personnalisÃ© ? Contactez-nous.',
       button: 'Nous contacter'
     }
   },
   privacy: {
-    title: 'Politique de confidentialité',
-    meta_description: 'Comment Yntra collecte, utilise et protège vos données personnelles.',
-    hero: 'Comment nous traitons vos données personnelles lorsque vous visitez notre site ou utilisez nos services.',
-    last_updated_label: 'Dernière mise à jour',
+    title: 'Politique de confidentialitÃ©',
+    meta_description: 'Comment Yntra collecte, utilise et protÃ¨ge vos donnÃ©es personnelles.',
+    hero: 'Comment nous traitons vos donnÃ©es personnelles lorsque vous visitez notre site ou utilisez nos services.',
+    last_updated_label: 'DerniÃ¨re mise Ã  jour',
     intro_card:
-      'Nous accordons une grande importance à votre vie privée et protégeons vos données personnelles. Cette politique explique comment nous collectons, utilisons et protégeons vos informations lorsque vous visitez notre site web ou utilisez nos services.',
+      'Nous accordons une grande importance Ã  votre vie privÃ©e et protÃ©geons vos donnÃ©es personnelles. Cette politique explique comment nous collectons, utilisons et protÃ©geons vos informations lorsque vous visitez notre site web ou utilisez nos services.',
     s1: {
-      title: '1. Données que nous collectons',
-      intro: 'Nous pouvons collecter les types de données suivants :',
+      title: '1. DonnÃ©es que nous collectons',
+      intro: 'Nous pouvons collecter les types de donnÃ©es suivants :',
       personal: {
-        title: 'Données personnelles',
-        desc: 'Par exemple : nom, adresse e‑mail, numéro de téléphone et informations d’entreprise lorsque vous nous contactez ou demandez un service.'
+        title: 'DonnÃ©es personnelles',
+        desc: 'Par exemple : nom, adresse eâ€‘mail, numÃ©ro de tÃ©lÃ©phone et informations dâ€™entreprise lorsque vous nous contactez ou demandez un service.'
       },
       technical: {
         title: 'Informations techniques',
-        desc: 'Par exemple : adresse IP, type de navigateur, informations sur l’appareil et données d’utilisation collectées automatiquement lorsque vous interagissez avec notre site.'
+        desc: 'Par exemple : adresse IP, type de navigateur, informations sur lâ€™appareil et donnÃ©es dâ€™utilisation collectÃ©es automatiquement lorsque vous interagissez avec notre site.'
       }
     },
     s2: {
-      title: '2. Comment nous utilisons les données',
-      intro: 'Nous utilisons les données pour :',
+      title: '2. Comment nous utilisons les donnÃ©es',
+      intro: 'Nous utilisons les donnÃ©es pour :',
       items: [
-        'Fournir, exploiter et améliorer nos services',
+        'Fournir, exploiter et amÃ©liorer nos services',
         'Communiquer avec vous au sujet des demandes, projets et du support',
-        'Analyser l’utilisation du site et améliorer l’expérience',
-        'Respecter nos obligations légales'
+        'Analyser lâ€™utilisation du site et amÃ©liorer lâ€™expÃ©rience',
+        'Respecter nos obligations lÃ©gales'
       ]
     },
     s3: {
-      title: '3. Partage des données',
-      dont_sell: 'Nous ne vendons, n’échangeons ni ne louons vos données personnelles.',
-      only_share_with: 'Nous partageons des données uniquement avec :',
+      title: '3. Partage des donnÃ©es',
+      dont_sell: 'Nous ne vendons, nâ€™Ã©changeons ni ne louons vos donnÃ©es personnelles.',
+      only_share_with: 'Nous partageons des donnÃ©es uniquement avec :',
       items: {
-        providers: 'Des prestataires de confiance nous aidant à exploiter le site et à fournir nos services.',
-        legal: 'Les autorités compétentes si la loi l’exige ou pour protéger nos droits.'
+        providers: 'Des prestataires de confiance nous aidant Ã  exploiter le site et Ã  fournir nos services.',
+        legal: 'Les autoritÃ©s compÃ©tentes si la loi lâ€™exige ou pour protÃ©ger nos droits.'
       }
     },
     s4: {
-      title: '4. Sécurité des données',
-      text: 'Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre l’accès non autorisé, la modification, la perte ou la suppression.'
+      title: '4. SÃ©curitÃ© des donnÃ©es',
+      text: 'Nous mettons en Å“uvre des mesures techniques et organisationnelles appropriÃ©es pour protÃ©ger vos donnÃ©es personnelles contre lâ€™accÃ¨s non autorisÃ©, la modification, la perte ou la suppression.'
     },
     s5: {
       title: '5. Vos droits',
-      intro: 'Selon votre lieu de résidence, vous pouvez avoir le droit de :',
+      intro: 'Selon votre lieu de rÃ©sidence, vous pouvez avoir le droit de :',
       items: [
-        'Accéder à vos données personnelles, les corriger ou les supprimer',
+        'AccÃ©der Ã  vos donnÃ©es personnelles, les corriger ou les supprimer',
         'Vous opposer au traitement ou le restreindre',
-        'Demander la portabilité des données',
-        'Retirer votre consentement à tout moment'
+        'Demander la portabilitÃ© des donnÃ©es',
+        'Retirer votre consentement Ã  tout moment'
       ],
-      contact_hint: 'Pour exercer ces droits, contactez‑nous à'
+      contact_hint: 'Pour exercer ces droits, contactezâ€‘nous Ã '
     },
     s6: {
       title: '6. Cookies',
-      text: 'Ce site web n’utilise pas de cookies ni de technologies de suivi similaires. Nous ne stockons ni ne collectons aucune information concernant votre visite par de tels moyens.'
+      text: 'Ce site web nâ€™utilise pas de cookies ni de technologies de suivi similaires. Nous ne stockons ni ne collectons aucune information concernant votre visite par de tels moyens.'
     },
     s7: {
       title: '7. Modifications de cette politique',
-      text: 'Nous pouvons mettre à jour la présente Politique de confidentialité de temps à autre. La version la plus récente sera toujours publiée sur cette page, accompagnée de la date de la dernière mise à jour. Si nous apportons des modifications importantes concernant la manière dont nous traitons vos données personnelles, nous vous en informerons de façon claire, par exemple par e-mail ou sur notre site web.'
+      text: 'Nous pouvons mettre Ã  jour la prÃ©sente Politique de confidentialitÃ© de temps Ã  autre. La version la plus rÃ©cente sera toujours publiÃ©e sur cette page, accompagnÃ©e de la date de la derniÃ¨re mise Ã  jour. Si nous apportons des modifications importantes concernant la maniÃ¨re dont nous traitons vos donnÃ©es personnelles, nous vous en informerons de faÃ§on claire, par exemple par e-mail ou sur notre site web.'
     },
     s8: {
-      title: '8. Conservation des données',
-      text: 'Nous conservons les données personnelles uniquement pendant la durée nécessaire à la réalisation des finalités décrites dans la présente Politique de confidentialité, sauf si une période de conservation plus longue est requise ou autorisée par la loi.'
+      title: '8. Conservation des donnÃ©es',
+      text: 'Nous conservons les donnÃ©es personnelles uniquement pendant la durÃ©e nÃ©cessaire Ã  la rÃ©alisation des finalitÃ©s dÃ©crites dans la prÃ©sente Politique de confidentialitÃ©, sauf si une pÃ©riode de conservation plus longue est requise ou autorisÃ©e par la loi.'
     },
     cta: {
       title: 'Des questions au sujet de cette politique ?',
-      desc: 'Si vous avez des questions concernant cette politique de confidentialité, n’hésitez pas à nous contacter.',
+      desc: 'Si vous avez des questions concernant cette politique de confidentialitÃ©, nâ€™hÃ©sitez pas Ã  nous contacter.',
       button: 'Nous contacter'
     }
   },
   help: {
-    meta_title: 'Centre d’aide — Yntra',
-    meta_description: 'Trouvez des réponses, des guides et des ressources pour bien démarrer avec Yntra.',
-    title: 'Centre d’aide',
-    subtitle: 'Des réponses rapides aux questions fréquentes, des guides à lire et de l’assistance quand vous en avez besoin.',
+    meta_title: 'Centre dâ€™aide â€” Yntra',
+    meta_description: 'Trouvez des rÃ©ponses, des guides et des ressources pour bien dÃ©marrer avec Yntra.',
+    title: 'Centre dâ€™aide',
+    subtitle: 'Des rÃ©ponses rapides aux questions frÃ©quentes, des guides Ã  lire et de lâ€™assistance quand vous en avez besoin.',
     search_open_aria: 'Ouvrir la recherche',
-    search_input_aria: 'Rechercher dans le Centre d’aide',
-    search_placeholder: 'Rechercher dans le Centre d’aide…',
+    search_input_aria: 'Rechercher dans le Centre dâ€™aide',
+    search_placeholder: 'Rechercher dans le Centre dâ€™aideâ€¦',
     search_suggestions_aria: 'Suggestions de recherche',
     categories: {
-      title: 'Explorer les catégories',
-      subtitle: 'L’essentiel regroupé pour démarrer, comprendre les tarifs et notre mode de livraison.',
-      more_help: 'Besoin de plus d’aide ?'
+      title: 'Explorer les catÃ©gories',
+      subtitle: 'Lâ€™essentiel regroupÃ© pour dÃ©marrer, comprendre les tarifs et notre mode de livraison.',
+      more_help: 'Besoin de plus dâ€™aide ?'
     },
     groups: {
-      getting_started: { title: 'Bien démarrer' },
+      getting_started: { title: 'Bien dÃ©marrer' },
       services_pricing: { title: 'Services & tarifs' },
       project_delivery: { title: 'Projet & livraison' },
-      tech_hosting: { title: 'Technologie & hébergement' },
+      tech_hosting: { title: 'Technologie & hÃ©bergement' },
       billing: { title: 'Facturation' },
       contact: { title: 'Contact' }
     },
     articles: {
-      'getting-started': { title: 'Comment démarrer un projet ?', category: 'Bien démarrer' },
-      pricing: { title: 'Combien coûte un site web ?', category: 'Services & tarifs' },
+      'getting-started': { title: 'Comment dÃ©marrer un projet ?', category: 'Bien dÃ©marrer' },
+      pricing: { title: 'Combien coÃ»te un site web ?', category: 'Services & tarifs' },
       process: { title: 'Quel est le processus de bout en bout ?', category: 'Projet & livraison' },
-      tech: { title: 'Quelle stack et quel hébergement utilisez-vous ?', category: 'Technologie & hébergement' },
+      tech: { title: 'Quelle stack et quel hÃ©bergement utilisez-vous ?', category: 'Technologie & hÃ©bergement' },
       billing: { title: 'Comment fonctionnent la facturation et le paiement ?', category: 'Facturation' },
       'contact-support': { title: 'Comment contacter le support ?', category: 'Contact' },
-      requirements: { title: 'De quoi avons‑nous besoin de votre part ?', category: 'Bien démarrer' },
+      requirements: { title: 'De quoi avonsâ€‘nous besoin de votre part ?', category: 'Bien dÃ©marrer' },
       scope: { title: 'Que comprend chaque offre ?', category: 'Services & tarifs' },
-      addons: { title: 'Options & post‑achat', category: 'Services & tarifs' },
-      quality: { title: 'Qualité & tests', category: 'Projet & livraison' },
+      addons: { title: 'Options & postâ€‘achat', category: 'Services & tarifs' },
+      quality: { title: 'QualitÃ© & tests', category: 'Projet & livraison' },
       handover: { title: 'Mise en ligne & passation', category: 'Projet & livraison' },
-      performance: { title: 'Performance & SEO', category: 'Technologie & hébergement' },
-      security: { title: 'Sécurité & sauvegarde', category: 'Technologie & hébergement' },
+      performance: { title: 'Performance & SEO', category: 'Technologie & hÃ©bergement' },
+      security: { title: 'SÃ©curitÃ© & sauvegarde', category: 'Technologie & hÃ©bergement' },
       payments: { title: 'Modes de paiement', category: 'Facturation' },
-      terms: { title: 'Contrats & résiliation', category: 'Facturation' },
-      slas: { title: 'Délais de réponse (SLA)', category: 'Contact' },
+      terms: { title: 'Contrats & rÃ©siliation', category: 'Facturation' },
+      slas: { title: 'DÃ©lais de rÃ©ponse (SLA)', category: 'Contact' },
       book: { title: 'Planifier un appel', category: 'Contact' }
     },
     answers: {
-      more_info: 'Plus d’informations',
-      fallback: 'Détails à venir.',
+      more_info: 'Plus dâ€™informations',
+      fallback: 'DÃ©tails Ã  venir.',
       'getting-started': {
         title: 'Lancement de projet & onboarding',
         paragraphs: [
-          'Décrivez vos objectifs, votre audience et les exigences clés. Nous reviendrons avec une solution recommandée, un calendrier et un modèle de tarification.',
-          'Au démarrage, nous ouvrons un canal commun (ex. Slack) et alignons le périmètre et les priorités.'
+          'DÃ©crivez vos objectifs, votre audience et les exigences clÃ©s. Nous reviendrons avec une solution recommandÃ©e, un calendrier et un modÃ¨le de tarification.',
+          'Au dÃ©marrage, nous ouvrons un canal commun (ex. Slack) et alignons le pÃ©rimÃ¨tre et les prioritÃ©s.'
         ]
       },
       pricing: {
-        title: 'Modèles de tarification',
+        title: 'ModÃ¨les de tarification',
         paragraphs: [
-          'Forfaits fixes quand les livrables sont clairs ; régie (T&M) pour un développement itératif.',
-          'Tous les modèles incluent QA, support de mise en ligne et gestion de projet dans un périmètre raisonnable.'
+          'Forfaits fixes quand les livrables sont clairs ; rÃ©gie (T&M) pour un dÃ©veloppement itÃ©ratif.',
+          'Tous les modÃ¨les incluent QA, support de mise en ligne et gestion de projet dans un pÃ©rimÃ¨tre raisonnable.'
         ]
       },
       process: {
-        title: 'Processus de design & développement',
+        title: 'Processus de design & dÃ©veloppement',
         paragraphs: [
-          'Discovery → Design → Développement → Tests → Mise en ligne → Support.',
-          'Travail transparent avec démos régulières et itérations courtes pour un feedback rapide.'
+          'Discovery â†’ Design â†’ DÃ©veloppement â†’ Tests â†’ Mise en ligne â†’ Support.',
+          'Travail transparent avec dÃ©mos rÃ©guliÃ¨res et itÃ©rations courtes pour un feedback rapide.'
         ]
       },
       requirements: {
         title: 'Ce dont nous avons besoin',
         paragraphs: [
-          'Assets (logo, guidelines), contenus existants et éventuelles références.',
-          'Accès pour les intégrations (clés API, etc.) et un contact pour des décisions rapides.'
+          'Assets (logo, guidelines), contenus existants et Ã©ventuelles rÃ©fÃ©rences.',
+          'AccÃ¨s pour les intÃ©grations (clÃ©s API, etc.) et un contact pour des dÃ©cisions rapides.'
         ]
       },
       scope: {
         title: 'Ce que comprennent les offres',
         paragraphs: [
-          'Livrables précisés dans le devis/SoW : pages, vues, fonctionnalités, intégrations et passation.',
-          'Des options peuvent être ajoutées selon les besoins.'
+          'Livrables prÃ©cisÃ©s dans le devis/SoW : pages, vues, fonctionnalitÃ©s, intÃ©grations et passation.',
+          'Des options peuvent Ãªtre ajoutÃ©es selon les besoins.'
         ]
       },
       addons: {
-        title: 'Options & post‑achat',
+        title: 'Options & postâ€‘achat',
         paragraphs: [
-          'Exemples : langues supplémentaires, modèles de page, expériences growth, A/B tests, SEO étendu.',
-          'Des offres de support et d’amélioration continue peuvent être souscrites.'
+          'Exemples : langues supplÃ©mentaires, modÃ¨les de page, expÃ©riences growth, A/B tests, SEO Ã©tendu.',
+          'Des offres de support et dâ€™amÃ©lioration continue peuvent Ãªtre souscrites.'
         ]
       },
       quality: {
-        title: 'Qualité & tests',
+        title: 'QualitÃ© & tests',
         paragraphs: [
-          'Tests automatisés et manuels, contrôles de performance et d’accessibilité.',
-          'Les anomalies détectées dans la fenêtre convenue sont corrigées sans frais.'
+          'Tests automatisÃ©s et manuels, contrÃ´les de performance et dâ€™accessibilitÃ©.',
+          'Les anomalies dÃ©tectÃ©es dans la fenÃªtre convenue sont corrigÃ©es sans frais.'
         ]
       },
       handover: {
         title: 'Mise en ligne & passation',
         paragraphs: [
-          'Plan de mise en ligne avec stratégie de rollback, documentation et transfert de connaissances.',
-          'Suivi et mesure post‑lancement possibles.'
+          'Plan de mise en ligne avec stratÃ©gie de rollback, documentation et transfert de connaissances.',
+          'Suivi et mesure postâ€‘lancement possibles.'
         ]
       },
       tech: {
         title: 'Stack & outils',
         paragraphs: [
-          'Stack web moderne (ex. SvelteKit) orienté performance, sécurité et DX.',
-          'Hébergement selon les besoins : edge/CDN ou environnements conteneurisés.'
+          'Stack web moderne (ex. SvelteKit) orientÃ© performance, sÃ©curitÃ© et DX.',
+          'HÃ©bergement selon les besoins : edge/CDN ou environnements conteneurisÃ©s.'
         ]
       },
       performance: {
         title: 'Performance & SEO',
         paragraphs: [
-          'Core Web Vitals, optimisation d’images et cache par défaut.',
-          'SEO technique et données structurées lorsque pertinent.'
+          'Core Web Vitals, optimisation dâ€™images et cache par dÃ©faut.',
+          'SEO technique et donnÃ©es structurÃ©es lorsque pertinent.'
         ]
       },
       security: {
-        title: 'Sécurité & sauvegarde',
+        title: 'SÃ©curitÃ© & sauvegarde',
         paragraphs: [
-          'Dépendances sécurisées, protection contre les attaques courantes, accès basé sur les rôles.',
-          'Procédures de sauvegarde et restauration selon RPO/RTO convenus.'
+          'DÃ©pendances sÃ©curisÃ©es, protection contre les attaques courantes, accÃ¨s basÃ© sur les rÃ´les.',
+          'ProcÃ©dures de sauvegarde et restauration selon RPO/RTO convenus.'
         ]
       },
       billing: {
         title: 'Rythme de facturation',
         paragraphs: [
-          'Mensuel à terme échu ou par jalon. 30 jours nets par défaut.',
-          'Le temps non utilisé peut être imputé selon l’accord.'
+          'Mensuel Ã  terme Ã©chu ou par jalon. 30 jours nets par dÃ©faut.',
+          'Le temps non utilisÃ© peut Ãªtre imputÃ© selon lâ€™accord.'
         ]
       },
       payments: {
         title: 'Modes de paiement',
         paragraphs: [
-          'Virement, carte ou transfert international selon l’entité.',
-          'La facture comprend les temps et livrables par période.'
+          'Virement, carte ou transfert international selon lâ€™entitÃ©.',
+          'La facture comprend les temps et livrables par pÃ©riode.'
         ]
       },
       terms: {
-        title: 'Contrats & résiliation',
+        title: 'Contrats & rÃ©siliation',
         paragraphs: [
-          'Conditions et délais indiqués dans l’Accord Client/SoW.',
-          'Le travail peut être suspendu en cas de retard de paiement après notification.'
+          'Conditions et dÃ©lais indiquÃ©s dans lâ€™Accord Client/SoW.',
+          'Le travail peut Ãªtre suspendu en cas de retard de paiement aprÃ¨s notification.'
         ]
       },
       'contact-support': {
         title: 'Canaux de support',
         paragraphs: [
-          'Écrivez‑nous à info@yntra.se pour toute demande. Pour les projets en cours, nous utilisons un canal Slack dédié.',
-          'Les incidents urgents sont priorisés conformément au SLA convenu.'
+          'Ã‰crivezâ€‘nous Ã  info@yntra.se pour toute demande. Pour les projets en cours, nous utilisons un canal Slack dÃ©diÃ©.',
+          'Les incidents urgents sont priorisÃ©s conformÃ©ment au SLA convenu.'
         ]
       },
       slas: {
-        title: 'Délais de réponse (SLA)',
+        title: 'DÃ©lais de rÃ©ponse (SLA)',
         paragraphs: [
-          'Demandes standard : réponse sous 1 jour ouvré. Urgent : accusé immédiat et plan d’action.',
-          'Disponibilité et astreintes possibles via des offres de support.'
+          'Demandes standard : rÃ©ponse sous 1 jour ouvrÃ©. Urgent : accusÃ© immÃ©diat et plan dâ€™action.',
+          'DisponibilitÃ© et astreintes possibles via des offres de support.'
         ]
       },
       book: {
         title: 'Planifier un appel',
         paragraphs: [
-          'Choisissez un créneau adapté. Nous passerons en revue les besoins, le périmètre et les prochaines étapes.',
-          'Vous recevez une invitation calendrier et une confirmation par e‑mail.'
+          'Choisissez un crÃ©neau adaptÃ©. Nous passerons en revue les besoins, le pÃ©rimÃ¨tre et les prochaines Ã©tapes.',
+          'Vous recevez une invitation calendrier et une confirmation par eâ€‘mail.'
         ]
       }
     },
     faq: {
-      title: 'Questions fréquentes',
+      title: 'Questions frÃ©quentes',
       items: [
-        { q: 'À quelle vitesse répondez‑vous aux nouvelles demandes ?', a: 'Généralement sous 1 jour ouvré. Plus rapidement pour les urgences.' },
-        { q: 'Incluez‑vous une garantie et des correctifs après la livraison ?', a: 'Oui — pendant la période convenue, nous corrigeons sans frais.' },
-        { q: 'Pouvez‑vous travailler sur une base de code/design existante ?', a: 'Oui. Nous faisons une revue technique/UX et recommandons la meilleure voie.' },
-        { q: 'Comment gérez‑vous les changements en cours de projet ?', a: 'Priorisation dans le backlog et estimation de l’impact. Les petits ajustements tiennent souvent dans un sprint.' },
-        { q: 'Proposez‑vous un support continu après la mise en ligne ?', a: 'Oui — offres flexibles (SLA, améliorations, monitoring, incidents).' }
+        { q: 'Ã€ quelle vitesse rÃ©pondezâ€‘vous aux nouvelles demandes ?', a: 'GÃ©nÃ©ralement sous 1 jour ouvrÃ©. Plus rapidement pour les urgences.' },
+        { q: 'Incluezâ€‘vous une garantie et des correctifs aprÃ¨s la livraison ?', a: 'Oui â€” pendant la pÃ©riode convenue, nous corrigeons sans frais.' },
+        { q: 'Pouvezâ€‘vous travailler sur une base de code/design existante ?', a: 'Oui. Nous faisons une revue technique/UX et recommandons la meilleure voie.' },
+        { q: 'Comment gÃ©rezâ€‘vous les changements en cours de projet ?', a: 'Priorisation dans le backlog et estimation de lâ€™impact. Les petits ajustements tiennent souvent dans un sprint.' },
+        { q: 'Proposezâ€‘vous un support continu aprÃ¨s la mise en ligne ?', a: 'Oui â€” offres flexibles (SLA, amÃ©liorations, monitoring, incidents).' }
       ]
     },
     cta: {
       title: 'Vous ne trouvez pas ce que vous cherchez ?',
-      subtitle: 'Notre équipe sera ravie de répondre à vos questions et de vous orienter vers la bonne solution.',
+      subtitle: 'Notre Ã©quipe sera ravie de rÃ©pondre Ã  vos questions et de vous orienter vers la bonne solution.',
       contact: 'Nous contacter',
       book_call: 'Planifier un appel'
     },
@@ -488,15 +488,15 @@ export default {
   },
   modal: {
     title: 'Nous contacter',
-    desc: 'Partagez quelques informations et nous vous répondrons rapidement.',
-    company_label: 'Nom de l’entreprise',
+    desc: 'Partagez quelques informations et nous vous rÃ©pondrons rapidement.',
+    company_label: 'Nom de lâ€™entreprise',
     company_placeholder: 'Ex. Yntra AB',
-    tel_label: 'Téléphone',
+    tel_label: 'TÃ©lÃ©phone',
     tel_placeholder: 'Ex. +46 70 123 45 67',
-    email_label: 'E‑mail',
+    email_label: 'Eâ€‘mail',
     email_placeholder: 'Ex. vous@entreprise.com',
     message_label: 'Message',
-    message_placeholder: 'Parlez‑nous de votre projet ou question…',
+    message_placeholder: 'Parlezâ€‘nous de votre projet ou questionâ€¦',
     cancel: 'Annuler',
     send: 'Envoyer',
     privacy: 'Nous ne partagerons jamais vos informations.',
@@ -504,32 +504,32 @@ export default {
   },
   schedule: {
     title: 'Planifier un appel',
-    desc: 'Choisissez un créneau qui vous convient. Nous échangerons en ligne sur vos besoins et les prochaines étapes.',
-    length_label: 'Durée',
+    desc: 'Choisissez un crÃ©neau qui vous convient. Nous Ã©changerons en ligne sur vos besoins et les prochaines Ã©tapes.',
+    length_label: 'DurÃ©e',
     min: 'min',
-    type_label: 'Type de rendez‑vous',
-    type_phone: 'Téléphone',
+    type_label: 'Type de rendezâ€‘vous',
+    type_phone: 'TÃ©lÃ©phone',
     pick_time: 'Choisir un jour et une heure',
-    timezone_prefix: 'Heures affichées en',
-    custom_label: 'Autre…',
+    timezone_prefix: 'Heures affichÃ©es en',
+    custom_label: 'Autreâ€¦',
     custom_pick_label: 'Choisir une date',
-    no_slots: 'Aucun créneau disponible ce jour‑là',
+    no_slots: 'Aucun crÃ©neau disponible ce jourâ€‘lÃ ',
     name_label: 'Nom',
     name_placeholder: 'Ex. Jane Doe',
-    email_label: 'E‑mail',
+    email_label: 'Eâ€‘mail',
     email_placeholder: 'Ex. vous@entreprise.com',
     company_label: 'Entreprise',
     company_placeholder: 'Ex. Yntra AB',
-    tel_label: 'Téléphone',
+    tel_label: 'TÃ©lÃ©phone',
     tel_placeholder: 'Ex. +46 70 123 45 67',
     notes_label: 'Notes (optionnel)',
-    notes_placeholder: 'Souhaitez‑vous aborder un sujet précis ?',
+    notes_placeholder: 'Souhaitezâ€‘vous aborder un sujet prÃ©cis ?',
     cancel: 'Annuler',
-    confirm: 'Confirmer la réservation',
+    confirm: 'Confirmer la rÃ©servation',
     privacy: 'Nous enverrons une confirmation et une invitation calendrier.',
     close: 'Fermer',
-    select_time_required: 'Veuillez sélectionner un créneau horaire.',
-    prev_day: 'Jour précédent',
+    select_time_required: 'Veuillez sÃ©lectionner un crÃ©neau horaire.',
+    prev_day: 'Jour prÃ©cÃ©dent',
     next_day: 'Jour suivant',
     calendar_open: 'Ouvrir le calendrier',
     clear_date: 'Effacer la date'

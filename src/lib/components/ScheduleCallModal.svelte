@@ -19,7 +19,6 @@
 
   const dispatch = createEventDispatcher<{
     submit: {
-      length: number;
       type: MeetingType;
       timezone: string;
       dateISO: string;
@@ -35,7 +34,6 @@
   let dialogEl: HTMLDivElement | null = null;
   let formEl: HTMLFormElement | null = null;
 
-  let selectedLength = 30;
   let selectedType: MeetingType = 'meet';
   let tz = 'UTC';
   let days: Date[] = [];
@@ -86,11 +84,9 @@
     const endH = 17;
     const endMinutes = endH * 60;
     for (let m = startH * 60; m < endMinutes; m += stepMin) {
-      if (m + selectedLength <= endMinutes) {
-        const hh = Math.floor(m / 60);
-        const mm = m % 60;
-        results.push(`${pad(hh)}:${pad(mm)}`);
-      }
+      const hh = Math.floor(m / 60);
+      const mm = m % 60;
+      results.push(`${pad(hh)}:${pad(mm)}`);
     }
     return results;
   }
@@ -259,7 +255,6 @@
     const baseDate = useCustomDate ? customDay : days[selectedDayIndex];
     if (!baseDate) return;
     const payload = {
-      length: selectedLength,
       type: selectedType,
       timezone: tz,
       dateISO: buildDateISO(baseDate, selectedTime),
@@ -305,7 +300,7 @@
   }
 
   $: if (browser) {
-    selectedLength, selectedDayIndex, days, useCustomDate, customDay;
+    selectedDayIndex, days, useCustomDate, customDay;
     refreshSlots();
   }
 
@@ -548,5 +543,3 @@
     }
   }
  </style>
-
-

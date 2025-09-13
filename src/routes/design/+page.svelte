@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { t } from '$lib/i18n';
   import { onDestroy } from 'svelte';
   import ChevronRight from 'lucide-svelte/icons/chevron-right';
@@ -25,12 +25,12 @@
   <meta name="description" content={$t('design.meta_description')} />
 </svelte:head>
 
-<!-- Hero with video background -->
+
 <section class="relative isolate min-h-[520px] flex items-center text-white overflow-hidden">
   <div class="absolute inset-0 -z-10">
     <video bind:this={bgVideo} class="h-full w-full object-cover object-[center_85%] md:object-[center_75%] opacity-70" autoplay muted loop playsinline preload="metadata">
       <source src="/media/UI.mp4" type="video/mp4" />
-      <!-- Fallback if local file missing -->
+      
       <source src="https://videos.pexels.com/video-files/3048485/3048485-uhd_2560_1440_30fps.mp4" type="video/mp4" />
     </video>
     <div class="absolute inset-0 bg-[linear-gradient(45deg,rgba(0,0,0,.15)_0%,rgba(0,0,0,.3)_60%,rgba(0,0,0,.15)_100%)]"></div>
@@ -52,7 +52,7 @@
 
 <section class="py-14 md:py-20">
   <div class="max-w-[895px] mx-auto px-6 md:px-0 space-y-10 md:space-y-14">
-    <!-- What we design -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -81,7 +81,7 @@
       </div>
     </div>
 
-    <!-- Principles -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -96,7 +96,7 @@
       </ul>
     </div>
 
-    <!-- Process (design-focused) -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -114,7 +114,7 @@
       </div>
     </div>
 
-    <!-- CTA -->
+    
     <div class="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 md:p-10">
       <div class="flex items-start gap-4">
         <div class="shrink-0 h-10 w-10 rounded-xl bg-[color-mix(in_oklab,var(--accent)_16%,white)] text-[var(--accent)] grid place-items-center ring-1 ring-slate-200/70">
@@ -133,4 +133,3 @@
     </div>
   </div>
 </section>
-

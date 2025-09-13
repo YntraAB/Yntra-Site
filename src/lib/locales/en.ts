@@ -1,4 +1,4 @@
-import base from './en.json';
+﻿import base from './en.json';
 
 export default {
   ...base,
@@ -8,13 +8,13 @@ export default {
   },
   design: {
     title: 'Design',
-    meta_description: 'We craft clear, brand‑strong experiences for web and apps — from research to a production‑ready design system.',
+    meta_description: 'We craft clear, brandâ€‘strong experiences for web and apps â€” from research to a productionâ€‘ready design system.',
     badge: 'Design Expertise',
-    hero: 'Years of experience in UX/UI and brand‑driven design for websites and mission‑critical apps. We combine research, clear flows, and consistent UI into solutions that convert better and feel right in hand.',
+    hero: 'Years of experience in UX/UI and brandâ€‘driven design for websites and missionâ€‘critical apps. We combine research, clear flows, and consistent UI into solutions that convert better and feel right in hand.',
     cta_primary: 'Talk design with us',
     s1: {
       title: 'What we design',
-      intro: 'From marketing sites to product interfaces and design systems — we deliver consistent, scalable design that works in the real world.',
+      intro: 'From marketing sites to product interfaces and design systems â€” we deliver consistent, scalable design that works in the real world.',
       web: { title: 'Websites', desc: 'Marketing, campaign, and corporate sites that load fast and convert.' },
       apps: { title: 'Systems & Apps', desc: 'Dashboards, internal tools, and portals focused on clarity and efficiency.' },
       brand: { title: 'Brand & UI', desc: 'Visual identity, voice, and UI components that strengthen the whole.' },
@@ -23,36 +23,36 @@ export default {
     s2: {
       title: 'Our principles',
       items: [
-        'Clarity first — every screen needs a clear goal',
-        'Consistency and scale — shared patterns, faster teams',
-        'Performance and feel — fast, easy‑to‑navigate experiences',
-        'Accessibility (WCAG) — design for all users'
+        'Clarity first â€” every screen needs a clear goal',
+        'Consistency and scale â€” shared patterns, faster teams',
+        'Performance and feel â€” fast, easyâ€‘toâ€‘navigate experiences',
+        'Accessibility (WCAG) â€” design for all users'
       ]
     },
     s3: {
       title: 'Design process at a glance',
       steps: [
         { title: 'Research & definition', desc: 'Goals, users, market, and constraints. We frame the problems and success metrics.' },
-        { title: 'Flows & wireframes', desc: 'Task flows and low‑fidelity that unlock early decisions and feedback.' },
+        { title: 'Flows & wireframes', desc: 'Task flows and lowâ€‘fidelity that unlock early decisions and feedback.' },
         { title: 'UI & prototype', desc: 'Visual exploration, components, and interactive prototype for fast validation.' },
         { title: 'Design system & handover', desc: 'Tokens, guidelines, documentation, and support during implementation.' }
       ]
     },
     cta_title: 'Ready to elevate your design?',
-    cta_desc: 'Tell us about your audience and challenge — we’ll propose a pragmatic, launchable plan.',
+    cta_desc: 'Tell us about your audience and challenge â€” weâ€™ll propose a pragmatic, launchable plan.',
     tools_title: 'Tools & deliverables'
   },
   system: {
     title: 'Applications',
-    meta_description: 'We design and develop applications for mobile, web, and enterprise — tailored to your needs.',
+    meta_description: 'We design and develop applications for mobile, web, and enterprise â€” tailored to your needs.',
     badge: 'Applications',
-    hero: 'We build modern applications — mobile (iOS/Android), web, and desktop. Robust code, sharp UX, and integrations that matter.',
+    hero: 'We build modern applications â€” mobile (iOS/Android), web, and desktop. Robust code, sharp UX, and integrations that matter.',
     cta_primary: 'Talk applications with us',
     s1: {
       title: 'What we build',
-      intro: 'Mobile apps, web apps, and enterprise applications — from idea to launch and beyond.',
-      internal: { title: 'Mobile applications', desc: 'iOS/Android with web‑native wrappers (e.g., Capacitor/Tauri) for offline, push, and performance.' },
-      automation: { title: 'Web applications', desc: 'Portals, dashboards, booking, commerce, and real‑time data flows that scale.' },
+      intro: 'Mobile apps, web apps, and enterprise applications â€” from idea to launch and beyond.',
+      internal: { title: 'Mobile applications', desc: 'iOS/Android with webâ€‘native wrappers (e.g., Capacitor/Tauri) for offline, push, and performance.' },
+      automation: { title: 'Web applications', desc: 'Portals, dashboards, booking, commerce, and realâ€‘time data flows that scale.' },
       enterprise: { title: 'Enterprise applications', desc: 'RBAC, SSO, audit trails, scalability, and reliable operations (CI/CD + monitoring).' },
       custom: { title: 'Integrations & automation', desc: 'ERP/CRM integrations, payments, data pipelines, and background jobs.' }
     },
@@ -61,14 +61,14 @@ export default {
       items: [
         'Many years shipping complex applications to production',
         'Reliability: testing, logging, monitoring, and routines',
-        'Security and access from the start (least‑privilege)',
-        'Clear docs and long‑term maintainability'
+        'Security and access from the start (leastâ€‘privilege)',
+        'Clear docs and longâ€‘term maintainability'
       ]
     },
     s3: {
       title: 'Delivery & tech',
       stack_title: 'Tech stack',
-      stack_text: 'SvelteKit/Node for web; web‑native wrappers (Capacitor/Tauri) for mobile/desktop. API‑first, strong typing, CI/CD, and cloud ops — pragmatic choices for your context.',
+      stack_text: 'SvelteKit/Node for web; webâ€‘native wrappers (Capacitor/Tauri) for mobile/desktop. APIâ€‘first, strong typing, CI/CD, and cloud ops â€” pragmatic choices for your context.',
       delivery_title: 'Delivery approach',
       delivery_text: 'Short iterations, weekly demos, preview environments, and transparency. We ship value early and often.'
     },
@@ -78,19 +78,19 @@ export default {
       uptime: '99.9%', uptime_label: 'Typical uptime'
     },
     cta_title: 'Ready to build your next system?',
-    cta_desc: 'Tell us about your processes and goals — we’ll propose a solution that can launch and scale.'
+    cta_desc: 'Tell us about your processes and goals â€” weâ€™ll propose a solution that can launch and scale.'
   },
   process: {
     title: 'Our process',
-    subtitle: 'From idea to launch — transparent, efficient, and quality at every step.',
+    subtitle: 'From idea to launch â€” transparent, efficient, and quality at every step.',
     overview: {
       title: 'One focus: outcomes, without friction',
-      text: 'We guide you from idea to launch through a clear, transparent process that reduces risk and maximizes speed. You get visible progress every week, short decision cycles, and a team owning the whole — design, development, integrations, testing, and handover.',
+      text: 'We guide you from idea to launch through a clear, transparent process that reduces risk and maximizes speed. You get visible progress every week, short decision cycles, and a team owning the whole â€” design, development, integrations, testing, and handover.',
       points: [
         'Short iterations with weekly demos',
         'Traceable backlog and clear deliverables',
         'Accessibility, performance, and security from day one',
-        'Handover and docs for long‑term ownership'
+        'Handover and docs for longâ€‘term ownership'
       ]
     },
     timeline_title: 'Step by step',
@@ -105,9 +105,9 @@ export default {
     timeframes: {
       title: 'Typical timelines',
       marketing_title: 'Marketing website',
-      marketing_desc: '4–8 weeks — depending on page count, content, and integrations.',
+      marketing_desc: '4â€“8 weeks â€” depending on page count, content, and integrations.',
       product_title: 'System/app',
-      product_desc: '6–12+ weeks — driven by complexity, data model, and external dependencies.'
+      product_desc: '6â€“12+ weeks â€” driven by complexity, data model, and external dependencies.'
     },
     details: {
       discovery: ['OKRs/KPIs', 'Sitemap/flows', 'Backlog/SoW', 'Plan & risks'],
@@ -120,7 +120,7 @@ export default {
     collaboration: {
       title: 'Collaboration & communication',
       items: [
-        'Weekly meetings + demo/check‑ins',
+        'Weekly meetings + demo/checkâ€‘ins',
         'Async updates and release notes',
         'Single point of contact, fast feedback',
         'Access to backlog and issues'
@@ -138,13 +138,13 @@ export default {
     pricing: {
       title: 'Pricing & engagement',
       fixed_title: 'Fixed price',
-      fixed_desc: 'When scope is well‑defined. Quote with deliverables, milestones, and dates.',
+      fixed_desc: 'When scope is wellâ€‘defined. Quote with deliverables, milestones, and dates.',
       tm_title: 'Time & Materials',
       tm_desc: 'For iterative development. Weekly reporting and clear priorities.'
     },
     cta: {
       title: 'Ready to build together?',
-      desc: 'Tell us your goals. We’ll propose a pragmatic plan that balances speed, quality, and budget — and deliver.',
+      desc: 'Tell us your goals. Weâ€™ll propose a pragmatic plan that balances speed, quality, and budget â€” and deliver.',
       contact: 'Contact us'
     }
   },
@@ -157,11 +157,11 @@ export default {
   },
   terms: {
     title: 'Terms of Service',
-    meta_description: 'Terms governing your use of Yntra’s website and services.',
+    meta_description: 'Terms governing your use of Yntraâ€™s website and services.',
     hero: 'Please read these terms carefully. By visiting the website or using our services you agree to them.',
     last_updated_label: 'Last updated',
     intro_card:
-      'These Terms of Service ("Terms") govern your access to and use of Yntra’s website and the services we provide. If you are accepting the Terms on behalf of a company, you represent that you have the authority to bind that company. If you do not accept the Terms, do not use our website or services. If a separate signed customer agreement ("Customer Agreement") exists, that agreement shall prevail in the event of any conflict with these Terms.',
+      'These Terms of Service ("Terms") govern your access to and use of Yntraâ€™s website and the services we provide. If you are accepting the Terms on behalf of a company, you represent that you have the authority to bind that company. If you do not accept the Terms, do not use our website or services. If a separate signed customer agreement ("Customer Agreement") exists, that agreement shall prevail in the event of any conflict with these Terms.',
     s1: {
       title: '1. Acceptance and Changes',
       acceptance: {
@@ -201,7 +201,7 @@ export default {
       title: '5. Confidentiality and Data Protection',
       intro: 'The parties may exchange confidential information. Each party agrees to:',
       items: [
-        'Use the other party’s confidential information only to fulfill obligations under these Terms',
+        'Use the other partyâ€™s confidential information only to fulfill obligations under these Terms',
         'Protect such information with reasonable care and not disclose it to third parties',
         'Return or delete confidential information upon request, unless retention is legally required',
         'Process personal data in compliance with applicable data protection laws'
@@ -218,7 +218,7 @@ export default {
     },
     s8: {
       title: '8. Warranties and Disclaimers',
-      text: 'Unless expressly stated in a Customer Agreement, the website and services are provided “as is” and “as available”. We disclaim implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.'
+      text: 'Unless expressly stated in a Customer Agreement, the website and services are provided â€œas isâ€ and â€œas availableâ€. We disclaim implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.'
     },
     s9: {
       title: '9. Liability and Termination',
@@ -306,7 +306,7 @@ export default {
   },
   modal: {
     title: 'Contact us',
-    desc: 'Share a few details and we’ll get back to you shortly.',
+    desc: 'Share a few details and weâ€™ll get back to you shortly.',
     company_label: 'Company name',
     company_placeholder: 'e.g. Yntra AB',
     tel_label: 'Tel',
@@ -317,19 +317,19 @@ export default {
     message_placeholder: 'Tell us about your project or question...',
     cancel: 'Cancel',
     send: 'Send',
-    privacy: 'We’ll never share your info.',
+    privacy: 'Weâ€™ll never share your info.',
     close: 'Close'
   },
   schedule: {
     title: 'Book a call',
-    desc: 'Pick a time that works for you. We’ll meet online and discuss your needs and next steps.',
+    desc: 'Pick a time that works for you. Weâ€™ll meet online and discuss your needs and next steps.',
     length_label: 'Duration',
     min: 'min',
     type_label: 'Meeting type',
     type_phone: 'Phone',
     pick_time: 'Pick a day and time',
     timezone_prefix: 'Times shown in',
-    custom_label: 'Custom…',
+    custom_label: 'Customâ€¦',
     custom_pick_label: 'Pick a date',
     no_slots: 'No available slots on this day',
     name_label: 'Name',
@@ -341,10 +341,10 @@ export default {
     tel_label: 'Tel',
     tel_placeholder: 'e.g. +46 70 123 45 67',
     notes_label: 'Notes (optional)',
-    notes_placeholder: 'Anything specific you’d like to cover?',
+    notes_placeholder: 'Anything specific youâ€™d like to cover?',
     cancel: 'Cancel',
     confirm: 'Confirm booking',
-    privacy: 'We’ll send a confirmation and calendar invite.' ,
+    privacy: 'Weâ€™ll send a confirmation and calendar invite.' ,
     close: 'Close',
     select_time_required: 'Please select a time slot.',
     prev_day: 'Previous day',
@@ -354,25 +354,25 @@ export default {
   },
   about: {
     title: 'About Us',
-    meta_description: 'We build high‑performing websites, systems, and apps with clean custom code — no templates.',
-    hero: 'We build custom websites and business systems/apps. Mostly in Svelte, Tailwind, and TypeScript — and happily in other stacks on request. No templates or WordPress — just clean, handcrafted code that fits your business and scales with you.',
+    meta_description: 'We build highâ€‘performing websites, systems, and apps with clean custom code â€” no templates.',
+    hero: 'We build custom websites and business systems/apps. Mostly in Svelte, Tailwind, and TypeScript â€” and happily in other stacks on request. No templates or WordPress â€” just clean, handcrafted code that fits your business and scales with you.',
     s1: {
       title: 'What we do',
-      intro: 'From marketing sites to mission‑critical internal tools — we design, build, and ship fast, robust, and maintainable products.',
+      intro: 'From marketing sites to missionâ€‘critical internal tools â€” we design, build, and ship fast, robust, and maintainable products.',
       items: {
         websites: { title: 'Websites', desc: 'Modern, accessible, fast websites that convert and are easy to manage.' },
         apps: { title: 'Systems & Apps', desc: 'Custom business tools, dashboards, portals, and integrations that streamline work.' },
         integrations: { title: 'Integrations & Automation', desc: 'APIs, data sync, background jobs, and workflows that remove manual steps.' },
-        design: { title: 'Design & UX', desc: 'User‑first interfaces, design systems, and thoughtful micro‑interactions.' }
+        design: { title: 'Design & UX', desc: 'Userâ€‘first interfaces, design systems, and thoughtful microâ€‘interactions.' }
       }
     },
     s2: {
       title: 'How we build',
       items: [
-        'Custom code only — never templates or generic CMS themes',
+        'Custom code only â€” never templates or generic CMS themes',
         'SvelteKit + Tailwind + TypeScript by default; other stacks on request',
         'Strong foundations: a11y, performance, security, and clean architecture',
-        'End‑to‑end testing where it matters; CI checks and previews',
+        'Endâ€‘toâ€‘end testing where it matters; CI checks and previews',
         'Own the code: handover, docs, and maintainability baked in',
         'Transparent collaboration: short iterations, demos, and async updates'
       ]
@@ -380,8 +380,8 @@ export default {
     s3: {
       title: 'Our process',
       steps: [
-        { title: 'Discovery', desc: 'Goals, users, constraints, success metrics — align on scope and assumptions.' },
-        { title: 'Design', desc: 'Flows, low‑/high‑fidelity, design tokens, and component system.' },
+        { title: 'Discovery', desc: 'Goals, users, constraints, success metrics â€” align on scope and assumptions.' },
+        { title: 'Design', desc: 'Flows, lowâ€‘/highâ€‘fidelity, design tokens, and component system.' },
         { title: 'Build', desc: 'Iterative delivery with CI, code reviews, and staging previews.' },
         { title: 'Integrate', desc: 'APIs, auth, payments, analytics, content, and automation.' },
         { title: 'Test & Optimize', desc: 'Functional, performance, and accessibility checks; profiling and polish.' },
@@ -390,26 +390,26 @@ export default {
     },
     s4: {
       title: 'Tech & tools',
-      text: 'We favor SvelteKit, Tailwind CSS, and TypeScript for speed and maintainability, but can deliver in React, Vue, or modern server runtimes if preferred. We design for long‑term ownership: minimal dependencies, clear boundaries, and infrastructure that scales.'
+      text: 'We favor SvelteKit, Tailwind CSS, and TypeScript for speed and maintainability, but can deliver in React, Vue, or modern server runtimes if preferred. We design for longâ€‘term ownership: minimal dependencies, clear boundaries, and infrastructure that scales.'
     },
     cta: {
       title: 'Ready to build together?',
-      desc: 'Tell us about your goals. We’ll propose a pragmatic plan that balances speed, quality, and budget — and then ship it.',
+      desc: 'Tell us about your goals. Weâ€™ll propose a pragmatic plan that balances speed, quality, and budget â€” and then ship it.',
       contact: 'Start a conversation'
     }
   },
   help: {
-    meta_title: 'Help Center — Yntra',
+    meta_title: 'Help Center â€” Yntra',
     meta_description: 'Find answers, guides, and resources to get started and succeed with Yntra.',
     title: 'Help Center',
     subtitle: 'Find quick answers to common questions, read guides, and get support when you need it.',
     search_open_aria: 'Open search',
     search_input_aria: 'Search in Help Center',
-    search_placeholder: 'Search the Help Center…',
+    search_placeholder: 'Search the Help Centerâ€¦',
     search_suggestions_aria: 'Search suggestions',
     categories: {
       title: 'Explore categories',
-      subtitle: 'We’ve grouped the essentials to help you get started, understand pricing, and how we deliver.',
+      subtitle: 'Weâ€™ve grouped the essentials to help you get started, understand pricing, and how we deliver.',
       more_help: 'Need more help?'
     },
     groups: {
@@ -423,13 +423,13 @@ export default {
     articles: {
       'getting-started': { title: 'How do I get started with a project?', category: 'Getting started' },
       pricing: { title: 'How much does a website cost?', category: 'Services & pricing' },
-      process: { title: 'What does the end‑to‑end process look like?', category: 'Project & delivery' },
+      process: { title: 'What does the endâ€‘toâ€‘end process look like?', category: 'Project & delivery' },
       tech: { title: 'What stack and hosting do you use?', category: 'Tech & hosting' },
       billing: { title: 'How does billing and payment work?', category: 'Billing' },
       'contact-support': { title: 'How do I reach support?', category: 'Contact' },
       requirements: { title: 'What do you need from us?', category: 'Getting started' },
-      scope: { title: 'What’s included in the packages?', category: 'Services & pricing' },
-      addons: { title: 'Add‑ons & post‑purchase', category: 'Services & pricing' },
+      scope: { title: 'Whatâ€™s included in the packages?', category: 'Services & pricing' },
+      addons: { title: 'Addâ€‘ons & postâ€‘purchase', category: 'Services & pricing' },
       quality: { title: 'Quality & testing', category: 'Project & delivery' },
       handover: { title: 'Launch & handover', category: 'Project & delivery' },
       performance: { title: 'Performance & SEO', category: 'Tech & hosting' },
@@ -445,7 +445,7 @@ export default {
       'getting-started': {
         title: 'Project kickoff & onboarding',
         paragraphs: [
-          'Start by describing your goals, audience, and key business requirements. We’ll return with a recommended solution, timeline, and pricing model.',
+          'Start by describing your goals, audience, and key business requirements. Weâ€™ll return with a recommended solution, timeline, and pricing model.',
           'At kickoff we set up a shared channel (e.g., Slack) and align scope and priorities.'
         ]
       },
@@ -459,8 +459,8 @@ export default {
       process: {
         title: 'Design & development process',
         paragraphs: [
-          'Discovery → Design → Development → Testing → Launch → Support.',
-          'We work transparently with demo check‑ins and short iterations for fast feedback.'
+          'Discovery â†’ Design â†’ Development â†’ Testing â†’ Launch â†’ Support.',
+          'We work transparently with demo checkâ€‘ins and short iterations for fast feedback.'
         ]
       },
       requirements: {
@@ -471,14 +471,14 @@ export default {
         ]
       },
       scope: {
-        title: 'What’s included in the packages?',
+        title: 'Whatâ€™s included in the packages?',
         paragraphs: [
           'Deliverables are specified in the quote/SoW: pages, views, features, integrations, and handover.',
-          'Add‑ons can be added as needed.'
+          'Addâ€‘ons can be added as needed.'
         ]
       },
       addons: {
-        title: 'Add‑ons & post‑purchase',
+        title: 'Addâ€‘ons & postâ€‘purchase',
         paragraphs: [
           'Examples: extra languages, more page templates, growth experiments, A/B testing, extended SEO.',
           'Support and improvement plans can be subscribed to on an ongoing basis.'
@@ -495,7 +495,7 @@ export default {
         title: 'Launch & handover',
         paragraphs: [
           'Release plan with rollback strategy, documentation, and knowledge transfer included.',
-          'We also offer post‑launch follow‑up and measurement.'
+          'We also offer postâ€‘launch followâ€‘up and measurement.'
         ]
       },
       tech: {
@@ -515,7 +515,7 @@ export default {
       security: {
         title: 'Security & backup',
         paragraphs: [
-          'Secure dependencies, protection against common attacks, and role‑based access.',
+          'Secure dependencies, protection against common attacks, and roleâ€‘based access.',
           'Backup and restore procedures per agreed RPO/RTO.'
         ]
       },
@@ -551,13 +551,13 @@ export default {
         title: 'Response times (SLA)',
         paragraphs: [
           'Standard requests: reply within 1 business day. Urgent: immediate acknowledgment and action plan.',
-          'Availability and on‑call can be included in support plans.'
+          'Availability and onâ€‘call can be included in support plans.'
         ]
       },
       book: {
         title: 'Book a call',
         paragraphs: [
-          'Pick a time that suits you. We’ll review needs, scope, and next steps.',
+          'Pick a time that suits you. Weâ€™ll review needs, scope, and next steps.',
           'The booking creates a calendar invite and confirmation by email.'
         ]
       }
@@ -566,14 +566,14 @@ export default {
       title: 'Frequently asked questions',
       items: [
         { q: 'How fast do you respond to new inquiries?', a: 'Typically within 1 business day. Urgent requests are handled faster.' },
-        { q: 'Do you include warranty and bug fixes after delivery?', a: 'Yes — within the agreed window we fix issues at no extra cost.' },
+        { q: 'Do you include warranty and bug fixes after delivery?', a: 'Yes â€” within the agreed window we fix issues at no extra cost.' },
         { q: 'Can you work with an existing codebase/design?', a: 'Absolutely. We do a quick technical/UX review and recommend the best path forward.' },
         { q: 'How do you handle change requests during a project?', a: 'We prioritize in the backlog and estimate impact. Smaller adjustments often fit into a sprint.' },
-        { q: 'Do you offer ongoing support after launch?', a: 'Yes — flexible support plans (SLA, improvements, monitoring, and incident handling).' }
+        { q: 'Do you offer ongoing support after launch?', a: 'Yes â€” flexible support plans (SLA, improvements, monitoring, and incident handling).' }
       ]
     },
     cta: {
-      title: 'Can’t find what you’re looking for?',
+      title: 'Canâ€™t find what youâ€™re looking for?',
       subtitle: 'Our team is happy to answer questions and guide you to the right solution.',
       contact: 'Contact us',
       book_call: 'Schedule a call'

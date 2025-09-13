@@ -307,17 +307,3 @@
     -webkit-overflow-scrolling: touch;
   }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
